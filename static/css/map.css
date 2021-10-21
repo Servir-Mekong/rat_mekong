@@ -1,0 +1,167 @@
+.topbar{
+    background-color: #5a94c0;
+}
+.topbar .nav-pills .nav-item .nav-link{
+    color: #fff;
+}
+.topbar .nav-pills .nav-item .nav-link:hover{
+    color: #000;
+}
+.topbar .nav-pills .nav-item .active{
+    color: #000;
+    background-color: #fff;
+}
+#map {
+    position: fixed;
+    height: calc(100% - 150px); /* //82% */
+    width: 100%;
+    z-index: 0;
+}
+.sidebar{
+    margin-top: 150px;
+    /* margin-left: 0; */ 
+    margin-left: 300px;
+    color: #eee; 
+    background-color: black; 
+    position: absolute;
+    overflow-y: none;
+    transition: 500ms;
+    z-index: 1;
+}
+.sidebar-content {
+    height: calc(100% - 150px);
+    /* width: 0; */ 
+    width: 300px;
+    position: fixed;
+    top: 40;
+    left: 0;
+    background-color: #eee;
+    overflow: auto !important;
+    transition: 0.3s;
+    padding-top: 10px;
+    /* display: none;  */
+    display: block;
+    z-index: 1;
+}
+.nav-tabs .nav-link:hover{
+    background-color: #3789cc;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+}
+/* #close-sidebar{
+    display: none;
+} */
+#open-sidebar{
+    display: none;
+} 
+.sidebar-content .tab-pane .card {
+    background-color: #eee;
+}
+.sidebar-content .tab-pane .card-body{
+    background-color: #eee;
+}
+/* Dropdown Filter */
+.multiselect {
+    width: 100%;
+    background: #fff;
+    border-radius: 0 !important;
+} 
+.selectBox {
+    position: relative;
+    border-radius: 0 !important;
+}
+.selectBox select {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 0 !important;
+    text-indent: 5px;
+}
+.overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 0 !important;
+}
+.checkboxes {
+    display: none;
+    border: 1px solid#dadada;
+    border-radius: 0 !important;
+    margin-left: 0px;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+.checkboxes label {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: block;
+}
+.checkboxes label:hover {
+    background-color: rgba(7, 7, 7, 0.1);
+}
+/* Leaflet Customization */
+.leaflet-popup {
+	position: absolute;
+	text-align: center;
+	margin-bottom: 20px;
+    border-radius: 0 !important;
+    border: 1px solid whitesmoke;
+}
+
+.leaflet-popup-content-wrapper {
+	padding: 5px;
+	border-radius: 0 !important;
+    min-width: 750px;
+}
+.leaflet-container a.leaflet-popup-close-button {
+	top: 7px;
+	right: 7px;
+    padding: 4px;
+    width: 25px;
+	height: 25px;
+    font: 20px/18px Tahoma, Verdana, sans-serif;
+} 
+.leaflet-container a.leaflet-popup-close-button:hover {
+	color: #fff;
+    background-color: rgb(243, 49, 49);
+}
+/* Tooltip */
+.leaflet-tooltip {
+	background-color: #000;
+	color: #fff;
+    border: 1px solid #000;
+    border-radius: 0;
+}
+.leaflet-tooltip-left:before {
+    right: 0;
+    margin-right: -12px;
+    border-left-color: rgba(0, 0, 0, 0.7);
+}
+.leaflet-tooltip-right:before {
+    left: 0;
+    margin-left: -12px;
+    border-right-color: rgba(0, 0, 0, 0.7);
+}
+
+td.details-control {
+    background: url('/static/images/angle-right-solid.svg') no-repeat center center;
+    cursor: pointer;
+    background-size: 16px 16px;
+}
+tr.shown td.details-control {
+    background: url('/static/images/angle-down-solid.svg') no-repeat center center;
+    background-size: 16px 16px;
+}
+td.details-control1 {
+    background: url('/static/images/angle-right-solid.svg') no-repeat center center;
+    cursor: pointer;
+    background-size: 16px 16px;
+}
+tr.shown td.details-control1 {
+    background: url('/static/images/angle-down-solid.svg') no-repeat center center;
+    background-size: 16px 16px;
+}

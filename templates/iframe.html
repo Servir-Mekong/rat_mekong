@@ -1,0 +1,845 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RAT Tool Iframe</title>
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/dist/css/bootstrap.min.css' %}"> 
+    <!-- jQuery -->
+	  <script src="{% static 'vendor/jquery/dist/jquery.min.js' %}"></script>
+    <!-- Bootstrap JS -->
+	  <script src="{% static 'vendor/bootstrap/dist/js/bootstrap.bundle.min.js'  %}"></script>
+    <!-- Highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+    <!-- reading parameter values -->
+    <script>
+      function getParamValue(paramName) {
+        var url = window.location.search.substring(1); //get rid of "?" in querystring
+        var qArray = url.split("&"); //get key-value pairs
+        for (var i = 0; i < qArray.length; i++) {
+          var pArr = qArray[i].split("="); //split key and value
+          if (pArr[0] == paramName) return pArr[1]; //return value
+        }
+      }
+      function zfill(num, len) {
+        return (Array(len).join("0") + num).slice(-len);
+      }
+
+      var station = getParamValue("stationid");
+      var resname = getParamValue("reservoirname");
+      //var damname = getParamValue("damname");
+      //var river = getParamValue("river");
+
+      // Reading Area Elevation Curve
+      function aecdata() {
+        dataset = "";
+        // AJAX in the data file
+        $.ajax({
+          type: "GET",
+          url: "http://127.0.0.1:8000/static/data/aec/" + station + ".txt",
+          async: false,
+          dataType: "text",
+          success: function (data) {
+            dataset = String(data);
+          },
+        });
+        return dataset;
+      }
+      function loadaec() {
+        var aec = [];
+
+        gfsdata = aecdata();
+        lines = gfsdata.split("\n");
+        for (i = 1; i < lines.length; i++) {
+          var items = lines[i].split(",");
+          aec.push([items[0], +items[1]]);
+        }
+        Highcharts.setOptions({
+          global: {
+            useUTC: false,
+          },
+        });
+        var chart = Highcharts.chart("pills-aec", {
+          chart: {
+            type: "spline",
+            zoomType: "x",
+            panning: true,
+            panKey: "shift",
+            style: {
+              fontFamily: "serif",
+              color: "#000000",
+            },
+          },
+          title: {
+            text: "Area Elevation Curve",
+            style: {
+              font: "20px bold Helvetica, sans-serif",
+              color: "#000000",
+            },
+          },
+          subtitle: {
+            text:
+              "ID: " + station + ", Reservoir: " + decodeURIComponent(resname),
+            style: {
+              font: "18px Times New Roman, sans-serif",
+              color: "#000000",
+            },
+          },
+          xAxis: {
+            type: "category",
+            title: {
+              text: "Elevation (m)",
+              style: {
+                font: "16px bold Times New Roman, sans-serif",
+                color: "#000000",
+              },
+            },
+            labels: {
+              format: "{value}",
+              style: {
+                font: "16px Times New Roman, sans-serif",
+                color: "#000000",
+              },
+            },
+            minTickInterval: 0.01,
+          },
+          yAxis: {
+            title: {
+              useHTML: true,
+              enabled: true,
+              text: "Area (Km<sup>2</sup>)",
+              style: {
+                font: "16px bold Times, sans-serif",
+                color: "#000000",
+              },
+            },
+            labels: {
+              format: "{value:.2f}",
+              style: {
+                font: "16px Times New Roman, sans-serif",
+                color: "#000000",
+              },
+            },
+            minTickInterval: 0.01,
+            min: 0.0,
+          },
+          tooltip: {
+            crosshairs: true,
+            shared: true,
+            valueDecimals: 2,
+            valueSuffix: " Sq. Km.",
+          },
+          legend: {},
+          plotOptions: {
+            series: {
+              turboThreshold: 0, // Comment out this code to display error
+            },
+            area: {
+              fillColor: {
+                linearGradient: {
+                  x1: 0,
+                  y1: 0,
+                  x2: 0,
+                  y2: 1,
+                },
+                stops: [
+                  [0, Highcharts.getOptions().colors[0]],
+                  [
+                    1,
+                    Highcharts.Color(Highcharts.getOptions().colors[0])
+                      .setOpacity(0)
+                      .get("rgba"),
+                  ],
+                ],
+              },
+              marker: {
+                radius: 2,
+              },
+              lineWidth: 1,
+              states: {
+                hover: {
+                  lineWidth: 1,
+                },
+              },
+              threshold: null,
+            },
+          },
+          series: [
+            {
+              name: "Area",
+              data: aec,
+              type: "area",
+              marker: {
+                enabled: true,
+                radius: 3,
+              },
+              zIndex: 1,
+              states: {
+                hover: {
+                  lineWidthPlus: 0,
+                },
+              },
+            },
+          ],
+        });
+      }
+
+      // Reading reservoir storage change
+      function l8deltasdata() {
+        dataset = "";
+        // AJAX in the data file
+        $.ajax({
+          type: "GET",
+          url:
+            "http://127.0.0.1:8000/static/data/deltas/" + station + ".txt",
+          async: false,
+          dataType: "text",
+          success: function (data) {
+            dataset = String(data);
+          },
+        });
+        return dataset;
+      }
+
+      function loaddeltas() {
+        var l8area = [],
+          s1area = [];
+
+        l8data = l8deltasdata();
+        lines = l8data.split("\n");
+        for (i = 0; i < lines.length; i++) {
+          var items = lines[i].split(",");
+          l8area.push([new Date(items[0]).getTime(), +items[1]]);
+        }
+        Highcharts.setOptions({
+          global: {
+            useUTC: false,
+          },
+        });
+        var chart = Highcharts.chart("pills-deltas", {
+          chart: {
+            zoomType: "x",
+            panning: true,
+            panKey: "shift",
+            style: {
+              fontFamily: "serif",
+              fontSize: "12px",
+              color: "#000000",
+            },
+          },
+          title: {
+            text: "Reservoir Storage Change",
+            style: {
+              font: "20px bold Times New Roman, sans-serif",
+              color: "#000000",
+            },
+          },
+          subtitle: {
+            text:
+              "ID: " + station + ", Reservoir: " + decodeURIComponent(resname),
+            style: {
+              font: "18px Times New Roman, sans-serif",
+              color: "#000000",
+            },
+          },
+          xAxis: {
+            type: "datetime",
+            title: {
+              text: "Date",
+              style: {
+                font: "16px bold Times New Roman, sans-serif",
+                color: "#000000",
+              },
+            },
+            labels: {
+              style: {
+                font: "16px Times New Roman, sans-serif",
+                color: "#000000",
+              },
+            },
+          },
+          yAxis: {
+            title: {
+              text: "Storage Change (BCM)",
+              style: {
+                font: "16px bold Times New Roman, sans-serif",
+                color: "#000000",
+              },
+            },
+            labels: {
+              format: "{value:.3f}",
+              style: {
+                font: "16px Times New Roman, sans-serif",
+                color: "#000000",
+              },
+            },
+            minTickInterval: 0.001,
+          },
+          tooltip: {
+            xDateFormat: "%d-%m-%Y",
+            crosshairs: true,
+            shared: true,
+            valueDecimals: 3,
+            valueSuffix: " BCM",
+          },
+          legend: {},
+          series: [
+            {
+              name: "Landsat-8 (NDWI Method) Based Storage Change",
+              data: l8area,
+              type: "spline",
+              marker: {
+                enabled: true,
+                radius: 3,
+              },
+              color: "green",
+              zIndex: 1,
+              states: {
+                hover: {
+                  lineWidthPlus: 0,
+                },
+              },
+            },
+          ],
+        });
+      }
+
+      // Reading reservoir inflow data
+      function inflowdata() {
+        dataset = "";
+        // AJAX in the data file
+        $.ajax({
+          type: "GET",
+          url: "http://127.0.0.1:8000/static/data/inflow/" + station + ".txt",
+          async: false,
+          dataType: "text",
+          success: function (data) {
+            dataset = String(data);
+          },
+        });
+        return dataset;
+      }
+      // Plotting reservoir inflow
+      function loadinflow() {
+        var inflow = [];
+        data = inflowdata();
+        testlines = data.split("\n");
+        for (i = 1; i < testlines.length; i++) {
+          var items = testlines[i].split(",");
+          inflow.push([new Date(items[0]).getTime(), +items[1]]);
+        }
+
+        Highcharts.setOptions({
+          global: {
+            useUTC: false,
+          },
+        });
+
+        var chart = Highcharts.chart("pills-inflow", {
+          chart: {
+            zoomType: "x",
+            panning: true,
+            panKey: "shift",
+            style: {
+              fontFamily: "serif",
+              fontSize: "12px",
+              color: "#000000",
+            },
+          },
+          title: {
+            text: "Inflow",
+            style: {
+              font: "20px bold Times New Roman, sans-serif",
+              color: "#000000",
+            },
+          },
+          subtitle: {
+            text:
+              "ID: " + station + ", Reservoir: " + decodeURIComponent(resname),
+            style: {
+              font: "18px Times New Roman, sans-serif",
+              color: "#000000",
+            },
+          },
+          xAxis: {
+            type: "datetime",
+            title: {
+              text: "Date",
+              style: {
+                font: "16px bold Times New Roman, sans-serif",
+                color: "#000000",
+              },
+            },
+            labels: {
+              style: {
+                font: "16px Times New Roman, sans-serif",
+                color: "#000000",
+              },
+            },
+          },
+          yAxis: {
+            title: {
+              text: "Inflow (cumecs)",
+              style: {
+                font: "16px bold Times New Roman, sans-serif",
+                color: "#000000",
+              },
+            },
+            labels: {
+              format: "{value:.1f}",
+              style: {
+                font: "16px Times New Roman, sans-serif",
+                color: "#000000",
+              },
+            },
+            minTickInterval: 0.1,
+          },
+          tooltip: {
+            xDateFormat: "%d-%m-%Y",
+            crosshairs: true,
+            shared: true,
+            valueDecimals: 1,
+            valueSuffix: " cumecs",
+          },
+          legend: {},
+          series: [
+            {
+              name: "Inflow from Model",
+              data: inflow,
+              type: "spline",
+              marker: {
+                enabled: false,
+              },
+              color: "green",
+              zIndex: 1,
+              states: {
+                hover: {
+                  lineWidthPlus: 0,
+                },
+              },
+            },
+          ],
+        });
+      }
+
+      // Reading reservoir outflow data
+      function outflowdata() {
+        dataset = "";
+        // AJAX in the data file
+        $.ajax({
+          type: "GET",
+          url: "http://127.0.0.1:8000/static/data/outflow/" + station + ".txt",
+          async: false,
+          dataType: "text",
+          success: function (data) {
+            dataset = String(data);
+          },
+        });
+        return dataset;
+      }
+      // Plotting reservoir outflow
+      function loadoutflow() {   
+        var outflow = [];
+        data = outflowdata();
+        testlines = data.split("\n");
+        for (i = 1; i < testlines.length; i++) {
+          var items = testlines[i].split(",");
+          outflow.push([new Date(items[0]).getTime(), +items[1]]);
+        }
+        Highcharts.setOptions({
+          global: {
+            useUTC: false,
+          },
+        });
+
+        var chart = Highcharts.chart("pills-outflow", {
+          chart: {
+            zoomType: "x",
+            panning: true,
+            panKey: "shift",
+            style: {
+              fontFamily: "serif",
+              fontSize: "12px",
+              color: "#000000",
+            },
+          },
+          title: {
+            text: "Outflow",
+            style: {
+              font: "20px bold Times New Roman, sans-serif",
+              color: "#000000",
+            },
+          },
+          subtitle: {
+            text:
+              "ID: " + station + ", Reservoir: " + decodeURIComponent(resname),
+            style: {
+              font: "18px Times New Roman, sans-serif",
+              color: "#000000",
+            },
+          },
+          xAxis: {
+            type: "datetime",
+            title: {
+              text: "Date",
+              style: {
+                font: "16px bold Times New Roman, sans-serif",
+                color: "#000000",
+              },
+            },
+            labels: {
+              style: {
+                font: "16px Times New Roman, sans-serif",
+                color: "#000000",
+              },
+            },
+          },
+          yAxis: {
+            title: {
+              text: "Outflow (cumecs)",
+              style: {
+                font: "16px bold Times New Roman, sans-serif",
+                color: "#000000",
+              },
+            },
+            labels: {
+              format: "{value:.1f}",
+              style: {
+                font: "16px Times New Roman, sans-serif",
+                color: "#000000",
+              },
+            },
+            minTickInterval: 0.1,
+          },
+          tooltip: {
+            xDateFormat: "%d-%m-%Y",
+            crosshairs: true,
+            shared: true,
+            valueDecimals: 1,
+            valueSuffix: " cumecs",
+          },
+          legend: {},
+          series: [
+            {
+              name: "Reservoir Outflow",
+              data: outflow,
+              type: "spline",
+              marker: {
+                enabled: false,
+              },
+              color: "green",
+              zIndex: 1,
+              states: {
+                hover: {
+                  lineWidthPlus: 0,
+                },
+              },
+            },
+          ],
+        });
+      }
+
+      // Reading Water Surface Area Changes
+      function sareadata() {
+        dataset = "";
+        // AJAX in the data file
+        $.ajax({
+          type: "GET",
+          url: "http://127.0.0.1:8000/static/data/sarea/" + station + ".txt",
+          async: false,
+          dataType: "text",
+          success: function (data) {
+            dataset = String(data);
+          },
+        });
+        return dataset;
+      }
+
+      function loadsarea() {
+        var sarea = [],
+        sadata = sareadata();
+        lines = sadata.split("\n");
+        for (i = 1; i < lines.length; i++) {
+          var items = lines[i].split(",");
+          sarea.push([new Date(items[0]).getTime(), +items[1]]);
+        }
+        Highcharts.setOptions({
+          global: {
+            useUTC: false,
+          },
+        });
+        var chart = Highcharts.chart("pills-sarea", {
+          chart: {
+            zoomType: "x",
+            panning: true,
+            panKey: "shift",
+            style: {
+              fontFamily: "serif",
+              fontSize: "12px",
+              color: "#000000",
+            },
+          },
+          title: {
+            text: "Surface Area Variation",
+            style: {
+              font: "20px bold Helvetica, sans-serif",
+              color: "#000000",
+            },
+          },
+          subtitle: {
+            text:
+              "ID: " + station + ", Reservoir: " + decodeURIComponent(resname),
+            style: {
+              font: "18px Times New Roman, sans-serif",
+              color: "#000000",
+            },
+          },
+          xAxis: {
+            type: "datetime",
+            title: {
+              text: "Date",
+              style: {
+                font: "16px bold Times New Roman, sans-serif",
+                color: "#000000",
+              },
+            },
+            labels: {
+              style: {
+                font: "16px Times New Roman, sans-serif",
+                color: "#000000",
+              },
+            },
+          },
+          yAxis: {
+            title: {
+              useHTML: true,
+              enabled: true,
+              text: " Water Extent Area (Km<sup>2</sup>)",
+              style: {
+                font: "16px bold Times New Roman, sans-serif",
+                color: "#000000",
+              },
+            },
+            labels: {
+              format: "{value:.3f}",
+              style: {
+                font: "16px Times New Roman, sans-serif",
+                color: "#000000",
+              },
+            },
+            minTickInterval: 0.001,
+          },
+          tooltip: {
+            xDateFormat: "%d-%m-%Y",
+            crosshairs: true,
+            shared: true,
+            valueDecimals: 2,
+            valueSuffix: " Sq. Km.",
+          },
+          legend: {},
+          series: [
+            {
+              name: "Landsat-8 (NDWI Method) Based Area",
+              data: sarea,
+              type: "spline",
+              marker: {
+                enabled: true,
+                radius: 3,
+              },
+              color: "green",
+              zIndex: 1,
+              states: {
+                hover: {
+                  lineWidthPlus: 0,
+                },
+              },
+            },
+          ],
+        });
+      }
+
+      // Reading Rule Curve Changes
+      function rcdata(){
+        dataset = '';
+        // AJAX in the data file
+        $.ajax({
+          type: "GET",
+          url: "http://127.0.0.1:8000/static/data/rcurve/" + station + ".txt",
+          async: false,
+          dataType: "text",
+          success: function(data)
+          {
+            dataset=String(data);
+          }
+        });
+        return dataset;
+      }
+
+      function loadrulecurve(){
+        var aec = []
+        gfsdata = rcdata();
+        lines = gfsdata.split('\n');
+        for (i = 1; i < lines.length; i++) {
+          var items = lines[i].split(',');
+          aec.push([items[0], +items[1]]);
+        }
+        Highcharts.setOptions({
+          global: {
+            useUTC: false
+          }
+        });
+        var chart = Highcharts.chart('pills-rcurve', {
+        chart: {
+            type: 'spline',
+            zoomType: 'x',
+            panning: true,
+            panKey: 'shift',
+            style: {
+              fontFamily: 'serif',
+              color: "#000000"
+            }
+          },
+        title: {
+          text: "Reservoir Operating Rule Curve",
+          style: {
+            font: '20px bold Helvetica, sans-serif',
+            color: "#000000"
+          }
+        },
+        subtitle: {
+          text: "ID: " + station + ", Reservoir: " + decodeURIComponent(resname),
+          style: {
+            font: '18px Times New Roman, sans-serif',
+            color: "#000000"
+          }
+        },
+        xAxis: [{
+          categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+          title: {
+            text: 'Month',
+            style: {
+              font: '16px bold Times New Roman, sans-serif',
+              color: "#000000"
+            }
+          },
+          labels: {
+            format: '{value}',
+            style: {
+              font: '16px Times New Roman, sans-serif',
+              color: "#000000"
+            }
+          },
+          minTickInterval: 0.01
+        }],
+        yAxis: {
+          title: {
+            useHTML: true,
+            enabled: true,
+            text: 'S/S<sub>max</sub>',
+            style: {
+              font: '16px bold Times, sans-serif',
+              color: "#000000"
+            }
+          },
+          labels: {
+            format: '{value:.2f}',
+            style: {
+              font: '16px Times New Roman, sans-serif',
+              color: "#000000"
+            }				
+          },
+          minTickInterval: 0.01,
+          min: 0.0
+        },
+        tooltip: {
+          formatter: function () {
+            return 'Specific Storage for <b>' + this.x +
+              '</b> is <b>' + this.y + '</b>';
+            }
+          },
+          legend: {},
+          plotOptions: {
+            series: {
+              turboThreshold: 0 // Comment out this code to display error
+            },
+            area: {
+              fillColor: {
+                linearGradient: {
+                  x1: 0,
+                  y1: 0,
+                  x2: 0,
+                  y2: 1
+                },
+                stops: [
+                  [0, Highcharts.getOptions().colors[0]],
+                  [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                ]
+              },
+              marker: {
+                radius: 2
+              },
+              lineWidth: 1,
+              states: {
+                hover: {
+                  lineWidth: 1
+                }
+              },
+              threshold: null
+            }
+          },
+          series: [{
+            name: 'Specific Storage (S/Smax)',
+            data: aec,
+            type: 'spline',
+            marker: {
+            enabled: true,
+            radius: 3		
+            },
+            zIndex: 5,
+            states: {
+            hover: {			
+              lineWidthPlus: 0
+            }
+            }
+          }]
+        });
+      }
+    </script>
+  </head>
+  <body onload="loadaec()">
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="pills-aec-tab" onclick="loadaec()" data-bs-toggle="pill" data-bs-target="#pills-aec" type="button" role="tab" aria-controls="pills-aec" aria-selected="true">AEC</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-deltas-tab" onclick="loaddeltas()" data-bs-toggle="pill" data-bs-target="#pills-deltas" type="button" role="tab" aria-controls="pills-deltas" aria-selected="false">Storage Change</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-inflow-tab" onclick="loadinflow()" data-bs-toggle="pill" data-bs-target="#pills-inflow" type="button" role="tab" aria-controls="pills-inflow" aria-selected="false">Inflow</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button  class="nav-link" id="pills-outflow-tab" onclick="loadoutflow()" data-bs-toggle="pill" data-bs-target="#pills-outflow" type="button" role="tab" aria-controls="pills-outflow" aria-selected="false">Outflow</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button  class="nav-link"  id="pills-sarea-tab"  onclick="loadsarea()"  data-bs-toggle="pill"  data-bs-target="#pills-sarea"  type="button"  role="tab"  aria-controls="pills-sarea"  aria-selected="false">Surface Area</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button  class="nav-link"  id="pills-rcurve-tab"  onclick="loadrulecurve()"  data-bs-toggle="pill"  data-bs-target="#pills-rcurve"  type="button"  role="tab"  aria-controls="pills-rcurve"  aria-selected="false">Rule Curve</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active"  id="pills-aec"  role="tabpanel"  aria-labelledby="pills-aec-tab"></div>
+      <div class="tab-pane fade" id="pills-deltas" role="tabpanel" aria-labelledby="pills-deltas-tab"></div>
+      <div class="tab-pane fade" id="pills-inflow" role="tabpanel" aria-labelledby="pills-inflow-tab"></div>
+      <div class="tab-pane fade" id="pills-outflow" role="tabpanel" aria-labelledby="pills-outflow-tab"></div>
+      <div class="tab-pane fade" id="pills-sarea" role="tabpanel" aria-labelledby="pills-sarea-tab"></div>
+      <div class="tab-pane fade" id="pills-rcurve" role="tabpanel" aria-labelledby="pills-rcurve-tab"></div>
+    </div>
+  </body>
+</html>

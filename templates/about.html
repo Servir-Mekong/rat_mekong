@@ -1,0 +1,70 @@
+{% extends "base.html" %} 
+{% load static %}
+
+<!-- CSS files -->
+{% block extra_css %} {% endblock %} 
+{% block container %}
+{% include 'navigation.html' %}
+<!-- Carousel item -->
+<div id="carouselHomeIndicators" class="carousel carousel-dark slide mb-5" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images//1.jpg' %}" class="d-block w-100" alt="..." />
+      <div class="carousel-caption d-none d-md-block">
+        <h1 class="display-1 text-white fw-bold">About RAT Tool</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Container -->
+<div class="container pb-5">
+  <p class="fs-3 pt-5 pb-5">
+    Reservoir  Assessment  Tool  (RAT)  is  an  integrated  software  framework  that  consists  of  an 
+interactive state-of-the-art web-based visualization system to facilitate  the visualization of 
+reservoir monitoring parameters in a near-real-time scale. The tool has been designed to monitor 
+the existing reservoirs over Mekong region. The tool facilitates the 
+visualization of reservoir states (such as, storage change, inflow, and outflow), which is useful in 
+understanding downstream impact. 
+  </p>
+  <h3 class="fw-bold">Conceptualization of RAT Tool</h3>
+  <p class="fs-3 pt-3">
+    The RAT frameworks have three main modules –Storage Change Module, Data Download
+Module and Model Simulation and Post-Processing Module to estimate the reservoir inflow,
+outflow, and storage changes. The three modules are run in the backend server and a task
+scheduler is used to automate the estimation by setting up task duration.
+  </p>
+  <h4 class="fw-bold pt-4">1. Storage Change Module</h4>
+  <p class="fs-3 pt-3">
+    The storage change module, written in a python programming language, is used to produce
+reservoir surface area time series. First, it selects a single reservoir from the reservoir database of
+the RAT framework. Then it creates a buffer polygon around the reservoir based on the distance
+provided. It selects all the available satellite imageries (of a selected sensor) and removes cloud
+and cloud shadow using a bit-masking algorithm. After removing the scenes with higher than
+threshold cloud cover, it mosaics all the scenes and applies the threshold-based method to create
+the water area of the reservoir. Finally, using the area-elevation relationship and the water area
+time series, it calculates the storage change for the selected reservoir. The module iterates all the
+reservoirs in the same way and generates the reservoir storage change time series for every
+reservoir.
+  </p>
+  <h4 class="fw-bold pt-4">2. Data Download Module</h4>
+  <p class="fs-3 pt-3">
+    The VIC model requires different types of meteorological parameters like precipitation,
+minimum and maximum temperature, wind speed, etc. to run VIC and Routing model to estimate
+reservoir inflow. The data download module is developed to download the required data from the
+relevant portal and reformat & resample into a specific format to run the VIC simulation model.
+  </p>
+  <h4 class="fw-bold pt-4">3. Model Simulation and Post-Processing Module</h4>
+  <p class="fs-3 pt-3 pb-5">
+    This module is used to run the VIC and Route model to get the latest available reservoir inflow
+data.
+After completing data processing data and calculation, the output will save into PostgreSQL and
+it will be accessed by Django and finally, visualize the data in frontend GUI.
+  </p>
+  <a href="https://drive.google.com/file/d/1fdUi3oNyayhxspI1tKaivw5VjwTZvXng/view?usp=sharing" class="btn btn-primary btn-lg" role="button" data-bs-toggle="button">Know More About RAT Tool</a>
+  <a href="https://github.com/nbiswasuw/rat-reservoir_assessment_tool" class="btn btn-primary btn-lg" role="button" data-bs-toggle="button">GitHub Repository</a>
+</div>
+
+<div class="container">{% include 'partners.html' %}</div>
+{% include 'footer.html' %} 
+{% endblock container %}

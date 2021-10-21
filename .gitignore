@@ -1,0 +1,14 @@
+#ignore python compile files
+*.pyc
+
+#ignore vendor files
+static/vendor/*
+static/data/backup/*
+static/templates/draft_iframe.html
+static/data/*.txt
+static/js/table.js
+
+#node and related environment files
+.npmignore
+node_modules/
+__pycache__/

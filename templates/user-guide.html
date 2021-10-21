@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!-- CSS files -->
+{% block extra_css %} {% endblock %}
+
+{% block container %}
+
+{% include 'navigation.html' %}
+
+<!-- Carousel item -->
+<div id="carouselHomeIndicators" class="carousel carousel-dark slide mb-5" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images//1.jpg' %}" class="d-block w-100" alt="..." />
+      <div class="carousel-caption d-none d-md-block">
+        <h1 class="display-1 text-white fw-bold">User Guide</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Container -->
+<h1>User Guide Page</h1>
+
+<div class="container">
+{% include 'partners.html' %}
+</div>
+{% include 'footer.html' %}
+
+{% endblock container %}
