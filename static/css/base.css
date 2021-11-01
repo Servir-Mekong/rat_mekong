@@ -55,6 +55,11 @@ html, body {
     border-radius: 0 !important;
     border: 0 !important;
 }
+.team .card{
+    border-radius: 0 !important;
+    border: 0 !important;
+    background-color: beige;
+}
 .card-body{
     border: 0 !important;
     border-radius: 0 !important;

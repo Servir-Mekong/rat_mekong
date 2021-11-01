@@ -234,7 +234,7 @@ var cambodia_reservoirs = L.geoJson(reservoirs, {
 	onEachFeature: function(feature, reservoirLayer) {
         var resname = feature.properties.Name;
         var stationid = feature.properties.id;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://127.0.0.1:8000/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
+        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
         reservoirLayer.on('click', function (e) {
@@ -248,7 +248,7 @@ var laos_reservoirs = L.geoJson(reservoirs, {
 	onEachFeature: function(feature, reservoirLayer) {
         var resname = feature.properties.Name;
         var stationid = feature.properties.id;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://127.0.0.1:8000/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
+        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
         reservoirLayer.on('click', function (e) {
@@ -262,7 +262,7 @@ var thailand_reservoirs = L.geoJson(reservoirs, {
 	onEachFeature: function(feature, reservoirLayer) {
         var resname = feature.properties.Name;
         var stationid = feature.properties.id;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://127.0.0.1:8000/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
+        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
         reservoirLayer.on('click', function (e) {
@@ -276,7 +276,7 @@ var vietnam_reservoirs = L.geoJson(reservoirs, {
 	onEachFeature: function(feature, reservoirLayer) {
         var resname = feature.properties.Name;
         var stationid = feature.properties.id;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://127.0.0.1:8000/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
+        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
         reservoirLayer.on('click', function (e) {
@@ -289,7 +289,7 @@ var all_reservoirs = L.geoJson(reservoirs, {
 	onEachFeature: function(feature, reservoirLayer) {
         var resname = feature.properties.Name;
         var stationid = feature.properties.id;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://127.0.0.1:8000/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
+        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
         reservoirLayer.on('click', function (e) {
@@ -389,7 +389,7 @@ var chiRiverLayer = L.geoJson(reservoirs, {
 	onEachFeature: function(feature, reservoirLayer) {
         var resname = feature.properties.Name;
         var stationid = feature.properties.id;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://127.0.0.1:8000/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
+        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
         reservoirLayer.on('click', function (e) {
@@ -404,7 +404,7 @@ var lamDomNoiRiverLayer = L.geoJson(reservoirs, {
 	onEachFeature: function(feature, reservoirLayer) {
         var resname = feature.properties.Name;
         var stationid = feature.properties.id;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://127.0.0.1:8000/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
+        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
         reservoirLayer.on('click', function (e) {
@@ -419,7 +419,7 @@ var namGnongRiverLayer = L.geoJson(reservoirs, {
 	onEachFeature: function(feature, reservoirLayer) {
         var resname = feature.properties.Name;
         var stationid = feature.properties.id;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://127.0.0.1:8000/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
+        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
         reservoirLayer.on('click', function (e) {
@@ -433,7 +433,7 @@ var namNgumRiverLayer = L.geoJson(reservoirs, {
 	onEachFeature: function(feature, reservoirLayer) {
         var resname = feature.properties.Name;
         var stationid = feature.properties.id;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://127.0.0.1:8000/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
+        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
         reservoirLayer.on('click', function (e) {
@@ -447,7 +447,7 @@ var namPongRiverLayer = L.geoJson(reservoirs, {
 	onEachFeature: function(feature, reservoirLayer) {
         var resname = feature.properties.Name;
         var stationid = feature.properties.id;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://127.0.0.1:8000/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
+        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
         reservoirLayer.on('click', function (e) {
@@ -461,7 +461,7 @@ var namTheunRiverLayer = L.geoJson(reservoirs, {
 	onEachFeature: function(feature, reservoirLayer) {
         var resname = feature.properties.Name;
         var stationid = feature.properties.id;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://127.0.0.1:8000/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
+        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
         reservoirLayer.on('click', function (e) {
@@ -475,7 +475,7 @@ var sesanRiverLayer = L.geoJson(reservoirs, {
 	onEachFeature: function(feature, reservoirLayer) {
         var resname = feature.properties.Name;
         var stationid = feature.properties.id;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://127.0.0.1:8000/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
+        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
         reservoirLayer.on('click', function (e) {
@@ -489,7 +489,7 @@ var seSanRiverLayer = L.geoJson(reservoirs, {
 	onEachFeature: function(feature, reservoirLayer) {
         var resname = feature.properties.Name;
         var stationid = feature.properties.id;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://127.0.0.1:8000/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
+        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
         reservoirLayer.on('click', function (e) {

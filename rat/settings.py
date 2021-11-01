@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-4(8^_5##b1j5&dyqot&u9laibl-3@et$dx(sqr&0&+qv*$m=&h'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -144,3 +144,9 @@ STATICFILES_FINDERS = (
 COMPRESS_ENABLED = True
 COMPRESS_CSS_FILTERS = ["compressor.filters.cssmin.CSSMinFilter"]
 COMPRESS_JS_FILTERS = ["compressor.filters.jsmin.JSMinFilter"]
+
+
+try:
+    from rat.local_settings import *
+except ImportError:
+    pass

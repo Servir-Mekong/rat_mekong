@@ -8,6 +8,9 @@ static/templates/draft_iframe.html
 static/data/*.txt
 static/js/table.js
 
+#ignore settings
+rat/local_settings.py
+
 #node and related environment files
 .npmignore
 node_modules/
