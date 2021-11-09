@@ -7,7 +7,7 @@ srtm = ee.Image("USGS/SRTMGL1_003");
 reservoirids = [1,2,3,4,5,6,7,8,9,10,11,12,13]
 
 for selreservoir in reservoirids:
-    if os.path.exists('./static/data/aec/' + str(selreservoir) + '.txt') == False:
+    if os.path.exists('./static/data/test/aec/' + str(selreservoir) + '.txt') == False:
     	selected = allreservoirs.filter(ee.Filter.equals('id', selreservoir));
     	rarea = selected.geometry().area().divide(1000000)
     	areaval = rarea.getInfo()
@@ -45,10 +45,10 @@ for selreservoir in reservoirids:
     	
     	ppp = sorted(int(x) for x in elevationdata.keys())
     	accarea = 0
-    	strtxt = "Elevation,Area,CumArea"
+    	strtxt = "ID, Elevation,Area,CumArea"
     	for xxx in ppp:
     		accarea = accarea + elevationdata[str(xxx)]*30.0*30.0/1000000.0
-    		strtxt = strtxt + '\n' + str(xxx) + ',' + str(elevationdata[str(xxx)]) + ',' + '{0:.2f}'.format(accarea)
+    		strtxt = strtxt + '\n' + str(selreservoir)+',' + str(xxx) + ',' + str(elevationdata[str(xxx)]) + ',' + '{0:.2f}'.format(accarea)
     	
-    	with open('./static/data/aec/' + str(selreservoir) + '.txt', 'w+') as txt:
+    	with open('./static/data/test/aec/' + str(selreservoir) + '.txt', 'w+') as txt:
     		txt.write(strtxt)

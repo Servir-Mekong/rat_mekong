@@ -143,25 +143,40 @@ $('input[type=radio][name=basemap_selection]').change(function(){
 
 //define admin boundary style
 var mekongBoundaryStyle = {
-    color: "#3182bd",
-    weight: 0.75,
-    opacity: 0.6,
-    fillOpacity: 0.3,
-    fillColor: "#3182bd",
+    color: "#191970",
+    weight: 1.75,
+    //opacity: 0.6,
+    //fillOpacity: 0.3,
+    fillColor: "none",
 };
 
 var adm0Style = {
-    color: "#756bb1",
-    weight: 0.75,
-    opacity: 0.6,
-    fillOpacity: 0.3,
-    fillColor: "#756bb1",
+    color: "#6A5ACD",
+    weight: 1.0,
+    //opacity: 0.6,
+    //fillOpacity: 0.3,
+    fillColor: "none",
 };
 
+var gmsriversStyle = {
+    color: "#1E90FF",
+    weight: 0.75,
+};
+var mainriversStyle = {
+    color: "#00008B",
+    weight: 1.5,
+};
+var basinStyle = {
+    color: "#00008B",
+    weight: 1.0,
+    //opacity: 0.6,
+    //fillOpacity: 0.65,
+    //fillColor: "#00008B"
+};
 // highlight admin feature style
 var highlightStyle = {
     color: '#fff', 
-    weight: 1,
+    weight: 1.0,
     opacity: 0.6,
     fillOpacity: 0.65,
     fillColor: '#2262CC'
@@ -190,8 +205,25 @@ var adm0_layer = L.geoJson(adm0, {
         }); 
         admin0Layer.on('mouseout', function (e) {
             this.setStyle(adm0Style);
-        });   
-                
+        });                   
+    } 
+});
+
+var gms_rivers_layer = L.geoJson(gms_rivers, {
+    style: gmsriversStyle
+});
+var main_rivers_layer = L.geoJson(main_rivers, {
+    style: mainriversStyle
+});
+var sub_basin_layer = L.geoJson(basinData, {
+    style: basinStyle,
+    onEachFeature: function(feature, subbasinLayer) {
+        subbasinLayer.on('mouseover', function (e) {
+            this.setStyle(highlightStyle);
+        }); 
+        subbasinLayer.on('mouseout', function (e) {
+            this.setStyle(basinStyle);
+        });                       
     } 
 });
 
@@ -207,6 +239,27 @@ $('input[type=checkbox][name=adm0_toggle]').click(function(){
         map.addLayer(adm0_layer);
     } else {
         map.removeLayer(adm0_layer);
+    }
+});
+$('input[type=checkbox][name=gms_rivers_toggle]').click(function(){
+    if(this.checked) {
+        map.addLayer(gms_rivers_layer);
+    } else {
+        map.removeLayer(gms_rivers_layer);
+    }
+});
+$('input[type=checkbox][name=main_rivers_toggle]').click(function(){
+    if(this.checked) {
+        map.addLayer(main_rivers_layer);
+    } else {
+        map.removeLayer(main_rivers_layer);
+    }
+});
+$('input[type=checkbox][name=sub_basin_toggle]').click(function(){
+    if(this.checked) {
+        map.addLayer(sub_basin_layer);
+    } else {
+        map.removeLayer(sub_basin_layer);
     }
 });
 

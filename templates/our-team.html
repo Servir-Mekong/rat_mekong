@@ -1,0 +1,21 @@
+{% load static %}
+<!-- Our Team Section -->
+<div class="row">
+    <h3 class="text-center fw-bold fs-2 my-5">Our Team</h3>
+    {% for tm in team_list %}
+        {% if forloop.counter0|divisibleby:3 and not forloop.first %}<div class="cal-md-12"></div>{% endif %}
+        <div class="col-md-3 mt-5">
+        <div class="card" style="width: 18rem;">
+            <a href="{% url 'team-detail' tm.slug %}"><img src="{{tm.img.url}}" class="card-img-top" height="300px" width="250px" alt="{{tm.name}}"></a>
+            <div class="card-body text-center">
+            <h5 class="card-title fw-bold"><a href="{% url 'team-detail' tm.slug %}">{{tm.name}}</a></h5>
+            <p class="card-text">{{tm.position}}</p>
+            <p class="pt-3">
+                <a class="btn btn-primary" href="{{tm.website}}" target="_blank" role="button"><i class="fa fa-globe"></i></a>
+                <a class="btn btn-primary" href="#" target="_blank" role="button"><i class="fab fa-linkedin"></i></a>
+            </p>
+            </div>
+        </div>
+        </div>
+    {% endfor %}
+</div>
