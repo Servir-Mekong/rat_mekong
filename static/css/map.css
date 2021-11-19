@@ -1,66 +1,166 @@
 .topbar{
-    background-color: #5a94c0;
+    /* background-color: #5a94c0; */
+    background-color: #3f51b5;
 }
 .topbar .nav-pills .nav-item .nav-link{
     color: #fff;
 }
 .topbar .nav-pills .nav-item .nav-link:hover{
-    color: #000;
+    color: #f0a163;
 }
 .topbar .nav-pills .nav-item .active{
     color: #000;
     background-color: #fff;
 }
-#map {
-    position: fixed;
-    height: calc(100% - 150px); /* //82% */
-    width: 100%;
-    z-index: 0;
-}
 .sidebar{
-    margin-top: 150px;
-    /* margin-left: 0; */ 
-    margin-left: 300px;
-    color: #eee; 
-    background-color: black; 
-    position: absolute;
-    overflow-y: none;
-    transition: 500ms;
-    z-index: 1;
+    height: calc(100% - 144px);
+    width: 60px;
+    color: #fff;
+    background-color: #303235;
+    position: fixed;
 }
-.sidebar-content {
-    height: calc(100% - 150px);
-    /* width: 0; */ 
-    width: 300px;
+.sidebar-content{
+    height: calc(100% - 144px);
+    width: 0;
     position: fixed;
     top: 40;
     left: 0;
-    background-color: #eee;
-    overflow: auto !important;
-    transition: 0.3s;
-    padding-top: 10px;
-    /* display: none;  */
-    display: block;
+    background-color: #e9ecef;
+    overflow: auto;
+    transition: 0.5s;
+    padding-top: 0px;
+    display: none;
     z-index: 1;
 }
-.nav-tabs .nav-link:hover{
-    background-color: #3789cc;
+
+#map {
+    position: fixed;
+    height: calc(100% - 144px); 
+    width: calc(100% - 60px);
+    margin-left: 60px;
+}
+.sidebar .nav .nav-link{
+    background-color: #303235;
     color: #fff;
+    border-radius: none;
     border: none;
-    border-radius: 0;
+    outline: none;
 }
-/* #close-sidebar{
-    display: none;
-} */
-#open-sidebar{
-    display: none;
-} 
-.sidebar-content .tab-pane .card {
-    background-color: #eee;
+.sidebar .nav .nav-link:hover{
+    background-color: #757de8;
+    color: #fff;
+    border-radius: none;
+    border: none;
+    outline: none;
 }
-.sidebar-content .tab-pane .card-body{
-    background-color: #eee;
+.sidebar .nav .active{
+    background-color: #303235;
+    color: #757de8;
 }
+.btn-custom,
+.btn-custom:active,
+.btn-custom:focus {
+    border: none !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: #173F5F;
+    color:#fff;
+}
+.btn-custom:hover{
+    border:none !important;
+    border-radius: 0 !important;
+    outline:none !important;
+    box-shadow: none !important;
+    background-color: #3789cc;
+    color:#fff;
+}
+.btn-home-close{
+    margin-top: 10px;
+    margin-left: 300px;
+    border:none !important;
+    border-radius: 0 !important;
+    outline:none !important;
+    box-shadow: none !important;
+    transition: 0.5s;
+}
+.btn-home-close:hover{
+    color: #5252d0;
+}
+.filter-header{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.btn-filter-close{
+    margin-right: 10px;
+    border:none !important;
+    border-radius: 0 !important;
+    outline:none !important;
+    box-shadow: none !important;
+}
+.btn-filter-close:hover{
+    color: #5252d0;
+}
+.filter-card {
+    background-color: #e9ecef;
+}
+.layer-header{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.btn-layer-close{
+    margin-right: 10px;
+    border:none !important;
+    border-radius: 0 !important;
+    outline:none !important;
+    box-shadow: none !important;
+}
+.btn-layer-close:hover{
+    color: #5252d0;
+}
+.layer-card {
+    background-color: #e9ecef;
+}
+.btn-basemap-close{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border:none !important;
+    border-radius: 0 !important;
+    outline:none !important;
+    box-shadow: none !important;
+}
+.btn-basemap-close:hover{
+    color: #5252d0;
+}
+.nav-basemap{
+    overflow-y: scroll !important; 
+}
+.basemap-card{
+    border: 1px solid #6262f5;
+    border-radius: 5px;
+    background-color: #e9ecef;
+}
+.basemap-card:hover{
+    border: 1px solid #6262f5;
+    border-radius: 5px;
+    background-color: #7676e6;
+    color: #fff;
+    cursor: pointer;
+}
+.nav-basemap .active{
+    background-color: #7676e6;
+    color: white;
+}
+.basemap-img{
+    border-radius: 5px;
+}
+
+
+
+
+
+
 /* Dropdown Filter */
 .multiselect {
     width: 100%;

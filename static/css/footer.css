@@ -1,6 +1,7 @@
 .footer {
     margin-top: 10px;
-    background-color: #eee;
+    background-color: #303235;
+    color: #fff;
 }
 .fcontent img{
     width: 280px;
@@ -19,12 +20,12 @@
     font-size: 18px;
     border-radius: 0;
     border: none;
-    background-color: #0f5e9c;
+    background-color: #1c1c1d;
 }
 .fcontent .btn-primary:hover {
     margin-left: 6px;
     border-radius: 0;
-    background-color: #3789cc;
+    background-color: #651fff;
 }
 .footer-menu {
     letter-spacing: 0.02em;
@@ -42,16 +43,16 @@
     font-size: 18px;
     font-weight: 500;
     padding-left: 10px;
-    color: #000;
+    color: #fff;
     text-decoration: none;
 }
 .footer-menu-item a:hover{
-    color: #0f5e9c;
+    color: #f0a163;
     text-underline-position: below;
     text-decoration: underline;
 }
 .copyright{
-    background-color: #0f5e9c; 
+    background-color: #212121; 
     text-align: center;
 }
 .copyright-content {

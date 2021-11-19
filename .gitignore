@@ -1,16 +1,24 @@
 #ignore python compile files
 *.pyc
 
-#ignore vendor files
+#ignore static files
 static/vendor/*
 static/data/backup/*
-static/templates/draft_iframe.html
 static/data/*.txt
-static/js/table.js
 static/data/test/*
+static/js/table.js
+static/js/map.js
+static/css/backup.css
 
 #ignore settings
 rat/local_settings.py
+
+#ignore templates
+templates/map_sidebar.html
+templates/draft_iframe.html
+
+#ignore db
+db.sqlite3
 
 #node and related environment files
 .npmignore

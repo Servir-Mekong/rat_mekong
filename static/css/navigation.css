@@ -36,7 +36,8 @@
 }
 .navigation {
     width: 100%; 
-    background-color: #0f5e9c;
+    background-color: #002984;
+    /* background-color: #0f5e9c; */
 }
 .navbar .navbar-brand .logo {
     width: 65px;

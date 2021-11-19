@@ -1,82 +1,120 @@
-// Sidebar
-var sidebar = document.querySelector("#sidebar"); 
-var sidenavFilter = document.querySelector("#filter");
-var sidenavLayer = document.querySelector("#layer");
-var sidenavBasemap = document.querySelector("#basemap");
-var sidenavOpen = document.querySelector("#open-sidebar"); 
-var sidenavClose = document.querySelector("#close-sidebar"); 
-var sidebarContent = document.querySelector("#sidebar-content");
+/* 
+    ** Map Tab Scripts **
+*/
 
+//Queryselector
+var sidebarContent = document.querySelector('#sidebar-content');
+//var displayHomeSidebarContent = document.querySelector("#home" );
+var displayFilterSidebarContent = document.querySelector("#filter" );
+var displayLayerSidebarContent = document.querySelector("#layer" );
+var displayBasemapSidebarContent = document.querySelector("#basemap" );
+//var closeHomeSidebarContent = document.querySelector("#close-home-content" );
+var closeFilterSidebarContent = document.querySelector("#close-filter-content" );
+var closeLayerSidebarContent = document.querySelector("#close-layer-content" );
+var closeBasemapSidebarContent = document.querySelector("#close-basemap-content" );
+
+//Define map center
 var MapOtions = {
     center: [21.9162, 95.9560],
     zoom: 5,
     zoomControl: false
- }
- var map = L.map('map', MapOtions);
+}
 
-function displaySidebar(){
-    if (sidebarContent.style.display === "none") {
-        sidebarContent.style.display = "block";
-        sidebarContent.style.width = "300px";
-        sidebar.style.marginLeft = "300px";
-        sidenavOpen.style.display = "none"; 
-        sidenavClose.style.display = "block";
+//create map
+var map = L.map('map', MapOtions);
+
+//Set default basemap
+var basemap_layer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+//Change zoom control postion to right
+L.control.zoom({
+    position: 'topright'
+}).addTo(map);
+
+//Add scale control to map
+var scale = L.control.scale({
+    position:'bottomright'
+}).addTo(map);
+
+
+//Onlick expand home sidebar content area
+// displayHomeSidebarContent.onclick = function(){
+//     if (getComputedStyle(sidebarContent).display === "none"){
+//         sidebarContent.style.display ="block";
+//         sidebarContent.style.width = "350px";
+//         sidebarContent.style.marginLeft = "60px";
+//     } else if (sidebarContent.style.display === "block"){
+//         sidebarContent.style.width = "350px";
+//         sidebarContent.style.marginLeft = "60px";
+//     }else {
+//         sidebarContent.style.display = "none";
+//     }
+// }
+
+//Onlick expand filter sidebar content area
+displayFilterSidebarContent.onclick = function(){
+    if (getComputedStyle(sidebarContent).display === "none"){
+        sidebarContent.style.display ="block";
+        sidebarContent.style.width = "350px";
+        sidebarContent.style.marginLeft = "60px";
+    } else if (sidebarContent.style.display === "block"){
+        sidebarContent.style.width = "350px";
+        sidebarContent.style.marginLeft = "60px";
+    }else {
+        sidebarContent.style.display = "none";
+    }
+};
+
+//Onlick expand layer sidebar content area
+displayLayerSidebarContent.onclick = function(){
+    if (getComputedStyle(sidebarContent).display === "none"){
+        sidebarContent.style.display ="block";
+        sidebarContent.style.width = "350px";
+        sidebarContent.style.marginLeft = "60px";
+    } else if (sidebarContent.style.display === "block"){
+        sidebarContent.style.width = "350px";
+        sidebarContent.style.marginLeft = "60px";
     } else {
         sidebarContent.style.display = "none";
-        sidebar.style.marginLeft = 0;
-        sidenavOpen.style.display = "block"; 
-        sidenavClose.style.display = "none";
     }
-};
+}
 
-function displayFilterSidebar(){
-    if (sidebarContent.style.display === "none") {
-        sidebarContent.style.display = "block";
-        sidebarContent.style.width = "300px";
-        sidebar.style.marginLeft = "300px";
-        sidenavOpen.style.display = "none"; 
-        sidenavClose.style.display = "block";
+//Onlick expand basemap sidebar content area
+displayBasemapSidebarContent.onclick=function(){
+    if (getComputedStyle(sidebarContent).display === "none"){
+        sidebarContent.style.display ="block";
+        sidebarContent.style.width = "350px";
+        sidebarContent.style.marginLeft = "60px";
+    } else if (sidebarContent.style.display === "block"){
+        sidebarContent.style.width = "350px";
+        sidebarContent.style.marginLeft = "60px";
     } else {
-        sidebarContent.style.display = "block";
-        sidebar.style.marginLeft = "300px";
-        sidenavOpen.style.display = "none"; 
-        sidenavClose.style.display = "block";
+        sidebarContent.style.display = "none";
     }
-};
-function displayLayerSidebar(){
-    if (sidebarContent.style.display === "none") {
-        sidebarContent.style.display = "block";
-        sidebarContent.style.width = "300px";
-        sidebar.style.marginLeft = "300px";
-        sidenavOpen.style.display = "none"; 
-        sidenavClose.style.display = "block";
-    } else {
-        sidebarContent.style.display = "block";
-        sidebar.style.marginLeft = "300px";
-        sidenavOpen.style.display = "none"; 
-        sidenavClose.style.display = "block";
-    }
-};
-function displayBasemapSidebar(){
-    if (sidebarContent.style.display === "none") {
-        sidebarContent.style.display = "block";
-        sidebarContent.style.width = "300px";
-        sidebar.style.marginLeft = "300px";
-        sidenavOpen.style.display = "none"; 
-        sidenavClose.style.display = "block";
-    } else {
-        sidebarContent.style.display = "block";
-        sidebar.style.marginLeft = "300px";
-        sidenavOpen.style.display = "none"; 
-        sidenavClose.style.display = "block";
-    }
-};
+}
 
-sidenavFilter.addEventListener("click", displayFilterSidebar); 
-sidenavLayer.addEventListener("click", displayLayerSidebar); 
-sidenavBasemap.addEventListener("click", displayBasemapSidebar);
-sidenavOpen.addEventListener("click", displaySidebar);
-sidenavClose.addEventListener("click", displaySidebar);
+// Onclick close sidebar home content area
+// closeHomeSidebarContent.onclick = function(){
+//     sidebarContent.style.display = "none";
+// }
+// Onclick close sidebar home content area
+closeFilterSidebarContent.onclick = function(){
+    sidebarContent.style.display = "none";
+}
+// Onclick close sidebar layer content area
+closeLayerSidebarContent.onclick = function(){
+    sidebarContent.style.display = "none";
+}
+// Onclick close sidebar basemap content area
+closeBasemapSidebarContent.onclick = function(){
+    sidebarContent.style.display = "none";
+}
+
+/* 
+    Filter Panel 
+*/
 
 // Sidebar Dropdown Filter
 var expanded = false;
@@ -87,8 +125,10 @@ function toggle(source) {
         if (checkboxes[i] != source)
             checkboxes[i].checked = source.checked;
     }
-}      
-function showCountries() {
+}    
+
+var filterCountry = document.querySelector("#filter-country");
+filterCountry.onclick = function() {
     var checkboxes = document.getElementById("countryCheckboxes");
     if (!expanded) {
         checkboxes.style.display = "block";
@@ -98,7 +138,8 @@ function showCountries() {
         expanded = false;
     }
 }
-function showRiverBasins() {
+var filterRiverBasin = document.querySelector("#filter-river-basin");
+filterRiverBasin.onclick = function() {
     var checkboxes = document.getElementById("riverBasinCheckboxes");
     if (!expanded) {
         checkboxes.style.display = "block";
@@ -108,160 +149,6 @@ function showRiverBasins() {
         expanded = false;
     }
 }
-/** Sidebar End Dropdown Filter */
-
-var basemap_layer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-
-L.control.zoom({
-    position: 'topright'
-}).addTo(map);
-
-
-$('input[type=radio][name=basemap_selection]').change(function(){
-    var selected_basemap = $(this).val();
-    if(selected_basemap === "osm"){
-        basemap_layer.setUrl('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
-    }else if((selected_basemap === "street")){
-        basemap_layer.setUrl('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}');
-    }else if(selected_basemap === "satellite"){
-        basemap_layer.setUrl('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
-    }else if(selected_basemap === "terrain"){
-        basemap_layer.setUrl('https://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer/tile/{z}/{y}/{x}');
-    }
-    else if(selected_basemap === "topo"){
-        basemap_layer.setUrl('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png');
-    }
-    else if(selected_basemap === "dark"){
-        basemap_layer.setUrl('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png');
-    }
-    else if(selected_basemap === "gray"){
-        basemap_layer.setUrl('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}');
-    }
-}); 
-
-//define admin boundary style
-var mekongBoundaryStyle = {
-    color: "#191970",
-    weight: 1.75,
-    //opacity: 0.6,
-    //fillOpacity: 0.3,
-    fillColor: "none",
-};
-
-var adm0Style = {
-    color: "#6A5ACD",
-    weight: 1.0,
-    //opacity: 0.6,
-    //fillOpacity: 0.3,
-    fillColor: "none",
-};
-
-var gmsriversStyle = {
-    color: "#1E90FF",
-    weight: 0.75,
-};
-var mainriversStyle = {
-    color: "#00008B",
-    weight: 1.5,
-};
-var basinStyle = {
-    color: "#00008B",
-    weight: 1.0,
-    //opacity: 0.6,
-    //fillOpacity: 0.65,
-    //fillColor: "#00008B"
-};
-// highlight admin feature style
-var highlightStyle = {
-    color: '#fff', 
-    weight: 1.0,
-    opacity: 0.6,
-    fillOpacity: 0.65,
-    fillColor: '#2262CC'
-};
-
-//create admin geojson layer
-var mekong_layer = L.geoJson(mekongBoundary, {
-    style: mekongBoundaryStyle,
-    onEachFeature: function(feature, mekongLayer) {
-        mekongLayer.on('mouseover', function (e) {
-            this.setStyle(highlightStyle);
-            this.bindTooltip('Mekong Region');
-        }); 
-        mekongLayer.on('mouseout', function (e) {
-            this.setStyle(mekongBoundaryStyle);
-        });                       
-    } 
-}); 
-
-var adm0_layer = L.geoJson(adm0, {
-    style: adm0Style,
-    onEachFeature: function(feature, admin0Layer) {
-        admin0Layer.on('mouseover', function (e) {
-            this.setStyle(highlightStyle);
-            this.bindTooltip(feature.properties.NAME_0);
-        }); 
-        admin0Layer.on('mouseout', function (e) {
-            this.setStyle(adm0Style);
-        });                   
-    } 
-});
-
-var gms_rivers_layer = L.geoJson(gms_rivers, {
-    style: gmsriversStyle
-});
-var main_rivers_layer = L.geoJson(main_rivers, {
-    style: mainriversStyle
-});
-var sub_basin_layer = L.geoJson(basinData, {
-    style: basinStyle,
-    onEachFeature: function(feature, subbasinLayer) {
-        subbasinLayer.on('mouseover', function (e) {
-            this.setStyle(highlightStyle);
-        }); 
-        subbasinLayer.on('mouseout', function (e) {
-            this.setStyle(basinStyle);
-        });                       
-    } 
-});
-
-$('input[type=checkbox][name=mekong_toggle]').click(function(){
-    if(this.checked) {
-        map.addLayer(mekong_layer);
-    } else {
-        map.removeLayer(mekong_layer);
-    }
-});
-$('input[type=checkbox][name=adm0_toggle]').click(function(){
-    if(this.checked) {
-        map.addLayer(adm0_layer);
-    } else {
-        map.removeLayer(adm0_layer);
-    }
-});
-$('input[type=checkbox][name=gms_rivers_toggle]').click(function(){
-    if(this.checked) {
-        map.addLayer(gms_rivers_layer);
-    } else {
-        map.removeLayer(gms_rivers_layer);
-    }
-});
-$('input[type=checkbox][name=main_rivers_toggle]').click(function(){
-    if(this.checked) {
-        map.addLayer(main_rivers_layer);
-    } else {
-        map.removeLayer(main_rivers_layer);
-    }
-});
-$('input[type=checkbox][name=sub_basin_toggle]').click(function(){
-    if(this.checked) {
-        map.addLayer(sub_basin_layer);
-    } else {
-        map.removeLayer(sub_basin_layer);
-    }
-});
 
 //filter by country
 function filterCambodia(feature) {
@@ -281,6 +168,15 @@ function filterVietnam(feature) {
     return true
 }
 
+// Icon options
+var iconOptions = {
+    iconUrl: '/static/images/marker.png',
+    iconSize: [22, 30]
+  }
+
+// Creating a custom icon
+var customIcon = L.icon(iconOptions);
+
 var cambodia_reservoirs = L.geoJson(reservoirs, {
     filter: filterCambodia,
     //style: Style, 
@@ -290,9 +186,11 @@ var cambodia_reservoirs = L.geoJson(reservoirs, {
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
-        reservoirLayer.on('click', function (e) {
-            this.bindPopup(popupContent);
-        });                       
+        // reservoirLayer.on('click', function (e) {
+        //     this.bindPopup(popupContent);
+        // });  
+        reservoirLayer.bindPopup(popupContent); 
+        reservoirLayer.setIcon(customIcon);                   
     } 
 })
 var laos_reservoirs = L.geoJson(reservoirs, {
@@ -304,9 +202,11 @@ var laos_reservoirs = L.geoJson(reservoirs, {
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
-        reservoirLayer.on('click', function (e) {
-            this.bindPopup(popupContent);
-        });                       
+        // reservoirLayer.on('click', function (e) {
+        //     this.bindPopup(popupContent);
+        // });  
+        reservoirLayer.bindPopup(popupContent);
+        reservoirLayer.setIcon(customIcon);                     
     } 
 })
 var thailand_reservoirs = L.geoJson(reservoirs, {
@@ -318,9 +218,11 @@ var thailand_reservoirs = L.geoJson(reservoirs, {
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
-        reservoirLayer.on('click', function (e) {
-            this.bindPopup(popupContent);
-        });                       
+        // reservoirLayer.on('click', function (e) {
+        //     this.bindPopup(popupContent);
+        // });  
+        reservoirLayer.bindPopup(popupContent); 
+        reservoirLayer.setIcon(customIcon);                    
     } 
 })
 var vietnam_reservoirs = L.geoJson(reservoirs, {
@@ -332,9 +234,11 @@ var vietnam_reservoirs = L.geoJson(reservoirs, {
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
-        reservoirLayer.on('click', function (e) {
-            this.bindPopup(popupContent);
-        });                       
+        // reservoirLayer.on('click', function (e) {
+        //     this.bindPopup(popupContent);
+        // });     
+        reservoirLayer.bindPopup(popupContent);  
+        reservoirLayer.setIcon(customIcon);                  
     } 
 });
 
@@ -345,9 +249,11 @@ var all_reservoirs = L.geoJson(reservoirs, {
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
-        reservoirLayer.on('click', function (e) {
-            this.bindPopup(popupContent);
-        });                       
+        // reservoirLayer.on('click', function (e) {
+        //     this.bindPopup(popupContent);
+        // }); 
+        reservoirLayer.bindPopup(popupContent);  
+        reservoirLayer.setIcon(customIcon);                      
     } 
 }).addTo(map);
 
@@ -445,9 +351,11 @@ var chiRiverLayer = L.geoJson(reservoirs, {
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
-        reservoirLayer.on('click', function (e) {
-            this.bindPopup(popupContent);
-        });                       
+        // reservoirLayer.on('click', function (e) {
+        //     this.bindPopup(popupContent);
+        // });   
+        reservoirLayer.bindPopup(popupContent);    
+        reservoirLayer.setIcon(customIcon);                  
     } 
 });
 
@@ -460,9 +368,11 @@ var lamDomNoiRiverLayer = L.geoJson(reservoirs, {
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
-        reservoirLayer.on('click', function (e) {
-            this.bindPopup(popupContent);
-        });                       
+        // reservoirLayer.on('click', function (e) {
+        //     this.bindPopup(popupContent);
+        // });  
+        reservoirLayer.bindPopup(popupContent);    
+        reservoirLayer.setIcon(customIcon);                   
     } 
 });
 
@@ -475,9 +385,11 @@ var namGnongRiverLayer = L.geoJson(reservoirs, {
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
-        reservoirLayer.on('click', function (e) {
-            this.bindPopup(popupContent);
-        });                       
+        // reservoirLayer.on('click', function (e) {
+        //     this.bindPopup(popupContent);
+        // }); 
+        reservoirLayer.bindPopup(popupContent);    
+        reservoirLayer.setIcon(customIcon);                  
     } 
 });
 var namNgumRiverLayer = L.geoJson(reservoirs, {
@@ -489,9 +401,11 @@ var namNgumRiverLayer = L.geoJson(reservoirs, {
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
-        reservoirLayer.on('click', function (e) {
-            this.bindPopup(popupContent);
-        });                       
+        // reservoirLayer.on('click', function (e) {
+        //     this.bindPopup(popupContent);
+        // });  
+        reservoirLayer.bindPopup(popupContent);   
+        reservoirLayer.setIcon(customIcon);                    
     } 
 });
 var namPongRiverLayer = L.geoJson(reservoirs, {
@@ -503,9 +417,11 @@ var namPongRiverLayer = L.geoJson(reservoirs, {
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
-        reservoirLayer.on('click', function (e) {
-            this.bindPopup(popupContent);
-        });                       
+        // reservoirLayer.on('click', function (e) {
+        //     this.bindPopup(popupContent);
+        // });  
+        reservoirLayer.bindPopup(popupContent);    
+        reservoirLayer.setIcon(customIcon);                   
     } 
 });
 var namTheunRiverLayer = L.geoJson(reservoirs, {
@@ -517,9 +433,11 @@ var namTheunRiverLayer = L.geoJson(reservoirs, {
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
-        reservoirLayer.on('click', function (e) {
-            this.bindPopup(popupContent);
-        });                       
+        // reservoirLayer.on('click', function (e) {
+        //     this.bindPopup(popupContent);
+        // }); 
+        reservoirLayer.bindPopup(popupContent);   
+        reservoirLayer.setIcon(customIcon);                     
     } 
 });
 var sesanRiverLayer = L.geoJson(reservoirs, {
@@ -531,9 +449,11 @@ var sesanRiverLayer = L.geoJson(reservoirs, {
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
-        reservoirLayer.on('click', function (e) {
-            this.bindPopup(popupContent);
-        });                       
+        // reservoirLayer.on('click', function (e) {
+        //     this.bindPopup(popupContent);
+        // });
+        reservoirLayer.bindPopup(popupContent);        
+        reservoirLayer.setIcon(customIcon);                 
     } 
 });
 var seSanRiverLayer = L.geoJson(reservoirs, {
@@ -545,9 +465,11 @@ var seSanRiverLayer = L.geoJson(reservoirs, {
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
-        reservoirLayer.on('click', function (e) {
-            this.bindPopup(popupContent);
-        });                       
+        // reservoirLayer.on('click', function (e) {
+        //     this.bindPopup(popupContent);
+        // }); 
+        reservoirLayer.bindPopup(popupContent);  
+        reservoirLayer.setIcon(customIcon);                     
     } 
 });
 
@@ -642,10 +564,225 @@ $('input[type=checkbox][name=seSan]').click(function(){
     }
 });
 
-var scale = L.control.scale({
-    position:'bottomright'
-}).addTo(map);
+/** End Filter Panel */
 
+/** 
+    Layer Panel
+*/
+
+//Define Mekong region boundary style
+var mekongBoundaryStyle = {
+    color: "#191970",
+    weight: 1.75,
+    //opacity: 0.6,
+    //fillOpacity: 0.3,
+    fillColor: "none",
+};
+
+//Define country boundary style
+var adm0Style = {
+    color: "#6A5ACD",
+    weight: 1.0,
+    //opacity: 0.6,
+    //fillOpacity: 0.3,
+    fillColor: "none",
+};
+
+var gmsriversStyle = {
+    color: "#1E90FF",
+    weight: 0.75,
+};
+var mainriversStyle = {
+    color: "#00008B",
+    weight: 1.5,
+};
+var basinStyle = {
+    color: "#018786",
+    weight: 1.0,
+    //opacity: 0.6,
+    //fillOpacity: 0.65,
+    fillColor: "none",
+};
+//Highlight feature style
+var highlightStyle = {
+    color: '#fff', 
+    weight: 1.0,
+    opacity: 0.6,
+    fillOpacity: 0.65,
+    //fillColor: '#2262CC'
+};
+
+//Create admin geojson layer
+var mekong_layer = L.geoJson(mekongBoundary, {
+    style: mekongBoundaryStyle,
+    onEachFeature: function(feature, mekongLayer) {
+        mekongLayer.on('mouseover', function (e) {
+            this.setStyle(highlightStyle);
+            this.bindTooltip('Mekong Region');
+        }); 
+        mekongLayer.on('mouseout', function (e) {
+            this.setStyle(mekongBoundaryStyle);
+        });                       
+    } 
+}); 
+
+var adm0_layer = L.geoJson(adm0, {
+    style: adm0Style,
+    onEachFeature: function(feature, admin0Layer) {
+
+        admin0Layer.bindPopup(feature.properties.NAME_0);
+        // admin0Layer.on('mouseover', function (e) {
+        //     this.setStyle(highlightStyle);
+        //     this.bindTooltip(feature.properties.NAME_0);
+        // }); 
+        // admin0Layer.on('mouseout', function (e) {
+        //     this.setStyle(adm0Style);
+        // });                   
+    } 
+});
+
+var gms_rivers_layer = L.geoJson(gms_rivers, {
+    style: gmsriversStyle
+});
+var main_rivers_layer = L.geoJson(main_rivers, {
+    style: mainriversStyle
+});
+var sub_basin_layer = L.geoJson(basinData, {
+    style: basinStyle,
+});
+
+$('input[type=checkbox][name=mekong_toggle]').click(function(){
+    if(this.checked) {
+        map.addLayer(mekong_layer);
+    } else {
+        map.removeLayer(mekong_layer);
+    }
+});
+$('input[type=checkbox][name=adm0_toggle]').click(function(){
+    if(this.checked) {
+        map.addLayer(adm0_layer);
+    } else {
+        map.removeLayer(adm0_layer);
+    }
+});
+$('input[type=checkbox][name=gms_rivers_toggle]').click(function(){
+    if(this.checked) {
+        map.addLayer(gms_rivers_layer);
+    } else {
+        map.removeLayer(gms_rivers_layer);
+    }
+});
+$('input[type=checkbox][name=main_rivers_toggle]').click(function(){
+    if(this.checked) {
+        map.addLayer(main_rivers_layer);
+    } else {
+        map.removeLayer(main_rivers_layer);
+    }
+});
+$('input[type=checkbox][name=sub_basin_toggle]').click(function(){
+    if(this.checked) {
+        map.addLayer(sub_basin_layer);
+    } else {
+        map.removeLayer(sub_basin_layer);
+    }
+});
+/** End Layer Panel */
+
+/* 
+    Basemap Panel
+*/
+
+//Onclick change basemap active class
+$(document).ready(function() {
+    $(".basemap-card").click(function () {
+        $(".basemap-card").removeClass("active");
+        // $(".tab").addClass("active"); // instead of this do the below 
+        $(this).addClass("active");   
+    });
+});
+
+//Onclick switch basemap 
+$('#nav-basemap div').on('click', function(e) {
+    var selected_basemap = this.getAttribute('data-layer');
+    //MapBox Basemap
+    // if((selected_basemap === "street")){
+    //     basemap_layer.setUrl('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}');
+    // }else if(selected_basemap === "osm"){
+    //     basemap_layer.setUrl('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+    // }else if(selected_basemap === "osm"){
+    //     basemap_layer.setUrl('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+    // }else if(selected_basemap === "osm"){
+    //     basemap_layer.setUrl('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+    // }else if(selected_basemap === "osm"){
+    //     basemap_layer.setUrl('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+    // }else 
+    if(selected_basemap === "osm"){
+        basemap_layer.setUrl('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+        
+    }else if((selected_basemap === "street")){
+        basemap_layer.setUrl('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}');
+    }else if(selected_basemap === "satellite"){
+        basemap_layer.setUrl('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
+    }else if(selected_basemap === "terrain"){
+        basemap_layer.setUrl('https://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer/tile/{z}/{y}/{x}');
+    }
+    else if(selected_basemap === "topo"){
+        basemap_layer.setUrl('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png');
+    }
+    else if(selected_basemap === "dark"){
+        basemap_layer.setUrl('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png');
+    }
+    else if(selected_basemap === "gray"){
+        basemap_layer.setUrl('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}');
+    } 
+});
+/** End Basemap Panel */
+
+/** 
+    ** Add GeoJSON Layer Search Bar ** 
+*/
+var searchControl = new L.Control.Search({
+    //container: 'findbox',
+    layer: all_reservoirs,
+    propertyName: 'Name',
+    position: 'topright',
+    zoom: 13,
+    marker: {						//custom L.Marker or false for hide
+        icon: false,				//custom L.Icon for maker location or false for hide
+        animate: true,				//animate a circle over location found
+        circle: {					//draw a circle in location found
+            radius: 0,
+            weight: 0,
+            color: 'blue',
+            stroke: true,
+            fill: true
+        }
+    }
+});
+
+var resetStyle = {
+    color: 'none', 
+    radius: 0,
+    weight: 0,
+    opacity: 0,
+    stroke: false,
+    fill: false
+}
+searchControl.on('search:locationfound', function(e) {
+    if(e.layer._popup)
+        e.layer.openPopup();
+}).on('search:collapsed', function(e) {
+    all_reservoirs.eachLayer(function(layer) {	//restore feature color
+        layer.setStyle(resetStyle);
+    });	
+});
+
+map.addControl( searchControl );  //inizialize search control
+/** End Search Panel */
+
+/** 
+    ** Table Tab Scripts **
+*/
 
 //AEC Table
 document.addEventListener('DOMContentLoaded', function () {
@@ -660,15 +797,31 @@ document.addEventListener('DOMContentLoaded', function () {
             'pageLength', 'print', 'excel', 'csv', 'pdf'
         ],
         columns: [
-            { "data": "id" },
-            { "data": "name" },
-            { "data": "elevation" },
-            { "data": "cum_area" },
+            //{ "data": "id" },
             { "data": "country" },
-            { "data": "river" },            
-        ]
+            { "data": "name" },
+            { "data": "river" },
+            { "data": "elevation" },
+            { "data": "cum_area" },                                  
+        ],
+        order: [[ 0, 'asc'], [ 1, 'asc'], [ 2, 'asc']]
     });
 });
+
+//Filter AEC by country
+$(document).ready(function() {
+    var table =  $('#aec').DataTable();    
+    $('#aec_country').on('change', function () {
+        table.columns(0).search( this.value ).draw();
+    });
+});
+//Filter AEC by river basin
+$(document).ready(function() {
+    var table =  $('#aec').DataTable();    
+    $('#aec_river_basin').on('change', function () {
+        table.columns(2).search( this.value ).draw();
+    });
+ });
 
 //deltas Table
 document.addEventListener('DOMContentLoaded', function () {
@@ -683,15 +836,32 @@ document.addEventListener('DOMContentLoaded', function () {
             'pageLength', 'print', 'excel', 'csv', 'pdf'
         ],
         columns: [
-            { "data": "id" },
-            { "data": "name" },
-            { "data": "date" },
-            { "data": "deltas" },
+            // { "data": "id" },
             { "data": "country" },
-            { "data": "river" },            
-        ]
+            { "data": "name" },
+            { "data": "river" },
+            { "data": "date" },
+            { "data": "deltas" },              
+        ],
+        columnDefs: [ { type: 'date', 'targets': [3] } ],
+        order: [[ 0, 'asc'], [ 1, 'asc'], [ 2, 'asc'], [ 3, 'desc' ]]
     });
 });
+
+//Filter deltas by country
+$(document).ready(function() {
+    var table =  $('#deltas').DataTable();    
+    $('#deltas_country').on('change', function () {
+        table.columns(0).search( this.value ).draw();
+    });
+});
+//Filter deltas by river basin
+$(document).ready(function() {
+    var table =  $('#deltas').DataTable();    
+    $('#deltas_river_basin').on('change', function () {
+        table.columns(2).search( this.value ).draw();
+    });
+ });
 
 //Inflow Table
 document.addEventListener('DOMContentLoaded', function () {
@@ -706,15 +876,32 @@ document.addEventListener('DOMContentLoaded', function () {
             'pageLength', 'print', 'excel', 'csv', 'pdf'
         ],
         columns: [
-            { "data": "id" },
-            { "data": "name" },
-            { "data": "date" },
-            { "data": "inflow_cumecs" },
+            // { "data": "id" },
             { "data": "country" },
-            { "data": "river" },            
-        ]
+            { "data": "name" },
+            { "data": "river" },
+            { "data": "date" },
+            { "data": "inflow_cumecs" },                        
+        ],
+        columnDefs: [ { type: 'date', 'targets': [3] } ],
+        order: [[ 0, 'asc'], [ 1, 'asc'], [ 2, 'asc'], [ 3, 'desc' ]]
     });
 });
+
+//Filter inflow by country
+$(document).ready(function() {
+    var table =  $('#inflow').DataTable();    
+    $('#inflow_country').on('change', function () {
+        table.columns(0).search( this.value ).draw();
+    });
+});
+//Filter inflow by river basin
+$(document).ready(function() {
+    var table =  $('#inflow').DataTable();    
+    $('#inflow_river_basin').on('change', function () {
+        table.columns(2).search( this.value ).draw();
+    });
+ });
 
 //Outflow Table
 document.addEventListener('DOMContentLoaded', function () {
@@ -729,15 +916,32 @@ document.addEventListener('DOMContentLoaded', function () {
             'pageLength', 'print', 'excel', 'csv', 'pdf'
         ],
         columns: [
-            { "data": "id" },
-            { "data": "name" },
-            { "data": "date" },
-            { "data": "outflow_cumecs" },
+            // { "data": "id" },
             { "data": "country" },
-            { "data": "river" },            
-        ]
+            { "data": "name" },
+            { "data": "river" },
+            { "data": "date" },
+            { "data": "outflow_cumecs" },                                  
+        ],
+        columnDefs: [ { type: 'date', 'targets': [3] } ],
+        order: [[ 0, 'asc'], [ 1, 'asc'], [ 2, 'asc'], [ 3, 'desc' ]]
     });
 });
+
+//Filter outflow by country
+$(document).ready(function() {
+    var table =  $('#outflow').DataTable();    
+    $('#outflow_country').on('change', function () {
+        table.columns(0).search( this.value ).draw();
+    });
+});
+//Filter outflow by river basin
+$(document).ready(function() {
+    var table =  $('#outflow').DataTable();    
+    $('#outflow_river_basin').on('change', function () {
+        table.columns(2).search( this.value ).draw();
+    });
+ });
 
 //Surface Area Table
 document.addEventListener('DOMContentLoaded', function () {
@@ -752,15 +956,32 @@ document.addEventListener('DOMContentLoaded', function () {
             'pageLength', 'print', 'excel', 'csv', 'pdf'
         ],
         columns: [
-            { "data": "id" },
-            { "data": "name" },
-            { "data": "date" },
-            { "data": "surface_area_sqkm" },
+            // { "data": "id" },
             { "data": "country" },
-            { "data": "river" },            
-        ]
+            { "data": "name" },
+            { "data": "river" },
+            { "data": "date" },
+            { "data": "surface_area_sqkm" },                                    
+        ],
+        columnDefs: [ { type: 'date', 'targets': [3] } ],
+        order: [[ 0, 'asc'], [ 1, 'asc'], [ 2, 'asc'], [ 3, 'desc' ]]
     });
 });
+
+//Filter surface_area by country
+$(document).ready(function() {
+    var table =  $('#surface_area').DataTable();    
+    $('#sarea_country').on('change', function () {
+        table.columns(0).search( this.value ).draw();
+    });
+});
+//Filter surface_area by river basin
+$(document).ready(function() {
+    var table =  $('#surface_area').DataTable();    
+    $('#sarea_river_basin').on('change', function () {
+        table.columns(2).search( this.value ).draw();
+    });
+ });
 
 //Rule Curve Table
 document.addEventListener('DOMContentLoaded', function () {
@@ -775,8 +996,10 @@ document.addEventListener('DOMContentLoaded', function () {
             'pageLength', 'print', 'excel', 'csv', 'pdf'
         ],
         columns: [
-            { "data": "id" },
+            // { "data": "id" },
+            { "data": "country" },
             { "data": "name" },
+            { "data": "river" }, 
             { "data": "January" },
             { "data": "February" },
             { "data": "March" },
@@ -788,17 +1011,23 @@ document.addEventListener('DOMContentLoaded', function () {
             { "data": "September" },
             { "data": "October" },
             { "data": "November" },
-            { "data": "December" },
-            { "data": "country" },
-            { "data": "river" },            
-        ]
+            { "data": "December" }           
+        ],
+        order: [[ 0, 'asc'], [ 1, 'asc'], [ 2, 'asc']]
     });
 });
 
-
-
-
-          
-          
-          
-        
+//Filter rcurve by country
+$(document).ready(function() {
+    var table =  $('#rcurve').DataTable();    
+    $('#rcurve_country').on('change', function () {
+        table.columns(0).search( this.value ).draw();
+    });
+});
+//Filter rcurve by river basin
+$(document).ready(function() {
+    var table =  $('#rcurve').DataTable();    
+    $('#rcurve_river_basin').on('change', function () {
+        table.columns(2).search( this.value ).draw();
+    });
+});
