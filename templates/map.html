@@ -272,40 +272,6 @@
     <!-- Table Tab -->
     <div class="tab-pane fade" id="pills-table" role="tabpanel" aria-labelledby="pills-table-tab">
         <div class="container mt-5 mb-5">  
-            <!-- Filter by Reservoir Shape -->
-            <!-- <div class="card ms-3 me-3 border-0">
-                    <div class="card-body border-0">
-                        <h6 class="fw-bold">Filter by Reservoir Shape</h6>
-                        <p class="fw-bold mt-2">
-                            <select class="form-select js-example-basic-multiple" name="states[]" data-placeholder="-- Show All --" multiple="multiple">
-                                <option value="all" selected>Select All</option>
-                                <option value="cambodia">Cambodia</option>
-                                <option value="WY">Lao PDR</option>
-                                <option value="WY">Thailand</option>
-                                <option value="WY">Vietnam</option>
-                            </select>  
-                            <span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
-                        </p>    
-                    </div>
-                </div> -->
-            <!-- Filter by Filter by Storage Change -->
-            <!-- <div class="card ms-3 me-3 border-0">
-                    <div class="card-body border-0">
-                        <h6 class="fw-bold">Filter by Storage Change</h6>
-                        <p class="fw-bold mt-2">
-                            <select class="form-select js-example-basic-multiple" name="states[]" data-placeholder="-- Show All --" multiple="multiple">
-                                <option value="all" selected>Select All</option>
-                                <option value="cambodia">Cambodia</option>
-                                <option value="WY">Lao PDR</option>
-                                <option value="WY">Thailand</option>
-                                <option value="WY">Vietnam</option>
-                            </select>  
-                            <span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Select your preferred country from the dropdown list. By default, we selects all countries."><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
-                        </p>    
-                    </div>
-                </div> 
-            </div>-->
-
             <ul class="nav nav-pills mb-5" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="pills-aec-tab" data-bs-toggle="pill" data-bs-target="#pills-aec"
@@ -337,9 +303,9 @@
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-aec" role="tabpanel" aria-labelledby="pills-aec-tab">
                     <div class="row mb-5">
+                        <!-- Filter Area Elevation Curve by Country -->
                         <div class="col-md-6">
-                            <!-- Filter by Country -->
-                            <h6 class="fw-bold">Filter by River Basin<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by country"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                            <h6 class="fw-bold">Filter by Country<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by country"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
                             <select id="aec_country" class="form-select" aria-label="Default select country">
                                 <option value="" selected>-- Show All --</option>
                                 <option value="Cambodia">Cambodia</option>
@@ -348,6 +314,7 @@
                                 <option value="Vietnam">Vietnam</option>
                             </select>
                         </div>
+                        <!-- Filter Area Elevation Curve by River Basin -->
                         <div class="col-md-6">
                             <h6 class="fw-bold">Filter by River Basin<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by river basin"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
                             <select id="aec_river_basin" class="form-select" aria-label="Default select country">
@@ -378,9 +345,9 @@
                 </div>
                 <div class="tab-pane fade" id="pills-deltas" role="tabpanel" aria-labelledby="pills-deltas-tab">
                     <div class="row mb-5">
+                        <!-- Filter Storage Change by Country -->
                         <div class="col-md-6">
-                            <!-- Filter by Country -->
-                            <h6 class="fw-bold">Filter by River Basin<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by country"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                            <h6 class="fw-bold">Filter by Country<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by country"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
                             <select id="deltas_country" class="form-select" aria-label="Default select country">
                                 <option value="" selected>-- Show All --</option>
                                 <option value="Cambodia">Cambodia</option>
@@ -389,6 +356,7 @@
                                 <option value="Vietnam">Vietnam</option>
                             </select>
                         </div>
+                        <!-- Filter Storage Change by River Basin -->
                         <div class="col-md-6">
                             <h6 class="fw-bold">Filter by River Basin<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by river basin"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
                             <select id="deltas_river_basin" class="form-select" aria-label="Default select country">
@@ -419,9 +387,9 @@
                 </div>
                 <div class="tab-pane fade" id="pills-inflow" role="tabpanel" aria-labelledby="pills-inflow-tab">
                     <div class="row mb-5">
+                        <!-- Filter Inflow by Country -->
                         <div class="col-md-6">
-                            <!-- Filter by Country -->
-                            <h6 class="fw-bold">Filter by River Basin<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by country"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                            <h6 class="fw-bold">Filter by Country<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by country"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
                             <select id="inflow_country" class="form-select" aria-label="Default select country">
                                 <option value="" selected>-- Show All --</option>
                                 <option value="Cambodia">Cambodia</option>
@@ -430,6 +398,7 @@
                                 <option value="Vietnam">Vietnam</option>
                             </select>
                         </div>
+                        <!-- Filter Inflow by River Basin -->
                         <div class="col-md-6">
                             <h6 class="fw-bold">Filter by River Basin<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by river basin"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
                             <select id="inflow_river_basin" class="form-select" aria-label="Default select country">
@@ -460,9 +429,9 @@
                 </div>
                 <div class="tab-pane fade" id="pills-outflow" role="tabpanel" aria-labelledby="pills-outflow-tab">
                     <div class="row mb-5">
+                        <!-- Filter Outflow by Country -->
                         <div class="col-md-6">
-                            <!-- Filter by Country -->
-                            <h6 class="fw-bold">Filter by River Basin<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by country"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                            <h6 class="fw-bold">Filter by Country<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by country"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
                             <select id="outflow_country" class="form-select" aria-label="Default select country">
                                 <option value="" selected>-- Show All --</option>
                                 <option value="Cambodia">Cambodia</option>
@@ -471,6 +440,7 @@
                                 <option value="Vietnam">Vietnam</option>
                             </select>
                         </div>
+                        <!-- Filter Outflow by River Basin -->
                         <div class="col-md-6">
                             <h6 class="fw-bold">Filter by River Basin<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by river basin"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
                             <select id="outflow_river_basin" class="form-select" aria-label="Default select country">
@@ -501,9 +471,9 @@
                 </div>
                 <div class="tab-pane fade" id="pills-sarea" role="tabpanel" aria-labelledby="pills-sarea-tab">
                     <div class="row mb-5">
+                        <!-- Filter Surface Area by Country -->
                         <div class="col-md-6">
-                            <!-- Filter by Country -->
-                            <h6 class="fw-bold">Filter by River Basin<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by country"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                            <h6 class="fw-bold">Filter by Country<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by country"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
                             <select id="sarea_country" class="form-select" aria-label="Default select country">
                                 <option value="" selected>-- Show All --</option>
                                 <option value="Cambodia">Cambodia</option>
@@ -512,6 +482,7 @@
                                 <option value="Vietnam">Vietnam</option>
                             </select>
                         </div>
+                        <!-- Filter Surface Area by River Basin -->
                         <div class="col-md-6">
                             <h6 class="fw-bold">Filter by River Basin<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by river basin"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
                             <select id="sarea_river_basin" class="form-select" aria-label="Default select country">
@@ -542,9 +513,9 @@
                 </div>
                 <div class="tab-pane fade" id="pills-rcurve" role="tabpanel" aria-labelledby="pills-rcurve-tab">
                     <div class="row mb-5">
+                        <!-- Filter Rule Curve by Country -->
                         <div class="col-md-6">
-                            <!-- Filter by Country -->
-                            <h6 class="fw-bold">Filter by River Basin<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by country"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                            <h6 class="fw-bold">Filter by Country<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by country"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
                             <select id="rcurve_country" class="form-select" aria-label="Default select country">
                                 <option value="" selected>-- Show All --</option>
                                 <option value="Cambodia">Cambodia</option>
@@ -553,6 +524,7 @@
                                 <option value="Vietnam">Vietnam</option>
                             </select>
                         </div>
+                        <!-- Filter Rule Curve by River Basin -->
                         <div class="col-md-6">
                             <h6 class="fw-bold">Filter by River Basin<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by river basin"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
                             <select id="rcurve_river_basin" class="form-select" aria-label="Default select country">

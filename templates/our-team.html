@@ -1,21 +1,22 @@
 {% load static %}
 <!-- Our Team Section -->
-<div class="row">
-    <h3 class="text-center fw-bold fs-2 my-5">Our Team</h3>
+<div class="row mt-5 mb-5">
+    <h3 class="text-center fw-bold fs-2 mt-5 mb-0">Our Team</h3>
+    <p class="text-center fw-bold fs-2 mb-5 mt-0">___</p>
     {% for tm in team_list %}
-        {% if forloop.counter0|divisibleby:3 and not forloop.first %}<div class="cal-md-12"></div>{% endif %}
+        {% if forloop.counter0|divisibleby:4 and not forloop.first %}<div class="cal-md-12"></div>{% endif %}
         <div class="col-md-3 mt-5">
-        <div class="card" style="width: 18rem;">
-            <a href="{% url 'team-detail' tm.slug %}"><img src="{{tm.img.url}}" class="card-img-top" height="300px" width="250px" alt="{{tm.name}}"></a>
-            <div class="card-body text-center">
-            <h5 class="card-title fw-bold"><a href="{% url 'team-detail' tm.slug %}">{{tm.name}}</a></h5>
-            <p class="card-text">{{tm.position}}</p>
-            <p class="pt-3">
-                <a class="btn btn-primary" href="{{tm.website}}" target="_blank" role="button"><i class="fa fa-globe"></i></a>
-                <a class="btn btn-primary" href="#" target="_blank" role="button"><i class="fab fa-linkedin"></i></a>
-            </p>
+            <div class="card border-1 text-center shadow-lg p-3 mb-5 bg-body rounded">  
+                <div class="card-body text-center">
+                    <a href="{% url 'team-detail' tm.slug %}"><img src="{{tm.img.url}}" class="circular--square" width="150" alt="{{tm.name}}"></a>
+                    <h5 class="card-title fw-bold mt-3"><a href="{% url 'team-detail' tm.slug %}">{{tm.name}}</a></h5>
+                    <p class="card-text">{{tm.position}}</p>
+                    <p class="pt-3">
+                        <a class="btn btn-primary" href="{{tm.website}}" target="_blank" role="button"><i class="fa fa-globe"></i></a>
+                        <a class="btn btn-primary" href="{{tm.linkedin}}" target="_blank" role="button"><i class="fab fa-linkedin"></i></a>
+                    </p>
+                </div>
             </div>
-        </div>
         </div>
     {% endfor %}
 </div>

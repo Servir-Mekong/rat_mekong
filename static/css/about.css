@@ -1,4 +1,20 @@
-.carousel-caption{
+/* Container holding the image and the text */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/hero-img.jpg");
+    /* Set a specific height */
+    height: 25%;
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+  
+/* Centered text */
+.hero-title {
+    position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
 }

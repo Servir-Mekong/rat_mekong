@@ -18,7 +18,7 @@ templates/map_sidebar.html
 templates/draft_iframe.html
 
 #ignore db
-db.sqlite3
+*.sqlite3
 
 #node and related environment files
 .npmignore

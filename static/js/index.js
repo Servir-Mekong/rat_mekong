@@ -15,8 +15,8 @@ var closeBasemapSidebarContent = document.querySelector("#close-basemap-content"
 
 //Define map center
 var MapOtions = {
-    center: [21.9162, 95.9560],
-    zoom: 5,
+    center: [15.5162, 102.9560],
+    zoom: 6,
     zoomControl: false
 }
 

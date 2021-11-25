@@ -6,27 +6,26 @@
 {% block container %} 
 {% include 'navigation.html' %}
 
-<div class="container">
-    <div class="row mt-5 mb-5">
+<div class="container team-details">
+    <div class="row">
       <div class="col-md-1"></div>
       <div class="col-md-3">
-        <div class="card">
-          
+        <div class="card text-center border-0"> 
           <div class="card-body">
-            <img src="{{object.img.url}}" class="card-img-top" height="300px" width="250px" alt="{{object.name}}">
+            <img src="{{object.img.url}}" width="200" alt="{{object.name}}">
             <h5 class="card-title fw-bold pt-4">{{object.name}}</h5>
             <p class="card-text">{{object.position}}</p>
             <p class="pt-1">
               <a class="btn btn-primary" href="{{tm.website}}" target="_blank" role="button"><i class="fa fa-globe"></i></a>
-              <a class="btn btn-primary" href="#" target="_blank" role="button"><i class="fab fa-linkedin"></i></a>
+              <a class="btn btn-primary" href="{{tm.linkedin}}" target="_blank" role="button"><i class="fab fa-linkedin"></i></a>
             </p>
           </div>
         </div>
       </div>
       <div class="col-md-6">
-        <div class="card card-body ps-3 mt-0 pt-0"></div>
+        <div class="card card-body border-0 mt-0 pt-0">
           <p class="card-text fs-5 ps-3 pt-0 mt-0">{{object.about}}</p>
-        </div>
+        </div>   
       </div> 
     </div>
     <div class="col-md-2"></div>

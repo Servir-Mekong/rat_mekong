@@ -57,17 +57,20 @@
     <div class="container mb-0 pb-0">
         <nav class="navbar navbar-expand-lg mb-0 pb-0">
             <a class="navbar-brand ms-0 ps-0" href="/">
-                <!-- <img class="logo" src="{% static 'images/rat-logo.png' %}"> -->
                 Reservoir Assessment Tool – Mekong
             </a>
             <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerMenu" aria-controls="navbarTogglerMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span><i class="fa fa-bars text-white"></i></span>
+                <span><i class="fa fa-bars text-white"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerMenu">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     {% url 'home' as homePage %} 
                     <li class="nav-item {% if request.path == homePage %}active{% endif %}">
                         <a class="nav-link" href="{{ homePage }}">Home</a>
+                    </li>
+                    {% url 'about-mrc' as aboutMRCPage %}
+                    <li class="nav-item {% if request.path == aboutMRCPage %}active{% endif %}">
+                        <a class="nav-link" href="{{ aboutMRCPage }}">About MRC</a>
                     </li>
                     {% url 'about' as aboutPage %}
                     <li class="nav-item {% if request.path == aboutPage %}active{% endif %}">
@@ -78,8 +81,16 @@
                         <a class="nav-link" href="{{  mapPage }}">Map Viewer</a>
                     </li>
                     {% url 'user-guide' as userGuidePage %}
-                    <li class="nav-item {% if request.path == userGuidePage %}active{% endif %}">
-                        <a class="nav-link" href="http://depts.washington.edu/saswe/rat_beta/RAT_UserManual_V1.01.pdf" target="_blank">User Guide</a>
+                    <li class="nav-item dropdown {% if request.path == userGuidePage %}active{% endif %}">
+                        <a class="nav-link dropdown-toggle" href="{}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          User Materials
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="{%static 'docs/210226 Concept Note_Mekong Reservoir Assessment Tool (RAT).docx' %}">Concept Note</a></li>
+                          <li><a class="dropdown-item" href="{%static 'docs/210920 Working Paper 1v3_RAT-Mekong.docx' %}">Working Paper</a></li>
+                          <li><a class="dropdown-item" href="https://saswe.net/publications/RATPaper.pdf" target="_blank">Research Paper</a></li>
+                          <li><a class="dropdown-item" href="{%static 'docs/211118 Working Paper 2v1_RAT-Mekong.docx' %}">User Manual</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>

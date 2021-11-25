@@ -5,7 +5,6 @@ from django.views.generic.list import ListView
 from .models import Team
 
 class TeamDetailView(DetailView):
-
     model = Team
     template_name = 'team-details.html'
 
@@ -33,11 +32,15 @@ class TeamList(ListView):
 # class HomePage(TemplateView):
 #     template_name = "home.html"
 
-class MapPage(TemplateView):
-    template_name = "map.html"
+class AboutMRCPage(TemplateView):
+    template_name = "about-mrc.html"
 
 class AboutPage(TemplateView):
     template_name = "about.html"
+
+class MapPage(TemplateView):
+    template_name = "map.html"
+
 
 class UserGuidePage(TemplateView):
     template_name = "user-guide.html"

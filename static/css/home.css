@@ -10,5 +10,25 @@
     align-items: center;
     text-align: center;
     background-size: cover;
+    position: relative;
 } 
-   
+.carousel-caption {
+    text-align: center;
+    margin-bottom: calc(100vh - 60vh);
+}
+.btn-caption{
+    background-color: cornsilk;
+    color: black;
+    opacity: 0.6;
+    font-weight: bold;
+    font-size: 25px;
+}
+.team .card{
+    border-radius: 0 !important;
+    border: 0 !important;
+    background-color: beige;
+}
+.team-details{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
