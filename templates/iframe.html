@@ -16,6 +16,8 @@
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/highcharts-more.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/offline-exporting.js"></script>  
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
 
     <!-- reading parameter values -->
     <script>
@@ -32,9 +34,9 @@
       }
 
       var station = getParamValue("stationid");
+      var country = getParamValue("countryname");
+      var rbasin = getParamValue("riverbasin");
       var resname = getParamValue("reservoirname");
-      //var damname = getParamValue("damname");
-      //var river = getParamValue("river");
 
       // Reading Area Elevation Curve
       function aecdata() {
@@ -85,7 +87,7 @@
           },
           subtitle: {
             text:
-              "ID: " + station + ", Reservoir: " + decodeURIComponent(resname),
+              "Reservoir: " + decodeURIComponent(resname) + ", River Basin: " + decodeURIComponent(rbasin) + ", Country: " + decodeURIComponent(country),
             style: {
               font: "18px Times New Roman, sans-serif",
               color: "#000000",

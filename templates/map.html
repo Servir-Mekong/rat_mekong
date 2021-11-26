@@ -36,26 +36,42 @@
             <nav>
                 <div class="nav nav-tabs flex-column" id="nav-tab" role="tablist">
                     <!-- <button class="nav-link active pt-3 pb-3" id="home" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="false" data-bs-toggle="tooltip" data-bs-placement="right" title="Menu"><i class="fas fa-bars fa-lg"></i></button> -->
-                    <button class="nav-link active pt-3 pb-3" id="filter" data-bs-toggle="tab" data-bs-target="#nav-filter" type="button" role="tab" aria-controls="nav-filter" aria-selected="false" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter Panel"><i class="fas fa-filter fa-lg"></i></button>
-                    <button class="nav-link pt-3 pb-3" id="layer" data-bs-toggle="tab" data-bs-target="#nav-layer" type="button" role="tab" aria-controls="nav-layer" aria-selected="false" data-bs-toggle="tooltip" data-bs-placement="right" title="Layer Panel"><i class="fas fa-layer-group fa-lg"></i></button>
-                    <button class="nav-link pt-3 pb-3" id="basemap" data-bs-toggle="tab" data-bs-target="#nav-basemap" type="button" role="tab" aria-controls="nav-basemap" aria-selected="false" data-bs-toggle="tooltip" data-bs-placement="right" title="Basemap Style"><i class="fa fa-globe fa-lg"></i></button>
+                    <button class="nav-link pt-3 pb-3" id="filter" data-bs-toggle="tab"
+                        data-bs-target="#nav-filter" type="button" role="tab" aria-controls="nav-filter"
+                        aria-selected="false" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter Panel"><i
+                            class="fas fa-filter fa-lg"></i></button>
+                    <button class="nav-link pt-3 pb-3" id="layer" data-bs-toggle="tab" data-bs-target="#nav-layer"
+                        type="button" role="tab" aria-controls="nav-layer" aria-selected="false"
+                        data-bs-toggle="tooltip" data-bs-placement="right" title="Layer Panel"><i
+                            class="fas fa-layer-group fa-lg"></i></button>
+                    <button class="nav-link pt-3 pb-3" id="basemap" data-bs-toggle="tab" data-bs-target="#nav-basemap"
+                        type="button" role="tab" aria-controls="nav-basemap" aria-selected="false"
+                        data-bs-toggle="tooltip" data-bs-placement="right" title="Basemap Style"><i
+                            class="fa fa-globe fa-lg"></i></button>
                 </div>
             </nav>
         </div>
-  
+
         <!-- Sidebar Content -->
         <div class="sidebar-content" id="sidebar-content">
-            <div class="tab-content mt-0 pt-0" id="nav-tabContent">    
+            <div class="tab-content mt-0 pt-0" id="nav-tabContent">
                 <!-- Default tab content area -->
                 <!-- <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="home">  
                     <button type="button" class="btn btn-home-close shadow-none" id="close-home-content" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="right" title="Close Menu"><i class="fas fa-arrow-left fa-lg"></i></button>        
                 </div> -->
                 <!-- Filter tab content area -->
                 <div class="tab-pane fade show active" id="nav-filter" role="tabpanel" aria-labelledby="nav-filter-tab">
-                    <div class="filter-header"><button type="button" class="btn btn-filter-close shadow-none" id="close-filter-content" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="right" title="Close Filter Menu"><i class="fas fa-arrow-left fa-lg"></i></button><span class="fw-bold fs-5">Filter Panel</span></div>     
+                    <div class="filter-header"><button type="button" class="btn btn-filter-close shadow-none"
+                            id="close-filter-content" aria-label="Close" data-bs-toggle="tooltip"
+                            data-bs-placement="right" title="Close Filter Menu"><i
+                                class="fas fa-arrow-left fa-lg"></i></button><span class="fw-bold fs-5">Filter
+                            Panel</span></div>
                     <div class="card filter-card m-2 border-0">
                         <div class="card-body border-0">
-                            <h6 class="fw-bold">Filter by Country <span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter reservoir by countries"><i class="fas fa-question-circle" aria-hidden="true"></i></button></span></h6>
+                            <h6 class="fw-bold">Filter by Country <span class="ps-2"><button type="button"
+                                        class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                                        data-bs-placement="right" title="Filter reservoir by countries"><i
+                                            class="fas fa-question-circle" aria-hidden="true"></i></button></span></h6>
                             <form>
                                 <div class="multiselect">
                                     <div class="selectBox" id="filter-country">
@@ -129,10 +145,14 @@
                     <!-- Filter by Reservoir Shape -->
                     <!-- Filter by Storage Change -->
                 </div>
-        
+
                 <!--Layer tab content area -->
-                <div class="tab-pane fade" id="nav-layer" role="tabpanel" aria-labelledby="nav-layer-tab">          
-                    <div class="layer-header"><button type="button" class="btn btn-layer-close shadow-none" id="close-layer-content" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="right" title="Close Layer Panel"><i class="fas fa-arrow-left fa-lg"></i></button><span class="fw-bold fs-5">Layer Panel</span></div>
+                <div class="tab-pane fade" id="nav-layer" role="tabpanel" aria-labelledby="nav-layer-tab">
+                    <div class="layer-header"><button type="button" class="btn btn-layer-close shadow-none"
+                            id="close-layer-content" aria-label="Close" data-bs-toggle="tooltip"
+                            data-bs-placement="right" title="Close Layer Panel"><i
+                                class="fas fa-arrow-left fa-lg"></i></button><span class="fw-bold fs-5">Layer
+                            Panel</span></div>
                     <div class="card card-body layer-card m-2 border-0">
                         <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" name="mekong_toggle" id="mekong_toggle">
@@ -159,10 +179,15 @@
                         </div>
                     </div>
                 </div>
-        
+
                 <!-- Basemap tab content area -->
-                <div class="tab-pane fade nav-basemap" id="nav-basemap" role="tabpanel" aria-labelledby="nav-basemap-tab">
-                    <div class="layer-header"><button type="button" class="btn btn-layer-close shadow-none" id="close-basemap-content" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="right" title="Close Basemap"><i class="fas fa-arrow-left fa-lg"></i></button><span class="fw-bold fs-5">Basemap Style</span></div>
+                <div class="tab-pane fade nav-basemap" id="nav-basemap" role="tabpanel"
+                    aria-labelledby="nav-basemap-tab">
+                    <div class="layer-header"><button type="button" class="btn btn-layer-close shadow-none"
+                            id="close-basemap-content" aria-label="Close" data-bs-toggle="tooltip"
+                            data-bs-placement="right" title="Close Basemap"><i
+                                class="fas fa-arrow-left fa-lg"></i></button><span class="fw-bold fs-5">Basemap
+                            Style</span></div>
                     <!-- Basemap from MapBox -->
                     <!-- <div class="card basemap-card active m-4" data-layer="streets-v11">
                         <div class="d-flex flex-row bd-highlight">
@@ -204,74 +229,90 @@
                             </div>
                         </div>
                     </div>  -->
-        
+
                     <!-- OSM Basemap -->
                     <div class="card basemap-card active m-4" data-layer="osm">
                         <div class="d-flex flex-row bd-highlight">
-                            <div class="bd-highlight"><img src="{% static 'images/osm.png' %}" class="basemap-img" height="60px" width="60px" alt="OSM World Streets Map"></div>
+                            <div class="bd-highlight"><img src="{% static 'images/osm.png' %}" class="basemap-img"
+                                    height="60px" width="60px" alt="OSM World Streets Map"></div>
                             <div class="bd-highlight pt-3 ps-4">
-                                <h6>OpenStreetMap<br><small>OSM World Streets Map</small></h6>    
+                                <h6>OpenStreetMap<br><small>OSM World Streets Map</small></h6>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                     <!-- Basemap from Esri -->
                     <div class="card basemap-card m-4" data-layer="street">
                         <div class="d-flex flex-row bd-highlight">
-                            <div class="bd-highlight"><img src="{% static 'images/esri-street.png' %}" class="basemap-img" height="60px" width="60px" alt="Esri World Streets Basemap"></div>
+                            <div class="bd-highlight"><img src="{% static 'images/esri-street.png' %}"
+                                    class="basemap-img" height="60px" width="60px" alt="Esri World Streets Basemap">
+                            </div>
                             <div class="bd-highlight pt-3 ps-4">
-                                <h6>Esri Streets<br><small>Esri World Streets Basemap</small></h6>    
+                                <h6>Esri Streets<br><small>Esri World Streets Basemap</small></h6>
                             </div>
                         </div>
                     </div>
                     <div class="card basemap-card m-4" data-layer="satellite">
                         <div class="d-flex flex-row bd-highlight">
-                            <div class="bd-highlight"><img src="{% static 'images/esri-satellite.png' %}" class="basemap-img" height="60px" width="60px" alt="Esri World Satellite Imagery"></div>
+                            <div class="bd-highlight"><img src="{% static 'images/esri-satellite.png' %}"
+                                    class="basemap-img" height="60px" width="60px" alt="Esri World Satellite Imagery">
+                            </div>
                             <div class="bd-highlight pt-3 ps-4">
-                                <h6>Satellite Map<br><small>Esri World Satellite Imagery</small></h6>    
+                                <h6>Satellite Map<br><small>Esri World Satellite Imagery</small></h6>
                             </div>
                         </div>
                     </div>
                     <div class="card basemap-card m-4" data-layer="topo">
                         <div class="d-flex flex-row bd-highlight">
-                            <div class="bd-highlight"><img src="{% static 'images/esri-topo.png' %}" class="basemap-img" height="60px" width="60px" alt="Esri World Topographic Map"></div>
+                            <div class="bd-highlight"><img src="{% static 'images/esri-topo.png' %}" class="basemap-img"
+                                    height="60px" width="60px" alt="Esri World Topographic Map"></div>
                             <div class="bd-highlight pt-3 ps-4">
-                                <h6>Topographic Map<br><small>Esri World Topographic Map</small></h6>    
+                                <h6>Topographic Map<br><small>Esri World Topographic Map</small></h6>
                             </div>
                         </div>
                     </div>
                     <div class="card basemap-card m-4" data-layer="terrain">
                         <div class="d-flex flex-row bd-highlight">
-                            <div class="bd-highlight"><img src="{% static 'images/esri-terrain.png' %}" class="basemap-img" height="60px" width="60px" alt="Esri World Terrain Basemap"></div>
+                            <div class="bd-highlight"><img src="{% static 'images/esri-terrain.png' %}"
+                                    class="basemap-img" height="60px" width="60px" alt="Esri World Terrain Basemap">
+                            </div>
                             <div class="bd-highlight pt-3 ps-4">
-                                <h6>Terrain Map<br><small>Esri World Terrain Basemap</small></h6>    
+                                <h6>Terrain Map<br><small>Esri World Terrain Basemap</small></h6>
                             </div>
                         </div>
                     </div>
                     <div class="card basemap-card m-4" data-layer="gray">
                         <div class="d-flex flex-row bd-highlight">
-                            <div class="bd-highlight"><img src="{% static 'images/esri-gray.png' %}" class="basemap-img" height="60px" width="60px" alt="Esri World Gray Map"></div>
+                            <div class="bd-highlight"><img src="{% static 'images/esri-gray.png' %}" class="basemap-img"
+                                    height="60px" width="60px" alt="Esri World Gray Map"></div>
                             <div class="bd-highlight pt-3 ps-4">
-                                <h6>Gray Map<br><small>Esri World Gray Map</small></h6>    
+                                <h6>Gray Map<br><small>Esri World Gray Map</small></h6>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                     <!-- Basemap from Carto Map -->
                     <div class="card basemap-card m-4" data-layer="dark">
                         <div class="d-flex flex-row bd-highlight">
-                            <div class="bd-highlight"><img src="{% static 'images/carto-dark.png' %}" class="basemap-img" height="60px" width="60px" alt="Carto World Dark Map"></div>
+                            <div class="bd-highlight"><img src="{% static 'images/carto-dark.png' %}"
+                                    class="basemap-img" height="60px" width="60px" alt="Carto World Dark Map"></div>
                             <div class="bd-highlight pt-3 ps-4">
-                                <h6>Dark Map<br><small>Carto World Dark Map</small></h6>    
+                                <h6>Dark Map<br><small>Carto World Dark Map</small></h6>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                 </div>
             </div>
-        </div>  
-        <div id="map"></div>
+        </div>
+        <div id="map">
+            <div class="d-flex justify-content-center spinner">
+                <div id="loader" class="spinner-grow text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Table Tab -->
     <div class="tab-pane fade" id="pills-table" role="tabpanel" aria-labelledby="pills-table-tab">
-        <div class="container mt-5 mb-5">  
+        <div class="container mt-5 mb-5">
             <ul class="nav nav-pills mb-5" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="pills-aec-tab" data-bs-toggle="pill" data-bs-target="#pills-aec"
@@ -305,7 +346,10 @@
                     <div class="row mb-5">
                         <!-- Filter Area Elevation Curve by Country -->
                         <div class="col-md-6">
-                            <h6 class="fw-bold">Filter by Country<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by country"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                            <h6 class="fw-bold">Filter by Country<span class="ps-2"><button type="button"
+                                        class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                                        data-bs-placement="right" title="Filter data by country"><i
+                                            class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
                             <select id="aec_country" class="form-select" aria-label="Default select country">
                                 <option value="" selected>-- Show All --</option>
                                 <option value="Cambodia">Cambodia</option>
@@ -316,7 +360,10 @@
                         </div>
                         <!-- Filter Area Elevation Curve by River Basin -->
                         <div class="col-md-6">
-                            <h6 class="fw-bold">Filter by River Basin<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by river basin"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                            <h6 class="fw-bold">Filter by River Basin<span class="ps-2"><button type="button"
+                                        class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                                        data-bs-placement="right" title="Filter data by river basin"><i
+                                            class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
                             <select id="aec_river_basin" class="form-select" aria-label="Default select country">
                                 <option value="" selected>-- Show All --</option>
                                 <option value="Chi">Chi</option>
@@ -329,14 +376,14 @@
                                 <option value="Se San">Se San</option>
                             </select>
                         </div>
-                    </div>                   
+                    </div>
                     <table id="aec" class="table table-hover" style="width:100%">
                         <thead>
                             <tr>
                                 <!-- <th>ID</th> -->
                                 <th>Country</th>
-                                <th>Reservoir/Dam Name</th>
                                 <th>River Basin</th>
+                                <th>Reservoir/Dam Name</th>
                                 <th>Elevation</th>
                                 <th>Cumulative Area</th>
                             </tr>
@@ -347,7 +394,10 @@
                     <div class="row mb-5">
                         <!-- Filter Storage Change by Country -->
                         <div class="col-md-6">
-                            <h6 class="fw-bold">Filter by Country<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by country"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                            <h6 class="fw-bold">Filter by Country<span class="ps-2"><button type="button"
+                                        class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                                        data-bs-placement="right" title="Filter data by country"><i
+                                            class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
                             <select id="deltas_country" class="form-select" aria-label="Default select country">
                                 <option value="" selected>-- Show All --</option>
                                 <option value="Cambodia">Cambodia</option>
@@ -358,7 +408,10 @@
                         </div>
                         <!-- Filter Storage Change by River Basin -->
                         <div class="col-md-6">
-                            <h6 class="fw-bold">Filter by River Basin<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by river basin"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                            <h6 class="fw-bold">Filter by River Basin<span class="ps-2"><button type="button"
+                                        class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                                        data-bs-placement="right" title="Filter data by river basin"><i
+                                            class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
                             <select id="deltas_river_basin" class="form-select" aria-label="Default select country">
                                 <option value="" selected>-- Show All --</option>
                                 <option value="Chi">Chi</option>
@@ -371,14 +424,14 @@
                                 <option value="Se San">Se San</option>
                             </select>
                         </div>
-                    </div>  
+                    </div>
                     <table id="deltas" class="table table-hover" style="width:100%">
                         <thead>
                             <tr>
                                 <!-- <th>ID</th> -->
                                 <th>Country</th>
-                                <th>Reservoir/Dam Name</th>
                                 <th>River Basin</th>
+                                <th>Reservoir/Dam Name</th>
                                 <th>Date</th>
                                 <th>Storage Change</th>
                             </tr>
@@ -389,7 +442,10 @@
                     <div class="row mb-5">
                         <!-- Filter Inflow by Country -->
                         <div class="col-md-6">
-                            <h6 class="fw-bold">Filter by Country<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by country"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                            <h6 class="fw-bold">Filter by Country<span class="ps-2"><button type="button"
+                                        class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                                        data-bs-placement="right" title="Filter data by country"><i
+                                            class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
                             <select id="inflow_country" class="form-select" aria-label="Default select country">
                                 <option value="" selected>-- Show All --</option>
                                 <option value="Cambodia">Cambodia</option>
@@ -400,7 +456,10 @@
                         </div>
                         <!-- Filter Inflow by River Basin -->
                         <div class="col-md-6">
-                            <h6 class="fw-bold">Filter by River Basin<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by river basin"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                            <h6 class="fw-bold">Filter by River Basin<span class="ps-2"><button type="button"
+                                        class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                                        data-bs-placement="right" title="Filter data by river basin"><i
+                                            class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
                             <select id="inflow_river_basin" class="form-select" aria-label="Default select country">
                                 <option value="" selected>-- Show All --</option>
                                 <option value="Chi">Chi</option>
@@ -413,14 +472,14 @@
                                 <option value="Se San">Se San</option>
                             </select>
                         </div>
-                    </div>  
+                    </div>
                     <table id="inflow" class="table table-hover" style="width:100%">
                         <thead>
                             <tr>
                                 <!-- <th>ID</th> -->
                                 <th>Country</th>
-                                <th>Reservoir/Dam Name</th>
                                 <th>River Basin</th>
+                                <th>Reservoir/Dam Name</th>
                                 <th>Date</th>
                                 <th>Inflow (Cumecs)</th>
                             </tr>
@@ -431,7 +490,10 @@
                     <div class="row mb-5">
                         <!-- Filter Outflow by Country -->
                         <div class="col-md-6">
-                            <h6 class="fw-bold">Filter by Country<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by country"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                            <h6 class="fw-bold">Filter by Country<span class="ps-2"><button type="button"
+                                        class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                                        data-bs-placement="right" title="Filter data by country"><i
+                                            class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
                             <select id="outflow_country" class="form-select" aria-label="Default select country">
                                 <option value="" selected>-- Show All --</option>
                                 <option value="Cambodia">Cambodia</option>
@@ -442,7 +504,10 @@
                         </div>
                         <!-- Filter Outflow by River Basin -->
                         <div class="col-md-6">
-                            <h6 class="fw-bold">Filter by River Basin<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by river basin"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                            <h6 class="fw-bold">Filter by River Basin<span class="ps-2"><button type="button"
+                                        class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                                        data-bs-placement="right" title="Filter data by river basin"><i
+                                            class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
                             <select id="outflow_river_basin" class="form-select" aria-label="Default select country">
                                 <option value="" selected>-- Show All --</option>
                                 <option value="Chi">Chi</option>
@@ -455,14 +520,14 @@
                                 <option value="Se San">Se San</option>
                             </select>
                         </div>
-                    </div>  
+                    </div>
                     <table id="outflow" class="table table-hover" style="width:100%">
                         <thead>
                             <tr>
                                 <!-- <th>ID</th> -->
                                 <th>Country</th>
-                                <th>Reservoir/Dam Name</th>
                                 <th>River Basin</th>
+                                <th>Reservoir/Dam Name</th>
                                 <th>Date</th>
                                 <th>Outflow (Cumecs)</th>
                             </tr>
@@ -473,7 +538,10 @@
                     <div class="row mb-5">
                         <!-- Filter Surface Area by Country -->
                         <div class="col-md-6">
-                            <h6 class="fw-bold">Filter by Country<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by country"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                            <h6 class="fw-bold">Filter by Country<span class="ps-2"><button type="button"
+                                        class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                                        data-bs-placement="right" title="Filter data by country"><i
+                                            class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
                             <select id="sarea_country" class="form-select" aria-label="Default select country">
                                 <option value="" selected>-- Show All --</option>
                                 <option value="Cambodia">Cambodia</option>
@@ -484,7 +552,10 @@
                         </div>
                         <!-- Filter Surface Area by River Basin -->
                         <div class="col-md-6">
-                            <h6 class="fw-bold">Filter by River Basin<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by river basin"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                            <h6 class="fw-bold">Filter by River Basin<span class="ps-2"><button type="button"
+                                        class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                                        data-bs-placement="right" title="Filter data by river basin"><i
+                                            class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
                             <select id="sarea_river_basin" class="form-select" aria-label="Default select country">
                                 <option value="" selected>-- Show All --</option>
                                 <option value="Chi">Chi</option>
@@ -497,16 +568,16 @@
                                 <option value="Se San">Se San</option>
                             </select>
                         </div>
-                    </div>  
+                    </div>
                     <table id="surface_area" class="table table-hover" style="width:100%">
                         <thead>
                             <tr>
                                 <!-- <th>ID</th> -->
                                 <th>Country</th>
-                                <th>Reservoir/Dam Name</th>
                                 <th>River Basin</th>
+                                <th>Reservoir/Dam Name</th>
                                 <th>Date</th>
-                                <th>Water Surface Area (Sq.Km)</th>                                
+                                <th>Water Surface Area (Sq.Km)</th>
                             </tr>
                         </thead>
                     </table>
@@ -515,7 +586,10 @@
                     <div class="row mb-5">
                         <!-- Filter Rule Curve by Country -->
                         <div class="col-md-6">
-                            <h6 class="fw-bold">Filter by Country<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by country"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                            <h6 class="fw-bold">Filter by Country<span class="ps-2"><button type="button"
+                                        class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                                        data-bs-placement="right" title="Filter data by country"><i
+                                            class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
                             <select id="rcurve_country" class="form-select" aria-label="Default select country">
                                 <option value="" selected>-- Show All --</option>
                                 <option value="Cambodia">Cambodia</option>
@@ -526,7 +600,10 @@
                         </div>
                         <!-- Filter Rule Curve by River Basin -->
                         <div class="col-md-6">
-                            <h6 class="fw-bold">Filter by River Basin<span class="ps-2"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter data by river basin"><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                            <h6 class="fw-bold">Filter by River Basin<span class="ps-2"><button type="button"
+                                        class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                                        data-bs-placement="right" title="Filter data by river basin"><i
+                                            class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
                             <select id="rcurve_river_basin" class="form-select" aria-label="Default select country">
                                 <option value="" selected>-- Show All --</option>
                                 <option value="Chi">Chi</option>
@@ -539,14 +616,14 @@
                                 <option value="Se San">Se San</option>
                             </select>
                         </div>
-                    </div>  
+                    </div>
                     <table id="rcurve" class="table table-hover" style="width:100%">
                         <thead>
                             <tr>
                                 <!-- <th>ID</th> -->
                                 <th>Country</th>
-                                <th>Reservoir/Dam Name</th>
                                 <th>River Basin</th>
+                                <th>Reservoir/Dam Name</th>
                                 <th>January</th>
                                 <th>February</th>
                                 <th>March</th>
