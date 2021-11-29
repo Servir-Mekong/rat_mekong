@@ -601,6 +601,14 @@ $('input[type=checkbox][name=seSan]').click(function(){
 /** 
     Layer Panel
 */
+//Define reservoirs boundary style
+var reservoirsBoundaryStyle = {
+    color: "#1ca3ec",
+    weight: 1.0,
+    opacity: 0.6,
+    fillOpacity: 0.6,
+    fillColor: "#1ca3ec",
+};
 
 //Define Mekong region boundary style
 var mekongBoundaryStyle = {
@@ -644,7 +652,22 @@ var highlightStyle = {
     //fillColor: '#2262CC'
 };
 
-//Create admin geojson layer
+var reservoirs_poly_layer = L.geoJson(reservoirs_poly, {
+    style: reservoirsBoundaryStyle,
+    onEachFeature: function(feature, reservoirsPolyLayer) {
+        var reservoirs_name = feature.properties.Name;
+        var country = feature.properties.Country;
+        reservoirsPolyLayer.on('mouseover', function (e) {
+            this.setStyle(highlightStyle);
+            this.bindTooltip(reservoirs_name + ", " + country);
+        }); 
+        reservoirsPolyLayer.on('mouseout', function (e) {
+            this.setStyle(reservoirsBoundaryStyle);
+        });                       
+    } 
+}); 
+
+//Create mekong layer
 var mekong_layer = L.geoJson(mekongBoundary, {
     style: mekongBoundaryStyle,
     onEachFeature: function(feature, mekongLayer) {
@@ -683,6 +706,13 @@ var sub_basin_layer = L.geoJson(basinData, {
     style: basinStyle,
 });
 
+$('input[type=checkbox][name=reservoirs_poly_toggle]').click(function(){
+    if(this.checked) {
+        map.addLayer(reservoirs_poly_layer);
+    } else {
+        map.removeLayer(reservoirs_poly_layer);
+    }
+});
 $('input[type=checkbox][name=mekong_toggle]').click(function(){
     if(this.checked) {
         map.addLayer(mekong_layer);
