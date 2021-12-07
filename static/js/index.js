@@ -629,8 +629,8 @@ var adm0Style = {
 };
 
 var gmsriversStyle = {
-    color: "#1E90FF",
-    weight: 0.75,
+    color: "#007FFF",
+    weight: 1.25,
 };
 var mainriversStyle = {
     color: "#00008B",
@@ -645,7 +645,7 @@ var basinStyle = {
 };
 //Highlight feature style
 var highlightStyle = {
-    color: '#fff', 
+    color: '#00008B', 
     weight: 1.0,
     opacity: 0.6,
     fillOpacity: 0.65,
@@ -668,7 +668,7 @@ var reservoirs_poly_layer = L.geoJson(reservoirs_poly, {
 }); 
 
 //Create mekong layer
-var mekong_layer = L.geoJson(mekongBoundary, {
+var mekong_layer = L.geoJson(lowerMekongBoundary, {
     style: mekongBoundaryStyle,
     onEachFeature: function(feature, mekongLayer) {
         mekongLayer.on('mouseover', function (e) {
@@ -696,10 +696,10 @@ var adm0_layer = L.geoJson(adm0, {
     } 
 });
 
-var gms_rivers_layer = L.geoJson(gms_rivers, {
+var gms_rivers_layer = L.geoJson(gms_rivers_lm, {
     style: gmsriversStyle
 });
-var main_rivers_layer = L.geoJson(main_rivers, {
+var main_rivers_layer = L.geoJson(main_rivers_lm, {
     style: mainriversStyle
 });
 var sub_basin_layer = L.geoJson(basinData, {

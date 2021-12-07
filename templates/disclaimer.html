@@ -1,0 +1,18 @@
+{% extends "base.html" %} 
+{% load static %}
+
+<!-- CSS files -->
+{% block extra_css %} {% endblock %} 
+{% block container %}
+{% include 'navigation.html' %}
+
+<div class="container">
+    <div class="card disclaimer-card m-5">
+        <div class="card-body">
+            <p class="card-text fs-5 p-5">The Reservoir Assessment Tool for Mekong Region (RAT-Mekong) is developed based on satellite remote sensing data of Landsat/Sentinel and VIC hydrological model. This tool is now at development stage. The RAT-Mekong team is working hard to improve the accuracy of the calibrated results from the VIC hydralogoical model and other parameters used in this tool. The outputs of this tool may vary from the ground level data. So, this tool have not ensured or made gurantee the acceptable level of accuracy of the outputs at this stage. Hence, the deveelopment team do not take any resposibility/liability to make wrong decision based on the outputs of the existing RAT-Mekong tool.</p>
+        </div>
+    </div>
+</div>
+<div class="container">{% include 'partners.html' %}</div>
+{% include 'footer.html' %} 
+{% endblock container %} 

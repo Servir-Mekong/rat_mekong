@@ -26,3 +26,10 @@ html, body {
     background-color: #505050;
     border-radius: 8px;
 }  
+.disclaimer-card{
+    border-radius: o;
+    -webkit-border-radius: 0;
+    border: 1px solid rgb(221, 20, 20);
+    border-left: 10px solid rgb(221, 20, 20);
+    background-color: rgba(218, 32, 32, 0.3);
+}

@@ -41,11 +41,12 @@ class AboutPage(TemplateView):
 class MapPage(TemplateView):
     template_name = "map.html"
 
-
 class UserGuidePage(TemplateView):
     template_name = "user-guide.html"
 
 class TestIframePage(TemplateView):
     template_name = "iframe.html"
 
+class DisclaimerPage(TemplateView):
+    template_name = "disclaimer.html"
 
