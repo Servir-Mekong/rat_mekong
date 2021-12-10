@@ -885,6 +885,21 @@ $(document).ready(function() {
     });
 });
 
+//Legend
+var legend = L.control({position: 'bottomright'});
+
+legend.onAdd = function (map) {
+    var div = L.DomUtil.create('div', 'legend');
+    div.innerHTML += '<strong>Storage Level</strong>'+ '<br>'
+    div.innerHTML +=  '<img class="pt-2" src="/static/images/green.png" width="20px">' + ' 80% - 100% ' + '<br>'
+    div.innerHTML +=  '<img class="pt-1" src="/static/images/blue.png" width="20px">'  + ' 61% - 80% ' + '<br>'
+    div.innerHTML +=  '<img class="pt-1" src="/static/images/brown.png" width="20px">'   +  ' 50% - 60% '
+
+    return div;
+};
+
+legend.addTo(map);
+
 //Onclick switch basemap 
 $('#nav-basemap div').on('click', function(e) {
     var selected_basemap = this.getAttribute('data-layer');
