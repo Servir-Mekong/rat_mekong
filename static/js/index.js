@@ -178,10 +178,28 @@ function filterVietnam(feature) {
 var iconOptions = {
     iconUrl: '/static/images/marker.png',
     iconSize: [22, 30]
-  }
+}
 
 // Creating a custom icon
 var customIcon = L.icon(iconOptions);
+
+var iconOptionsGreen = {
+    iconUrl: '/static/images/green.png',
+    iconSize: [22, 30]
+}
+var iconOptionsBlue = {
+    iconUrl: '/static/images/blue.png',
+    iconSize: [22, 30]
+}
+var iconOptionsBrown = {
+    iconUrl: '/static/images/brown.png',
+    iconSize: [22, 30]
+}
+
+var greenIcon = L.icon(iconOptionsGreen);
+var blueIcon = L.icon(iconOptionsBlue);
+var brownIcon = L.icon(iconOptionsBrown);
+
 
 var cambodia_reservoirs = L.geoJson(reservoirs, {
     filter: filterCambodia,
@@ -191,6 +209,7 @@ var cambodia_reservoirs = L.geoJson(reservoirs, {
         var stationid = feature.properties.id;
         var rbasin = feature.properties.River;
         var country = feature.properties.Country;
+        var slevel = feature.properties.Storage;
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
@@ -198,7 +217,14 @@ var cambodia_reservoirs = L.geoJson(reservoirs, {
         //     this.bindPopup(popupContent);
         // });  
         reservoirLayer.bindPopup(popupContent); 
-        reservoirLayer.setIcon(customIcon);                   
+        //reservoirLayer.setIcon(customIcon);
+        if (slevel === '81%-100%') {
+            reservoirLayer.setIcon(greenIcon); 
+        }else if(slevel === '61%-80%'){
+            reservoirLayer.setIcon(blueIcon);
+        }else {
+            reservoirLayer.setIcon(brownIcon);
+        }                    
     } 
 })
 var laos_reservoirs = L.geoJson(reservoirs, {
@@ -209,6 +235,7 @@ var laos_reservoirs = L.geoJson(reservoirs, {
         var stationid = feature.properties.id;
         var rbasin = feature.properties.River;
         var country = feature.properties.Country;
+        var slevel = feature.properties.Storage;
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
@@ -216,7 +243,14 @@ var laos_reservoirs = L.geoJson(reservoirs, {
         //     this.bindPopup(popupContent);
         // });  
         reservoirLayer.bindPopup(popupContent);
-        reservoirLayer.setIcon(customIcon);                     
+        //reservoirLayer.setIcon(customIcon); 
+        if (slevel === '81%-100%') {
+            reservoirLayer.setIcon(greenIcon); 
+        }else if(slevel === '61%-80%'){
+            reservoirLayer.setIcon(blueIcon);
+        }else {
+            reservoirLayer.setIcon(brownIcon);
+        }                       
     } 
 })
 var thailand_reservoirs = L.geoJson(reservoirs, {
@@ -227,6 +261,7 @@ var thailand_reservoirs = L.geoJson(reservoirs, {
         var stationid = feature.properties.id;
         var rbasin = feature.properties.River;
         var country = feature.properties.Country;
+        var slevel = feature.properties.Storage;
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
@@ -234,7 +269,14 @@ var thailand_reservoirs = L.geoJson(reservoirs, {
         //     this.bindPopup(popupContent);
         // });  
         reservoirLayer.bindPopup(popupContent); 
-        reservoirLayer.setIcon(customIcon);                    
+        //reservoirLayer.setIcon(customIcon);   
+        if (slevel === '81%-100%') {
+            reservoirLayer.setIcon(greenIcon); 
+        }else if(slevel === '61%-80%'){
+            reservoirLayer.setIcon(blueIcon);
+        }else {
+            reservoirLayer.setIcon(brownIcon);
+        }                    
     } 
 })
 var vietnam_reservoirs = L.geoJson(reservoirs, {
@@ -245,6 +287,7 @@ var vietnam_reservoirs = L.geoJson(reservoirs, {
         var stationid = feature.properties.id;
         var rbasin = feature.properties.River;
         var country = feature.properties.Country;
+        var slevel = feature.properties.Storage;
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
@@ -252,7 +295,14 @@ var vietnam_reservoirs = L.geoJson(reservoirs, {
         //     this.bindPopup(popupContent);
         // });     
         reservoirLayer.bindPopup(popupContent);  
-        reservoirLayer.setIcon(customIcon);                  
+        //reservoirLayer.setIcon(customIcon); 
+        if (slevel === '81%-100%') {
+            reservoirLayer.setIcon(greenIcon); 
+        }else if(slevel === '61%-80%'){
+            reservoirLayer.setIcon(blueIcon);
+        }else {
+            reservoirLayer.setIcon(brownIcon);
+        }                    
     } 
 });
 
@@ -262,6 +312,7 @@ var all_reservoirs = L.geoJson(reservoirs, {
         var stationid = feature.properties.id;
         var rbasin = feature.properties.River;
         var country = feature.properties.Country;
+        var slevel = feature.properties.Storage;
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
@@ -269,7 +320,14 @@ var all_reservoirs = L.geoJson(reservoirs, {
         //     this.bindPopup(popupContent);
         // }); 
         reservoirLayer.bindPopup(popupContent);  
-        reservoirLayer.setIcon(customIcon);                      
+        //reservoirLayer.setIcon(customIcon);
+        if (slevel === '81%-100%') {
+            reservoirLayer.setIcon(greenIcon); 
+        }else if(slevel === '61%-80%'){
+            reservoirLayer.setIcon(blueIcon);
+        }else {
+            reservoirLayer.setIcon(brownIcon);
+        }                    
     } 
 }).addTo(map);
 
@@ -366,6 +424,7 @@ var chiRiverLayer = L.geoJson(reservoirs, {
         var stationid = feature.properties.id;
         var rbasin = feature.properties.River;
         var country = feature.properties.Country;
+        var slevel = feature.properties.Storage;
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
@@ -373,7 +432,14 @@ var chiRiverLayer = L.geoJson(reservoirs, {
         //     this.bindPopup(popupContent);
         // });   
         reservoirLayer.bindPopup(popupContent);    
-        reservoirLayer.setIcon(customIcon);                  
+        //reservoirLayer.setIcon(customIcon);  
+        if (slevel === '81%-100%') {
+            reservoirLayer.setIcon(greenIcon); 
+        }else if(slevel === '61%-80%'){
+            reservoirLayer.setIcon(blueIcon);
+        }else {
+            reservoirLayer.setIcon(brownIcon);
+        }                   
     } 
 });
 
@@ -385,6 +451,7 @@ var lamDomNoiRiverLayer = L.geoJson(reservoirs, {
         var stationid = feature.properties.id;
         var rbasin = feature.properties.River;
         var country = feature.properties.Country;
+        var slevel = feature.properties.Storage;
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
@@ -392,7 +459,14 @@ var lamDomNoiRiverLayer = L.geoJson(reservoirs, {
         //     this.bindPopup(popupContent);
         // });  
         reservoirLayer.bindPopup(popupContent);    
-        reservoirLayer.setIcon(customIcon);                   
+        //reservoirLayer.setIcon(customIcon);    
+        if (slevel === '81%-100%') {
+            reservoirLayer.setIcon(greenIcon); 
+        }else if(slevel === '61%-80%'){
+            reservoirLayer.setIcon(blueIcon);
+        }else {
+            reservoirLayer.setIcon(brownIcon);
+        }                  
     } 
 });
 
@@ -404,6 +478,7 @@ var namGnongRiverLayer = L.geoJson(reservoirs, {
         var stationid = feature.properties.id;
         var rbasin = feature.properties.River;
         var country = feature.properties.Country;
+        var slevel = feature.properties.Storage;
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
@@ -411,7 +486,14 @@ var namGnongRiverLayer = L.geoJson(reservoirs, {
         //     this.bindPopup(popupContent);
         // }); 
         reservoirLayer.bindPopup(popupContent);    
-        reservoirLayer.setIcon(customIcon);                  
+        //reservoirLayer.setIcon(customIcon); 
+        if (slevel === '81%-100%') {
+            reservoirLayer.setIcon(greenIcon); 
+        }else if(slevel === '61%-80%'){
+            reservoirLayer.setIcon(blueIcon);
+        }else {
+            reservoirLayer.setIcon(brownIcon);
+        }                   
     } 
 });
 var namNgumRiverLayer = L.geoJson(reservoirs, {
@@ -422,6 +504,7 @@ var namNgumRiverLayer = L.geoJson(reservoirs, {
         var stationid = feature.properties.id;
         var rbasin = feature.properties.River;
         var country = feature.properties.Country;
+        var slevel = feature.properties.Storage;
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
@@ -429,7 +512,14 @@ var namNgumRiverLayer = L.geoJson(reservoirs, {
         //     this.bindPopup(popupContent);
         // });  
         reservoirLayer.bindPopup(popupContent);   
-        reservoirLayer.setIcon(customIcon);                    
+        //reservoirLayer.setIcon(customIcon);   
+        if (slevel === '81%-100%') {
+            reservoirLayer.setIcon(greenIcon); 
+        }else if(slevel === '61%-80%'){
+            reservoirLayer.setIcon(blueIcon);
+        }else {
+            reservoirLayer.setIcon(brownIcon);
+        }                    
     } 
 });
 var namPongRiverLayer = L.geoJson(reservoirs, {
@@ -440,6 +530,7 @@ var namPongRiverLayer = L.geoJson(reservoirs, {
         var stationid = feature.properties.id;
         var rbasin = feature.properties.River;
         var country = feature.properties.Country;
+        var slevel = feature.properties.Storage;
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
@@ -447,7 +538,14 @@ var namPongRiverLayer = L.geoJson(reservoirs, {
         //     this.bindPopup(popupContent);
         // });  
         reservoirLayer.bindPopup(popupContent);    
-        reservoirLayer.setIcon(customIcon);                   
+        //reservoirLayer.setIcon(customIcon);  
+        if (slevel === '81%-100%') {
+            reservoirLayer.setIcon(greenIcon); 
+        }else if(slevel === '61%-80%'){
+            reservoirLayer.setIcon(blueIcon);
+        }else {
+            reservoirLayer.setIcon(brownIcon);
+        }                    
     } 
 });
 var namTheunRiverLayer = L.geoJson(reservoirs, {
@@ -458,6 +556,7 @@ var namTheunRiverLayer = L.geoJson(reservoirs, {
         var stationid = feature.properties.id;
         var rbasin = feature.properties.River;
         var country = feature.properties.Country;
+        var slevel = feature.properties.Storage;
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
@@ -465,7 +564,14 @@ var namTheunRiverLayer = L.geoJson(reservoirs, {
         //     this.bindPopup(popupContent);
         // }); 
         reservoirLayer.bindPopup(popupContent);   
-        reservoirLayer.setIcon(customIcon);                     
+        //reservoirLayer.setIcon(customIcon); 
+        if (slevel === '81%-100%') {
+            reservoirLayer.setIcon(greenIcon); 
+        }else if(slevel === '61%-80%'){
+            reservoirLayer.setIcon(blueIcon);
+        }else {
+            reservoirLayer.setIcon(brownIcon);
+        }                       
     } 
 });
 var sesanRiverLayer = L.geoJson(reservoirs, {
@@ -476,6 +582,7 @@ var sesanRiverLayer = L.geoJson(reservoirs, {
         var stationid = feature.properties.id;
         var rbasin = feature.properties.River;
         var country = feature.properties.Country;
+        var slevel = feature.properties.Storage;
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
@@ -483,7 +590,14 @@ var sesanRiverLayer = L.geoJson(reservoirs, {
         //     this.bindPopup(popupContent);
         // });
         reservoirLayer.bindPopup(popupContent);        
-        reservoirLayer.setIcon(customIcon);                 
+        //reservoirLayer.setIcon(customIcon); 
+        if (slevel === '81%-100%') {
+            reservoirLayer.setIcon(greenIcon); 
+        }else if(slevel === '61%-80%'){
+            reservoirLayer.setIcon(blueIcon);
+        }else {
+            reservoirLayer.setIcon(brownIcon);
+        }                   
     } 
 });
 var seSanRiverLayer = L.geoJson(reservoirs, {
@@ -494,6 +608,7 @@ var seSanRiverLayer = L.geoJson(reservoirs, {
         var stationid = feature.properties.id;
         var rbasin = feature.properties.River;
         var country = feature.properties.Country;
+        var slevel = feature.properties.Storage;
         var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
 		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
         reservoirLayer.bindTooltip(resname);
@@ -501,7 +616,14 @@ var seSanRiverLayer = L.geoJson(reservoirs, {
         //     this.bindPopup(popupContent);
         // }); 
         reservoirLayer.bindPopup(popupContent);  
-        reservoirLayer.setIcon(customIcon);                     
+        //reservoirLayer.setIcon(customIcon); 
+        if (slevel === '81%-100%') {
+            reservoirLayer.setIcon(greenIcon); 
+        }else if(slevel === '61%-80%'){
+            reservoirLayer.setIcon(blueIcon);
+        }else {
+            reservoirLayer.setIcon(brownIcon);
+        }                       
     } 
 });
 

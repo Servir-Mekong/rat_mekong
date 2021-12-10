@@ -3,13 +3,13 @@ var reservoirs = {
 "name": "reservoirs",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
-{ "type": "Feature", "properties": { "Name": "Lower Sesan 2", "id": 7303, "Country": "Cambodia", "River": "Sesan"}, "geometry": { "type": "Point", "coordinates": [ 106.256294238933805, 13.55281549164688, 0.0 ] } },
-{ "type": "Feature", "properties": { "Name": "Nam Ngum 1", "id": 5136, "Country": "Laos", "River": "Nam Ngum" }, "geometry": { "type": "Point", "coordinates": [ 102.547577, 18.531068, 0.0 ] } },
-{ "type": "Feature", "properties": { "Name": "Nam Theun 2", "id": 6999, "Country": "Laos", "River": "Nam Theun" }, "geometry": { "type": "Point", "coordinates": [ 104.952306, 17.997353, 0.0 ] } },
-{ "type": "Feature", "properties": { "Name": "Nam Mang 3", "id": 7000, "Country": "Laos", "River": "Nam Gnong" }, "geometry": { "type": "Point", "coordinates": [ 102.766998675468699, 18.348854467356031, 0.0 ] } },
-{ "type": "Feature", "properties": { "Name": "Lam Pao", "id": 5150, "Country": "Thailand", "River": "Chi" }, "geometry": { "type": "Point", "coordinates": [ 103.45234, 16.602568, 0.0 ] } },
-{ "type": "Feature", "properties": { "Name": "Sirindhorn", "id": 5796, "Country": "Thailand", "River": "Lam Dom Noi" }, "geometry": { "type": "Point", "coordinates": [ 105.429156, 15.206339, 0.0 ] } },
-{ "type": "Feature", "properties": { "Name": "Ubol Ratana", "id": 5149, "Country": "Thailand", "River": "Nam Pong" }, "geometry": { "type": "Point", "coordinates": [ 102.618325, 16.775394, 0.0 ] } },
-{ "type": "Feature", "properties": { "Name": "Se San 4", "id": 7203, "Country": "Vietnam", "River": "Se San" }, "geometry": { "type": "Point", "coordinates": [ 107.49516, 13.968252, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Lower Sesan 2", "id": 7303, "Country": "Cambodia", "River": "Sesan", "Storage": "61%-80%"}, "geometry": { "type": "Point", "coordinates": [ 106.256294238933805, 13.55281549164688, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Nam Ngum 1", "id": 5136, "Country": "Laos", "River": "Nam Ngum", "Storage": "50%-60%" }, "geometry": { "type": "Point", "coordinates": [ 102.547577, 18.531068, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Nam Theun 2", "id": 6999, "Country": "Laos", "River": "Nam Theun", "Storage": "81%-100%" }, "geometry": { "type": "Point", "coordinates": [ 104.952306, 17.997353, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Nam Mang 3", "id": 7000, "Country": "Laos", "River": "Nam Gnong", "Storage": "61%-80%" }, "geometry": { "type": "Point", "coordinates": [ 102.766998675468699, 18.348854467356031, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Lam Pao", "id": 5150, "Country": "Thailand", "River": "Chi", "Storage": "61%-80%" }, "geometry": { "type": "Point", "coordinates": [ 103.45234, 16.602568, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Sirindhorn", "id": 5796, "Country": "Thailand", "River": "Lam Dom Noi", "Storage": "61%-80%" }, "geometry": { "type": "Point", "coordinates": [ 105.429156, 15.206339, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Ubol Ratana", "id": 5149, "Country": "Thailand", "River": "Nam Pong", "Storage": "50%-60%" }, "geometry": { "type": "Point", "coordinates": [ 102.618325, 16.775394, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Se San 4", "id": 7203, "Country": "Vietnam", "River": "Se San", "Storage": "81%-100%"}, "geometry": { "type": "Point", "coordinates": [ 107.49516, 13.968252, 0.0 ] } },
 ]
 }
