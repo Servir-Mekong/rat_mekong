@@ -191,14 +191,14 @@ var iconOptionsBlue = {
     iconUrl: '/static/images/blue.png',
     iconSize: [22, 30]
 }
-var iconOptionsBrown = {
-    iconUrl: '/static/images/brown.png',
+var iconOptionsYellow = {
+    iconUrl: '/static/images/yellow.png',
     iconSize: [22, 30]
 }
 
 var greenIcon = L.icon(iconOptionsGreen);
 var blueIcon = L.icon(iconOptionsBlue);
-var brownIcon = L.icon(iconOptionsBrown);
+var yellowIcon = L.icon(iconOptionsYellow);
 
 
 var cambodia_reservoirs = L.geoJson(reservoirs, {
@@ -219,11 +219,11 @@ var cambodia_reservoirs = L.geoJson(reservoirs, {
         reservoirLayer.bindPopup(popupContent); 
         //reservoirLayer.setIcon(customIcon);
         if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(greenIcon); 
-        }else if(slevel === '61%-80%'){
-            reservoirLayer.setIcon(blueIcon);
+            reservoirLayer.setIcon(blueIcon); 
+        }else if(slevel === '30%-80%'){
+            reservoirLayer.setIcon(greenIcon);
         }else {
-            reservoirLayer.setIcon(brownIcon);
+            reservoirLayer.setIcon(yellowIcon);
         }                    
     } 
 })
@@ -245,11 +245,11 @@ var laos_reservoirs = L.geoJson(reservoirs, {
         reservoirLayer.bindPopup(popupContent);
         //reservoirLayer.setIcon(customIcon); 
         if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(greenIcon); 
-        }else if(slevel === '61%-80%'){
-            reservoirLayer.setIcon(blueIcon);
+            reservoirLayer.setIcon(blueIcon); 
+        }else if(slevel === '30%-80%'){
+            reservoirLayer.setIcon(greenIcon);
         }else {
-            reservoirLayer.setIcon(brownIcon);
+            reservoirLayer.setIcon(yellowIcon);
         }                       
     } 
 })
@@ -271,11 +271,11 @@ var thailand_reservoirs = L.geoJson(reservoirs, {
         reservoirLayer.bindPopup(popupContent); 
         //reservoirLayer.setIcon(customIcon);   
         if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(greenIcon); 
-        }else if(slevel === '61%-80%'){
-            reservoirLayer.setIcon(blueIcon);
+            reservoirLayer.setIcon(blueIcon); 
+        }else if(slevel === '30%-80%'){
+            reservoirLayer.setIcon(greenIcon);
         }else {
-            reservoirLayer.setIcon(brownIcon);
+            reservoirLayer.setIcon(yellowIcon);
         }                    
     } 
 })
@@ -297,11 +297,11 @@ var vietnam_reservoirs = L.geoJson(reservoirs, {
         reservoirLayer.bindPopup(popupContent);  
         //reservoirLayer.setIcon(customIcon); 
         if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(greenIcon); 
-        }else if(slevel === '61%-80%'){
-            reservoirLayer.setIcon(blueIcon);
+            reservoirLayer.setIcon(blueIcon); 
+        }else if(slevel === '30%-80%'){
+            reservoirLayer.setIcon(greenIcon);
         }else {
-            reservoirLayer.setIcon(brownIcon);
+            reservoirLayer.setIcon(yellowIcon);
         }                    
     } 
 });
@@ -322,12 +322,12 @@ var all_reservoirs = L.geoJson(reservoirs, {
         reservoirLayer.bindPopup(popupContent);  
         //reservoirLayer.setIcon(customIcon);
         if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(greenIcon); 
-        }else if(slevel === '61%-80%'){
-            reservoirLayer.setIcon(blueIcon);
+            reservoirLayer.setIcon(blueIcon); 
+        }else if(slevel === '30%-80%'){
+            reservoirLayer.setIcon(greenIcon);
         }else {
-            reservoirLayer.setIcon(brownIcon);
-        }                    
+            reservoirLayer.setIcon(yellowIcon);
+        }                     
     } 
 }).addTo(map);
 
@@ -434,12 +434,12 @@ var chiRiverLayer = L.geoJson(reservoirs, {
         reservoirLayer.bindPopup(popupContent);    
         //reservoirLayer.setIcon(customIcon);  
         if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(greenIcon); 
-        }else if(slevel === '61%-80%'){
-            reservoirLayer.setIcon(blueIcon);
+            reservoirLayer.setIcon(blueIcon); 
+        }else if(slevel === '30%-80%'){
+            reservoirLayer.setIcon(greenIcon);
         }else {
-            reservoirLayer.setIcon(brownIcon);
-        }                   
+            reservoirLayer.setIcon(yellowIcon);
+        }                     
     } 
 });
 
@@ -461,11 +461,11 @@ var lamDomNoiRiverLayer = L.geoJson(reservoirs, {
         reservoirLayer.bindPopup(popupContent);    
         //reservoirLayer.setIcon(customIcon);    
         if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(greenIcon); 
-        }else if(slevel === '61%-80%'){
-            reservoirLayer.setIcon(blueIcon);
+            reservoirLayer.setIcon(blueIcon); 
+        }else if(slevel === '30%-80%'){
+            reservoirLayer.setIcon(greenIcon);
         }else {
-            reservoirLayer.setIcon(brownIcon);
+            reservoirLayer.setIcon(yellowIcon);
         }                  
     } 
 });
@@ -488,11 +488,11 @@ var namGnongRiverLayer = L.geoJson(reservoirs, {
         reservoirLayer.bindPopup(popupContent);    
         //reservoirLayer.setIcon(customIcon); 
         if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(greenIcon); 
-        }else if(slevel === '61%-80%'){
-            reservoirLayer.setIcon(blueIcon);
+            reservoirLayer.setIcon(blueIcon); 
+        }else if(slevel === '30%-80%'){
+            reservoirLayer.setIcon(greenIcon);
         }else {
-            reservoirLayer.setIcon(brownIcon);
+            reservoirLayer.setIcon(yellowIcon);
         }                   
     } 
 });
@@ -514,12 +514,12 @@ var namNgumRiverLayer = L.geoJson(reservoirs, {
         reservoirLayer.bindPopup(popupContent);   
         //reservoirLayer.setIcon(customIcon);   
         if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(greenIcon); 
-        }else if(slevel === '61%-80%'){
-            reservoirLayer.setIcon(blueIcon);
+            reservoirLayer.setIcon(blueIcon); 
+        }else if(slevel === '30%-80%'){
+            reservoirLayer.setIcon(greenIcon);
         }else {
-            reservoirLayer.setIcon(brownIcon);
-        }                    
+            reservoirLayer.setIcon(yellowIcon);
+        }                     
     } 
 });
 var namPongRiverLayer = L.geoJson(reservoirs, {
@@ -540,11 +540,11 @@ var namPongRiverLayer = L.geoJson(reservoirs, {
         reservoirLayer.bindPopup(popupContent);    
         //reservoirLayer.setIcon(customIcon);  
         if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(greenIcon); 
-        }else if(slevel === '61%-80%'){
-            reservoirLayer.setIcon(blueIcon);
+            reservoirLayer.setIcon(blueIcon); 
+        }else if(slevel === '30%-80%'){
+            reservoirLayer.setIcon(greenIcon);
         }else {
-            reservoirLayer.setIcon(brownIcon);
+            reservoirLayer.setIcon(yellowIcon);
         }                    
     } 
 });
@@ -566,11 +566,11 @@ var namTheunRiverLayer = L.geoJson(reservoirs, {
         reservoirLayer.bindPopup(popupContent);   
         //reservoirLayer.setIcon(customIcon); 
         if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(greenIcon); 
-        }else if(slevel === '61%-80%'){
-            reservoirLayer.setIcon(blueIcon);
+            reservoirLayer.setIcon(blueIcon); 
+        }else if(slevel === '30%-80%'){
+            reservoirLayer.setIcon(greenIcon);
         }else {
-            reservoirLayer.setIcon(brownIcon);
+            reservoirLayer.setIcon(yellowIcon);
         }                       
     } 
 });
@@ -592,12 +592,12 @@ var sesanRiverLayer = L.geoJson(reservoirs, {
         reservoirLayer.bindPopup(popupContent);        
         //reservoirLayer.setIcon(customIcon); 
         if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(greenIcon); 
-        }else if(slevel === '61%-80%'){
-            reservoirLayer.setIcon(blueIcon);
+            reservoirLayer.setIcon(blueIcon); 
+        }else if(slevel === '30%-80%'){
+            reservoirLayer.setIcon(greenIcon);
         }else {
-            reservoirLayer.setIcon(brownIcon);
-        }                   
+            reservoirLayer.setIcon(yellowIcon);
+        }                  
     } 
 });
 var seSanRiverLayer = L.geoJson(reservoirs, {
@@ -618,12 +618,12 @@ var seSanRiverLayer = L.geoJson(reservoirs, {
         reservoirLayer.bindPopup(popupContent);  
         //reservoirLayer.setIcon(customIcon); 
         if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(greenIcon); 
-        }else if(slevel === '61%-80%'){
-            reservoirLayer.setIcon(blueIcon);
+            reservoirLayer.setIcon(blueIcon); 
+        }else if(slevel === '30%-80%'){
+            reservoirLayer.setIcon(greenIcon);
         }else {
-            reservoirLayer.setIcon(brownIcon);
-        }                       
+            reservoirLayer.setIcon(yellowIcon);
+        }                      
     } 
 });
 
@@ -801,7 +801,7 @@ var mekong_layer = L.geoJson(lowerMekongBoundary, {
             this.setStyle(mekongBoundaryStyle);
         });                       
     } 
-}); 
+}).addTo(map); 
 
 var adm0_layer = L.geoJson(adm0, {
     style: adm0Style,
@@ -891,9 +891,9 @@ var legend = L.control({position: 'bottomright'});
 legend.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'legend');
     div.innerHTML += '<strong>Storage Level</strong>'+ '<br>'
-    div.innerHTML +=  '<img class="pt-2" src="/static/images/green.png" width="20px">' + ' 80% - 100% ' + '<br>'
-    div.innerHTML +=  '<img class="pt-1" src="/static/images/blue.png" width="20px">'  + ' 61% - 80% ' + '<br>'
-    div.innerHTML +=  '<img class="pt-1" src="/static/images/brown.png" width="20px">'   +  ' 50% - 60% '
+    div.innerHTML +=  '<img class="pt-2" src="/static/images/blue.png" width="20px">' + ' > 80% ' + '<br>'
+    div.innerHTML +=  '<img class="pt-1" src="/static/images/green.png" width="20px">'  + ' 30% - 80% ' + '<br>'
+    div.innerHTML +=  '<img class="pt-1" src="/static/images/yellow.png" width="20px">'   +  ' < 30% '
 
     return div;
 };
