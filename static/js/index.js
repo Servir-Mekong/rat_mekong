@@ -192,7 +192,7 @@ var iconOptionsBlue = {
     iconSize: [22, 30]
 }
 var iconOptionsYellow = {
-    iconUrl: '/static/images/yellow.png',
+    iconUrl: '/static/images/red.png',
     iconSize: [22, 30]
 }
 
@@ -893,7 +893,7 @@ legend.onAdd = function (map) {
     div.innerHTML += '<strong>Storage Level</strong>'+ '<br>'
     div.innerHTML +=  '<img class="pt-2" src="/static/images/blue.png" width="20px">' + ' > 80% ' + '<br>'
     div.innerHTML +=  '<img class="pt-1" src="/static/images/green.png" width="20px">'  + ' 30% - 80% ' + '<br>'
-    div.innerHTML +=  '<img class="pt-1" src="/static/images/yellow.png" width="20px">'   +  ' < 30% '
+    div.innerHTML +=  '<img class="pt-1" src="/static/images/red.png" width="20px">'   +  ' < 30% '
 
     return div;
 };
