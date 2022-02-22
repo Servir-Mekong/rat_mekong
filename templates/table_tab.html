@@ -1,0 +1,216 @@
+{% load static %}
+<div class="tab-pane fade" id="pills-table" role="tabpanel" aria-labelledby="pills-table-tab">
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <h4 class="fw-bold pb-3">Filter Data:</h4>
+            <div class="col-md-3">
+                <h6 class="fw-bold">Country<span class="ps-2"><button type="button"
+                    class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                    data-bs-placement="right" title="Select a country you want to focus 
+or select All to get data for all countries."><i
+                        class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                <select id="select_country" class="form-select" aria-label="Default select country">
+                    <option value="" selected>All</option>
+                    <option value="Cambodia">Cambodia</option>
+                    <option value="Laos">Lao PDR</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="Vietnam">Vietnam</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <h6 class="fw-bold">Reservoir<span class="ps-2"><button type="button"
+                    class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                    data-bs-placement="right" title="Select a reservoir you want to focus 
+or select All to get data for all reservoirs."><i
+                        class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                <select id="reservoir" class="form-select" aria-label="Default select country">
+                    <option value="" selected>All</option>
+                    <option value="Lower Sesan 2">Lower Sesan 2</option>
+                    <option value="Nam Ngum 1">Nam Ngum 1</option>
+                    <option value="Nam Theun 2">Nam Theun 2</option>
+                    <option value="Nam Mang 3">Nam Mang 3</option>
+                    <option value="Lam Pao">Lam Pao</option>
+                    <option value="Sirindhorn">Sirindhorn</option>
+                    <option value="Ubol Ratana">Ubol Ratana</option>
+                    <option value="Se San 4">Se San 4</option>                        
+                </select>
+            </div>
+            <div class="col-md-3">
+                <h6 class="fw-bold">River Basin<span class="ps-2"><button type="button"
+                    class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                    data-bs-placement="right" title="Select a river basin you want to focus 
+or select All to get data for all basin."><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                <select id="select_river_basin" class="form-select" aria-label="Default select country">
+                    <option value="" selected>All</option>
+                    <option value="Chi">Chi</option>
+                    <option value="Lam Dom Noi">Lam Dom Noi</option>
+                    <option value="Nam Gnong">Nam Gnong</option>
+                    <option value="Nam Ngum">Nam Ngum</option>
+                    <option value="Nam Pong">Nam Pong</option>
+                    <option value="Nam Theun">Nam Theun</option>
+                    <option value="Sesan">Sesan</option>
+                    <option value="Se San">Se San</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <h6 class="fw-bold">Reservoir Datasets<span class="ps-2"><button type="button"
+                    class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                    data-bs-placement="right" title="Select a data from the list that you want to focus."><i
+                        class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                <select id="reservoir_datasets" class="form-select" aria-label="Default select country">
+                    <option value="AEC" selected>Area Elevation Curve (AEC)</option>
+                    <option value="Storage Change">Storage Change</option>
+                    <option value="Inflow">Inflow</option>
+                    <option value="Outflow">Outflow</option>
+                    <option value="Surface Area">Surface Area</option>
+                    <option value="Rule Curve">Rule Curve</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mt-3" id="dateFilterRow" style="display: none;">
+            <div class="col-md-3">
+                <h6 class="fw-bold">Date<span class="ps-2"><button type="button"
+                    class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                    data-bs-placement="right" title="Select a date range to filter table data that you want to focus."><i
+                        class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="startDate" class="form-label">From</label>
+                            <input type="text" class="form-control" id="min" name="min">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="endDate" class="form-label">To</label>
+                            <input type="text" class="form-control" id="max" name="max">
+                        </div>
+                    </div>
+                </div>    
+                
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3"></div>
+        </div>
+
+        <!-- AEC Table -->
+        <div class="row mt-5" id="aec_table">
+            <div class="col-md-12">
+                <table id="aec" class="table table-hover" style="width:100%">
+                    <thead>
+                        <tr>
+                            <!-- <th>ID</th> -->
+                            <th>Country</th>
+                            <th>River Basin</th>
+                            <th>Reservoir/Dam Name</th>
+                            <th>Elevation</th>
+                            <th>Cumulative Area</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+
+        <!-- Storage Change Table -->
+        <div class="row mt-5" id="deltas_table" style="display: none;">
+            <div class="col-md-12">
+                <table id="deltas" class="table table-hover" style="width:100%">
+                    <thead>
+                        <tr>
+                            <!-- <th>ID</th> -->
+                            <th>Country</th>
+                            <th>River Basin</th>
+                            <th>Reservoir/Dam Name</th>
+                            <th>Date</th>
+                            <th>Storage Change</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+
+        <!-- Inflow Table -->
+        <div class="row mt-5" id="inflow_table" style="display: none;">
+            <div class="col-md-12">
+                <table id="inflow" class="table table-hover" style="width:100%">
+                    <thead>
+                        <tr>
+                            <!-- <th>ID</th> -->
+                            <th>Country</th>
+                            <th>River Basin</th>
+                            <th>Reservoir/Dam Name</th>
+                            <th>Date</th>
+                            <th>Inflow (Cumecs)</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+
+        <!-- Outflow Table -->
+        <div class="row mt-5" id="outflow_table" style="display: none;">
+            <div class="col-md-12">
+                <table id="outflow" class="table table-hover" style="width:100%">
+                    <thead>
+                        <tr>
+                            <!-- <th>ID</th> -->
+                            <th>Country</th>
+                            <th>River Basin</th>
+                            <th>Reservoir/Dam Name</th>
+                            <th>Date</th>
+                            <th>Outflow (Cumecs)</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+
+        <!-- Surface Area Table -->
+        <div class="row mt-5" id="sarea_table" style="display: none;">
+            <div class="col-md-12">
+                <table id="surface_area" class="table table-hover" style="width:100%">
+                    <thead>
+                        <tr>
+                            <!-- <th>ID</th> -->
+                            <th>Country</th>
+                            <th>River Basin</th>
+                            <th>Reservoir/Dam Name</th>
+                            <th>Date</th>
+                            <th>Water Surface Area (Sq.Km)</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+
+        <!-- Rule Curve Table -->
+        <div class="row mt-5" id="rcurve_table" style="display: none;">
+            <div class="col-md-12">
+                <table id="rcurve" class="table table-hover" style="width:100%">
+                    <thead>
+                        <tr>
+                            <!-- <th>ID</th> -->
+                            <th>Country</th>
+                            <th>River Basin</th>
+                            <th>Reservoir/Dam Name</th>
+                            <th>January</th>
+                            <th>February</th>
+                            <th>March</th>
+                            <th>April</th>
+                            <th>May</th>
+                            <th>June</th>
+                            <th>July</th>
+                            <th>August</th>
+                            <th>September</th>
+                            <th>October</th>
+                            <th>November</th>
+                            <th>December</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

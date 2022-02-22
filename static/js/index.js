@@ -44,21 +44,6 @@ var scale = L.control.scale({
     position:'bottomright'
 }).addTo(map);
 
-
-//Onlick expand home sidebar content area
-// displayHomeSidebarContent.onclick = function(){
-//     if (getComputedStyle(sidebarContent).display === "none"){
-//         sidebarContent.style.display ="block";
-//         sidebarContent.style.width = "350px";
-//         sidebarContent.style.marginLeft = "60px";
-//     } else if (sidebarContent.style.display === "block"){
-//         sidebarContent.style.width = "350px";
-//         sidebarContent.style.marginLeft = "60px";
-//     }else {
-//         sidebarContent.style.display = "none";
-//     }
-// }
-
 //Onlick expand filter sidebar content area
 displayFilterSidebarContent.onclick = function(){
     if (getComputedStyle(sidebarContent).display === "none"){
@@ -156,24 +141,6 @@ filterRiverBasin.onclick = function() {
     }
 }
 
-//filter by country
-function filterCambodia(feature) {
-    if(feature.properties.Country=="Cambodia")
-    return true
-}
-function filterLaos(feature) {
-    if(feature.properties.Country=="Laos")
-    return true
-}
-function filterThailand(feature) {
-    if(feature.properties.Country=="Thailand")
-    return true
-}
-function filterVietnam(feature) {
-    if(feature.properties.Country=="Vietnam")
-    return true
-}
-
 // Icon options
 var iconOptions = {
     iconUrl: '/static/images/marker.png',
@@ -201,135 +168,114 @@ var blueIcon = L.icon(iconOptionsBlue);
 var yellowIcon = L.icon(iconOptionsYellow);
 
 
+var reservoirName = document.getElementById("reservoir_name");
+
+// Filter by reservoir/dam name
+function filterByReservoirName(feature) {
+    if(feature.properties.Name==reservoirName.value)
+    return true
+}
+
+function onEachFeature(feature, reservoirLayer) {
+    var resname = feature.properties.Name;
+    var stationid = feature.properties.id;
+    var rbasin = feature.properties.River;
+    var country = feature.properties.Country;
+    var slevel = feature.properties.Storage;
+    var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
+    var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
+    reservoirLayer.bindTooltip(resname);
+    // reservoirLayer.on('click', function (e) {
+    //     this.bindPopup(popupContent);
+    // });  
+    reservoirLayer.bindPopup(popupContent); 
+    reservoirLayer.layerTag = "GeoJSONLayer"
+    //reservoirLayer.setIcon(customIcon);
+    if (slevel === '81%-100%') {
+        reservoirLayer.setIcon(blueIcon); 
+    }else if(slevel === '30%-80%'){
+        reservoirLayer.setIcon(greenIcon);
+    }else {
+        reservoirLayer.setIcon(yellowIcon);
+    }                    
+} 
+
+var selectedReservoirLayer;
+$("#reservoir_name").on('change', function(){
+    var selectedValue = this.value;
+    if (selectedValue == "All"){
+        // unchecked layer;
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        for (var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].checked = true;
+        }
+        selectedReservoirLayer = L.geoJson(reservoirs, {
+            onEachFeature: onEachFeature
+        }).addTo(map);
+    } else if (selectedValue == selectedValue){
+        // unchecked layer;
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        for (var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].checked = false;
+        }
+
+        // remove layers from map
+        map.eachLayer(function (layer) {
+            if ( layer.layerTag && layer.layerTag === "GeoJSONLayer") {
+                map.removeLayer(layer)
+            }
+        });
+        if (selectedReservoirLayer){
+            map.removeLayer(selectedReservoirLayer)
+        }
+        selectedReservoirLayer = L.geoJson(reservoirs, {
+            filter: filterByReservoirName, 
+            onEachFeature: onEachFeature
+        }).addTo(map);
+    }
+
+});
+
+//filter by country
+function filterCambodia(feature) {
+    if(feature.properties.Country=="Cambodia")
+    return true
+}
+function filterLaos(feature) {
+    if(feature.properties.Country=="Laos")
+    return true
+}
+function filterThailand(feature) {
+    if(feature.properties.Country=="Thailand")
+    return true
+}
+function filterVietnam(feature) {
+    if(feature.properties.Country=="Vietnam")
+    return true
+}
+
 var cambodia_reservoirs = L.geoJson(reservoirs, {
     filter: filterCambodia,
-    //style: Style, 
-	onEachFeature: function(feature, reservoirLayer) {
-        var resname = feature.properties.Name;
-        var stationid = feature.properties.id;
-        var rbasin = feature.properties.River;
-        var country = feature.properties.Country;
-        var slevel = feature.properties.Storage;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
-		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
-        reservoirLayer.bindTooltip(resname);
-        // reservoirLayer.on('click', function (e) {
-        //     this.bindPopup(popupContent);
-        // });  
-        reservoirLayer.bindPopup(popupContent); 
-        //reservoirLayer.setIcon(customIcon);
-        if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(blueIcon); 
-        }else if(slevel === '30%-80%'){
-            reservoirLayer.setIcon(greenIcon);
-        }else {
-            reservoirLayer.setIcon(yellowIcon);
-        }                    
-    } 
+	onEachFeature: onEachFeature      
 })
 var laos_reservoirs = L.geoJson(reservoirs, {
     filter: filterLaos,
-    //style: Style, 
-	onEachFeature: function(feature, reservoirLayer) {
-        var resname = feature.properties.Name;
-        var stationid = feature.properties.id;
-        var rbasin = feature.properties.River;
-        var country = feature.properties.Country;
-        var slevel = feature.properties.Storage;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
-		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
-        reservoirLayer.bindTooltip(resname);
-        // reservoirLayer.on('click', function (e) {
-        //     this.bindPopup(popupContent);
-        // });  
-        reservoirLayer.bindPopup(popupContent);
-        //reservoirLayer.setIcon(customIcon); 
-        if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(blueIcon); 
-        }else if(slevel === '30%-80%'){
-            reservoirLayer.setIcon(greenIcon);
-        }else {
-            reservoirLayer.setIcon(yellowIcon);
-        }                       
-    } 
+	onEachFeature: onEachFeature
 })
 var thailand_reservoirs = L.geoJson(reservoirs, {
     filter: filterThailand,
-    //style: Style, 
-	onEachFeature: function(feature, reservoirLayer) {
-        var resname = feature.properties.Name;
-        var stationid = feature.properties.id;
-        var rbasin = feature.properties.River;
-        var country = feature.properties.Country;
-        var slevel = feature.properties.Storage;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
-		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
-        reservoirLayer.bindTooltip(resname);
-        // reservoirLayer.on('click', function (e) {
-        //     this.bindPopup(popupContent);
-        // });  
-        reservoirLayer.bindPopup(popupContent); 
-        //reservoirLayer.setIcon(customIcon);   
-        if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(blueIcon); 
-        }else if(slevel === '30%-80%'){
-            reservoirLayer.setIcon(greenIcon);
-        }else {
-            reservoirLayer.setIcon(yellowIcon);
-        }                    
-    } 
+	onEachFeature: onEachFeature
 })
 var vietnam_reservoirs = L.geoJson(reservoirs, {
     filter: filterVietnam,
-    //style: Style, 
-	onEachFeature: function(feature, reservoirLayer) {
-        var resname = feature.properties.Name;
-        var stationid = feature.properties.id;
-        var rbasin = feature.properties.River;
-        var country = feature.properties.Country;
-        var slevel = feature.properties.Storage;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
-		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
-        reservoirLayer.bindTooltip(resname);
-        // reservoirLayer.on('click', function (e) {
-        //     this.bindPopup(popupContent);
-        // });     
-        reservoirLayer.bindPopup(popupContent);  
-        //reservoirLayer.setIcon(customIcon); 
-        if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(blueIcon); 
-        }else if(slevel === '30%-80%'){
-            reservoirLayer.setIcon(greenIcon);
-        }else {
-            reservoirLayer.setIcon(yellowIcon);
-        }                    
-    } 
+	onEachFeature: onEachFeature
 });
 
-var all_reservoirs = L.geoJson(reservoirs, {
-	onEachFeature: function(feature, reservoirLayer) {
-        var resname = feature.properties.Name;
-        var stationid = feature.properties.id;
-        var rbasin = feature.properties.River;
-        var country = feature.properties.Country;
-        var slevel = feature.properties.Storage;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
-		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
-        reservoirLayer.bindTooltip(resname);
-        // reservoirLayer.on('click', function (e) {
-        //     this.bindPopup(popupContent);
-        // }); 
-        reservoirLayer.bindPopup(popupContent);  
-        //reservoirLayer.setIcon(customIcon);
-        if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(blueIcon); 
-        }else if(slevel === '30%-80%'){
-            reservoirLayer.setIcon(greenIcon);
-        }else {
-            reservoirLayer.setIcon(yellowIcon);
-        }                     
-    } 
-}).addTo(map);
+// var all_reservoirs = L.geoJson(reservoirs, {
+// 	onEachFeature: onEachFeature
+// }).addTo(map);
+
+var all_reservoirs = L.layerGroup([cambodia_reservoirs, laos_reservoirs, thailand_reservoirs, vietnam_reservoirs]);
 
 document.getElementById("all").checked = true;
 document.getElementById("cambodia").checked = true;
@@ -341,16 +287,8 @@ document.getElementById("vietnam").checked = true;
 $('input[type=checkbox][name=all]').click(function(){
     if (this.checked){
         map.addLayer(all_reservoirs)
-        //map.addLayer(cambodia_reservoirs);
-        //map.addLayer(laos_reservoirs);
-        //map.addLayer(thailand_reservoirs);
-        //map.addLayer(vietnam_reservoirs);
     }else {
-        map.removeLayer(all_reservoirs);
-        //map.removeLayer(cambodia_reservoirs);
-        //map.removeLayer(laos_reservoirs);
-        //map.removeLayer(thailand_reservoirs);
-        //map.removeLayer(vietnam_reservoirs);  
+        map.removeLayer(all_reservoirs); 
     }
 });
 $('input[type=checkbox][name=cambodia]').click(function(){
@@ -418,238 +356,43 @@ function filterBySeSan(feature) {
 
 var chiRiverLayer = L.geoJson(reservoirs, {
     filter: filterByChi,
-    //style: Style, 
-	onEachFeature: function(feature, reservoirLayer) {
-        var resname = feature.properties.Name;
-        var stationid = feature.properties.id;
-        var rbasin = feature.properties.River;
-        var country = feature.properties.Country;
-        var slevel = feature.properties.Storage;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
-		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
-        reservoirLayer.bindTooltip(resname);
-        // reservoirLayer.on('click', function (e) {
-        //     this.bindPopup(popupContent);
-        // });   
-        reservoirLayer.bindPopup(popupContent);    
-        //reservoirLayer.setIcon(customIcon);  
-        if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(blueIcon); 
-        }else if(slevel === '30%-80%'){
-            reservoirLayer.setIcon(greenIcon);
-        }else {
-            reservoirLayer.setIcon(yellowIcon);
-        }                     
-    } 
+	onEachFeature: onEachFeature
 });
 
 var lamDomNoiRiverLayer = L.geoJson(reservoirs, {
     filter: filteryByLamDomNoi,
-    //style: Style, 
-	onEachFeature: function(feature, reservoirLayer) {
-        var resname = feature.properties.Name;
-        var stationid = feature.properties.id;
-        var rbasin = feature.properties.River;
-        var country = feature.properties.Country;
-        var slevel = feature.properties.Storage;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
-		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
-        reservoirLayer.bindTooltip(resname);
-        // reservoirLayer.on('click', function (e) {
-        //     this.bindPopup(popupContent);
-        // });  
-        reservoirLayer.bindPopup(popupContent);    
-        //reservoirLayer.setIcon(customIcon);    
-        if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(blueIcon); 
-        }else if(slevel === '30%-80%'){
-            reservoirLayer.setIcon(greenIcon);
-        }else {
-            reservoirLayer.setIcon(yellowIcon);
-        }                  
-    } 
+	onEachFeature: onEachFeature
 });
 
 var namGnongRiverLayer = L.geoJson(reservoirs, {
     filter: filterByNamGnong,
-    //style: Style, 
-	onEachFeature: function(feature, reservoirLayer) {
-        var resname = feature.properties.Name;
-        var stationid = feature.properties.id;
-        var rbasin = feature.properties.River;
-        var country = feature.properties.Country;
-        var slevel = feature.properties.Storage;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
-		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
-        reservoirLayer.bindTooltip(resname);
-        // reservoirLayer.on('click', function (e) {
-        //     this.bindPopup(popupContent);
-        // }); 
-        reservoirLayer.bindPopup(popupContent);    
-        //reservoirLayer.setIcon(customIcon); 
-        if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(blueIcon); 
-        }else if(slevel === '30%-80%'){
-            reservoirLayer.setIcon(greenIcon);
-        }else {
-            reservoirLayer.setIcon(yellowIcon);
-        }                   
-    } 
+	onEachFeature: onEachFeature
 });
 var namNgumRiverLayer = L.geoJson(reservoirs, {
     filter: filterByNamNgum,
-    //style: Style, 
-	onEachFeature: function(feature, reservoirLayer) {
-        var resname = feature.properties.Name;
-        var stationid = feature.properties.id;
-        var rbasin = feature.properties.River;
-        var country = feature.properties.Country;
-        var slevel = feature.properties.Storage;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
-		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
-        reservoirLayer.bindTooltip(resname);
-        // reservoirLayer.on('click', function (e) {
-        //     this.bindPopup(popupContent);
-        // });  
-        reservoirLayer.bindPopup(popupContent);   
-        //reservoirLayer.setIcon(customIcon);   
-        if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(blueIcon); 
-        }else if(slevel === '30%-80%'){
-            reservoirLayer.setIcon(greenIcon);
-        }else {
-            reservoirLayer.setIcon(yellowIcon);
-        }                     
-    } 
+	onEachFeature: onEachFeature
 });
 var namPongRiverLayer = L.geoJson(reservoirs, {
     filter: filterByNamPong,
-    //style: Style, 
-	onEachFeature: function(feature, reservoirLayer) {
-        var resname = feature.properties.Name;
-        var stationid = feature.properties.id;
-        var rbasin = feature.properties.River;
-        var country = feature.properties.Country;
-        var slevel = feature.properties.Storage;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
-		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
-        reservoirLayer.bindTooltip(resname);
-        // reservoirLayer.on('click', function (e) {
-        //     this.bindPopup(popupContent);
-        // });  
-        reservoirLayer.bindPopup(popupContent);    
-        //reservoirLayer.setIcon(customIcon);  
-        if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(blueIcon); 
-        }else if(slevel === '30%-80%'){
-            reservoirLayer.setIcon(greenIcon);
-        }else {
-            reservoirLayer.setIcon(yellowIcon);
-        }                    
-    } 
+	onEachFeature: onEachFeature
 });
 var namTheunRiverLayer = L.geoJson(reservoirs, {
     filter: filterByNamTheun,
-    //style: Style, 
-	onEachFeature: function(feature, reservoirLayer) {
-        var resname = feature.properties.Name;
-        var stationid = feature.properties.id;
-        var rbasin = feature.properties.River;
-        var country = feature.properties.Country;
-        var slevel = feature.properties.Storage;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
-		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
-        reservoirLayer.bindTooltip(resname);
-        // reservoirLayer.on('click', function (e) {
-        //     this.bindPopup(popupContent);
-        // }); 
-        reservoirLayer.bindPopup(popupContent);   
-        //reservoirLayer.setIcon(customIcon); 
-        if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(blueIcon); 
-        }else if(slevel === '30%-80%'){
-            reservoirLayer.setIcon(greenIcon);
-        }else {
-            reservoirLayer.setIcon(yellowIcon);
-        }                       
-    } 
+	onEachFeature: onEachFeature
 });
 var sesanRiverLayer = L.geoJson(reservoirs, {
     filter: filterBySesan,
-    //style: Style, 
-	onEachFeature: function(feature, reservoirLayer) {
-        var resname = feature.properties.Name;
-        var stationid = feature.properties.id;
-        var rbasin = feature.properties.River;
-        var country = feature.properties.Country;
-        var slevel = feature.properties.Storage;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
-		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
-        reservoirLayer.bindTooltip(resname);
-        // reservoirLayer.on('click', function (e) {
-        //     this.bindPopup(popupContent);
-        // });
-        reservoirLayer.bindPopup(popupContent);        
-        //reservoirLayer.setIcon(customIcon); 
-        if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(blueIcon); 
-        }else if(slevel === '30%-80%'){
-            reservoirLayer.setIcon(greenIcon);
-        }else {
-            reservoirLayer.setIcon(yellowIcon);
-        }                  
-    } 
+	onEachFeature: onEachFeature
 });
 var seSanRiverLayer = L.geoJson(reservoirs, {
     filter: filterBySeSan,
-    //style: Style, 
-	onEachFeature: function(feature, reservoirLayer) {
-        var resname = feature.properties.Name;
-        var stationid = feature.properties.id;
-        var rbasin = feature.properties.River;
-        var country = feature.properties.Country;
-        var slevel = feature.properties.Storage;
-        var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://58.137.55.230/testiframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
-		var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
-        reservoirLayer.bindTooltip(resname);
-        // reservoirLayer.on('click', function (e) {
-        //     this.bindPopup(popupContent);
-        // }); 
-        reservoirLayer.bindPopup(popupContent);  
-        //reservoirLayer.setIcon(customIcon); 
-        if (slevel === '81%-100%') {
-            reservoirLayer.setIcon(blueIcon); 
-        }else if(slevel === '30%-80%'){
-            reservoirLayer.setIcon(greenIcon);
-        }else {
-            reservoirLayer.setIcon(yellowIcon);
-        }                      
-    } 
+	onEachFeature: onEachFeature
 });
 
 $('input[type=checkbox][name=allRivers]').click(function(){
     if (this.checked){
-        map.addLayer(chiRiverLayer);
-        map.addLayer(lamDomNoiRiverLayer);
-        map.addLayer(namGnongRiverLayer);
-        map.addLayer(namNgumRiverLayer);
-        map.addLayer(namPongRiverLayer);
-        map.addLayer(namTheunRiverLayer);
-        map.addLayer(sesanRiverLayer);
-        map.addLayer(seSanRiverLayer);
+        map.addLayer(all_reservoirs);
     }else {
-        map.removeLayer(chiRiverLayer);
-        map.removeLayer(lamDomNoiRiverLayer);
-        map.removeLayer(namGnongRiverLayer);
-        map.removeLayer(namNgumRiverLayer);
-        map.removeLayer(namPongRiverLayer);
-        map.removeLayer(namTheunRiverLayer);
-        map.removeLayer(sesanRiverLayer);
-        map.removeLayer(seSanRiverLayer);
-        map.removeLayer(cambodia_reservoirs);
-        map.removeLayer(laos_reservoirs);
-        map.removeLayer(thailand_reservoirs);
-        map.removeLayer(vietnam_reservoirs); 
         map.removeLayer(all_reservoirs);
     }
 });
@@ -659,6 +402,7 @@ $('input[type=checkbox][name=chi]').click(function(){
     }else {
         map.removeLayer(chiRiverLayer);
         map.removeLayer(all_reservoirs);
+        
     }
 });
 $('input[type=checkbox][name=lamDomNoi]').click(function(){
@@ -667,6 +411,7 @@ $('input[type=checkbox][name=lamDomNoi]').click(function(){
     }else {
         map.removeLayer(lamDomNoiRiverLayer);
         map.removeLayer(all_reservoirs);
+        
     }
 });
 $('input[type=checkbox][name=namGnong]').click(function(){
@@ -675,6 +420,7 @@ $('input[type=checkbox][name=namGnong]').click(function(){
     }else {
         map.removeLayer(namGnongRiverLayer);
         map.removeLayer(all_reservoirs);
+        
     }
 });
 $('input[type=checkbox][name=namNgum]').click(function(){
@@ -683,6 +429,7 @@ $('input[type=checkbox][name=namNgum]').click(function(){
     }else {
         map.removeLayer(namNgumRiverLayer);
         map.removeLayer(all_reservoirs);
+        
     }
 });
 $('input[type=checkbox][name=namPong]').click(function(){
@@ -691,6 +438,7 @@ $('input[type=checkbox][name=namPong]').click(function(){
     }else {
         map.removeLayer(namPongRiverLayer);
         map.removeLayer(all_reservoirs);
+        
     }
 });
 $('input[type=checkbox][name=namTheun]').click(function(){
@@ -699,6 +447,7 @@ $('input[type=checkbox][name=namTheun]').click(function(){
     }else {
         map.removeLayer(namTheunRiverLayer);
         map.removeLayer(all_reservoirs);
+        
     }
 });
 $('input[type=checkbox][name=sesan]').click(function(){
@@ -707,6 +456,7 @@ $('input[type=checkbox][name=sesan]').click(function(){
     }else {
         map.removeLayer(sesanRiverLayer);
         map.removeLayer(all_reservoirs);
+        
     }
 });
 $('input[type=checkbox][name=seSan]').click(function(){
@@ -715,6 +465,7 @@ $('input[type=checkbox][name=seSan]').click(function(){
     }else {
         map.removeLayer(seSanRiverLayer);
         map.removeLayer(all_reservoirs);
+        
     }
 });
 
@@ -983,7 +734,7 @@ map.addControl( searchControl );  //inizialize search control
     ** Table Tab Scripts **
 */
 
-//AEC Table
+// AEC Table
 document.addEventListener('DOMContentLoaded', function () {
     let table = new DataTable('#aec', {
         ajax: function (d, cb) {
@@ -1007,22 +758,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-//Filter AEC by country
-$(document).ready(function() {
-    var table =  $('#aec').DataTable();    
-    $('#aec_country').on('change', function () {
-        table.columns(0).search( this.value ).draw();
-    });
-});
-//Filter AEC by river basin
-$(document).ready(function() {
-    var table =  $('#aec').DataTable();    
-    $('#aec_river_basin').on('change', function () {
-        table.columns(1).search( this.value ).draw();
-    });
- });
-
-//deltas Table
+// Storage Change Table
 document.addEventListener('DOMContentLoaded', function () {
     let table = new DataTable('#deltas', {
         ajax: function (d, cb) {
@@ -1047,22 +783,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-//Filter deltas by country
-$(document).ready(function() {
-    var table =  $('#deltas').DataTable();    
-    $('#deltas_country').on('change', function () {
-        table.columns(0).search( this.value ).draw();
-    });
-});
-//Filter deltas by river basin
-$(document).ready(function() {
-    var table =  $('#deltas').DataTable();    
-    $('#deltas_river_basin').on('change', function () {
-        table.columns(1).search( this.value ).draw();
-    });
- });
-
-//Inflow Table
+// Inflow Table
 document.addEventListener('DOMContentLoaded', function () {
     let table = new DataTable('#inflow', {
         ajax: function (d, cb) {
@@ -1087,22 +808,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-//Filter inflow by country
-$(document).ready(function() {
-    var table =  $('#inflow').DataTable();    
-    $('#inflow_country').on('change', function () {
-        table.columns(0).search( this.value ).draw();
-    });
-});
-//Filter inflow by river basin
-$(document).ready(function() {
-    var table =  $('#inflow').DataTable();    
-    $('#inflow_river_basin').on('change', function () {
-        table.columns(1).search( this.value ).draw();
-    });
- });
-
-//Outflow Table
+// Outflow Table
 document.addEventListener('DOMContentLoaded', function () {
     let table = new DataTable('#outflow', {
         ajax: function (d, cb) {
@@ -1127,22 +833,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-//Filter outflow by country
-$(document).ready(function() {
-    var table =  $('#outflow').DataTable();    
-    $('#outflow_country').on('change', function () {
-        table.columns(0).search( this.value ).draw();
-    });
-});
-//Filter outflow by river basin
-$(document).ready(function() {
-    var table =  $('#outflow').DataTable();    
-    $('#outflow_river_basin').on('change', function () {
-        table.columns(1).search( this.value ).draw();
-    });
- });
-
-//Surface Area Table
+// Surface Area Table
 document.addEventListener('DOMContentLoaded', function () {
     let table = new DataTable('#surface_area', {
         ajax: function (d, cb) {
@@ -1167,22 +858,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-//Filter surface_area by country
-$(document).ready(function() {
-    var table =  $('#surface_area').DataTable();    
-    $('#sarea_country').on('change', function () {
-        table.columns(0).search( this.value ).draw();
-    });
-});
-//Filter surface_area by river basin
-$(document).ready(function() {
-    var table =  $('#surface_area').DataTable();    
-    $('#sarea_river_basin').on('change', function () {
-        table.columns(1).search( this.value ).draw();
-    });
- });
-
-//Rule Curve Table
+// Rule Curve Table
 document.addEventListener('DOMContentLoaded', function () {
     let table = new DataTable('#rcurve', {
         ajax: function (d, cb) {
@@ -1216,17 +892,478 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-//Filter rcurve by country
+var aec_table = document.getElementById('aec_table');
+var deltas_table = document.getElementById('deltas_table');
+var inflow_table = document.getElementById('inflow_table');
+var outflow_table = document.getElementById('outflow_table');
+var sarea_table = document.getElementById('sarea_table');
+var rcurve_table = document.getElementById('rcurve_table');
+
+// $("#reservoir_datasets").on('change', function(){
+//     var selectedValue = this.value;
+//     if (selectedValue == 'AEC'){
+//         aec_table.style.display = "block";
+//     } else {
+//         aec_table.style.display = "none";
+//     }
+//     if (selectedValue == 'Storage Change'){
+//         deltas_table.style.display = "block";
+//     } else {
+//         deltas_table.style.display = "none";
+//     }
+//     if (selectedValue == 'Inflow'){
+//         inflow_table.style.display = "block";
+//     } else {
+//         inflow_table.style.display = "none";
+//     }
+//     if (selectedValue == 'Outflow'){
+//         outflow_table.style.display = "block";
+//     } else {
+//         outflow_table.style.display = "none";
+//     }
+//     if (selectedValue == 'Surface Area'){
+//         sarea_table.style.display = "block";
+//     } else {
+//         sarea_table.style.display = "none";
+//     }
+//     if (selectedValue == 'Rule Curve'){
+//         rcurve_table.style.display = "block";
+//     } else {
+//         rcurve_table.style.display = "none";
+//     }
+// });
+
+// Filter 
 $(document).ready(function() {
-    var table =  $('#rcurve').DataTable();    
-    $('#rcurve_country').on('change', function () {
-        table.columns(0).search( this.value ).draw();
+    var dateFilterRow = document.getElementById('dateFilterRow');
+    var aecTable = $('#aec').DataTable();  
+    var deltasTable = $('#deltas').DataTable();  
+    var inflowTable = $('#inflow').DataTable(); 
+    var outflowTable = $('#outflow').DataTable(); 
+    var sareaTable = $('#surface_area').DataTable();  
+    var rcurveTable = $('#rcurve').DataTable(); 
+
+    var getSelectedValue = document.getElementById('reservoir_datasets');
+    //console.log(getSelectedValue)
+
+    // if (getSelectedValue.value == "AEC"){
+    //     $('#select_country').on('change', function () {
+    //         aecTable.columns(0).search( this.value ).draw();
+    //     });
+    //     $('#select_river_basin').on('change', function () {
+    //         aecTable.columns(1).search( this.value ).draw();
+    //     });
+    //     $('#reservoir').on('change', function () {
+    //         var selectedReservoir = this.value;
+    //         if (selectedReservoir == selectedReservoir){
+    //             aecTable.columns(2).search( this.value ).draw();
+    //         }
+    //     });
+    //     // Hide date filter row
+    //     dateFilterRow.style.display = "none";
+    // } 
+
+    $("#reservoir_datasets").on('change', function(){
+        var selectedValue = this.value;
+        if (selectedValue == 'AEC'){
+            dateFilterRow.style.display = "none";
+            aec_table.style.display = "block";
+            var getSelectedCountry = document.getElementById('select_country');
+            // var getSelectedRiverBasin = document.getElementById('select_river_basin');
+            // getSelectedRiverBasin.value = "";
+            // getSelectedRiverBasin.text = "All";
+            
+            // Filter by country
+            aecTable.columns(0).search( getSelectedCountry.value ).draw();
+            $('#select_country').on('change', function () {
+                aecTable.columns(0).search( this.value ).draw();
+            });
+            // Filter by river basin
+            $('#select_river_basin').on('change', function () {
+                aecTable.columns(1).search( this.value ).draw();
+            });
+            // Filter by reservoir
+            $('#reservoir').on('change', function () {     
+                aecTable.columns(2).search( this.value ).draw();              
+            });
+        } else {
+            //dateFilterRow.style.display = "block";
+            aec_table.style.display = "none";
+        }
+
+        if (selectedValue == 'Storage Change'){
+            dateFilterRow.style.display = "block";
+            deltas_table.style.display = "block";
+            var getSelectedCountry = document.getElementById('select_country');
+            var getSelectedRiverBasin = document.getElementById('select_river_basin');
+            
+            // Filter by country
+            deltasTable.columns(0).search( getSelectedCountry.value ).draw();
+            $('#select_country').on('change', function () {
+                deltasTable.columns(0).search( this.value ).draw();
+            });
+            // Filter by river basin
+            $('#select_river_basin').on('change', function () {
+                deltasTable.columns(1).search( this.value ).draw();
+            });
+            // Filter by reservoir
+            $('#reservoir').on('change', function () {     
+                deltasTable.columns(2).search( this.value ).draw();           
+            });
+
+            var minDate;
+            var maxDate;
+            
+            // Custom filtering function which will search data in column four between two values
+            $.fn.dataTable.ext.search.push(
+                function( settings, data, dataIndex ) {
+                    var min = minDate.val();
+                    var max = maxDate.val();
+                    var date = new Date( data[3] );
+            
+                    if (
+                        ( min === null && max === null ) ||
+                        ( min === null && date <= max ) ||
+                        ( min <= date   && max === null ) ||
+                        ( min <= date   && date <= max )
+                    ) {
+                        return true;
+                    }
+                    return false;
+                }
+            );
+            
+            $(document).ready(function() {
+                // Create date inputs
+                minDate = new DateTime($('#min'), {
+                    // format: 'MMMM Do YYYY'
+                    format: 'M/D/YYYY'
+                });
+                maxDate = new DateTime($('#max'), {
+                    //format: 'MMMM Do YYYY'
+                    format: 'M/D/YYYY'
+                });
+            
+                // DataTables initialisation
+                //var table = $('#surface_area').DataTable();
+            
+                // Refilter the table
+                $('#min, #max').on('change', function () {
+                    deltasTable.draw();
+                });
+            });
+
+        } else {
+            deltas_table.style.display = "none";
+        }
+
+        if (selectedValue == 'Inflow'){
+            dateFilterRow.style.display = "block";
+            inflow_table.style.display = "block";
+            var getSelectedCountry = document.getElementById('select_country');
+            var getSelectedRiverBasin = document.getElementById('select_river_basin');
+            
+            // Filter by country
+            inflowTable.columns(0).search( getSelectedCountry.value ).draw();
+            $('#select_country').on('change', function () {
+                inflowTable.columns(0).search( this.value ).draw();
+            });
+            // Filter by river basin
+            $('#select_river_basin').on('change', function () {
+                inflowTable.columns(1).search( this.value ).draw();
+            });
+            // Filter by reservoir
+            $('#reservoir').on('change', function () {     
+                inflowTable.columns(2).search( this.value ).draw();              
+            });   
+            
+            var minDate;
+            var maxDate;
+            
+            // Custom filtering function which will search data in column four between two values
+            $.fn.dataTable.ext.search.push(
+                function( settings, data, dataIndex ) {
+                    var min = minDate.val();
+                    var max = maxDate.val();
+                    var date = new Date( data[3] );
+            
+                    if (
+                        ( min === null && max === null ) ||
+                        ( min === null && date <= max ) ||
+                        ( min <= date   && max === null ) ||
+                        ( min <= date   && date <= max )
+                    ) {
+                        return true;
+                    }
+                    return false;
+                }
+            );
+            
+            $(document).ready(function() {
+                // Create date inputs
+                minDate = new DateTime($('#min'), {
+                    // format: 'MMMM Do YYYY'
+                    format: 'M/D/YYYY'
+                });
+                maxDate = new DateTime($('#max'), {
+                    //format: 'MMMM Do YYYY'
+                    format: 'M/D/YYYY'
+                });
+            
+                // DataTables initialisation
+                //var table = $('#surface_area').DataTable();
+            
+                // Refilter the table
+                $('#min, #max').on('change', function () {
+                    inflowTable.draw();
+                });
+            });
+
+        } else {
+            inflow_table.style.display = "none";
+        }
+
+        if (selectedValue == 'Outflow'){
+            dateFilterRow.style.display = "block";
+            outflow_table.style.display = "block";
+            var getSelectedCountry = document.getElementById('select_country');
+            var getSelectedRiverBasin = document.getElementById('select_river_basin');
+            
+            // Filter by country
+            outflowTable.columns(0).search( getSelectedCountry.value ).draw();
+            $('#select_country').on('change', function () {
+                outflowTable.columns(0).search( this.value ).draw();
+            });
+            // Filter by river basin
+            $('#select_river_basin').on('change', function () {
+                outflowTable.columns(1).search( this.value ).draw();
+            });
+            // Filter by reservoir
+            $('#reservoir').on('change', function () {     
+                outflowTable.columns(2).search( this.value ).draw();              
+            });
+
+            var minDate;
+            var maxDate;
+            
+            // Custom filtering function which will search data in column four between two values
+            $.fn.dataTable.ext.search.push(
+                function( settings, data, dataIndex ) {
+                    var min = minDate.val();
+                    var max = maxDate.val();
+                    var date = new Date( data[3] );
+            
+                    if (
+                        ( min === null && max === null ) ||
+                        ( min === null && date <= max ) ||
+                        ( min <= date   && max === null ) ||
+                        ( min <= date   && date <= max )
+                    ) {
+                        return true;
+                    }
+                    return false;
+                }
+            );
+            
+            $(document).ready(function() {
+                // Create date inputs
+                minDate = new DateTime($('#min'), {
+                    // format: 'MMMM Do YYYY'
+                    format: 'M/D/YYYY'
+                });
+                maxDate = new DateTime($('#max'), {
+                    //format: 'MMMM Do YYYY'
+                    format: 'M/D/YYYY'
+                });
+            
+                // DataTables initialisation
+                //var table = $('#surface_area').DataTable();
+            
+                // Refilter the table
+                $('#min, #max').on('change', function () {
+                    outflowTable.draw();
+                });
+            });
+        } else {
+            outflow_table.style.display = "none";
+        }
+
+        if (selectedValue == 'Surface Area'){
+            dateFilterRow.style.display = "block";
+            sarea_table.style.display = "block";
+            var getSelectedCountry = document.getElementById('select_country');
+            var getSelectedRiverBasin = document.getElementById('select_river_basin');
+            
+            // Filter by country
+            sareaTable.columns(0).search( getSelectedCountry.value ).draw();
+            $('#select_country').on('change', function () {
+                sareaTable.columns(0).search( this.value ).draw();
+            });
+            // Filter by river basin
+            $('#select_river_basin').on('change', function () {
+                sareaTable.columns(1).search( this.value ).draw();
+            });
+            // Filter by reservoir
+            $('#reservoir').on('change', function () {     
+                sareaTable.columns(2).search( this.value ).draw();              
+            });
+
+            var minDate;
+            var maxDate;
+            
+            // Custom filtering function which will search data in column four between two values
+            $.fn.dataTable.ext.search.push(
+                function( settings, data, dataIndex ) {
+                    var min = minDate.val();
+                    var max = maxDate.val();
+                    var date = new Date( data[3] );
+            
+                    if (
+                        ( min === null && max === null ) ||
+                        ( min === null && date <= max ) ||
+                        ( min <= date   && max === null ) ||
+                        ( min <= date   && date <= max )
+                    ) {
+                        return true;
+                    }
+                    return false;
+                }
+            );
+            
+            $(document).ready(function() {
+                // Create date inputs
+                minDate = new DateTime($('#min'), {
+                    // format: 'MMMM Do YYYY'
+                    format: 'M/D/YYYY'
+                });
+                maxDate = new DateTime($('#max'), {
+                    //format: 'MMMM Do YYYY'
+                    format: 'M/D/YYYY'
+                });
+            
+                // DataTables initialisation
+                //var table = $('#surface_area').DataTable();
+            
+                // Refilter the table
+                $('#min, #max').on('change', function () {
+                    sareaTable.draw();
+                });
+            });
+        } else {
+            sarea_table.style.display = "none";
+        }
+
+        if (selectedValue == 'Rule Curve'){
+            dateFilterRow.style.display = "none";
+            rcurve_table.style.display = "block";
+            var getSelectedCountry = document.getElementById('select_country');
+            var getSelectedRiverBasin = document.getElementById('select_river_basin');
+            
+            // Filter by country
+            rcurveTable.columns(0).search( getSelectedCountry.value ).draw();
+            $('#select_country').on('change', function () {
+                rcurveTable.columns(0).search( this.value ).draw();
+            });
+            // Filter by river basin
+            $('#select_river_basin').on('change', function () {
+                rcurveTable.columns(1).search( getSelectedRiverBasin.value ).draw();
+            });
+            // Filter by reservoir
+            $('#reservoir').on('change', function () {     
+                rcurveTable.columns(2).search( this.value ).draw();              
+            });
+            // dateFilterRow.style.display = "none";
+        } else {
+            rcurve_table.style.display = "none";
+        }
     });
+
+    // // Filter by country
+    // $('#select_country').on('change', function () {
+    //     aecTable.columns(0).search( this.value ).draw();
+    //     deltasTable.columns(0).search( this.value ).draw();
+    //     inflowTable.columns(0).search( this.value ).draw();
+    //     outflowTable.columns(0).search( this.value ).draw();
+    //     sareaTable.columns(0).search( this.value ).draw();
+    //     rcurveTable.columns(0).search( this.value ).draw();
+    // });
+
+    // // Filter by river basin
+    // $('#select_river_basin').on('change', function () {
+    //     aecTable.columns(1).search( this.value ).draw();
+    //     deltasTable.columns(1).search( this.value ).draw();
+    //     inflowTable.columns(1).search( this.value ).draw();
+    //     outflowTable.columns(1).search( this.value ).draw();
+    //     sareaTable.columns(1).search( this.value ).draw();
+    //     rcurveTable.columns(1).search( this.value ).draw();
+    // });
+
+    
 });
-//Filter rcurve by river basin
-$(document).ready(function() {
-    var table =  $('#rcurve').DataTable();    
-    $('#rcurve_river_basin').on('change', function () {
-        table.columns(1).search( this.value ).draw();
-    });
-});
+
+
+
+// $(document).ready(function() { 
+//     // $( "#min" ).datepicker({
+//     //     changeMonth: true, 
+//     //     changeYear: true, 
+//     //     dateFormat: "mm/dd/yy",
+//     //     yearRange: "-90:+00"
+//     // });
+//     // $( "#max" ).datepicker({
+//     //     changeMonth: true, 
+//     //     changeYear: true, 
+//     //     dateFormat: "mm/dd/yy",
+//     //     yearRange: "-90:+00"
+//     // });
+
+//     $("#reservoir_datasets").on('change', function(){
+//         var selectedValue = this.value;
+//         if (selectedValue == 'Surface Area'){
+//             var minDate;
+//             var maxDate;
+            
+//             // Custom filtering function which will search data in column four between two values
+//             $.fn.dataTable.ext.search.push(
+//                 function( settings, data, dataIndex ) {
+//                     var min = minDate.val();
+//                     var max = maxDate.val();
+//                     var date = new Date( data[4] );
+            
+//                     if (
+//                         ( min === null && max === null ) ||
+//                         ( min === null && date <= max ) ||
+//                         ( min <= date   && max === null ) ||
+//                         ( min <= date   && date <= max )
+//                     ) {
+//                         return true;
+//                     }
+//                     return false;
+//                 }
+//             );
+            
+//             $(document).ready(function() {
+//                 // Create date inputs
+//                 minDate = new DateTime($('#min'), {
+//                     // format: 'MMMM Do YYYY'
+//                     format: 'M/D/YYYY'
+//                 });
+//                 maxDate = new DateTime($('#max'), {
+//                     //format: 'MMMM Do YYYY'
+//                     format: 'M/D/YYYY'
+//                 });
+            
+//                 // DataTables initialisation
+//                 var table = $('#surface_area').DataTable();
+            
+//                 // Refilter the table
+//                 $('#min, #max').on('change', function () {
+//                     table.draw();
+//                 });
+//             });
+//         }
+//     });
+
+// });
+
+

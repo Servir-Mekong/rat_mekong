@@ -33,3 +33,9 @@ html, body {
     border-left: 10px solid rgb(221, 20, 20);
     background-color: rgba(218, 32, 32, 0.3);
 }
+.tooltip-inner {
+    white-space:pre-wrap;
+}
+.ui-datepicker .ui-widget-content {
+    background: #000 none;
+}
