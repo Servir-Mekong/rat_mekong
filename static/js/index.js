@@ -23,6 +23,8 @@ var closeBasemapSidebarContent = document.querySelector("#close-basemap-content"
 var MapOtions = {
     center: [15.5162, 102.9560],
     zoom: 6,
+    minZoom: 5,
+    maxZoom: 14,
     zoomControl: false
 }
 
@@ -30,7 +32,7 @@ var MapOtions = {
 var map = L.map('map', MapOtions);
 
 //Set default basemap
-var basemap_layer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+var basemap_layer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
@@ -212,6 +214,7 @@ $("#reservoir_name").on('change', function(){
         selectedReservoirLayer = L.geoJson(reservoirs, {
             onEachFeature: onEachFeature
         }).addTo(map);
+        map.fitBounds(selectedReservoirLayer.getBounds());
     } else if (selectedValue == selectedValue){
         // unchecked layer;
         var checkboxes = document.querySelectorAll('input[type="checkbox"]');
@@ -232,6 +235,7 @@ $("#reservoir_name").on('change', function(){
             filter: filterByReservoirName, 
             onEachFeature: onEachFeature
         }).addTo(map);
+        map.fitBounds(selectedReservoirLayer.getBounds());
     }
 
 });
@@ -253,7 +257,6 @@ function filterVietnam(feature) {
     if(feature.properties.Country=="Vietnam")
     return true
 }
-
 var cambodia_reservoirs = L.geoJson(reservoirs, {
     filter: filterCambodia,
 	onEachFeature: onEachFeature      
@@ -271,11 +274,12 @@ var vietnam_reservoirs = L.geoJson(reservoirs, {
 	onEachFeature: onEachFeature
 });
 
-// var all_reservoirs = L.geoJson(reservoirs, {
-// 	onEachFeature: onEachFeature
-// }).addTo(map);
+var all_reservoirs = L.geoJson(reservoirs, {
+	onEachFeature: onEachFeature
+}).addTo(map);
+map.fitBounds(all_reservoirs.getBounds());
 
-var all_reservoirs = L.layerGroup([cambodia_reservoirs, laos_reservoirs, thailand_reservoirs, vietnam_reservoirs]);
+// var all_reservoirs = L.layerGroup([cambodia_reservoirs, laos_reservoirs, thailand_reservoirs, vietnam_reservoirs]);
 
 document.getElementById("all").checked = true;
 document.getElementById("cambodia").checked = true;
@@ -287,6 +291,7 @@ document.getElementById("vietnam").checked = true;
 $('input[type=checkbox][name=all]').click(function(){
     if (this.checked){
         map.addLayer(all_reservoirs)
+        map.fitBounds(all_reservoirs.getBounds());
     }else {
         map.removeLayer(all_reservoirs); 
     }
@@ -294,6 +299,7 @@ $('input[type=checkbox][name=all]').click(function(){
 $('input[type=checkbox][name=cambodia]').click(function(){
     if (this.checked){
         map.addLayer(cambodia_reservoirs);
+        map.fitBounds(cambodia_reservoirs.getBounds());
     }else {
         map.removeLayer(cambodia_reservoirs);
     }
@@ -301,6 +307,7 @@ $('input[type=checkbox][name=cambodia]').click(function(){
 $('input[type=checkbox][name=laos]').click(function(){
     if (this.checked){
         map.addLayer(laos_reservoirs);
+        map.fitBounds(laos_reservoirs.getBounds());
     }else {
         map.removeLayer(laos_reservoirs);
     }
@@ -308,6 +315,7 @@ $('input[type=checkbox][name=laos]').click(function(){
 $('input[type=checkbox][name=thailand]').click(function(){
     if (this.checked){
         map.addLayer(thailand_reservoirs);
+        map.fitBounds(thailand_reservoirs.getBounds());
     }else {
         map.removeLayer(thailand_reservoirs);
     }
@@ -315,6 +323,7 @@ $('input[type=checkbox][name=thailand]').click(function(){
 $('input[type=checkbox][name=vietnam]').click(function(){
     if (this.checked){
         map.addLayer(vietnam_reservoirs);
+        map.fitBounds(vietnam_reservoirs.getBounds());
     }else {
         map.removeLayer(vietnam_reservoirs);
     }
@@ -392,6 +401,7 @@ var seSanRiverLayer = L.geoJson(reservoirs, {
 $('input[type=checkbox][name=allRivers]').click(function(){
     if (this.checked){
         map.addLayer(all_reservoirs);
+        map.fitBounds(all_reservoirs.getBounds());
     }else {
         map.removeLayer(all_reservoirs);
     }
@@ -399,73 +409,73 @@ $('input[type=checkbox][name=allRivers]').click(function(){
 $('input[type=checkbox][name=chi]').click(function(){
     if (this.checked){
         map.addLayer(chiRiverLayer);
+        map.fitBounds(chiRiverLayer.getBounds());
     }else {
         map.removeLayer(chiRiverLayer);
         map.removeLayer(all_reservoirs);
-        
     }
 });
 $('input[type=checkbox][name=lamDomNoi]').click(function(){
     if (this.checked){
         map.addLayer(lamDomNoiRiverLayer);
+        map.fitBounds(lamDomNoiRiverLayer.getBounds());
     }else {
         map.removeLayer(lamDomNoiRiverLayer);
         map.removeLayer(all_reservoirs);
-        
     }
 });
 $('input[type=checkbox][name=namGnong]').click(function(){
     if (this.checked){
         map.addLayer(namGnongRiverLayer);
+        map.fitBounds(namGnongRiverLayer.getBounds());
     }else {
         map.removeLayer(namGnongRiverLayer);
         map.removeLayer(all_reservoirs);
-        
     }
 });
 $('input[type=checkbox][name=namNgum]').click(function(){
     if (this.checked){
         map.addLayer(namNgumRiverLayer);
+        map.fitBounds(namNgumRiverLayer.getBounds());
     }else {
         map.removeLayer(namNgumRiverLayer);
-        map.removeLayer(all_reservoirs);
-        
+        map.removeLayer(all_reservoirs); 
     }
 });
 $('input[type=checkbox][name=namPong]').click(function(){
     if (this.checked){
         map.addLayer(namPongRiverLayer);
+        map.fitBounds(namPongRiverLayer.getBounds());
     }else {
         map.removeLayer(namPongRiverLayer);
         map.removeLayer(all_reservoirs);
-        
     }
 });
 $('input[type=checkbox][name=namTheun]').click(function(){
     if (this.checked){
         map.addLayer(namTheunRiverLayer);
+        map.fitBounds(namTheunRiverLayer.getBounds());
     }else {
         map.removeLayer(namTheunRiverLayer);
         map.removeLayer(all_reservoirs);
-        
     }
 });
 $('input[type=checkbox][name=sesan]').click(function(){
     if (this.checked){
         map.addLayer(sesanRiverLayer);
+        map.fitBounds(sesanRiverLayer.getBounds());
     }else {
         map.removeLayer(sesanRiverLayer);
         map.removeLayer(all_reservoirs);
-        
     }
 });
 $('input[type=checkbox][name=seSan]').click(function(){
     if (this.checked){
         map.addLayer(seSanRiverLayer);
+        map.fitBounds(seSanRiverLayer.getBounds());
     }else {
         map.removeLayer(seSanRiverLayer);
         map.removeLayer(all_reservoirs);
-        
     }
 });
 
@@ -667,8 +677,7 @@ $('#nav-basemap div').on('click', function(e) {
     //     basemap_layer.setUrl('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
     // }else 
     if(selected_basemap === "osm"){
-        basemap_layer.setUrl('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
-        
+        basemap_layer.setUrl('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');    
     }else if((selected_basemap === "street")){
         basemap_layer.setUrl('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}');
     }else if(selected_basemap === "satellite"){
@@ -733,6 +742,56 @@ map.addControl( searchControl );  //inizialize search control
 /** 
     ** Table Tab Scripts **
 */
+
+// $(document).ready(function() {
+//     $('#aec2').DataTable( {
+//         "ajax": {
+//             "url": "/static/data/json/aec.json",
+//             "dataSrc": ""
+//         },
+//         dom: 'Bfrtip',
+//         buttons: [
+//             'pageLength', 'print', 'excel', 'csv', 'pdf'
+//         ],
+//         columns: [
+//             //{ "data": "id" },
+//             { "data": "country" },
+//             { "data": "river" },
+//             { "data": "name" },
+//             { "data": "elevation" },
+//             { "data": "cum_area" },                                  
+//         ],
+//         order: [[ 0, 'asc'], [ 1, 'asc'], [ 2, 'asc']]
+//     });
+// });
+
+// // AEC Table
+// document.addEventListener('DOMContentLoaded', function () {
+//     let table = new DataTable('#aec2', {
+//         ajax: function (d, cb) {
+//             fetch('/static/data/json/aec.json', {
+               
+//             })
+//                 .then(response => response.json())
+//                 .then(data => cb(data));
+//         },
+//         dom: 'Bfrtip',
+//         buttons: [
+//             'pageLength', 'print', 'excel', 'csv', 'pdf'
+//         ],
+//         columns: [
+//             //{ "data": "id" },
+//             { "data": "country" },
+//             { "data": "river" },
+//             { "data": "name" },
+//             { "data": "elevation" },
+//             { "data": "cum_area" },                                  
+//         ],
+//         order: [[ 0, 'asc'], [ 1, 'asc'], [ 2, 'asc']]
+//     });
+// });
+
+
 
 // AEC Table
 document.addEventListener('DOMContentLoaded', function () {
@@ -1276,94 +1335,5 @@ $(document).ready(function() {
         } else {
             rcurve_table.style.display = "none";
         }
-    });
-
-    // // Filter by country
-    // $('#select_country').on('change', function () {
-    //     aecTable.columns(0).search( this.value ).draw();
-    //     deltasTable.columns(0).search( this.value ).draw();
-    //     inflowTable.columns(0).search( this.value ).draw();
-    //     outflowTable.columns(0).search( this.value ).draw();
-    //     sareaTable.columns(0).search( this.value ).draw();
-    //     rcurveTable.columns(0).search( this.value ).draw();
-    // });
-
-    // // Filter by river basin
-    // $('#select_river_basin').on('change', function () {
-    //     aecTable.columns(1).search( this.value ).draw();
-    //     deltasTable.columns(1).search( this.value ).draw();
-    //     inflowTable.columns(1).search( this.value ).draw();
-    //     outflowTable.columns(1).search( this.value ).draw();
-    //     sareaTable.columns(1).search( this.value ).draw();
-    //     rcurveTable.columns(1).search( this.value ).draw();
-    // });
-
-    
+    }); 
 });
-
-
-
-// $(document).ready(function() { 
-//     // $( "#min" ).datepicker({
-//     //     changeMonth: true, 
-//     //     changeYear: true, 
-//     //     dateFormat: "mm/dd/yy",
-//     //     yearRange: "-90:+00"
-//     // });
-//     // $( "#max" ).datepicker({
-//     //     changeMonth: true, 
-//     //     changeYear: true, 
-//     //     dateFormat: "mm/dd/yy",
-//     //     yearRange: "-90:+00"
-//     // });
-
-//     $("#reservoir_datasets").on('change', function(){
-//         var selectedValue = this.value;
-//         if (selectedValue == 'Surface Area'){
-//             var minDate;
-//             var maxDate;
-            
-//             // Custom filtering function which will search data in column four between two values
-//             $.fn.dataTable.ext.search.push(
-//                 function( settings, data, dataIndex ) {
-//                     var min = minDate.val();
-//                     var max = maxDate.val();
-//                     var date = new Date( data[4] );
-            
-//                     if (
-//                         ( min === null && max === null ) ||
-//                         ( min === null && date <= max ) ||
-//                         ( min <= date   && max === null ) ||
-//                         ( min <= date   && date <= max )
-//                     ) {
-//                         return true;
-//                     }
-//                     return false;
-//                 }
-//             );
-            
-//             $(document).ready(function() {
-//                 // Create date inputs
-//                 minDate = new DateTime($('#min'), {
-//                     // format: 'MMMM Do YYYY'
-//                     format: 'M/D/YYYY'
-//                 });
-//                 maxDate = new DateTime($('#max'), {
-//                     //format: 'MMMM Do YYYY'
-//                     format: 'M/D/YYYY'
-//                 });
-            
-//                 // DataTables initialisation
-//                 var table = $('#surface_area').DataTable();
-            
-//                 // Refilter the table
-//                 $('#min, #max').on('change', function () {
-//                     table.draw();
-//                 });
-//             });
-//         }
-//     });
-
-// });
-
-

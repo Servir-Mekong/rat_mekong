@@ -1,0 +1,13 @@
+Month,S/Smax,id,name,country,river
+1,0.83,5796,Sirindhorn,Thailand,Lam Dom Noi
+2,0.78,5796,Sirindhorn,Thailand,Lam Dom Noi
+3,0.74,5796,Sirindhorn,Thailand,Lam Dom Noi
+4,0.65,5796,Sirindhorn,Thailand,Lam Dom Noi
+5,0.65,5796,Sirindhorn,Thailand,Lam Dom Noi
+6,0.69,5796,Sirindhorn,Thailand,Lam Dom Noi
+7,0.68,5796,Sirindhorn,Thailand,Lam Dom Noi
+8,0.72,5796,Sirindhorn,Thailand,Lam Dom Noi
+9,0.85,5796,Sirindhorn,Thailand,Lam Dom Noi
+10,0.1,5796,Sirindhorn,Thailand,Lam Dom Noi
+11,0.89,5796,Sirindhorn,Thailand,Lam Dom Noi
+12,0.85,5796,Sirindhorn,Thailand,Lam Dom Noi

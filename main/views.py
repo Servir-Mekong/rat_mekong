@@ -3,6 +3,11 @@ from django.shortcuts import render
 from django.views.generic import TemplateView, DetailView
 from django.views.generic.list import ListView
 from .models import Team
+from django.http import JsonResponse
+from datetime import date
+import os
+import pandas as pd
+import json
 
 class TeamDetailView(DetailView):
     model = Team

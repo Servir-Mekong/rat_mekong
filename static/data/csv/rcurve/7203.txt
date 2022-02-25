@@ -1,0 +1,13 @@
+Month,S/Smax,id,name,country,river
+1,0.76,7203,Se San 4,Vietnam,Se San
+2,0.76,7203,Se San 4,Vietnam,Se San
+3,0.7,7203,Se San 4,Vietnam,Se San
+4,0.63,7203,Se San 4,Vietnam,Se San
+5,0.7,7203,Se San 4,Vietnam,Se San
+6,0.67,7203,Se San 4,Vietnam,Se San
+7,0.8,7203,Se San 4,Vietnam,Se San
+8,0.7,7203,Se San 4,Vietnam,Se San
+9,0.78,7203,Se San 4,Vietnam,Se San
+10,0.1,7203,Se San 4,Vietnam,Se San
+11,0.78,7203,Se San 4,Vietnam,Se San
+12,0.81,7203,Se San 4,Vietnam,Se San

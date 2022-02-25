@@ -1,0 +1,2 @@
+python manage.py shell < ./scripts/merge/aec_merge.py
+python manage.py shell < ./scripts/conversion/aec_json.py

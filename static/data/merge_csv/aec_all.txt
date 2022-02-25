@@ -1,0 +1,4049 @@
+Elevation,CumArea,id,name,country,river
+743.0,0.26,7000,Nam Mang 3,Laos,Nam Gnong
+744.0,0.82,7000,Nam Mang 3,Laos,Nam Gnong
+745.0,1.37,7000,Nam Mang 3,Laos,Nam Gnong
+746.0,2.73,7000,Nam Mang 3,Laos,Nam Gnong
+747.0,4.06,7000,Nam Mang 3,Laos,Nam Gnong
+748.0,5.35,7000,Nam Mang 3,Laos,Nam Gnong
+749.0,6.6,7000,Nam Mang 3,Laos,Nam Gnong
+750.0,7.82,7000,Nam Mang 3,Laos,Nam Gnong
+751.0,9.02,7000,Nam Mang 3,Laos,Nam Gnong
+752.0,10.17,7000,Nam Mang 3,Laos,Nam Gnong
+753.0,11.26,7000,Nam Mang 3,Laos,Nam Gnong
+754.0,12.36,7000,Nam Mang 3,Laos,Nam Gnong
+755.0,13.36,7000,Nam Mang 3,Laos,Nam Gnong
+756.0,14.27,7000,Nam Mang 3,Laos,Nam Gnong
+757.0,15.12,7000,Nam Mang 3,Laos,Nam Gnong
+758.0,15.94,7000,Nam Mang 3,Laos,Nam Gnong
+759.0,16.72,7000,Nam Mang 3,Laos,Nam Gnong
+760.0,17.43,7000,Nam Mang 3,Laos,Nam Gnong
+761.0,18.07,7000,Nam Mang 3,Laos,Nam Gnong
+762.0,18.72,7000,Nam Mang 3,Laos,Nam Gnong
+763.0,19.35,7000,Nam Mang 3,Laos,Nam Gnong
+764.0,19.99,7000,Nam Mang 3,Laos,Nam Gnong
+765.0,20.58,7000,Nam Mang 3,Laos,Nam Gnong
+766.0,21.16,7000,Nam Mang 3,Laos,Nam Gnong
+767.0,21.7,7000,Nam Mang 3,Laos,Nam Gnong
+768.0,22.19,7000,Nam Mang 3,Laos,Nam Gnong
+769.0,22.74,7000,Nam Mang 3,Laos,Nam Gnong
+770.0,23.32,7000,Nam Mang 3,Laos,Nam Gnong
+771.0,23.87,7000,Nam Mang 3,Laos,Nam Gnong
+772.0,24.42,7000,Nam Mang 3,Laos,Nam Gnong
+773.0,24.93,7000,Nam Mang 3,Laos,Nam Gnong
+774.0,25.47,7000,Nam Mang 3,Laos,Nam Gnong
+775.0,26.04,7000,Nam Mang 3,Laos,Nam Gnong
+776.0,26.51,7000,Nam Mang 3,Laos,Nam Gnong
+777.0,27.04,7000,Nam Mang 3,Laos,Nam Gnong
+778.0,27.59,7000,Nam Mang 3,Laos,Nam Gnong
+779.0,28.13,7000,Nam Mang 3,Laos,Nam Gnong
+780.0,28.72,7000,Nam Mang 3,Laos,Nam Gnong
+781.0,29.3,7000,Nam Mang 3,Laos,Nam Gnong
+782.0,29.86,7000,Nam Mang 3,Laos,Nam Gnong
+783.0,30.51,7000,Nam Mang 3,Laos,Nam Gnong
+784.0,31.19,7000,Nam Mang 3,Laos,Nam Gnong
+785.0,32.0,7000,Nam Mang 3,Laos,Nam Gnong
+786.0,32.84,7000,Nam Mang 3,Laos,Nam Gnong
+787.0,33.64,7000,Nam Mang 3,Laos,Nam Gnong
+788.0,34.46,7000,Nam Mang 3,Laos,Nam Gnong
+789.0,35.22,7000,Nam Mang 3,Laos,Nam Gnong
+790.0,35.96,7000,Nam Mang 3,Laos,Nam Gnong
+791.0,36.73,7000,Nam Mang 3,Laos,Nam Gnong
+792.0,37.39,7000,Nam Mang 3,Laos,Nam Gnong
+793.0,38.07,7000,Nam Mang 3,Laos,Nam Gnong
+794.0,38.72,7000,Nam Mang 3,Laos,Nam Gnong
+795.0,39.33,7000,Nam Mang 3,Laos,Nam Gnong
+796.0,39.9,7000,Nam Mang 3,Laos,Nam Gnong
+797.0,40.52,7000,Nam Mang 3,Laos,Nam Gnong
+798.0,41.07,7000,Nam Mang 3,Laos,Nam Gnong
+799.0,41.59,7000,Nam Mang 3,Laos,Nam Gnong
+800.0,42.09,7000,Nam Mang 3,Laos,Nam Gnong
+801.0,42.6,7000,Nam Mang 3,Laos,Nam Gnong
+802.0,43.11,7000,Nam Mang 3,Laos,Nam Gnong
+803.0,43.6,7000,Nam Mang 3,Laos,Nam Gnong
+804.0,44.05,7000,Nam Mang 3,Laos,Nam Gnong
+805.0,44.53,7000,Nam Mang 3,Laos,Nam Gnong
+806.0,44.98,7000,Nam Mang 3,Laos,Nam Gnong
+807.0,45.38,7000,Nam Mang 3,Laos,Nam Gnong
+808.0,45.82,7000,Nam Mang 3,Laos,Nam Gnong
+809.0,46.26,7000,Nam Mang 3,Laos,Nam Gnong
+810.0,46.7,7000,Nam Mang 3,Laos,Nam Gnong
+811.0,47.09,7000,Nam Mang 3,Laos,Nam Gnong
+812.0,47.5,7000,Nam Mang 3,Laos,Nam Gnong
+813.0,47.89,7000,Nam Mang 3,Laos,Nam Gnong
+814.0,48.31,7000,Nam Mang 3,Laos,Nam Gnong
+815.0,48.74,7000,Nam Mang 3,Laos,Nam Gnong
+816.0,49.13,7000,Nam Mang 3,Laos,Nam Gnong
+817.0,49.52,7000,Nam Mang 3,Laos,Nam Gnong
+818.0,49.92,7000,Nam Mang 3,Laos,Nam Gnong
+819.0,50.33,7000,Nam Mang 3,Laos,Nam Gnong
+820.0,50.71,7000,Nam Mang 3,Laos,Nam Gnong
+821.0,51.1,7000,Nam Mang 3,Laos,Nam Gnong
+822.0,51.49,7000,Nam Mang 3,Laos,Nam Gnong
+823.0,51.84,7000,Nam Mang 3,Laos,Nam Gnong
+824.0,52.2,7000,Nam Mang 3,Laos,Nam Gnong
+825.0,52.55,7000,Nam Mang 3,Laos,Nam Gnong
+826.0,52.91,7000,Nam Mang 3,Laos,Nam Gnong
+827.0,53.26,7000,Nam Mang 3,Laos,Nam Gnong
+828.0,53.63,7000,Nam Mang 3,Laos,Nam Gnong
+829.0,54.02,7000,Nam Mang 3,Laos,Nam Gnong
+830.0,54.4,7000,Nam Mang 3,Laos,Nam Gnong
+831.0,54.75,7000,Nam Mang 3,Laos,Nam Gnong
+832.0,55.08,7000,Nam Mang 3,Laos,Nam Gnong
+833.0,55.44,7000,Nam Mang 3,Laos,Nam Gnong
+834.0,55.77,7000,Nam Mang 3,Laos,Nam Gnong
+835.0,56.1,7000,Nam Mang 3,Laos,Nam Gnong
+836.0,56.43,7000,Nam Mang 3,Laos,Nam Gnong
+837.0,56.74,7000,Nam Mang 3,Laos,Nam Gnong
+838.0,57.1,7000,Nam Mang 3,Laos,Nam Gnong
+839.0,57.42,7000,Nam Mang 3,Laos,Nam Gnong
+840.0,57.75,7000,Nam Mang 3,Laos,Nam Gnong
+841.0,58.09,7000,Nam Mang 3,Laos,Nam Gnong
+842.0,58.43,7000,Nam Mang 3,Laos,Nam Gnong
+843.0,58.78,7000,Nam Mang 3,Laos,Nam Gnong
+844.0,59.07,7000,Nam Mang 3,Laos,Nam Gnong
+845.0,59.37,7000,Nam Mang 3,Laos,Nam Gnong
+846.0,59.7,7000,Nam Mang 3,Laos,Nam Gnong
+847.0,60.05,7000,Nam Mang 3,Laos,Nam Gnong
+848.0,60.42,7000,Nam Mang 3,Laos,Nam Gnong
+849.0,60.73,7000,Nam Mang 3,Laos,Nam Gnong
+850.0,61.06,7000,Nam Mang 3,Laos,Nam Gnong
+851.0,61.36,7000,Nam Mang 3,Laos,Nam Gnong
+852.0,61.63,7000,Nam Mang 3,Laos,Nam Gnong
+853.0,61.94,7000,Nam Mang 3,Laos,Nam Gnong
+854.0,62.24,7000,Nam Mang 3,Laos,Nam Gnong
+855.0,62.53,7000,Nam Mang 3,Laos,Nam Gnong
+856.0,62.84,7000,Nam Mang 3,Laos,Nam Gnong
+857.0,63.15,7000,Nam Mang 3,Laos,Nam Gnong
+858.0,63.45,7000,Nam Mang 3,Laos,Nam Gnong
+859.0,63.73,7000,Nam Mang 3,Laos,Nam Gnong
+860.0,63.99,7000,Nam Mang 3,Laos,Nam Gnong
+861.0,64.26,7000,Nam Mang 3,Laos,Nam Gnong
+862.0,64.55,7000,Nam Mang 3,Laos,Nam Gnong
+863.0,64.85,7000,Nam Mang 3,Laos,Nam Gnong
+864.0,65.11,7000,Nam Mang 3,Laos,Nam Gnong
+865.0,65.41,7000,Nam Mang 3,Laos,Nam Gnong
+866.0,65.68,7000,Nam Mang 3,Laos,Nam Gnong
+867.0,65.96,7000,Nam Mang 3,Laos,Nam Gnong
+868.0,66.28,7000,Nam Mang 3,Laos,Nam Gnong
+869.0,66.55,7000,Nam Mang 3,Laos,Nam Gnong
+870.0,66.84,7000,Nam Mang 3,Laos,Nam Gnong
+871.0,67.12,7000,Nam Mang 3,Laos,Nam Gnong
+872.0,67.44,7000,Nam Mang 3,Laos,Nam Gnong
+873.0,67.75,7000,Nam Mang 3,Laos,Nam Gnong
+874.0,68.08,7000,Nam Mang 3,Laos,Nam Gnong
+875.0,68.38,7000,Nam Mang 3,Laos,Nam Gnong
+876.0,68.73,7000,Nam Mang 3,Laos,Nam Gnong
+877.0,69.08,7000,Nam Mang 3,Laos,Nam Gnong
+878.0,69.41,7000,Nam Mang 3,Laos,Nam Gnong
+879.0,69.71,7000,Nam Mang 3,Laos,Nam Gnong
+880.0,70.02,7000,Nam Mang 3,Laos,Nam Gnong
+881.0,70.33,7000,Nam Mang 3,Laos,Nam Gnong
+882.0,70.64,7000,Nam Mang 3,Laos,Nam Gnong
+883.0,70.96,7000,Nam Mang 3,Laos,Nam Gnong
+884.0,71.3,7000,Nam Mang 3,Laos,Nam Gnong
+885.0,71.57,7000,Nam Mang 3,Laos,Nam Gnong
+886.0,71.85,7000,Nam Mang 3,Laos,Nam Gnong
+887.0,72.11,7000,Nam Mang 3,Laos,Nam Gnong
+888.0,72.39,7000,Nam Mang 3,Laos,Nam Gnong
+889.0,72.67,7000,Nam Mang 3,Laos,Nam Gnong
+890.0,72.96,7000,Nam Mang 3,Laos,Nam Gnong
+891.0,73.22,7000,Nam Mang 3,Laos,Nam Gnong
+892.0,73.5,7000,Nam Mang 3,Laos,Nam Gnong
+893.0,73.79,7000,Nam Mang 3,Laos,Nam Gnong
+894.0,74.06,7000,Nam Mang 3,Laos,Nam Gnong
+895.0,74.32,7000,Nam Mang 3,Laos,Nam Gnong
+896.0,74.6,7000,Nam Mang 3,Laos,Nam Gnong
+897.0,74.88,7000,Nam Mang 3,Laos,Nam Gnong
+898.0,75.17,7000,Nam Mang 3,Laos,Nam Gnong
+899.0,75.43,7000,Nam Mang 3,Laos,Nam Gnong
+900.0,75.71,7000,Nam Mang 3,Laos,Nam Gnong
+901.0,75.97,7000,Nam Mang 3,Laos,Nam Gnong
+902.0,76.24,7000,Nam Mang 3,Laos,Nam Gnong
+903.0,76.5,7000,Nam Mang 3,Laos,Nam Gnong
+904.0,76.74,7000,Nam Mang 3,Laos,Nam Gnong
+905.0,76.96,7000,Nam Mang 3,Laos,Nam Gnong
+906.0,77.17,7000,Nam Mang 3,Laos,Nam Gnong
+907.0,77.4,7000,Nam Mang 3,Laos,Nam Gnong
+908.0,77.61,7000,Nam Mang 3,Laos,Nam Gnong
+909.0,77.81,7000,Nam Mang 3,Laos,Nam Gnong
+910.0,78.02,7000,Nam Mang 3,Laos,Nam Gnong
+911.0,78.21,7000,Nam Mang 3,Laos,Nam Gnong
+912.0,78.43,7000,Nam Mang 3,Laos,Nam Gnong
+913.0,78.69,7000,Nam Mang 3,Laos,Nam Gnong
+914.0,78.94,7000,Nam Mang 3,Laos,Nam Gnong
+915.0,79.18,7000,Nam Mang 3,Laos,Nam Gnong
+916.0,79.41,7000,Nam Mang 3,Laos,Nam Gnong
+917.0,79.64,7000,Nam Mang 3,Laos,Nam Gnong
+918.0,79.89,7000,Nam Mang 3,Laos,Nam Gnong
+919.0,80.12,7000,Nam Mang 3,Laos,Nam Gnong
+920.0,80.34,7000,Nam Mang 3,Laos,Nam Gnong
+921.0,80.56,7000,Nam Mang 3,Laos,Nam Gnong
+922.0,80.77,7000,Nam Mang 3,Laos,Nam Gnong
+923.0,81.0,7000,Nam Mang 3,Laos,Nam Gnong
+924.0,81.22,7000,Nam Mang 3,Laos,Nam Gnong
+925.0,81.4,7000,Nam Mang 3,Laos,Nam Gnong
+926.0,81.61,7000,Nam Mang 3,Laos,Nam Gnong
+927.0,81.82,7000,Nam Mang 3,Laos,Nam Gnong
+928.0,82.04,7000,Nam Mang 3,Laos,Nam Gnong
+929.0,82.23,7000,Nam Mang 3,Laos,Nam Gnong
+930.0,82.43,7000,Nam Mang 3,Laos,Nam Gnong
+931.0,82.61,7000,Nam Mang 3,Laos,Nam Gnong
+932.0,82.81,7000,Nam Mang 3,Laos,Nam Gnong
+933.0,83.01,7000,Nam Mang 3,Laos,Nam Gnong
+934.0,83.18,7000,Nam Mang 3,Laos,Nam Gnong
+935.0,83.36,7000,Nam Mang 3,Laos,Nam Gnong
+936.0,83.52,7000,Nam Mang 3,Laos,Nam Gnong
+937.0,83.68,7000,Nam Mang 3,Laos,Nam Gnong
+938.0,83.85,7000,Nam Mang 3,Laos,Nam Gnong
+939.0,84.0,7000,Nam Mang 3,Laos,Nam Gnong
+940.0,84.14,7000,Nam Mang 3,Laos,Nam Gnong
+941.0,84.31,7000,Nam Mang 3,Laos,Nam Gnong
+942.0,84.44,7000,Nam Mang 3,Laos,Nam Gnong
+943.0,84.6,7000,Nam Mang 3,Laos,Nam Gnong
+944.0,84.75,7000,Nam Mang 3,Laos,Nam Gnong
+945.0,84.92,7000,Nam Mang 3,Laos,Nam Gnong
+946.0,85.04,7000,Nam Mang 3,Laos,Nam Gnong
+947.0,85.19,7000,Nam Mang 3,Laos,Nam Gnong
+948.0,85.35,7000,Nam Mang 3,Laos,Nam Gnong
+949.0,85.49,7000,Nam Mang 3,Laos,Nam Gnong
+950.0,85.62,7000,Nam Mang 3,Laos,Nam Gnong
+951.0,85.76,7000,Nam Mang 3,Laos,Nam Gnong
+952.0,85.91,7000,Nam Mang 3,Laos,Nam Gnong
+953.0,86.05,7000,Nam Mang 3,Laos,Nam Gnong
+954.0,86.18,7000,Nam Mang 3,Laos,Nam Gnong
+955.0,86.31,7000,Nam Mang 3,Laos,Nam Gnong
+956.0,86.44,7000,Nam Mang 3,Laos,Nam Gnong
+957.0,86.56,7000,Nam Mang 3,Laos,Nam Gnong
+958.0,86.65,7000,Nam Mang 3,Laos,Nam Gnong
+959.0,86.75,7000,Nam Mang 3,Laos,Nam Gnong
+960.0,86.87,7000,Nam Mang 3,Laos,Nam Gnong
+961.0,86.97,7000,Nam Mang 3,Laos,Nam Gnong
+962.0,87.07,7000,Nam Mang 3,Laos,Nam Gnong
+963.0,87.18,7000,Nam Mang 3,Laos,Nam Gnong
+964.0,87.27,7000,Nam Mang 3,Laos,Nam Gnong
+965.0,87.37,7000,Nam Mang 3,Laos,Nam Gnong
+966.0,87.46,7000,Nam Mang 3,Laos,Nam Gnong
+967.0,87.56,7000,Nam Mang 3,Laos,Nam Gnong
+968.0,87.65,7000,Nam Mang 3,Laos,Nam Gnong
+969.0,87.74,7000,Nam Mang 3,Laos,Nam Gnong
+970.0,87.84,7000,Nam Mang 3,Laos,Nam Gnong
+971.0,87.93,7000,Nam Mang 3,Laos,Nam Gnong
+972.0,88.03,7000,Nam Mang 3,Laos,Nam Gnong
+973.0,88.13,7000,Nam Mang 3,Laos,Nam Gnong
+974.0,88.23,7000,Nam Mang 3,Laos,Nam Gnong
+975.0,88.31,7000,Nam Mang 3,Laos,Nam Gnong
+976.0,88.42,7000,Nam Mang 3,Laos,Nam Gnong
+977.0,88.51,7000,Nam Mang 3,Laos,Nam Gnong
+978.0,88.59,7000,Nam Mang 3,Laos,Nam Gnong
+979.0,88.69,7000,Nam Mang 3,Laos,Nam Gnong
+980.0,88.79,7000,Nam Mang 3,Laos,Nam Gnong
+981.0,88.88,7000,Nam Mang 3,Laos,Nam Gnong
+982.0,88.99,7000,Nam Mang 3,Laos,Nam Gnong
+983.0,89.07,7000,Nam Mang 3,Laos,Nam Gnong
+984.0,89.16,7000,Nam Mang 3,Laos,Nam Gnong
+985.0,89.23,7000,Nam Mang 3,Laos,Nam Gnong
+986.0,89.34,7000,Nam Mang 3,Laos,Nam Gnong
+987.0,89.42,7000,Nam Mang 3,Laos,Nam Gnong
+988.0,89.5,7000,Nam Mang 3,Laos,Nam Gnong
+989.0,89.59,7000,Nam Mang 3,Laos,Nam Gnong
+990.0,89.68,7000,Nam Mang 3,Laos,Nam Gnong
+991.0,89.77,7000,Nam Mang 3,Laos,Nam Gnong
+992.0,89.86,7000,Nam Mang 3,Laos,Nam Gnong
+993.0,89.94,7000,Nam Mang 3,Laos,Nam Gnong
+994.0,90.03,7000,Nam Mang 3,Laos,Nam Gnong
+995.0,90.09,7000,Nam Mang 3,Laos,Nam Gnong
+996.0,90.18,7000,Nam Mang 3,Laos,Nam Gnong
+997.0,90.25,7000,Nam Mang 3,Laos,Nam Gnong
+998.0,90.32,7000,Nam Mang 3,Laos,Nam Gnong
+999.0,90.39,7000,Nam Mang 3,Laos,Nam Gnong
+1000.0,90.46,7000,Nam Mang 3,Laos,Nam Gnong
+1001.0,90.53,7000,Nam Mang 3,Laos,Nam Gnong
+1002.0,90.6,7000,Nam Mang 3,Laos,Nam Gnong
+1003.0,90.68,7000,Nam Mang 3,Laos,Nam Gnong
+1004.0,90.75,7000,Nam Mang 3,Laos,Nam Gnong
+1005.0,90.82,7000,Nam Mang 3,Laos,Nam Gnong
+1006.0,90.9,7000,Nam Mang 3,Laos,Nam Gnong
+1007.0,90.96,7000,Nam Mang 3,Laos,Nam Gnong
+1008.0,91.02,7000,Nam Mang 3,Laos,Nam Gnong
+1009.0,91.09,7000,Nam Mang 3,Laos,Nam Gnong
+1010.0,91.17,7000,Nam Mang 3,Laos,Nam Gnong
+1011.0,91.23,7000,Nam Mang 3,Laos,Nam Gnong
+1012.0,91.29,7000,Nam Mang 3,Laos,Nam Gnong
+1013.0,91.35,7000,Nam Mang 3,Laos,Nam Gnong
+1014.0,91.4,7000,Nam Mang 3,Laos,Nam Gnong
+1015.0,91.46,7000,Nam Mang 3,Laos,Nam Gnong
+1016.0,91.52,7000,Nam Mang 3,Laos,Nam Gnong
+1017.0,91.56,7000,Nam Mang 3,Laos,Nam Gnong
+1018.0,91.62,7000,Nam Mang 3,Laos,Nam Gnong
+1019.0,91.66,7000,Nam Mang 3,Laos,Nam Gnong
+1020.0,91.71,7000,Nam Mang 3,Laos,Nam Gnong
+1021.0,91.76,7000,Nam Mang 3,Laos,Nam Gnong
+1022.0,91.8,7000,Nam Mang 3,Laos,Nam Gnong
+1023.0,91.86,7000,Nam Mang 3,Laos,Nam Gnong
+1024.0,91.92,7000,Nam Mang 3,Laos,Nam Gnong
+1025.0,91.97,7000,Nam Mang 3,Laos,Nam Gnong
+1026.0,92.03,7000,Nam Mang 3,Laos,Nam Gnong
+1027.0,92.07,7000,Nam Mang 3,Laos,Nam Gnong
+1028.0,92.13,7000,Nam Mang 3,Laos,Nam Gnong
+1029.0,92.19,7000,Nam Mang 3,Laos,Nam Gnong
+1030.0,92.24,7000,Nam Mang 3,Laos,Nam Gnong
+1031.0,92.29,7000,Nam Mang 3,Laos,Nam Gnong
+1032.0,92.33,7000,Nam Mang 3,Laos,Nam Gnong
+1033.0,92.39,7000,Nam Mang 3,Laos,Nam Gnong
+1034.0,92.45,7000,Nam Mang 3,Laos,Nam Gnong
+1035.0,92.49,7000,Nam Mang 3,Laos,Nam Gnong
+1036.0,92.52,7000,Nam Mang 3,Laos,Nam Gnong
+1037.0,92.57,7000,Nam Mang 3,Laos,Nam Gnong
+1038.0,92.6,7000,Nam Mang 3,Laos,Nam Gnong
+1039.0,92.67,7000,Nam Mang 3,Laos,Nam Gnong
+1040.0,92.71,7000,Nam Mang 3,Laos,Nam Gnong
+1041.0,92.76,7000,Nam Mang 3,Laos,Nam Gnong
+1042.0,92.8,7000,Nam Mang 3,Laos,Nam Gnong
+1043.0,92.85,7000,Nam Mang 3,Laos,Nam Gnong
+1044.0,92.9,7000,Nam Mang 3,Laos,Nam Gnong
+1045.0,92.94,7000,Nam Mang 3,Laos,Nam Gnong
+1046.0,92.98,7000,Nam Mang 3,Laos,Nam Gnong
+1047.0,93.02,7000,Nam Mang 3,Laos,Nam Gnong
+1048.0,93.06,7000,Nam Mang 3,Laos,Nam Gnong
+1049.0,93.11,7000,Nam Mang 3,Laos,Nam Gnong
+1050.0,93.14,7000,Nam Mang 3,Laos,Nam Gnong
+1051.0,93.19,7000,Nam Mang 3,Laos,Nam Gnong
+1052.0,93.25,7000,Nam Mang 3,Laos,Nam Gnong
+1053.0,93.29,7000,Nam Mang 3,Laos,Nam Gnong
+1054.0,93.34,7000,Nam Mang 3,Laos,Nam Gnong
+1055.0,93.38,7000,Nam Mang 3,Laos,Nam Gnong
+1056.0,93.42,7000,Nam Mang 3,Laos,Nam Gnong
+1057.0,93.46,7000,Nam Mang 3,Laos,Nam Gnong
+1058.0,93.52,7000,Nam Mang 3,Laos,Nam Gnong
+1059.0,93.56,7000,Nam Mang 3,Laos,Nam Gnong
+1060.0,93.6,7000,Nam Mang 3,Laos,Nam Gnong
+1061.0,93.64,7000,Nam Mang 3,Laos,Nam Gnong
+1062.0,93.69,7000,Nam Mang 3,Laos,Nam Gnong
+1063.0,93.73,7000,Nam Mang 3,Laos,Nam Gnong
+1064.0,93.77,7000,Nam Mang 3,Laos,Nam Gnong
+1065.0,93.81,7000,Nam Mang 3,Laos,Nam Gnong
+1066.0,93.85,7000,Nam Mang 3,Laos,Nam Gnong
+1067.0,93.89,7000,Nam Mang 3,Laos,Nam Gnong
+1068.0,93.94,7000,Nam Mang 3,Laos,Nam Gnong
+1069.0,93.97,7000,Nam Mang 3,Laos,Nam Gnong
+1070.0,94.01,7000,Nam Mang 3,Laos,Nam Gnong
+1071.0,94.06,7000,Nam Mang 3,Laos,Nam Gnong
+1072.0,94.09,7000,Nam Mang 3,Laos,Nam Gnong
+1073.0,94.13,7000,Nam Mang 3,Laos,Nam Gnong
+1074.0,94.17,7000,Nam Mang 3,Laos,Nam Gnong
+1075.0,94.21,7000,Nam Mang 3,Laos,Nam Gnong
+1076.0,94.25,7000,Nam Mang 3,Laos,Nam Gnong
+1077.0,94.29,7000,Nam Mang 3,Laos,Nam Gnong
+1078.0,94.33,7000,Nam Mang 3,Laos,Nam Gnong
+1079.0,94.36,7000,Nam Mang 3,Laos,Nam Gnong
+1080.0,94.4,7000,Nam Mang 3,Laos,Nam Gnong
+1081.0,94.43,7000,Nam Mang 3,Laos,Nam Gnong
+1082.0,94.46,7000,Nam Mang 3,Laos,Nam Gnong
+1083.0,94.49,7000,Nam Mang 3,Laos,Nam Gnong
+1084.0,94.51,7000,Nam Mang 3,Laos,Nam Gnong
+1085.0,94.53,7000,Nam Mang 3,Laos,Nam Gnong
+1086.0,94.56,7000,Nam Mang 3,Laos,Nam Gnong
+1087.0,94.58,7000,Nam Mang 3,Laos,Nam Gnong
+1088.0,94.61,7000,Nam Mang 3,Laos,Nam Gnong
+1089.0,94.63,7000,Nam Mang 3,Laos,Nam Gnong
+1090.0,94.65,7000,Nam Mang 3,Laos,Nam Gnong
+1091.0,94.68,7000,Nam Mang 3,Laos,Nam Gnong
+1092.0,94.7,7000,Nam Mang 3,Laos,Nam Gnong
+1093.0,94.72,7000,Nam Mang 3,Laos,Nam Gnong
+1094.0,94.74,7000,Nam Mang 3,Laos,Nam Gnong
+1096.0,94.77,7000,Nam Mang 3,Laos,Nam Gnong
+1097.0,94.79,7000,Nam Mang 3,Laos,Nam Gnong
+1098.0,94.81,7000,Nam Mang 3,Laos,Nam Gnong
+1099.0,94.83,7000,Nam Mang 3,Laos,Nam Gnong
+1100.0,94.86,7000,Nam Mang 3,Laos,Nam Gnong
+1101.0,94.88,7000,Nam Mang 3,Laos,Nam Gnong
+1102.0,94.9,7000,Nam Mang 3,Laos,Nam Gnong
+1103.0,94.92,7000,Nam Mang 3,Laos,Nam Gnong
+1104.0,94.95,7000,Nam Mang 3,Laos,Nam Gnong
+1105.0,94.97,7000,Nam Mang 3,Laos,Nam Gnong
+1107.0,95.01,7000,Nam Mang 3,Laos,Nam Gnong
+1108.0,95.03,7000,Nam Mang 3,Laos,Nam Gnong
+1109.0,95.05,7000,Nam Mang 3,Laos,Nam Gnong
+1111.0,95.07,7000,Nam Mang 3,Laos,Nam Gnong
+1112.0,95.09,7000,Nam Mang 3,Laos,Nam Gnong
+1113.0,95.1,7000,Nam Mang 3,Laos,Nam Gnong
+1114.0,95.12,7000,Nam Mang 3,Laos,Nam Gnong
+1115.0,95.13,7000,Nam Mang 3,Laos,Nam Gnong
+1116.0,95.16,7000,Nam Mang 3,Laos,Nam Gnong
+1118.0,95.2,7000,Nam Mang 3,Laos,Nam Gnong
+1119.0,95.21,7000,Nam Mang 3,Laos,Nam Gnong
+1120.0,95.23,7000,Nam Mang 3,Laos,Nam Gnong
+1121.0,95.25,7000,Nam Mang 3,Laos,Nam Gnong
+1122.0,95.27,7000,Nam Mang 3,Laos,Nam Gnong
+1123.0,95.29,7000,Nam Mang 3,Laos,Nam Gnong
+1124.0,95.31,7000,Nam Mang 3,Laos,Nam Gnong
+1125.0,95.33,7000,Nam Mang 3,Laos,Nam Gnong
+1127.0,95.35,7000,Nam Mang 3,Laos,Nam Gnong
+1128.0,95.37,7000,Nam Mang 3,Laos,Nam Gnong
+1129.0,95.39,7000,Nam Mang 3,Laos,Nam Gnong
+1130.0,95.41,7000,Nam Mang 3,Laos,Nam Gnong
+1131.0,95.43,7000,Nam Mang 3,Laos,Nam Gnong
+1132.0,95.44,7000,Nam Mang 3,Laos,Nam Gnong
+1133.0,95.46,7000,Nam Mang 3,Laos,Nam Gnong
+1134.0,95.48,7000,Nam Mang 3,Laos,Nam Gnong
+1135.0,95.5,7000,Nam Mang 3,Laos,Nam Gnong
+1136.0,95.53,7000,Nam Mang 3,Laos,Nam Gnong
+1137.0,95.54,7000,Nam Mang 3,Laos,Nam Gnong
+1138.0,95.56,7000,Nam Mang 3,Laos,Nam Gnong
+1139.0,95.58,7000,Nam Mang 3,Laos,Nam Gnong
+1140.0,95.6,7000,Nam Mang 3,Laos,Nam Gnong
+1142.0,95.62,7000,Nam Mang 3,Laos,Nam Gnong
+1143.0,95.64,7000,Nam Mang 3,Laos,Nam Gnong
+1144.0,95.65,7000,Nam Mang 3,Laos,Nam Gnong
+1145.0,95.66,7000,Nam Mang 3,Laos,Nam Gnong
+1146.0,95.68,7000,Nam Mang 3,Laos,Nam Gnong
+1147.0,95.69,7000,Nam Mang 3,Laos,Nam Gnong
+1148.0,95.71,7000,Nam Mang 3,Laos,Nam Gnong
+1149.0,95.73,7000,Nam Mang 3,Laos,Nam Gnong
+1150.0,95.74,7000,Nam Mang 3,Laos,Nam Gnong
+1152.0,95.76,7000,Nam Mang 3,Laos,Nam Gnong
+1154.0,95.77,7000,Nam Mang 3,Laos,Nam Gnong
+218.0,1.05,7203,Se San 4,Vietnam,Se San
+219.0,2.79,7203,Se San 4,Vietnam,Se San
+220.0,4.53,7203,Se San 4,Vietnam,Se San
+221.0,8.72,7203,Se San 4,Vietnam,Se San
+222.0,12.97,7203,Se San 4,Vietnam,Se San
+223.0,17.21,7203,Se San 4,Vietnam,Se San
+224.0,21.23,7203,Se San 4,Vietnam,Se San
+225.0,25.09,7203,Se San 4,Vietnam,Se San
+226.0,29.08,7203,Se San 4,Vietnam,Se San
+227.0,32.95,7203,Se San 4,Vietnam,Se San
+228.0,36.8,7203,Se San 4,Vietnam,Se San
+229.0,40.69,7203,Se San 4,Vietnam,Se San
+230.0,44.35,7203,Se San 4,Vietnam,Se San
+231.0,48.18,7203,Se San 4,Vietnam,Se San
+232.0,51.92,7203,Se San 4,Vietnam,Se San
+233.0,55.87,7203,Se San 4,Vietnam,Se San
+234.0,59.75,7203,Se San 4,Vietnam,Se San
+235.0,63.54,7203,Se San 4,Vietnam,Se San
+236.0,67.51,7203,Se San 4,Vietnam,Se San
+237.0,71.48,7203,Se San 4,Vietnam,Se San
+238.0,75.44,7203,Se San 4,Vietnam,Se San
+239.0,79.43,7203,Se San 4,Vietnam,Se San
+240.0,83.45,7203,Se San 4,Vietnam,Se San
+241.0,87.56,7203,Se San 4,Vietnam,Se San
+242.0,91.69,7203,Se San 4,Vietnam,Se San
+243.0,96.03,7203,Se San 4,Vietnam,Se San
+244.0,100.11,7203,Se San 4,Vietnam,Se San
+245.0,104.28,7203,Se San 4,Vietnam,Se San
+246.0,108.53,7203,Se San 4,Vietnam,Se San
+247.0,112.68,7203,Se San 4,Vietnam,Se San
+248.0,116.73,7203,Se San 4,Vietnam,Se San
+249.0,120.74,7203,Se San 4,Vietnam,Se San
+250.0,124.74,7203,Se San 4,Vietnam,Se San
+251.0,128.52,7203,Se San 4,Vietnam,Se San
+252.0,132.23,7203,Se San 4,Vietnam,Se San
+253.0,136.05,7203,Se San 4,Vietnam,Se San
+254.0,139.79,7203,Se San 4,Vietnam,Se San
+255.0,143.54,7203,Se San 4,Vietnam,Se San
+256.0,147.17,7203,Se San 4,Vietnam,Se San
+257.0,150.87,7203,Se San 4,Vietnam,Se San
+258.0,154.45,7203,Se San 4,Vietnam,Se San
+259.0,157.88,7203,Se San 4,Vietnam,Se San
+260.0,161.14,7203,Se San 4,Vietnam,Se San
+261.0,164.44,7203,Se San 4,Vietnam,Se San
+262.0,167.58,7203,Se San 4,Vietnam,Se San
+263.0,170.76,7203,Se San 4,Vietnam,Se San
+264.0,173.88,7203,Se San 4,Vietnam,Se San
+265.0,176.97,7203,Se San 4,Vietnam,Se San
+266.0,180.14,7203,Se San 4,Vietnam,Se San
+267.0,183.2,7203,Se San 4,Vietnam,Se San
+268.0,186.18,7203,Se San 4,Vietnam,Se San
+269.0,189.06,7203,Se San 4,Vietnam,Se San
+270.0,191.94,7203,Se San 4,Vietnam,Se San
+271.0,194.77,7203,Se San 4,Vietnam,Se San
+272.0,197.44,7203,Se San 4,Vietnam,Se San
+273.0,200.07,7203,Se San 4,Vietnam,Se San
+274.0,202.52,7203,Se San 4,Vietnam,Se San
+275.0,204.92,7203,Se San 4,Vietnam,Se San
+276.0,207.21,7203,Se San 4,Vietnam,Se San
+277.0,209.58,7203,Se San 4,Vietnam,Se San
+278.0,211.85,7203,Se San 4,Vietnam,Se San
+279.0,214.03,7203,Se San 4,Vietnam,Se San
+280.0,216.17,7203,Se San 4,Vietnam,Se San
+281.0,218.34,7203,Se San 4,Vietnam,Se San
+282.0,220.37,7203,Se San 4,Vietnam,Se San
+283.0,222.38,7203,Se San 4,Vietnam,Se San
+284.0,224.32,7203,Se San 4,Vietnam,Se San
+285.0,226.11,7203,Se San 4,Vietnam,Se San
+286.0,227.74,7203,Se San 4,Vietnam,Se San
+287.0,229.36,7203,Se San 4,Vietnam,Se San
+288.0,230.9,7203,Se San 4,Vietnam,Se San
+289.0,232.36,7203,Se San 4,Vietnam,Se San
+290.0,233.75,7203,Se San 4,Vietnam,Se San
+291.0,235.05,7203,Se San 4,Vietnam,Se San
+292.0,236.29,7203,Se San 4,Vietnam,Se San
+293.0,237.45,7203,Se San 4,Vietnam,Se San
+294.0,238.52,7203,Se San 4,Vietnam,Se San
+295.0,239.57,7203,Se San 4,Vietnam,Se San
+296.0,240.58,7203,Se San 4,Vietnam,Se San
+297.0,241.51,7203,Se San 4,Vietnam,Se San
+298.0,242.47,7203,Se San 4,Vietnam,Se San
+299.0,243.37,7203,Se San 4,Vietnam,Se San
+300.0,244.26,7203,Se San 4,Vietnam,Se San
+301.0,245.12,7203,Se San 4,Vietnam,Se San
+302.0,245.9,7203,Se San 4,Vietnam,Se San
+303.0,246.7,7203,Se San 4,Vietnam,Se San
+304.0,247.49,7203,Se San 4,Vietnam,Se San
+305.0,248.28,7203,Se San 4,Vietnam,Se San
+306.0,249.02,7203,Se San 4,Vietnam,Se San
+307.0,249.72,7203,Se San 4,Vietnam,Se San
+308.0,250.48,7203,Se San 4,Vietnam,Se San
+309.0,251.16,7203,Se San 4,Vietnam,Se San
+310.0,251.89,7203,Se San 4,Vietnam,Se San
+311.0,252.53,7203,Se San 4,Vietnam,Se San
+312.0,253.16,7203,Se San 4,Vietnam,Se San
+313.0,253.79,7203,Se San 4,Vietnam,Se San
+314.0,254.43,7203,Se San 4,Vietnam,Se San
+315.0,255.08,7203,Se San 4,Vietnam,Se San
+316.0,255.69,7203,Se San 4,Vietnam,Se San
+317.0,256.26,7203,Se San 4,Vietnam,Se San
+318.0,256.82,7203,Se San 4,Vietnam,Se San
+319.0,257.38,7203,Se San 4,Vietnam,Se San
+320.0,257.88,7203,Se San 4,Vietnam,Se San
+321.0,258.42,7203,Se San 4,Vietnam,Se San
+322.0,258.99,7203,Se San 4,Vietnam,Se San
+323.0,259.53,7203,Se San 4,Vietnam,Se San
+324.0,260.08,7203,Se San 4,Vietnam,Se San
+325.0,260.63,7203,Se San 4,Vietnam,Se San
+326.0,261.13,7203,Se San 4,Vietnam,Se San
+327.0,261.64,7203,Se San 4,Vietnam,Se San
+328.0,262.19,7203,Se San 4,Vietnam,Se San
+329.0,262.72,7203,Se San 4,Vietnam,Se San
+330.0,263.24,7203,Se San 4,Vietnam,Se San
+331.0,263.71,7203,Se San 4,Vietnam,Se San
+332.0,264.2,7203,Se San 4,Vietnam,Se San
+333.0,264.7,7203,Se San 4,Vietnam,Se San
+334.0,265.25,7203,Se San 4,Vietnam,Se San
+335.0,265.79,7203,Se San 4,Vietnam,Se San
+336.0,266.28,7203,Se San 4,Vietnam,Se San
+337.0,266.8,7203,Se San 4,Vietnam,Se San
+338.0,267.33,7203,Se San 4,Vietnam,Se San
+339.0,267.83,7203,Se San 4,Vietnam,Se San
+340.0,268.32,7203,Se San 4,Vietnam,Se San
+341.0,268.81,7203,Se San 4,Vietnam,Se San
+342.0,269.32,7203,Se San 4,Vietnam,Se San
+343.0,269.83,7203,Se San 4,Vietnam,Se San
+344.0,270.3,7203,Se San 4,Vietnam,Se San
+345.0,270.81,7203,Se San 4,Vietnam,Se San
+346.0,271.33,7203,Se San 4,Vietnam,Se San
+347.0,271.85,7203,Se San 4,Vietnam,Se San
+348.0,272.41,7203,Se San 4,Vietnam,Se San
+349.0,272.91,7203,Se San 4,Vietnam,Se San
+350.0,273.4,7203,Se San 4,Vietnam,Se San
+351.0,273.91,7203,Se San 4,Vietnam,Se San
+352.0,274.39,7203,Se San 4,Vietnam,Se San
+353.0,274.82,7203,Se San 4,Vietnam,Se San
+354.0,275.27,7203,Se San 4,Vietnam,Se San
+355.0,275.68,7203,Se San 4,Vietnam,Se San
+356.0,276.12,7203,Se San 4,Vietnam,Se San
+357.0,276.55,7203,Se San 4,Vietnam,Se San
+358.0,276.96,7203,Se San 4,Vietnam,Se San
+359.0,277.37,7203,Se San 4,Vietnam,Se San
+360.0,277.8,7203,Se San 4,Vietnam,Se San
+361.0,278.19,7203,Se San 4,Vietnam,Se San
+362.0,278.61,7203,Se San 4,Vietnam,Se San
+363.0,279.03,7203,Se San 4,Vietnam,Se San
+364.0,279.44,7203,Se San 4,Vietnam,Se San
+365.0,279.87,7203,Se San 4,Vietnam,Se San
+366.0,280.3,7203,Se San 4,Vietnam,Se San
+367.0,280.71,7203,Se San 4,Vietnam,Se San
+368.0,281.14,7203,Se San 4,Vietnam,Se San
+369.0,281.52,7203,Se San 4,Vietnam,Se San
+370.0,281.95,7203,Se San 4,Vietnam,Se San
+371.0,282.35,7203,Se San 4,Vietnam,Se San
+372.0,282.76,7203,Se San 4,Vietnam,Se San
+373.0,283.17,7203,Se San 4,Vietnam,Se San
+374.0,283.59,7203,Se San 4,Vietnam,Se San
+375.0,283.98,7203,Se San 4,Vietnam,Se San
+376.0,284.39,7203,Se San 4,Vietnam,Se San
+377.0,284.76,7203,Se San 4,Vietnam,Se San
+378.0,285.16,7203,Se San 4,Vietnam,Se San
+379.0,285.54,7203,Se San 4,Vietnam,Se San
+380.0,285.93,7203,Se San 4,Vietnam,Se San
+381.0,286.34,7203,Se San 4,Vietnam,Se San
+382.0,286.69,7203,Se San 4,Vietnam,Se San
+383.0,287.07,7203,Se San 4,Vietnam,Se San
+384.0,287.42,7203,Se San 4,Vietnam,Se San
+385.0,287.8,7203,Se San 4,Vietnam,Se San
+386.0,288.2,7203,Se San 4,Vietnam,Se San
+387.0,288.58,7203,Se San 4,Vietnam,Se San
+388.0,288.96,7203,Se San 4,Vietnam,Se San
+389.0,289.34,7203,Se San 4,Vietnam,Se San
+390.0,289.7,7203,Se San 4,Vietnam,Se San
+391.0,290.02,7203,Se San 4,Vietnam,Se San
+392.0,290.38,7203,Se San 4,Vietnam,Se San
+393.0,290.75,7203,Se San 4,Vietnam,Se San
+394.0,291.1,7203,Se San 4,Vietnam,Se San
+395.0,291.48,7203,Se San 4,Vietnam,Se San
+396.0,291.82,7203,Se San 4,Vietnam,Se San
+397.0,292.13,7203,Se San 4,Vietnam,Se San
+398.0,292.45,7203,Se San 4,Vietnam,Se San
+399.0,292.78,7203,Se San 4,Vietnam,Se San
+400.0,293.14,7203,Se San 4,Vietnam,Se San
+401.0,293.49,7203,Se San 4,Vietnam,Se San
+402.0,293.84,7203,Se San 4,Vietnam,Se San
+403.0,294.21,7203,Se San 4,Vietnam,Se San
+404.0,294.55,7203,Se San 4,Vietnam,Se San
+405.0,294.93,7203,Se San 4,Vietnam,Se San
+406.0,295.28,7203,Se San 4,Vietnam,Se San
+407.0,295.59,7203,Se San 4,Vietnam,Se San
+408.0,295.91,7203,Se San 4,Vietnam,Se San
+409.0,296.24,7203,Se San 4,Vietnam,Se San
+410.0,296.58,7203,Se San 4,Vietnam,Se San
+411.0,296.92,7203,Se San 4,Vietnam,Se San
+412.0,297.27,7203,Se San 4,Vietnam,Se San
+413.0,297.61,7203,Se San 4,Vietnam,Se San
+414.0,297.97,7203,Se San 4,Vietnam,Se San
+415.0,298.28,7203,Se San 4,Vietnam,Se San
+416.0,298.61,7203,Se San 4,Vietnam,Se San
+417.0,298.92,7203,Se San 4,Vietnam,Se San
+418.0,299.25,7203,Se San 4,Vietnam,Se San
+419.0,299.59,7203,Se San 4,Vietnam,Se San
+420.0,299.9,7203,Se San 4,Vietnam,Se San
+421.0,300.2,7203,Se San 4,Vietnam,Se San
+422.0,300.51,7203,Se San 4,Vietnam,Se San
+423.0,300.85,7203,Se San 4,Vietnam,Se San
+424.0,301.18,7203,Se San 4,Vietnam,Se San
+425.0,301.49,7203,Se San 4,Vietnam,Se San
+426.0,301.8,7203,Se San 4,Vietnam,Se San
+427.0,302.12,7203,Se San 4,Vietnam,Se San
+428.0,302.44,7203,Se San 4,Vietnam,Se San
+429.0,302.77,7203,Se San 4,Vietnam,Se San
+430.0,303.06,7203,Se San 4,Vietnam,Se San
+431.0,303.4,7203,Se San 4,Vietnam,Se San
+432.0,303.72,7203,Se San 4,Vietnam,Se San
+433.0,304.02,7203,Se San 4,Vietnam,Se San
+434.0,304.3,7203,Se San 4,Vietnam,Se San
+435.0,304.62,7203,Se San 4,Vietnam,Se San
+436.0,304.9,7203,Se San 4,Vietnam,Se San
+437.0,305.19,7203,Se San 4,Vietnam,Se San
+438.0,305.47,7203,Se San 4,Vietnam,Se San
+439.0,305.76,7203,Se San 4,Vietnam,Se San
+440.0,306.08,7203,Se San 4,Vietnam,Se San
+441.0,306.37,7203,Se San 4,Vietnam,Se San
+442.0,306.65,7203,Se San 4,Vietnam,Se San
+443.0,306.94,7203,Se San 4,Vietnam,Se San
+444.0,307.23,7203,Se San 4,Vietnam,Se San
+445.0,307.52,7203,Se San 4,Vietnam,Se San
+446.0,307.8,7203,Se San 4,Vietnam,Se San
+447.0,308.07,7203,Se San 4,Vietnam,Se San
+448.0,308.33,7203,Se San 4,Vietnam,Se San
+449.0,308.62,7203,Se San 4,Vietnam,Se San
+450.0,308.88,7203,Se San 4,Vietnam,Se San
+451.0,309.17,7203,Se San 4,Vietnam,Se San
+452.0,309.45,7203,Se San 4,Vietnam,Se San
+453.0,309.71,7203,Se San 4,Vietnam,Se San
+454.0,310.01,7203,Se San 4,Vietnam,Se San
+455.0,310.28,7203,Se San 4,Vietnam,Se San
+456.0,310.53,7203,Se San 4,Vietnam,Se San
+457.0,310.82,7203,Se San 4,Vietnam,Se San
+458.0,311.07,7203,Se San 4,Vietnam,Se San
+459.0,311.33,7203,Se San 4,Vietnam,Se San
+460.0,311.6,7203,Se San 4,Vietnam,Se San
+461.0,311.87,7203,Se San 4,Vietnam,Se San
+462.0,312.11,7203,Se San 4,Vietnam,Se San
+463.0,312.39,7203,Se San 4,Vietnam,Se San
+464.0,312.61,7203,Se San 4,Vietnam,Se San
+465.0,312.89,7203,Se San 4,Vietnam,Se San
+466.0,313.14,7203,Se San 4,Vietnam,Se San
+467.0,313.42,7203,Se San 4,Vietnam,Se San
+468.0,313.65,7203,Se San 4,Vietnam,Se San
+469.0,313.91,7203,Se San 4,Vietnam,Se San
+470.0,314.19,7203,Se San 4,Vietnam,Se San
+471.0,314.43,7203,Se San 4,Vietnam,Se San
+472.0,314.65,7203,Se San 4,Vietnam,Se San
+473.0,314.91,7203,Se San 4,Vietnam,Se San
+474.0,315.15,7203,Se San 4,Vietnam,Se San
+475.0,315.41,7203,Se San 4,Vietnam,Se San
+476.0,315.65,7203,Se San 4,Vietnam,Se San
+477.0,315.89,7203,Se San 4,Vietnam,Se San
+478.0,316.12,7203,Se San 4,Vietnam,Se San
+479.0,316.35,7203,Se San 4,Vietnam,Se San
+480.0,316.58,7203,Se San 4,Vietnam,Se San
+481.0,316.81,7203,Se San 4,Vietnam,Se San
+482.0,317.03,7203,Se San 4,Vietnam,Se San
+483.0,317.29,7203,Se San 4,Vietnam,Se San
+484.0,317.52,7203,Se San 4,Vietnam,Se San
+485.0,317.73,7203,Se San 4,Vietnam,Se San
+486.0,317.95,7203,Se San 4,Vietnam,Se San
+487.0,318.2,7203,Se San 4,Vietnam,Se San
+488.0,318.43,7203,Se San 4,Vietnam,Se San
+489.0,318.66,7203,Se San 4,Vietnam,Se San
+490.0,318.86,7203,Se San 4,Vietnam,Se San
+491.0,319.07,7203,Se San 4,Vietnam,Se San
+492.0,319.3,7203,Se San 4,Vietnam,Se San
+493.0,319.54,7203,Se San 4,Vietnam,Se San
+494.0,319.75,7203,Se San 4,Vietnam,Se San
+495.0,319.98,7203,Se San 4,Vietnam,Se San
+496.0,320.2,7203,Se San 4,Vietnam,Se San
+497.0,320.43,7203,Se San 4,Vietnam,Se San
+498.0,320.65,7203,Se San 4,Vietnam,Se San
+499.0,320.85,7203,Se San 4,Vietnam,Se San
+500.0,321.06,7203,Se San 4,Vietnam,Se San
+501.0,321.29,7203,Se San 4,Vietnam,Se San
+502.0,321.53,7203,Se San 4,Vietnam,Se San
+503.0,321.74,7203,Se San 4,Vietnam,Se San
+504.0,321.98,7203,Se San 4,Vietnam,Se San
+505.0,322.18,7203,Se San 4,Vietnam,Se San
+506.0,322.4,7203,Se San 4,Vietnam,Se San
+507.0,322.62,7203,Se San 4,Vietnam,Se San
+508.0,322.81,7203,Se San 4,Vietnam,Se San
+509.0,323.03,7203,Se San 4,Vietnam,Se San
+510.0,323.22,7203,Se San 4,Vietnam,Se San
+511.0,323.44,7203,Se San 4,Vietnam,Se San
+512.0,323.65,7203,Se San 4,Vietnam,Se San
+513.0,323.83,7203,Se San 4,Vietnam,Se San
+514.0,324.04,7203,Se San 4,Vietnam,Se San
+515.0,324.26,7203,Se San 4,Vietnam,Se San
+516.0,324.45,7203,Se San 4,Vietnam,Se San
+517.0,324.64,7203,Se San 4,Vietnam,Se San
+518.0,324.84,7203,Se San 4,Vietnam,Se San
+519.0,325.05,7203,Se San 4,Vietnam,Se San
+520.0,325.24,7203,Se San 4,Vietnam,Se San
+521.0,325.44,7203,Se San 4,Vietnam,Se San
+522.0,325.64,7203,Se San 4,Vietnam,Se San
+523.0,325.86,7203,Se San 4,Vietnam,Se San
+524.0,326.06,7203,Se San 4,Vietnam,Se San
+525.0,326.24,7203,Se San 4,Vietnam,Se San
+526.0,326.45,7203,Se San 4,Vietnam,Se San
+527.0,326.64,7203,Se San 4,Vietnam,Se San
+528.0,326.84,7203,Se San 4,Vietnam,Se San
+529.0,327.02,7203,Se San 4,Vietnam,Se San
+530.0,327.21,7203,Se San 4,Vietnam,Se San
+531.0,327.41,7203,Se San 4,Vietnam,Se San
+532.0,327.64,7203,Se San 4,Vietnam,Se San
+533.0,327.82,7203,Se San 4,Vietnam,Se San
+534.0,328.04,7203,Se San 4,Vietnam,Se San
+535.0,328.24,7203,Se San 4,Vietnam,Se San
+536.0,328.43,7203,Se San 4,Vietnam,Se San
+537.0,328.58,7203,Se San 4,Vietnam,Se San
+538.0,328.76,7203,Se San 4,Vietnam,Se San
+539.0,328.95,7203,Se San 4,Vietnam,Se San
+540.0,329.16,7203,Se San 4,Vietnam,Se San
+541.0,329.33,7203,Se San 4,Vietnam,Se San
+542.0,329.52,7203,Se San 4,Vietnam,Se San
+543.0,329.71,7203,Se San 4,Vietnam,Se San
+544.0,329.87,7203,Se San 4,Vietnam,Se San
+545.0,330.05,7203,Se San 4,Vietnam,Se San
+546.0,330.24,7203,Se San 4,Vietnam,Se San
+547.0,330.42,7203,Se San 4,Vietnam,Se San
+548.0,330.61,7203,Se San 4,Vietnam,Se San
+549.0,330.79,7203,Se San 4,Vietnam,Se San
+550.0,330.99,7203,Se San 4,Vietnam,Se San
+551.0,331.17,7203,Se San 4,Vietnam,Se San
+552.0,331.36,7203,Se San 4,Vietnam,Se San
+553.0,331.55,7203,Se San 4,Vietnam,Se San
+554.0,331.72,7203,Se San 4,Vietnam,Se San
+555.0,331.9,7203,Se San 4,Vietnam,Se San
+556.0,332.09,7203,Se San 4,Vietnam,Se San
+557.0,332.29,7203,Se San 4,Vietnam,Se San
+558.0,332.45,7203,Se San 4,Vietnam,Se San
+559.0,332.63,7203,Se San 4,Vietnam,Se San
+560.0,332.79,7203,Se San 4,Vietnam,Se San
+561.0,332.98,7203,Se San 4,Vietnam,Se San
+562.0,333.16,7203,Se San 4,Vietnam,Se San
+563.0,333.35,7203,Se San 4,Vietnam,Se San
+564.0,333.55,7203,Se San 4,Vietnam,Se San
+565.0,333.73,7203,Se San 4,Vietnam,Se San
+566.0,333.89,7203,Se San 4,Vietnam,Se San
+567.0,334.05,7203,Se San 4,Vietnam,Se San
+568.0,334.24,7203,Se San 4,Vietnam,Se San
+569.0,334.41,7203,Se San 4,Vietnam,Se San
+570.0,334.58,7203,Se San 4,Vietnam,Se San
+571.0,334.75,7203,Se San 4,Vietnam,Se San
+572.0,334.92,7203,Se San 4,Vietnam,Se San
+573.0,335.08,7203,Se San 4,Vietnam,Se San
+574.0,335.24,7203,Se San 4,Vietnam,Se San
+575.0,335.41,7203,Se San 4,Vietnam,Se San
+576.0,335.59,7203,Se San 4,Vietnam,Se San
+577.0,335.74,7203,Se San 4,Vietnam,Se San
+578.0,335.88,7203,Se San 4,Vietnam,Se San
+579.0,336.04,7203,Se San 4,Vietnam,Se San
+580.0,336.2,7203,Se San 4,Vietnam,Se San
+581.0,336.33,7203,Se San 4,Vietnam,Se San
+582.0,336.5,7203,Se San 4,Vietnam,Se San
+583.0,336.63,7203,Se San 4,Vietnam,Se San
+584.0,336.8,7203,Se San 4,Vietnam,Se San
+585.0,336.94,7203,Se San 4,Vietnam,Se San
+586.0,337.11,7203,Se San 4,Vietnam,Se San
+587.0,337.24,7203,Se San 4,Vietnam,Se San
+588.0,337.36,7203,Se San 4,Vietnam,Se San
+589.0,337.52,7203,Se San 4,Vietnam,Se San
+590.0,337.66,7203,Se San 4,Vietnam,Se San
+591.0,337.81,7203,Se San 4,Vietnam,Se San
+592.0,337.94,7203,Se San 4,Vietnam,Se San
+593.0,338.06,7203,Se San 4,Vietnam,Se San
+594.0,338.2,7203,Se San 4,Vietnam,Se San
+595.0,338.35,7203,Se San 4,Vietnam,Se San
+596.0,338.51,7203,Se San 4,Vietnam,Se San
+597.0,338.67,7203,Se San 4,Vietnam,Se San
+598.0,338.8,7203,Se San 4,Vietnam,Se San
+599.0,338.93,7203,Se San 4,Vietnam,Se San
+600.0,339.06,7203,Se San 4,Vietnam,Se San
+601.0,339.19,7203,Se San 4,Vietnam,Se San
+602.0,339.32,7203,Se San 4,Vietnam,Se San
+603.0,339.47,7203,Se San 4,Vietnam,Se San
+604.0,339.61,7203,Se San 4,Vietnam,Se San
+605.0,339.76,7203,Se San 4,Vietnam,Se San
+606.0,339.9,7203,Se San 4,Vietnam,Se San
+607.0,340.04,7203,Se San 4,Vietnam,Se San
+608.0,340.16,7203,Se San 4,Vietnam,Se San
+609.0,340.29,7203,Se San 4,Vietnam,Se San
+610.0,340.43,7203,Se San 4,Vietnam,Se San
+611.0,340.59,7203,Se San 4,Vietnam,Se San
+612.0,340.75,7203,Se San 4,Vietnam,Se San
+613.0,340.9,7203,Se San 4,Vietnam,Se San
+614.0,341.05,7203,Se San 4,Vietnam,Se San
+615.0,341.21,7203,Se San 4,Vietnam,Se San
+616.0,341.34,7203,Se San 4,Vietnam,Se San
+617.0,341.49,7203,Se San 4,Vietnam,Se San
+618.0,341.62,7203,Se San 4,Vietnam,Se San
+619.0,341.75,7203,Se San 4,Vietnam,Se San
+620.0,341.88,7203,Se San 4,Vietnam,Se San
+621.0,342.05,7203,Se San 4,Vietnam,Se San
+622.0,342.18,7203,Se San 4,Vietnam,Se San
+623.0,342.33,7203,Se San 4,Vietnam,Se San
+624.0,342.46,7203,Se San 4,Vietnam,Se San
+625.0,342.59,7203,Se San 4,Vietnam,Se San
+626.0,342.74,7203,Se San 4,Vietnam,Se San
+627.0,342.9,7203,Se San 4,Vietnam,Se San
+628.0,343.04,7203,Se San 4,Vietnam,Se San
+629.0,343.17,7203,Se San 4,Vietnam,Se San
+630.0,343.31,7203,Se San 4,Vietnam,Se San
+631.0,343.43,7203,Se San 4,Vietnam,Se San
+632.0,343.57,7203,Se San 4,Vietnam,Se San
+633.0,343.69,7203,Se San 4,Vietnam,Se San
+634.0,343.83,7203,Se San 4,Vietnam,Se San
+635.0,343.97,7203,Se San 4,Vietnam,Se San
+636.0,344.1,7203,Se San 4,Vietnam,Se San
+637.0,344.22,7203,Se San 4,Vietnam,Se San
+638.0,344.34,7203,Se San 4,Vietnam,Se San
+639.0,344.47,7203,Se San 4,Vietnam,Se San
+640.0,344.59,7203,Se San 4,Vietnam,Se San
+641.0,344.73,7203,Se San 4,Vietnam,Se San
+642.0,344.86,7203,Se San 4,Vietnam,Se San
+643.0,345.0,7203,Se San 4,Vietnam,Se San
+644.0,345.13,7203,Se San 4,Vietnam,Se San
+645.0,345.25,7203,Se San 4,Vietnam,Se San
+646.0,345.36,7203,Se San 4,Vietnam,Se San
+647.0,345.49,7203,Se San 4,Vietnam,Se San
+648.0,345.61,7203,Se San 4,Vietnam,Se San
+649.0,345.74,7203,Se San 4,Vietnam,Se San
+650.0,345.86,7203,Se San 4,Vietnam,Se San
+651.0,345.99,7203,Se San 4,Vietnam,Se San
+652.0,346.11,7203,Se San 4,Vietnam,Se San
+653.0,346.22,7203,Se San 4,Vietnam,Se San
+654.0,346.33,7203,Se San 4,Vietnam,Se San
+655.0,346.46,7203,Se San 4,Vietnam,Se San
+656.0,346.57,7203,Se San 4,Vietnam,Se San
+657.0,346.69,7203,Se San 4,Vietnam,Se San
+658.0,346.79,7203,Se San 4,Vietnam,Se San
+659.0,346.9,7203,Se San 4,Vietnam,Se San
+660.0,347.01,7203,Se San 4,Vietnam,Se San
+661.0,347.11,7203,Se San 4,Vietnam,Se San
+662.0,347.21,7203,Se San 4,Vietnam,Se San
+663.0,347.32,7203,Se San 4,Vietnam,Se San
+664.0,347.42,7203,Se San 4,Vietnam,Se San
+665.0,347.52,7203,Se San 4,Vietnam,Se San
+666.0,347.64,7203,Se San 4,Vietnam,Se San
+667.0,347.73,7203,Se San 4,Vietnam,Se San
+668.0,347.83,7203,Se San 4,Vietnam,Se San
+669.0,347.94,7203,Se San 4,Vietnam,Se San
+670.0,348.02,7203,Se San 4,Vietnam,Se San
+671.0,348.11,7203,Se San 4,Vietnam,Se San
+672.0,348.21,7203,Se San 4,Vietnam,Se San
+673.0,348.29,7203,Se San 4,Vietnam,Se San
+674.0,348.36,7203,Se San 4,Vietnam,Se San
+675.0,348.43,7203,Se San 4,Vietnam,Se San
+676.0,348.49,7203,Se San 4,Vietnam,Se San
+677.0,348.55,7203,Se San 4,Vietnam,Se San
+678.0,348.63,7203,Se San 4,Vietnam,Se San
+679.0,348.71,7203,Se San 4,Vietnam,Se San
+680.0,348.79,7203,Se San 4,Vietnam,Se San
+681.0,348.87,7203,Se San 4,Vietnam,Se San
+682.0,348.94,7203,Se San 4,Vietnam,Se San
+683.0,349.0,7203,Se San 4,Vietnam,Se San
+684.0,349.06,7203,Se San 4,Vietnam,Se San
+685.0,349.13,7203,Se San 4,Vietnam,Se San
+686.0,349.2,7203,Se San 4,Vietnam,Se San
+687.0,349.26,7203,Se San 4,Vietnam,Se San
+688.0,349.32,7203,Se San 4,Vietnam,Se San
+689.0,349.39,7203,Se San 4,Vietnam,Se San
+690.0,349.45,7203,Se San 4,Vietnam,Se San
+691.0,349.52,7203,Se San 4,Vietnam,Se San
+692.0,349.59,7203,Se San 4,Vietnam,Se San
+693.0,349.66,7203,Se San 4,Vietnam,Se San
+694.0,349.74,7203,Se San 4,Vietnam,Se San
+695.0,349.81,7203,Se San 4,Vietnam,Se San
+696.0,349.89,7203,Se San 4,Vietnam,Se San
+697.0,349.95,7203,Se San 4,Vietnam,Se San
+698.0,350.01,7203,Se San 4,Vietnam,Se San
+699.0,350.06,7203,Se San 4,Vietnam,Se San
+700.0,350.12,7203,Se San 4,Vietnam,Se San
+701.0,350.18,7203,Se San 4,Vietnam,Se San
+702.0,350.24,7203,Se San 4,Vietnam,Se San
+703.0,350.3,7203,Se San 4,Vietnam,Se San
+704.0,350.37,7203,Se San 4,Vietnam,Se San
+705.0,350.44,7203,Se San 4,Vietnam,Se San
+706.0,350.49,7203,Se San 4,Vietnam,Se San
+707.0,350.55,7203,Se San 4,Vietnam,Se San
+708.0,350.6,7203,Se San 4,Vietnam,Se San
+709.0,350.65,7203,Se San 4,Vietnam,Se San
+710.0,350.71,7203,Se San 4,Vietnam,Se San
+711.0,350.76,7203,Se San 4,Vietnam,Se San
+712.0,350.82,7203,Se San 4,Vietnam,Se San
+713.0,350.87,7203,Se San 4,Vietnam,Se San
+714.0,350.95,7203,Se San 4,Vietnam,Se San
+715.0,351.01,7203,Se San 4,Vietnam,Se San
+716.0,351.07,7203,Se San 4,Vietnam,Se San
+717.0,351.12,7203,Se San 4,Vietnam,Se San
+718.0,351.18,7203,Se San 4,Vietnam,Se San
+719.0,351.23,7203,Se San 4,Vietnam,Se San
+720.0,351.29,7203,Se San 4,Vietnam,Se San
+721.0,351.34,7203,Se San 4,Vietnam,Se San
+722.0,351.39,7203,Se San 4,Vietnam,Se San
+723.0,351.44,7203,Se San 4,Vietnam,Se San
+724.0,351.51,7203,Se San 4,Vietnam,Se San
+725.0,351.56,7203,Se San 4,Vietnam,Se San
+726.0,351.62,7203,Se San 4,Vietnam,Se San
+727.0,351.67,7203,Se San 4,Vietnam,Se San
+728.0,351.72,7203,Se San 4,Vietnam,Se San
+729.0,351.77,7203,Se San 4,Vietnam,Se San
+730.0,351.81,7203,Se San 4,Vietnam,Se San
+731.0,351.86,7203,Se San 4,Vietnam,Se San
+732.0,351.9,7203,Se San 4,Vietnam,Se San
+733.0,351.94,7203,Se San 4,Vietnam,Se San
+734.0,351.98,7203,Se San 4,Vietnam,Se San
+735.0,352.02,7203,Se San 4,Vietnam,Se San
+736.0,352.09,7203,Se San 4,Vietnam,Se San
+737.0,352.13,7203,Se San 4,Vietnam,Se San
+738.0,352.17,7203,Se San 4,Vietnam,Se San
+739.0,352.21,7203,Se San 4,Vietnam,Se San
+740.0,352.26,7203,Se San 4,Vietnam,Se San
+741.0,352.3,7203,Se San 4,Vietnam,Se San
+742.0,352.35,7203,Se San 4,Vietnam,Se San
+743.0,352.4,7203,Se San 4,Vietnam,Se San
+744.0,352.43,7203,Se San 4,Vietnam,Se San
+745.0,352.48,7203,Se San 4,Vietnam,Se San
+746.0,352.51,7203,Se San 4,Vietnam,Se San
+747.0,352.55,7203,Se San 4,Vietnam,Se San
+748.0,352.59,7203,Se San 4,Vietnam,Se San
+749.0,352.62,7203,Se San 4,Vietnam,Se San
+750.0,352.66,7203,Se San 4,Vietnam,Se San
+751.0,352.7,7203,Se San 4,Vietnam,Se San
+752.0,352.74,7203,Se San 4,Vietnam,Se San
+753.0,352.77,7203,Se San 4,Vietnam,Se San
+754.0,352.8,7203,Se San 4,Vietnam,Se San
+755.0,352.84,7203,Se San 4,Vietnam,Se San
+756.0,352.88,7203,Se San 4,Vietnam,Se San
+757.0,352.91,7203,Se San 4,Vietnam,Se San
+758.0,352.95,7203,Se San 4,Vietnam,Se San
+759.0,352.97,7203,Se San 4,Vietnam,Se San
+760.0,353.0,7203,Se San 4,Vietnam,Se San
+761.0,353.02,7203,Se San 4,Vietnam,Se San
+762.0,353.06,7203,Se San 4,Vietnam,Se San
+763.0,353.09,7203,Se San 4,Vietnam,Se San
+764.0,353.11,7203,Se San 4,Vietnam,Se San
+765.0,353.15,7203,Se San 4,Vietnam,Se San
+766.0,353.19,7203,Se San 4,Vietnam,Se San
+767.0,353.22,7203,Se San 4,Vietnam,Se San
+768.0,353.26,7203,Se San 4,Vietnam,Se San
+769.0,353.29,7203,Se San 4,Vietnam,Se San
+770.0,353.32,7203,Se San 4,Vietnam,Se San
+771.0,353.35,7203,Se San 4,Vietnam,Se San
+772.0,353.38,7203,Se San 4,Vietnam,Se San
+773.0,353.41,7203,Se San 4,Vietnam,Se San
+774.0,353.44,7203,Se San 4,Vietnam,Se San
+775.0,353.47,7203,Se San 4,Vietnam,Se San
+776.0,353.49,7203,Se San 4,Vietnam,Se San
+777.0,353.53,7203,Se San 4,Vietnam,Se San
+778.0,353.56,7203,Se San 4,Vietnam,Se San
+779.0,353.6,7203,Se San 4,Vietnam,Se San
+780.0,353.63,7203,Se San 4,Vietnam,Se San
+781.0,353.66,7203,Se San 4,Vietnam,Se San
+782.0,353.69,7203,Se San 4,Vietnam,Se San
+783.0,353.72,7203,Se San 4,Vietnam,Se San
+784.0,353.75,7203,Se San 4,Vietnam,Se San
+785.0,353.78,7203,Se San 4,Vietnam,Se San
+786.0,353.81,7203,Se San 4,Vietnam,Se San
+787.0,353.84,7203,Se San 4,Vietnam,Se San
+788.0,353.87,7203,Se San 4,Vietnam,Se San
+789.0,353.9,7203,Se San 4,Vietnam,Se San
+790.0,353.93,7203,Se San 4,Vietnam,Se San
+791.0,353.96,7203,Se San 4,Vietnam,Se San
+792.0,353.99,7203,Se San 4,Vietnam,Se San
+793.0,354.02,7203,Se San 4,Vietnam,Se San
+794.0,354.04,7203,Se San 4,Vietnam,Se San
+795.0,354.06,7203,Se San 4,Vietnam,Se San
+796.0,354.09,7203,Se San 4,Vietnam,Se San
+797.0,354.12,7203,Se San 4,Vietnam,Se San
+798.0,354.14,7203,Se San 4,Vietnam,Se San
+799.0,354.16,7203,Se San 4,Vietnam,Se San
+801.0,354.19,7203,Se San 4,Vietnam,Se San
+802.0,354.21,7203,Se San 4,Vietnam,Se San
+803.0,354.23,7203,Se San 4,Vietnam,Se San
+804.0,354.25,7203,Se San 4,Vietnam,Se San
+805.0,354.28,7203,Se San 4,Vietnam,Se San
+806.0,354.31,7203,Se San 4,Vietnam,Se San
+807.0,354.33,7203,Se San 4,Vietnam,Se San
+810.0,354.37,7203,Se San 4,Vietnam,Se San
+811.0,354.39,7203,Se San 4,Vietnam,Se San
+814.0,354.43,7203,Se San 4,Vietnam,Se San
+815.0,354.44,7203,Se San 4,Vietnam,Se San
+821.0,354.5,7203,Se San 4,Vietnam,Se San
+828.0,354.57,7203,Se San 4,Vietnam,Se San
+846.0,354.63,7203,Se San 4,Vietnam,Se San
+138.0,3.4,5149,Ubol Ratana,Thailand,Nam Pong
+139.0,10.57,5149,Ubol Ratana,Thailand,Nam Pong
+140.0,17.75,5149,Ubol Ratana,Thailand,Nam Pong
+141.0,24.93,5149,Ubol Ratana,Thailand,Nam Pong
+142.0,32.1,5149,Ubol Ratana,Thailand,Nam Pong
+143.0,39.28,5149,Ubol Ratana,Thailand,Nam Pong
+144.0,46.45,5149,Ubol Ratana,Thailand,Nam Pong
+145.0,53.63,5149,Ubol Ratana,Thailand,Nam Pong
+146.0,60.81,5149,Ubol Ratana,Thailand,Nam Pong
+147.0,67.98,5149,Ubol Ratana,Thailand,Nam Pong
+148.0,75.16,5149,Ubol Ratana,Thailand,Nam Pong
+149.0,82.34,5149,Ubol Ratana,Thailand,Nam Pong
+150.0,89.51,5149,Ubol Ratana,Thailand,Nam Pong
+151.0,96.69,5149,Ubol Ratana,Thailand,Nam Pong
+152.0,103.86,5149,Ubol Ratana,Thailand,Nam Pong
+153.0,111.04,5149,Ubol Ratana,Thailand,Nam Pong
+154.0,118.22,5149,Ubol Ratana,Thailand,Nam Pong
+155.0,125.39,5149,Ubol Ratana,Thailand,Nam Pong
+156.0,132.57,5149,Ubol Ratana,Thailand,Nam Pong
+157.0,139.74,5149,Ubol Ratana,Thailand,Nam Pong
+158.0,146.92,5149,Ubol Ratana,Thailand,Nam Pong
+159.0,154.1,5149,Ubol Ratana,Thailand,Nam Pong
+160.0,161.27,5149,Ubol Ratana,Thailand,Nam Pong
+161.0,168.45,5149,Ubol Ratana,Thailand,Nam Pong
+162.0,175.63,5149,Ubol Ratana,Thailand,Nam Pong
+163.0,182.8,5149,Ubol Ratana,Thailand,Nam Pong
+164.0,189.98,5149,Ubol Ratana,Thailand,Nam Pong
+165.0,197.15,5149,Ubol Ratana,Thailand,Nam Pong
+166.0,204.33,5149,Ubol Ratana,Thailand,Nam Pong
+167.0,211.51,5149,Ubol Ratana,Thailand,Nam Pong
+168.0,218.68,5149,Ubol Ratana,Thailand,Nam Pong
+169.0,225.86,5149,Ubol Ratana,Thailand,Nam Pong
+170.0,233.03,5149,Ubol Ratana,Thailand,Nam Pong
+171.0,240.21,5149,Ubol Ratana,Thailand,Nam Pong
+172.0,247.39,5149,Ubol Ratana,Thailand,Nam Pong
+173.0,254.56,5149,Ubol Ratana,Thailand,Nam Pong
+174.0,261.74,5149,Ubol Ratana,Thailand,Nam Pong
+175.0,268.92,5149,Ubol Ratana,Thailand,Nam Pong
+176.0,276.09,5149,Ubol Ratana,Thailand,Nam Pong
+177.0,283.27,5149,Ubol Ratana,Thailand,Nam Pong
+178.0,290.44,5149,Ubol Ratana,Thailand,Nam Pong
+179.0,297.62,5149,Ubol Ratana,Thailand,Nam Pong
+180.0,306.89,5149,Ubol Ratana,Thailand,Nam Pong
+181.0,326.15,5149,Ubol Ratana,Thailand,Nam Pong
+182.0,360.12,5149,Ubol Ratana,Thailand,Nam Pong
+183.0,399.09,5149,Ubol Ratana,Thailand,Nam Pong
+184.0,436.48,5149,Ubol Ratana,Thailand,Nam Pong
+185.0,474.11,5149,Ubol Ratana,Thailand,Nam Pong
+186.0,512.59,5149,Ubol Ratana,Thailand,Nam Pong
+187.0,551.71,5149,Ubol Ratana,Thailand,Nam Pong
+188.0,591.46,5149,Ubol Ratana,Thailand,Nam Pong
+189.0,631.23,5149,Ubol Ratana,Thailand,Nam Pong
+190.0,670.96,5149,Ubol Ratana,Thailand,Nam Pong
+191.0,710.28,5149,Ubol Ratana,Thailand,Nam Pong
+192.0,748.52,5149,Ubol Ratana,Thailand,Nam Pong
+193.0,784.89,5149,Ubol Ratana,Thailand,Nam Pong
+194.0,819.67,5149,Ubol Ratana,Thailand,Nam Pong
+195.0,852.77,5149,Ubol Ratana,Thailand,Nam Pong
+196.0,883.69,5149,Ubol Ratana,Thailand,Nam Pong
+197.0,912.37,5149,Ubol Ratana,Thailand,Nam Pong
+198.0,938.82,5149,Ubol Ratana,Thailand,Nam Pong
+199.0,962.65,5149,Ubol Ratana,Thailand,Nam Pong
+200.0,984.2,5149,Ubol Ratana,Thailand,Nam Pong
+201.0,1003.4,5149,Ubol Ratana,Thailand,Nam Pong
+202.0,1020.71,5149,Ubol Ratana,Thailand,Nam Pong
+203.0,1036.23,5149,Ubol Ratana,Thailand,Nam Pong
+204.0,1050.06,5149,Ubol Ratana,Thailand,Nam Pong
+205.0,1062.42,5149,Ubol Ratana,Thailand,Nam Pong
+206.0,1073.36,5149,Ubol Ratana,Thailand,Nam Pong
+207.0,1082.89,5149,Ubol Ratana,Thailand,Nam Pong
+208.0,1091.28,5149,Ubol Ratana,Thailand,Nam Pong
+209.0,1098.51,5149,Ubol Ratana,Thailand,Nam Pong
+210.0,1104.78,5149,Ubol Ratana,Thailand,Nam Pong
+211.0,1110.39,5149,Ubol Ratana,Thailand,Nam Pong
+212.0,1115.47,5149,Ubol Ratana,Thailand,Nam Pong
+213.0,1119.9,5149,Ubol Ratana,Thailand,Nam Pong
+214.0,1123.93,5149,Ubol Ratana,Thailand,Nam Pong
+215.0,1127.48,5149,Ubol Ratana,Thailand,Nam Pong
+216.0,1130.53,5149,Ubol Ratana,Thailand,Nam Pong
+217.0,1133.37,5149,Ubol Ratana,Thailand,Nam Pong
+218.0,1136.02,5149,Ubol Ratana,Thailand,Nam Pong
+219.0,1138.49,5149,Ubol Ratana,Thailand,Nam Pong
+220.0,1140.84,5149,Ubol Ratana,Thailand,Nam Pong
+221.0,1143.0,5149,Ubol Ratana,Thailand,Nam Pong
+222.0,1145.1,5149,Ubol Ratana,Thailand,Nam Pong
+223.0,1147.04,5149,Ubol Ratana,Thailand,Nam Pong
+224.0,1148.87,5149,Ubol Ratana,Thailand,Nam Pong
+225.0,1150.6,5149,Ubol Ratana,Thailand,Nam Pong
+226.0,1152.33,5149,Ubol Ratana,Thailand,Nam Pong
+227.0,1154.03,5149,Ubol Ratana,Thailand,Nam Pong
+228.0,1155.56,5149,Ubol Ratana,Thailand,Nam Pong
+229.0,1157.02,5149,Ubol Ratana,Thailand,Nam Pong
+230.0,1158.4,5149,Ubol Ratana,Thailand,Nam Pong
+231.0,1159.71,5149,Ubol Ratana,Thailand,Nam Pong
+232.0,1160.99,5149,Ubol Ratana,Thailand,Nam Pong
+233.0,1162.19,5149,Ubol Ratana,Thailand,Nam Pong
+234.0,1163.35,5149,Ubol Ratana,Thailand,Nam Pong
+235.0,1164.41,5149,Ubol Ratana,Thailand,Nam Pong
+236.0,1165.46,5149,Ubol Ratana,Thailand,Nam Pong
+237.0,1166.44,5149,Ubol Ratana,Thailand,Nam Pong
+238.0,1167.46,5149,Ubol Ratana,Thailand,Nam Pong
+239.0,1168.42,5149,Ubol Ratana,Thailand,Nam Pong
+240.0,1169.26,5149,Ubol Ratana,Thailand,Nam Pong
+241.0,1170.15,5149,Ubol Ratana,Thailand,Nam Pong
+242.0,1171.03,5149,Ubol Ratana,Thailand,Nam Pong
+243.0,1171.96,5149,Ubol Ratana,Thailand,Nam Pong
+244.0,1172.83,5149,Ubol Ratana,Thailand,Nam Pong
+245.0,1173.7,5149,Ubol Ratana,Thailand,Nam Pong
+246.0,1174.46,5149,Ubol Ratana,Thailand,Nam Pong
+247.0,1175.18,5149,Ubol Ratana,Thailand,Nam Pong
+248.0,1175.89,5149,Ubol Ratana,Thailand,Nam Pong
+249.0,1176.64,5149,Ubol Ratana,Thailand,Nam Pong
+250.0,1177.34,5149,Ubol Ratana,Thailand,Nam Pong
+251.0,1178.11,5149,Ubol Ratana,Thailand,Nam Pong
+252.0,1178.88,5149,Ubol Ratana,Thailand,Nam Pong
+253.0,1179.58,5149,Ubol Ratana,Thailand,Nam Pong
+254.0,1180.32,5149,Ubol Ratana,Thailand,Nam Pong
+255.0,1180.99,5149,Ubol Ratana,Thailand,Nam Pong
+256.0,1181.64,5149,Ubol Ratana,Thailand,Nam Pong
+257.0,1182.3,5149,Ubol Ratana,Thailand,Nam Pong
+258.0,1183.0,5149,Ubol Ratana,Thailand,Nam Pong
+259.0,1183.66,5149,Ubol Ratana,Thailand,Nam Pong
+260.0,1184.29,5149,Ubol Ratana,Thailand,Nam Pong
+261.0,1184.91,5149,Ubol Ratana,Thailand,Nam Pong
+262.0,1185.58,5149,Ubol Ratana,Thailand,Nam Pong
+263.0,1186.2,5149,Ubol Ratana,Thailand,Nam Pong
+264.0,1186.84,5149,Ubol Ratana,Thailand,Nam Pong
+265.0,1187.42,5149,Ubol Ratana,Thailand,Nam Pong
+266.0,1187.97,5149,Ubol Ratana,Thailand,Nam Pong
+267.0,1188.5,5149,Ubol Ratana,Thailand,Nam Pong
+268.0,1189.13,5149,Ubol Ratana,Thailand,Nam Pong
+269.0,1189.7,5149,Ubol Ratana,Thailand,Nam Pong
+270.0,1190.27,5149,Ubol Ratana,Thailand,Nam Pong
+271.0,1190.81,5149,Ubol Ratana,Thailand,Nam Pong
+272.0,1191.35,5149,Ubol Ratana,Thailand,Nam Pong
+273.0,1191.91,5149,Ubol Ratana,Thailand,Nam Pong
+274.0,1192.43,5149,Ubol Ratana,Thailand,Nam Pong
+275.0,1193.0,5149,Ubol Ratana,Thailand,Nam Pong
+276.0,1193.54,5149,Ubol Ratana,Thailand,Nam Pong
+277.0,1194.07,5149,Ubol Ratana,Thailand,Nam Pong
+278.0,1194.6,5149,Ubol Ratana,Thailand,Nam Pong
+279.0,1195.14,5149,Ubol Ratana,Thailand,Nam Pong
+280.0,1195.65,5149,Ubol Ratana,Thailand,Nam Pong
+281.0,1196.2,5149,Ubol Ratana,Thailand,Nam Pong
+282.0,1196.74,5149,Ubol Ratana,Thailand,Nam Pong
+283.0,1197.25,5149,Ubol Ratana,Thailand,Nam Pong
+284.0,1197.78,5149,Ubol Ratana,Thailand,Nam Pong
+285.0,1198.31,5149,Ubol Ratana,Thailand,Nam Pong
+286.0,1198.84,5149,Ubol Ratana,Thailand,Nam Pong
+287.0,1199.4,5149,Ubol Ratana,Thailand,Nam Pong
+288.0,1199.89,5149,Ubol Ratana,Thailand,Nam Pong
+289.0,1200.45,5149,Ubol Ratana,Thailand,Nam Pong
+290.0,1200.99,5149,Ubol Ratana,Thailand,Nam Pong
+291.0,1201.51,5149,Ubol Ratana,Thailand,Nam Pong
+292.0,1202.07,5149,Ubol Ratana,Thailand,Nam Pong
+293.0,1202.6,5149,Ubol Ratana,Thailand,Nam Pong
+294.0,1203.1,5149,Ubol Ratana,Thailand,Nam Pong
+295.0,1203.6,5149,Ubol Ratana,Thailand,Nam Pong
+296.0,1204.15,5149,Ubol Ratana,Thailand,Nam Pong
+297.0,1204.68,5149,Ubol Ratana,Thailand,Nam Pong
+298.0,1205.26,5149,Ubol Ratana,Thailand,Nam Pong
+299.0,1205.82,5149,Ubol Ratana,Thailand,Nam Pong
+300.0,1206.34,5149,Ubol Ratana,Thailand,Nam Pong
+301.0,1206.84,5149,Ubol Ratana,Thailand,Nam Pong
+302.0,1207.38,5149,Ubol Ratana,Thailand,Nam Pong
+303.0,1207.88,5149,Ubol Ratana,Thailand,Nam Pong
+304.0,1208.4,5149,Ubol Ratana,Thailand,Nam Pong
+305.0,1208.87,5149,Ubol Ratana,Thailand,Nam Pong
+306.0,1209.35,5149,Ubol Ratana,Thailand,Nam Pong
+307.0,1209.87,5149,Ubol Ratana,Thailand,Nam Pong
+308.0,1210.35,5149,Ubol Ratana,Thailand,Nam Pong
+309.0,1210.85,5149,Ubol Ratana,Thailand,Nam Pong
+310.0,1211.31,5149,Ubol Ratana,Thailand,Nam Pong
+311.0,1211.78,5149,Ubol Ratana,Thailand,Nam Pong
+312.0,1212.28,5149,Ubol Ratana,Thailand,Nam Pong
+313.0,1212.73,5149,Ubol Ratana,Thailand,Nam Pong
+314.0,1213.23,5149,Ubol Ratana,Thailand,Nam Pong
+315.0,1213.68,5149,Ubol Ratana,Thailand,Nam Pong
+316.0,1214.19,5149,Ubol Ratana,Thailand,Nam Pong
+317.0,1214.65,5149,Ubol Ratana,Thailand,Nam Pong
+318.0,1215.15,5149,Ubol Ratana,Thailand,Nam Pong
+319.0,1215.65,5149,Ubol Ratana,Thailand,Nam Pong
+320.0,1216.14,5149,Ubol Ratana,Thailand,Nam Pong
+321.0,1216.63,5149,Ubol Ratana,Thailand,Nam Pong
+322.0,1217.09,5149,Ubol Ratana,Thailand,Nam Pong
+323.0,1217.56,5149,Ubol Ratana,Thailand,Nam Pong
+324.0,1218.02,5149,Ubol Ratana,Thailand,Nam Pong
+325.0,1218.47,5149,Ubol Ratana,Thailand,Nam Pong
+326.0,1218.94,5149,Ubol Ratana,Thailand,Nam Pong
+327.0,1219.39,5149,Ubol Ratana,Thailand,Nam Pong
+328.0,1219.85,5149,Ubol Ratana,Thailand,Nam Pong
+329.0,1220.26,5149,Ubol Ratana,Thailand,Nam Pong
+330.0,1220.69,5149,Ubol Ratana,Thailand,Nam Pong
+331.0,1221.12,5149,Ubol Ratana,Thailand,Nam Pong
+332.0,1221.56,5149,Ubol Ratana,Thailand,Nam Pong
+333.0,1221.97,5149,Ubol Ratana,Thailand,Nam Pong
+334.0,1222.36,5149,Ubol Ratana,Thailand,Nam Pong
+335.0,1222.75,5149,Ubol Ratana,Thailand,Nam Pong
+336.0,1223.14,5149,Ubol Ratana,Thailand,Nam Pong
+337.0,1223.5,5149,Ubol Ratana,Thailand,Nam Pong
+338.0,1223.89,5149,Ubol Ratana,Thailand,Nam Pong
+339.0,1224.25,5149,Ubol Ratana,Thailand,Nam Pong
+340.0,1224.61,5149,Ubol Ratana,Thailand,Nam Pong
+341.0,1224.97,5149,Ubol Ratana,Thailand,Nam Pong
+342.0,1225.33,5149,Ubol Ratana,Thailand,Nam Pong
+343.0,1225.68,5149,Ubol Ratana,Thailand,Nam Pong
+344.0,1226.05,5149,Ubol Ratana,Thailand,Nam Pong
+345.0,1226.41,5149,Ubol Ratana,Thailand,Nam Pong
+346.0,1226.78,5149,Ubol Ratana,Thailand,Nam Pong
+347.0,1227.14,5149,Ubol Ratana,Thailand,Nam Pong
+348.0,1227.49,5149,Ubol Ratana,Thailand,Nam Pong
+349.0,1227.83,5149,Ubol Ratana,Thailand,Nam Pong
+350.0,1228.15,5149,Ubol Ratana,Thailand,Nam Pong
+351.0,1228.49,5149,Ubol Ratana,Thailand,Nam Pong
+352.0,1228.83,5149,Ubol Ratana,Thailand,Nam Pong
+353.0,1229.19,5149,Ubol Ratana,Thailand,Nam Pong
+354.0,1229.52,5149,Ubol Ratana,Thailand,Nam Pong
+355.0,1229.85,5149,Ubol Ratana,Thailand,Nam Pong
+356.0,1230.18,5149,Ubol Ratana,Thailand,Nam Pong
+357.0,1230.5,5149,Ubol Ratana,Thailand,Nam Pong
+358.0,1230.85,5149,Ubol Ratana,Thailand,Nam Pong
+359.0,1231.16,5149,Ubol Ratana,Thailand,Nam Pong
+360.0,1231.46,5149,Ubol Ratana,Thailand,Nam Pong
+361.0,1231.77,5149,Ubol Ratana,Thailand,Nam Pong
+362.0,1232.05,5149,Ubol Ratana,Thailand,Nam Pong
+363.0,1232.32,5149,Ubol Ratana,Thailand,Nam Pong
+364.0,1232.6,5149,Ubol Ratana,Thailand,Nam Pong
+365.0,1232.87,5149,Ubol Ratana,Thailand,Nam Pong
+366.0,1233.13,5149,Ubol Ratana,Thailand,Nam Pong
+367.0,1233.4,5149,Ubol Ratana,Thailand,Nam Pong
+368.0,1233.63,5149,Ubol Ratana,Thailand,Nam Pong
+369.0,1233.9,5149,Ubol Ratana,Thailand,Nam Pong
+370.0,1234.16,5149,Ubol Ratana,Thailand,Nam Pong
+371.0,1234.4,5149,Ubol Ratana,Thailand,Nam Pong
+372.0,1234.67,5149,Ubol Ratana,Thailand,Nam Pong
+373.0,1234.92,5149,Ubol Ratana,Thailand,Nam Pong
+374.0,1235.17,5149,Ubol Ratana,Thailand,Nam Pong
+375.0,1235.42,5149,Ubol Ratana,Thailand,Nam Pong
+376.0,1235.65,5149,Ubol Ratana,Thailand,Nam Pong
+377.0,1235.87,5149,Ubol Ratana,Thailand,Nam Pong
+378.0,1236.11,5149,Ubol Ratana,Thailand,Nam Pong
+379.0,1236.35,5149,Ubol Ratana,Thailand,Nam Pong
+380.0,1236.57,5149,Ubol Ratana,Thailand,Nam Pong
+381.0,1236.8,5149,Ubol Ratana,Thailand,Nam Pong
+382.0,1237.01,5149,Ubol Ratana,Thailand,Nam Pong
+383.0,1237.22,5149,Ubol Ratana,Thailand,Nam Pong
+384.0,1237.4,5149,Ubol Ratana,Thailand,Nam Pong
+385.0,1237.62,5149,Ubol Ratana,Thailand,Nam Pong
+386.0,1237.84,5149,Ubol Ratana,Thailand,Nam Pong
+387.0,1238.06,5149,Ubol Ratana,Thailand,Nam Pong
+388.0,1238.26,5149,Ubol Ratana,Thailand,Nam Pong
+389.0,1238.47,5149,Ubol Ratana,Thailand,Nam Pong
+390.0,1238.66,5149,Ubol Ratana,Thailand,Nam Pong
+391.0,1238.86,5149,Ubol Ratana,Thailand,Nam Pong
+392.0,1239.05,5149,Ubol Ratana,Thailand,Nam Pong
+393.0,1239.28,5149,Ubol Ratana,Thailand,Nam Pong
+394.0,1239.5,5149,Ubol Ratana,Thailand,Nam Pong
+395.0,1239.69,5149,Ubol Ratana,Thailand,Nam Pong
+396.0,1239.9,5149,Ubol Ratana,Thailand,Nam Pong
+397.0,1240.13,5149,Ubol Ratana,Thailand,Nam Pong
+398.0,1240.32,5149,Ubol Ratana,Thailand,Nam Pong
+399.0,1240.52,5149,Ubol Ratana,Thailand,Nam Pong
+400.0,1240.76,5149,Ubol Ratana,Thailand,Nam Pong
+401.0,1240.93,5149,Ubol Ratana,Thailand,Nam Pong
+402.0,1241.13,5149,Ubol Ratana,Thailand,Nam Pong
+403.0,1241.31,5149,Ubol Ratana,Thailand,Nam Pong
+404.0,1241.46,5149,Ubol Ratana,Thailand,Nam Pong
+405.0,1241.63,5149,Ubol Ratana,Thailand,Nam Pong
+406.0,1241.82,5149,Ubol Ratana,Thailand,Nam Pong
+407.0,1241.97,5149,Ubol Ratana,Thailand,Nam Pong
+408.0,1242.12,5149,Ubol Ratana,Thailand,Nam Pong
+409.0,1242.31,5149,Ubol Ratana,Thailand,Nam Pong
+410.0,1242.48,5149,Ubol Ratana,Thailand,Nam Pong
+411.0,1242.65,5149,Ubol Ratana,Thailand,Nam Pong
+412.0,1242.79,5149,Ubol Ratana,Thailand,Nam Pong
+413.0,1242.97,5149,Ubol Ratana,Thailand,Nam Pong
+414.0,1243.11,5149,Ubol Ratana,Thailand,Nam Pong
+415.0,1243.26,5149,Ubol Ratana,Thailand,Nam Pong
+416.0,1243.4,5149,Ubol Ratana,Thailand,Nam Pong
+417.0,1243.56,5149,Ubol Ratana,Thailand,Nam Pong
+418.0,1243.69,5149,Ubol Ratana,Thailand,Nam Pong
+419.0,1243.87,5149,Ubol Ratana,Thailand,Nam Pong
+420.0,1244.01,5149,Ubol Ratana,Thailand,Nam Pong
+421.0,1244.17,5149,Ubol Ratana,Thailand,Nam Pong
+422.0,1244.34,5149,Ubol Ratana,Thailand,Nam Pong
+423.0,1244.51,5149,Ubol Ratana,Thailand,Nam Pong
+424.0,1244.67,5149,Ubol Ratana,Thailand,Nam Pong
+425.0,1244.81,5149,Ubol Ratana,Thailand,Nam Pong
+426.0,1244.96,5149,Ubol Ratana,Thailand,Nam Pong
+427.0,1245.12,5149,Ubol Ratana,Thailand,Nam Pong
+428.0,1245.25,5149,Ubol Ratana,Thailand,Nam Pong
+429.0,1245.4,5149,Ubol Ratana,Thailand,Nam Pong
+430.0,1245.55,5149,Ubol Ratana,Thailand,Nam Pong
+431.0,1245.69,5149,Ubol Ratana,Thailand,Nam Pong
+432.0,1245.82,5149,Ubol Ratana,Thailand,Nam Pong
+433.0,1245.96,5149,Ubol Ratana,Thailand,Nam Pong
+434.0,1246.1,5149,Ubol Ratana,Thailand,Nam Pong
+435.0,1246.23,5149,Ubol Ratana,Thailand,Nam Pong
+436.0,1246.38,5149,Ubol Ratana,Thailand,Nam Pong
+437.0,1246.5,5149,Ubol Ratana,Thailand,Nam Pong
+438.0,1246.63,5149,Ubol Ratana,Thailand,Nam Pong
+439.0,1246.75,5149,Ubol Ratana,Thailand,Nam Pong
+440.0,1246.86,5149,Ubol Ratana,Thailand,Nam Pong
+441.0,1246.98,5149,Ubol Ratana,Thailand,Nam Pong
+442.0,1247.1,5149,Ubol Ratana,Thailand,Nam Pong
+443.0,1247.22,5149,Ubol Ratana,Thailand,Nam Pong
+444.0,1247.35,5149,Ubol Ratana,Thailand,Nam Pong
+445.0,1247.49,5149,Ubol Ratana,Thailand,Nam Pong
+446.0,1247.6,5149,Ubol Ratana,Thailand,Nam Pong
+447.0,1247.74,5149,Ubol Ratana,Thailand,Nam Pong
+448.0,1247.87,5149,Ubol Ratana,Thailand,Nam Pong
+449.0,1248.0,5149,Ubol Ratana,Thailand,Nam Pong
+450.0,1248.12,5149,Ubol Ratana,Thailand,Nam Pong
+451.0,1248.25,5149,Ubol Ratana,Thailand,Nam Pong
+452.0,1248.36,5149,Ubol Ratana,Thailand,Nam Pong
+453.0,1248.5,5149,Ubol Ratana,Thailand,Nam Pong
+454.0,1248.62,5149,Ubol Ratana,Thailand,Nam Pong
+455.0,1248.74,5149,Ubol Ratana,Thailand,Nam Pong
+456.0,1248.86,5149,Ubol Ratana,Thailand,Nam Pong
+457.0,1249.0,5149,Ubol Ratana,Thailand,Nam Pong
+458.0,1249.1,5149,Ubol Ratana,Thailand,Nam Pong
+459.0,1249.22,5149,Ubol Ratana,Thailand,Nam Pong
+460.0,1249.34,5149,Ubol Ratana,Thailand,Nam Pong
+461.0,1249.45,5149,Ubol Ratana,Thailand,Nam Pong
+462.0,1249.56,5149,Ubol Ratana,Thailand,Nam Pong
+463.0,1249.67,5149,Ubol Ratana,Thailand,Nam Pong
+464.0,1249.78,5149,Ubol Ratana,Thailand,Nam Pong
+465.0,1249.88,5149,Ubol Ratana,Thailand,Nam Pong
+466.0,1249.98,5149,Ubol Ratana,Thailand,Nam Pong
+467.0,1250.08,5149,Ubol Ratana,Thailand,Nam Pong
+468.0,1250.17,5149,Ubol Ratana,Thailand,Nam Pong
+469.0,1250.27,5149,Ubol Ratana,Thailand,Nam Pong
+470.0,1250.37,5149,Ubol Ratana,Thailand,Nam Pong
+471.0,1250.46,5149,Ubol Ratana,Thailand,Nam Pong
+472.0,1250.56,5149,Ubol Ratana,Thailand,Nam Pong
+473.0,1250.64,5149,Ubol Ratana,Thailand,Nam Pong
+474.0,1250.73,5149,Ubol Ratana,Thailand,Nam Pong
+475.0,1250.82,5149,Ubol Ratana,Thailand,Nam Pong
+476.0,1250.91,5149,Ubol Ratana,Thailand,Nam Pong
+477.0,1250.99,5149,Ubol Ratana,Thailand,Nam Pong
+478.0,1251.07,5149,Ubol Ratana,Thailand,Nam Pong
+479.0,1251.14,5149,Ubol Ratana,Thailand,Nam Pong
+480.0,1251.21,5149,Ubol Ratana,Thailand,Nam Pong
+481.0,1251.29,5149,Ubol Ratana,Thailand,Nam Pong
+482.0,1251.37,5149,Ubol Ratana,Thailand,Nam Pong
+483.0,1251.44,5149,Ubol Ratana,Thailand,Nam Pong
+484.0,1251.53,5149,Ubol Ratana,Thailand,Nam Pong
+485.0,1251.61,5149,Ubol Ratana,Thailand,Nam Pong
+486.0,1251.68,5149,Ubol Ratana,Thailand,Nam Pong
+487.0,1251.76,5149,Ubol Ratana,Thailand,Nam Pong
+488.0,1251.85,5149,Ubol Ratana,Thailand,Nam Pong
+489.0,1251.93,5149,Ubol Ratana,Thailand,Nam Pong
+490.0,1252.01,5149,Ubol Ratana,Thailand,Nam Pong
+491.0,1252.09,5149,Ubol Ratana,Thailand,Nam Pong
+492.0,1252.19,5149,Ubol Ratana,Thailand,Nam Pong
+493.0,1252.29,5149,Ubol Ratana,Thailand,Nam Pong
+494.0,1252.36,5149,Ubol Ratana,Thailand,Nam Pong
+495.0,1252.45,5149,Ubol Ratana,Thailand,Nam Pong
+496.0,1252.53,5149,Ubol Ratana,Thailand,Nam Pong
+497.0,1252.61,5149,Ubol Ratana,Thailand,Nam Pong
+498.0,1252.69,5149,Ubol Ratana,Thailand,Nam Pong
+499.0,1252.78,5149,Ubol Ratana,Thailand,Nam Pong
+500.0,1252.86,5149,Ubol Ratana,Thailand,Nam Pong
+501.0,1252.94,5149,Ubol Ratana,Thailand,Nam Pong
+502.0,1253.02,5149,Ubol Ratana,Thailand,Nam Pong
+503.0,1253.11,5149,Ubol Ratana,Thailand,Nam Pong
+504.0,1253.2,5149,Ubol Ratana,Thailand,Nam Pong
+505.0,1253.27,5149,Ubol Ratana,Thailand,Nam Pong
+506.0,1253.34,5149,Ubol Ratana,Thailand,Nam Pong
+507.0,1253.41,5149,Ubol Ratana,Thailand,Nam Pong
+508.0,1253.49,5149,Ubol Ratana,Thailand,Nam Pong
+509.0,1253.57,5149,Ubol Ratana,Thailand,Nam Pong
+510.0,1253.63,5149,Ubol Ratana,Thailand,Nam Pong
+511.0,1253.68,5149,Ubol Ratana,Thailand,Nam Pong
+512.0,1253.73,5149,Ubol Ratana,Thailand,Nam Pong
+513.0,1253.8,5149,Ubol Ratana,Thailand,Nam Pong
+514.0,1253.86,5149,Ubol Ratana,Thailand,Nam Pong
+515.0,1253.92,5149,Ubol Ratana,Thailand,Nam Pong
+516.0,1253.98,5149,Ubol Ratana,Thailand,Nam Pong
+517.0,1254.04,5149,Ubol Ratana,Thailand,Nam Pong
+518.0,1254.1,5149,Ubol Ratana,Thailand,Nam Pong
+519.0,1254.15,5149,Ubol Ratana,Thailand,Nam Pong
+520.0,1254.21,5149,Ubol Ratana,Thailand,Nam Pong
+521.0,1254.27,5149,Ubol Ratana,Thailand,Nam Pong
+522.0,1254.33,5149,Ubol Ratana,Thailand,Nam Pong
+523.0,1254.38,5149,Ubol Ratana,Thailand,Nam Pong
+524.0,1254.43,5149,Ubol Ratana,Thailand,Nam Pong
+525.0,1254.48,5149,Ubol Ratana,Thailand,Nam Pong
+526.0,1254.53,5149,Ubol Ratana,Thailand,Nam Pong
+527.0,1254.56,5149,Ubol Ratana,Thailand,Nam Pong
+528.0,1254.61,5149,Ubol Ratana,Thailand,Nam Pong
+529.0,1254.64,5149,Ubol Ratana,Thailand,Nam Pong
+530.0,1254.68,5149,Ubol Ratana,Thailand,Nam Pong
+531.0,1254.72,5149,Ubol Ratana,Thailand,Nam Pong
+532.0,1254.76,5149,Ubol Ratana,Thailand,Nam Pong
+533.0,1254.79,5149,Ubol Ratana,Thailand,Nam Pong
+534.0,1254.84,5149,Ubol Ratana,Thailand,Nam Pong
+535.0,1254.87,5149,Ubol Ratana,Thailand,Nam Pong
+536.0,1254.9,5149,Ubol Ratana,Thailand,Nam Pong
+537.0,1254.94,5149,Ubol Ratana,Thailand,Nam Pong
+538.0,1254.97,5149,Ubol Ratana,Thailand,Nam Pong
+539.0,1254.99,5149,Ubol Ratana,Thailand,Nam Pong
+540.0,1255.01,5149,Ubol Ratana,Thailand,Nam Pong
+541.0,1255.04,5149,Ubol Ratana,Thailand,Nam Pong
+542.0,1255.06,5149,Ubol Ratana,Thailand,Nam Pong
+543.0,1255.08,5149,Ubol Ratana,Thailand,Nam Pong
+544.0,1255.1,5149,Ubol Ratana,Thailand,Nam Pong
+545.0,1255.13,5149,Ubol Ratana,Thailand,Nam Pong
+546.0,1255.16,5149,Ubol Ratana,Thailand,Nam Pong
+547.0,1255.18,5149,Ubol Ratana,Thailand,Nam Pong
+548.0,1255.2,5149,Ubol Ratana,Thailand,Nam Pong
+549.0,1255.22,5149,Ubol Ratana,Thailand,Nam Pong
+550.0,1255.25,5149,Ubol Ratana,Thailand,Nam Pong
+551.0,1255.27,5149,Ubol Ratana,Thailand,Nam Pong
+-55.0,1.76,5136,Nam Ngum 1,Laos,Nam Ngum
+-54.0,3.54,5136,Nam Ngum 1,Laos,Nam Ngum
+-53.0,5.32,5136,Nam Ngum 1,Laos,Nam Ngum
+-52.0,7.1,5136,Nam Ngum 1,Laos,Nam Ngum
+-51.0,8.88,5136,Nam Ngum 1,Laos,Nam Ngum
+-50.0,10.67,5136,Nam Ngum 1,Laos,Nam Ngum
+-49.0,12.45,5136,Nam Ngum 1,Laos,Nam Ngum
+-48.0,14.23,5136,Nam Ngum 1,Laos,Nam Ngum
+-47.0,16.01,5136,Nam Ngum 1,Laos,Nam Ngum
+-46.0,17.79,5136,Nam Ngum 1,Laos,Nam Ngum
+-45.0,19.58,5136,Nam Ngum 1,Laos,Nam Ngum
+-44.0,21.36,5136,Nam Ngum 1,Laos,Nam Ngum
+-43.0,23.14,5136,Nam Ngum 1,Laos,Nam Ngum
+-42.0,24.92,5136,Nam Ngum 1,Laos,Nam Ngum
+-41.0,26.7,5136,Nam Ngum 1,Laos,Nam Ngum
+-40.0,28.48,5136,Nam Ngum 1,Laos,Nam Ngum
+-39.0,30.27,5136,Nam Ngum 1,Laos,Nam Ngum
+-38.0,32.05,5136,Nam Ngum 1,Laos,Nam Ngum
+-37.0,33.83,5136,Nam Ngum 1,Laos,Nam Ngum
+-36.0,35.61,5136,Nam Ngum 1,Laos,Nam Ngum
+-35.0,37.39,5136,Nam Ngum 1,Laos,Nam Ngum
+-34.0,39.17,5136,Nam Ngum 1,Laos,Nam Ngum
+-33.0,40.96,5136,Nam Ngum 1,Laos,Nam Ngum
+-32.0,42.74,5136,Nam Ngum 1,Laos,Nam Ngum
+-31.0,44.52,5136,Nam Ngum 1,Laos,Nam Ngum
+-30.0,46.3,5136,Nam Ngum 1,Laos,Nam Ngum
+-29.0,48.08,5136,Nam Ngum 1,Laos,Nam Ngum
+-28.0,49.86,5136,Nam Ngum 1,Laos,Nam Ngum
+-27.0,51.65,5136,Nam Ngum 1,Laos,Nam Ngum
+-26.0,53.43,5136,Nam Ngum 1,Laos,Nam Ngum
+-25.0,55.21,5136,Nam Ngum 1,Laos,Nam Ngum
+-24.0,56.99,5136,Nam Ngum 1,Laos,Nam Ngum
+-23.0,58.77,5136,Nam Ngum 1,Laos,Nam Ngum
+-22.0,60.55,5136,Nam Ngum 1,Laos,Nam Ngum
+-21.0,62.34,5136,Nam Ngum 1,Laos,Nam Ngum
+-20.0,64.12,5136,Nam Ngum 1,Laos,Nam Ngum
+-19.0,65.9,5136,Nam Ngum 1,Laos,Nam Ngum
+-18.0,67.68,5136,Nam Ngum 1,Laos,Nam Ngum
+-17.0,69.46,5136,Nam Ngum 1,Laos,Nam Ngum
+-16.0,71.25,5136,Nam Ngum 1,Laos,Nam Ngum
+-15.0,73.03,5136,Nam Ngum 1,Laos,Nam Ngum
+-14.0,74.81,5136,Nam Ngum 1,Laos,Nam Ngum
+-13.0,76.59,5136,Nam Ngum 1,Laos,Nam Ngum
+-12.0,78.37,5136,Nam Ngum 1,Laos,Nam Ngum
+-11.0,80.15,5136,Nam Ngum 1,Laos,Nam Ngum
+-10.0,81.94,5136,Nam Ngum 1,Laos,Nam Ngum
+-9.0,83.72,5136,Nam Ngum 1,Laos,Nam Ngum
+-8.0,85.5,5136,Nam Ngum 1,Laos,Nam Ngum
+-7.0,87.28,5136,Nam Ngum 1,Laos,Nam Ngum
+-6.0,89.06,5136,Nam Ngum 1,Laos,Nam Ngum
+-5.0,90.84,5136,Nam Ngum 1,Laos,Nam Ngum
+-4.0,92.63,5136,Nam Ngum 1,Laos,Nam Ngum
+-3.0,94.41,5136,Nam Ngum 1,Laos,Nam Ngum
+-2.0,96.19,5136,Nam Ngum 1,Laos,Nam Ngum
+-1.0,97.97,5136,Nam Ngum 1,Laos,Nam Ngum
+0.0,99.75,5136,Nam Ngum 1,Laos,Nam Ngum
+1.0,101.53,5136,Nam Ngum 1,Laos,Nam Ngum
+2.0,103.32,5136,Nam Ngum 1,Laos,Nam Ngum
+3.0,105.1,5136,Nam Ngum 1,Laos,Nam Ngum
+4.0,106.88,5136,Nam Ngum 1,Laos,Nam Ngum
+5.0,108.66,5136,Nam Ngum 1,Laos,Nam Ngum
+6.0,110.44,5136,Nam Ngum 1,Laos,Nam Ngum
+7.0,112.22,5136,Nam Ngum 1,Laos,Nam Ngum
+8.0,114.01,5136,Nam Ngum 1,Laos,Nam Ngum
+9.0,115.79,5136,Nam Ngum 1,Laos,Nam Ngum
+10.0,117.57,5136,Nam Ngum 1,Laos,Nam Ngum
+11.0,119.35,5136,Nam Ngum 1,Laos,Nam Ngum
+12.0,121.13,5136,Nam Ngum 1,Laos,Nam Ngum
+13.0,122.91,5136,Nam Ngum 1,Laos,Nam Ngum
+14.0,124.7,5136,Nam Ngum 1,Laos,Nam Ngum
+15.0,126.48,5136,Nam Ngum 1,Laos,Nam Ngum
+16.0,128.26,5136,Nam Ngum 1,Laos,Nam Ngum
+17.0,130.04,5136,Nam Ngum 1,Laos,Nam Ngum
+18.0,131.82,5136,Nam Ngum 1,Laos,Nam Ngum
+19.0,133.61,5136,Nam Ngum 1,Laos,Nam Ngum
+20.0,135.39,5136,Nam Ngum 1,Laos,Nam Ngum
+21.0,137.17,5136,Nam Ngum 1,Laos,Nam Ngum
+22.0,138.95,5136,Nam Ngum 1,Laos,Nam Ngum
+23.0,140.73,5136,Nam Ngum 1,Laos,Nam Ngum
+24.0,142.51,5136,Nam Ngum 1,Laos,Nam Ngum
+25.0,144.3,5136,Nam Ngum 1,Laos,Nam Ngum
+26.0,146.08,5136,Nam Ngum 1,Laos,Nam Ngum
+27.0,147.86,5136,Nam Ngum 1,Laos,Nam Ngum
+28.0,149.64,5136,Nam Ngum 1,Laos,Nam Ngum
+29.0,151.42,5136,Nam Ngum 1,Laos,Nam Ngum
+30.0,153.2,5136,Nam Ngum 1,Laos,Nam Ngum
+31.0,154.99,5136,Nam Ngum 1,Laos,Nam Ngum
+32.0,156.77,5136,Nam Ngum 1,Laos,Nam Ngum
+33.0,158.55,5136,Nam Ngum 1,Laos,Nam Ngum
+34.0,160.33,5136,Nam Ngum 1,Laos,Nam Ngum
+35.0,162.11,5136,Nam Ngum 1,Laos,Nam Ngum
+36.0,163.89,5136,Nam Ngum 1,Laos,Nam Ngum
+37.0,165.68,5136,Nam Ngum 1,Laos,Nam Ngum
+38.0,167.46,5136,Nam Ngum 1,Laos,Nam Ngum
+39.0,169.24,5136,Nam Ngum 1,Laos,Nam Ngum
+40.0,171.02,5136,Nam Ngum 1,Laos,Nam Ngum
+41.0,172.8,5136,Nam Ngum 1,Laos,Nam Ngum
+42.0,174.58,5136,Nam Ngum 1,Laos,Nam Ngum
+43.0,176.37,5136,Nam Ngum 1,Laos,Nam Ngum
+44.0,178.15,5136,Nam Ngum 1,Laos,Nam Ngum
+45.0,179.93,5136,Nam Ngum 1,Laos,Nam Ngum
+46.0,181.71,5136,Nam Ngum 1,Laos,Nam Ngum
+47.0,183.49,5136,Nam Ngum 1,Laos,Nam Ngum
+48.0,185.28,5136,Nam Ngum 1,Laos,Nam Ngum
+49.0,187.06,5136,Nam Ngum 1,Laos,Nam Ngum
+50.0,188.84,5136,Nam Ngum 1,Laos,Nam Ngum
+51.0,190.62,5136,Nam Ngum 1,Laos,Nam Ngum
+52.0,192.4,5136,Nam Ngum 1,Laos,Nam Ngum
+53.0,194.18,5136,Nam Ngum 1,Laos,Nam Ngum
+54.0,195.97,5136,Nam Ngum 1,Laos,Nam Ngum
+55.0,197.75,5136,Nam Ngum 1,Laos,Nam Ngum
+56.0,199.53,5136,Nam Ngum 1,Laos,Nam Ngum
+57.0,201.31,5136,Nam Ngum 1,Laos,Nam Ngum
+58.0,203.09,5136,Nam Ngum 1,Laos,Nam Ngum
+59.0,204.87,5136,Nam Ngum 1,Laos,Nam Ngum
+60.0,206.66,5136,Nam Ngum 1,Laos,Nam Ngum
+61.0,208.44,5136,Nam Ngum 1,Laos,Nam Ngum
+62.0,210.22,5136,Nam Ngum 1,Laos,Nam Ngum
+63.0,212.0,5136,Nam Ngum 1,Laos,Nam Ngum
+64.0,213.78,5136,Nam Ngum 1,Laos,Nam Ngum
+65.0,215.56,5136,Nam Ngum 1,Laos,Nam Ngum
+66.0,217.35,5136,Nam Ngum 1,Laos,Nam Ngum
+67.0,219.13,5136,Nam Ngum 1,Laos,Nam Ngum
+68.0,220.91,5136,Nam Ngum 1,Laos,Nam Ngum
+69.0,222.69,5136,Nam Ngum 1,Laos,Nam Ngum
+70.0,224.47,5136,Nam Ngum 1,Laos,Nam Ngum
+71.0,226.25,5136,Nam Ngum 1,Laos,Nam Ngum
+72.0,228.04,5136,Nam Ngum 1,Laos,Nam Ngum
+73.0,229.82,5136,Nam Ngum 1,Laos,Nam Ngum
+74.0,231.6,5136,Nam Ngum 1,Laos,Nam Ngum
+75.0,233.38,5136,Nam Ngum 1,Laos,Nam Ngum
+76.0,235.16,5136,Nam Ngum 1,Laos,Nam Ngum
+77.0,236.94,5136,Nam Ngum 1,Laos,Nam Ngum
+78.0,238.73,5136,Nam Ngum 1,Laos,Nam Ngum
+79.0,240.51,5136,Nam Ngum 1,Laos,Nam Ngum
+80.0,242.29,5136,Nam Ngum 1,Laos,Nam Ngum
+81.0,244.07,5136,Nam Ngum 1,Laos,Nam Ngum
+82.0,245.85,5136,Nam Ngum 1,Laos,Nam Ngum
+83.0,247.64,5136,Nam Ngum 1,Laos,Nam Ngum
+84.0,249.42,5136,Nam Ngum 1,Laos,Nam Ngum
+85.0,251.2,5136,Nam Ngum 1,Laos,Nam Ngum
+86.0,252.98,5136,Nam Ngum 1,Laos,Nam Ngum
+87.0,254.76,5136,Nam Ngum 1,Laos,Nam Ngum
+88.0,256.54,5136,Nam Ngum 1,Laos,Nam Ngum
+89.0,258.33,5136,Nam Ngum 1,Laos,Nam Ngum
+90.0,260.11,5136,Nam Ngum 1,Laos,Nam Ngum
+91.0,261.89,5136,Nam Ngum 1,Laos,Nam Ngum
+92.0,263.67,5136,Nam Ngum 1,Laos,Nam Ngum
+93.0,265.45,5136,Nam Ngum 1,Laos,Nam Ngum
+94.0,267.23,5136,Nam Ngum 1,Laos,Nam Ngum
+95.0,269.02,5136,Nam Ngum 1,Laos,Nam Ngum
+96.0,270.8,5136,Nam Ngum 1,Laos,Nam Ngum
+97.0,272.58,5136,Nam Ngum 1,Laos,Nam Ngum
+98.0,274.36,5136,Nam Ngum 1,Laos,Nam Ngum
+99.0,276.14,5136,Nam Ngum 1,Laos,Nam Ngum
+100.0,277.92,5136,Nam Ngum 1,Laos,Nam Ngum
+101.0,279.71,5136,Nam Ngum 1,Laos,Nam Ngum
+102.0,281.49,5136,Nam Ngum 1,Laos,Nam Ngum
+103.0,283.27,5136,Nam Ngum 1,Laos,Nam Ngum
+104.0,285.05,5136,Nam Ngum 1,Laos,Nam Ngum
+105.0,286.83,5136,Nam Ngum 1,Laos,Nam Ngum
+106.0,288.61,5136,Nam Ngum 1,Laos,Nam Ngum
+107.0,290.4,5136,Nam Ngum 1,Laos,Nam Ngum
+108.0,292.18,5136,Nam Ngum 1,Laos,Nam Ngum
+109.0,293.96,5136,Nam Ngum 1,Laos,Nam Ngum
+110.0,295.74,5136,Nam Ngum 1,Laos,Nam Ngum
+111.0,297.52,5136,Nam Ngum 1,Laos,Nam Ngum
+112.0,299.31,5136,Nam Ngum 1,Laos,Nam Ngum
+113.0,301.09,5136,Nam Ngum 1,Laos,Nam Ngum
+114.0,302.87,5136,Nam Ngum 1,Laos,Nam Ngum
+115.0,304.65,5136,Nam Ngum 1,Laos,Nam Ngum
+116.0,306.43,5136,Nam Ngum 1,Laos,Nam Ngum
+117.0,308.21,5136,Nam Ngum 1,Laos,Nam Ngum
+118.0,310.0,5136,Nam Ngum 1,Laos,Nam Ngum
+119.0,311.78,5136,Nam Ngum 1,Laos,Nam Ngum
+120.0,313.56,5136,Nam Ngum 1,Laos,Nam Ngum
+121.0,315.34,5136,Nam Ngum 1,Laos,Nam Ngum
+122.0,317.12,5136,Nam Ngum 1,Laos,Nam Ngum
+123.0,318.9,5136,Nam Ngum 1,Laos,Nam Ngum
+124.0,320.69,5136,Nam Ngum 1,Laos,Nam Ngum
+125.0,322.47,5136,Nam Ngum 1,Laos,Nam Ngum
+126.0,324.25,5136,Nam Ngum 1,Laos,Nam Ngum
+127.0,326.03,5136,Nam Ngum 1,Laos,Nam Ngum
+128.0,327.81,5136,Nam Ngum 1,Laos,Nam Ngum
+129.0,329.59,5136,Nam Ngum 1,Laos,Nam Ngum
+130.0,331.38,5136,Nam Ngum 1,Laos,Nam Ngum
+131.0,333.16,5136,Nam Ngum 1,Laos,Nam Ngum
+132.0,334.94,5136,Nam Ngum 1,Laos,Nam Ngum
+133.0,336.72,5136,Nam Ngum 1,Laos,Nam Ngum
+134.0,338.5,5136,Nam Ngum 1,Laos,Nam Ngum
+135.0,340.28,5136,Nam Ngum 1,Laos,Nam Ngum
+136.0,342.07,5136,Nam Ngum 1,Laos,Nam Ngum
+137.0,343.85,5136,Nam Ngum 1,Laos,Nam Ngum
+138.0,345.63,5136,Nam Ngum 1,Laos,Nam Ngum
+139.0,347.41,5136,Nam Ngum 1,Laos,Nam Ngum
+140.0,349.19,5136,Nam Ngum 1,Laos,Nam Ngum
+141.0,350.97,5136,Nam Ngum 1,Laos,Nam Ngum
+142.0,352.76,5136,Nam Ngum 1,Laos,Nam Ngum
+143.0,354.54,5136,Nam Ngum 1,Laos,Nam Ngum
+144.0,356.32,5136,Nam Ngum 1,Laos,Nam Ngum
+145.0,358.1,5136,Nam Ngum 1,Laos,Nam Ngum
+146.0,359.88,5136,Nam Ngum 1,Laos,Nam Ngum
+147.0,361.67,5136,Nam Ngum 1,Laos,Nam Ngum
+148.0,363.45,5136,Nam Ngum 1,Laos,Nam Ngum
+149.0,365.23,5136,Nam Ngum 1,Laos,Nam Ngum
+150.0,367.01,5136,Nam Ngum 1,Laos,Nam Ngum
+151.0,368.79,5136,Nam Ngum 1,Laos,Nam Ngum
+152.0,370.57,5136,Nam Ngum 1,Laos,Nam Ngum
+153.0,372.36,5136,Nam Ngum 1,Laos,Nam Ngum
+154.0,374.14,5136,Nam Ngum 1,Laos,Nam Ngum
+155.0,375.92,5136,Nam Ngum 1,Laos,Nam Ngum
+156.0,377.7,5136,Nam Ngum 1,Laos,Nam Ngum
+157.0,379.48,5136,Nam Ngum 1,Laos,Nam Ngum
+158.0,381.26,5136,Nam Ngum 1,Laos,Nam Ngum
+159.0,383.05,5136,Nam Ngum 1,Laos,Nam Ngum
+160.0,384.83,5136,Nam Ngum 1,Laos,Nam Ngum
+161.0,386.61,5136,Nam Ngum 1,Laos,Nam Ngum
+162.0,388.39,5136,Nam Ngum 1,Laos,Nam Ngum
+163.0,390.17,5136,Nam Ngum 1,Laos,Nam Ngum
+164.0,391.95,5136,Nam Ngum 1,Laos,Nam Ngum
+165.0,393.74,5136,Nam Ngum 1,Laos,Nam Ngum
+166.0,395.52,5136,Nam Ngum 1,Laos,Nam Ngum
+167.0,397.3,5136,Nam Ngum 1,Laos,Nam Ngum
+168.0,399.08,5136,Nam Ngum 1,Laos,Nam Ngum
+169.0,400.86,5136,Nam Ngum 1,Laos,Nam Ngum
+170.0,402.64,5136,Nam Ngum 1,Laos,Nam Ngum
+171.0,404.43,5136,Nam Ngum 1,Laos,Nam Ngum
+172.0,406.21,5136,Nam Ngum 1,Laos,Nam Ngum
+173.0,407.99,5136,Nam Ngum 1,Laos,Nam Ngum
+174.0,409.77,5136,Nam Ngum 1,Laos,Nam Ngum
+175.0,411.55,5136,Nam Ngum 1,Laos,Nam Ngum
+176.0,413.34,5136,Nam Ngum 1,Laos,Nam Ngum
+177.0,415.12,5136,Nam Ngum 1,Laos,Nam Ngum
+178.0,416.9,5136,Nam Ngum 1,Laos,Nam Ngum
+179.0,418.68,5136,Nam Ngum 1,Laos,Nam Ngum
+180.0,420.46,5136,Nam Ngum 1,Laos,Nam Ngum
+181.0,422.24,5136,Nam Ngum 1,Laos,Nam Ngum
+182.0,424.03,5136,Nam Ngum 1,Laos,Nam Ngum
+183.0,425.81,5136,Nam Ngum 1,Laos,Nam Ngum
+184.0,427.59,5136,Nam Ngum 1,Laos,Nam Ngum
+185.0,429.37,5136,Nam Ngum 1,Laos,Nam Ngum
+186.0,431.15,5136,Nam Ngum 1,Laos,Nam Ngum
+187.0,432.93,5136,Nam Ngum 1,Laos,Nam Ngum
+188.0,434.72,5136,Nam Ngum 1,Laos,Nam Ngum
+189.0,436.5,5136,Nam Ngum 1,Laos,Nam Ngum
+190.0,438.28,5136,Nam Ngum 1,Laos,Nam Ngum
+191.0,440.06,5136,Nam Ngum 1,Laos,Nam Ngum
+192.0,441.84,5136,Nam Ngum 1,Laos,Nam Ngum
+193.0,443.62,5136,Nam Ngum 1,Laos,Nam Ngum
+194.0,445.41,5136,Nam Ngum 1,Laos,Nam Ngum
+195.0,447.19,5136,Nam Ngum 1,Laos,Nam Ngum
+196.0,448.97,5136,Nam Ngum 1,Laos,Nam Ngum
+197.0,450.75,5136,Nam Ngum 1,Laos,Nam Ngum
+198.0,452.53,5136,Nam Ngum 1,Laos,Nam Ngum
+199.0,454.31,5136,Nam Ngum 1,Laos,Nam Ngum
+200.0,456.1,5136,Nam Ngum 1,Laos,Nam Ngum
+201.0,457.88,5136,Nam Ngum 1,Laos,Nam Ngum
+202.0,459.66,5136,Nam Ngum 1,Laos,Nam Ngum
+203.0,461.44,5136,Nam Ngum 1,Laos,Nam Ngum
+204.0,463.22,5136,Nam Ngum 1,Laos,Nam Ngum
+205.0,465.0,5136,Nam Ngum 1,Laos,Nam Ngum
+206.0,466.79,5136,Nam Ngum 1,Laos,Nam Ngum
+207.0,468.57,5136,Nam Ngum 1,Laos,Nam Ngum
+208.0,470.35,5136,Nam Ngum 1,Laos,Nam Ngum
+209.0,473.37,5136,Nam Ngum 1,Laos,Nam Ngum
+210.0,476.6,5136,Nam Ngum 1,Laos,Nam Ngum
+211.0,480.32,5136,Nam Ngum 1,Laos,Nam Ngum
+212.0,484.34,5136,Nam Ngum 1,Laos,Nam Ngum
+213.0,488.86,5136,Nam Ngum 1,Laos,Nam Ngum
+214.0,493.93,5136,Nam Ngum 1,Laos,Nam Ngum
+215.0,499.66,5136,Nam Ngum 1,Laos,Nam Ngum
+216.0,506.19,5136,Nam Ngum 1,Laos,Nam Ngum
+217.0,513.44,5136,Nam Ngum 1,Laos,Nam Ngum
+218.0,521.25,5136,Nam Ngum 1,Laos,Nam Ngum
+219.0,529.3,5136,Nam Ngum 1,Laos,Nam Ngum
+220.0,537.5,5136,Nam Ngum 1,Laos,Nam Ngum
+221.0,545.66,5136,Nam Ngum 1,Laos,Nam Ngum
+222.0,553.49,5136,Nam Ngum 1,Laos,Nam Ngum
+223.0,560.92,5136,Nam Ngum 1,Laos,Nam Ngum
+224.0,568.24,5136,Nam Ngum 1,Laos,Nam Ngum
+225.0,575.32,5136,Nam Ngum 1,Laos,Nam Ngum
+226.0,581.97,5136,Nam Ngum 1,Laos,Nam Ngum
+227.0,588.65,5136,Nam Ngum 1,Laos,Nam Ngum
+228.0,594.95,5136,Nam Ngum 1,Laos,Nam Ngum
+229.0,601.05,5136,Nam Ngum 1,Laos,Nam Ngum
+230.0,606.97,5136,Nam Ngum 1,Laos,Nam Ngum
+231.0,612.79,5136,Nam Ngum 1,Laos,Nam Ngum
+232.0,618.42,5136,Nam Ngum 1,Laos,Nam Ngum
+233.0,624.23,5136,Nam Ngum 1,Laos,Nam Ngum
+234.0,629.93,5136,Nam Ngum 1,Laos,Nam Ngum
+235.0,635.54,5136,Nam Ngum 1,Laos,Nam Ngum
+236.0,641.23,5136,Nam Ngum 1,Laos,Nam Ngum
+237.0,646.9,5136,Nam Ngum 1,Laos,Nam Ngum
+238.0,652.5,5136,Nam Ngum 1,Laos,Nam Ngum
+239.0,658.03,5136,Nam Ngum 1,Laos,Nam Ngum
+240.0,663.33,5136,Nam Ngum 1,Laos,Nam Ngum
+241.0,668.49,5136,Nam Ngum 1,Laos,Nam Ngum
+242.0,673.62,5136,Nam Ngum 1,Laos,Nam Ngum
+243.0,678.75,5136,Nam Ngum 1,Laos,Nam Ngum
+244.0,683.86,5136,Nam Ngum 1,Laos,Nam Ngum
+245.0,688.84,5136,Nam Ngum 1,Laos,Nam Ngum
+246.0,693.61,5136,Nam Ngum 1,Laos,Nam Ngum
+247.0,698.36,5136,Nam Ngum 1,Laos,Nam Ngum
+248.0,703.0,5136,Nam Ngum 1,Laos,Nam Ngum
+249.0,707.58,5136,Nam Ngum 1,Laos,Nam Ngum
+250.0,712.2,5136,Nam Ngum 1,Laos,Nam Ngum
+251.0,716.69,5136,Nam Ngum 1,Laos,Nam Ngum
+252.0,721.3,5136,Nam Ngum 1,Laos,Nam Ngum
+253.0,725.77,5136,Nam Ngum 1,Laos,Nam Ngum
+254.0,730.03,5136,Nam Ngum 1,Laos,Nam Ngum
+255.0,734.16,5136,Nam Ngum 1,Laos,Nam Ngum
+256.0,738.26,5136,Nam Ngum 1,Laos,Nam Ngum
+257.0,742.25,5136,Nam Ngum 1,Laos,Nam Ngum
+258.0,746.29,5136,Nam Ngum 1,Laos,Nam Ngum
+259.0,750.09,5136,Nam Ngum 1,Laos,Nam Ngum
+260.0,753.89,5136,Nam Ngum 1,Laos,Nam Ngum
+261.0,757.72,5136,Nam Ngum 1,Laos,Nam Ngum
+262.0,761.4,5136,Nam Ngum 1,Laos,Nam Ngum
+263.0,764.95,5136,Nam Ngum 1,Laos,Nam Ngum
+264.0,768.54,5136,Nam Ngum 1,Laos,Nam Ngum
+265.0,772.04,5136,Nam Ngum 1,Laos,Nam Ngum
+266.0,775.52,5136,Nam Ngum 1,Laos,Nam Ngum
+267.0,778.96,5136,Nam Ngum 1,Laos,Nam Ngum
+268.0,782.23,5136,Nam Ngum 1,Laos,Nam Ngum
+269.0,785.47,5136,Nam Ngum 1,Laos,Nam Ngum
+270.0,788.61,5136,Nam Ngum 1,Laos,Nam Ngum
+271.0,791.71,5136,Nam Ngum 1,Laos,Nam Ngum
+272.0,794.88,5136,Nam Ngum 1,Laos,Nam Ngum
+273.0,798.0,5136,Nam Ngum 1,Laos,Nam Ngum
+274.0,800.95,5136,Nam Ngum 1,Laos,Nam Ngum
+275.0,803.79,5136,Nam Ngum 1,Laos,Nam Ngum
+276.0,806.62,5136,Nam Ngum 1,Laos,Nam Ngum
+277.0,809.34,5136,Nam Ngum 1,Laos,Nam Ngum
+278.0,812.13,5136,Nam Ngum 1,Laos,Nam Ngum
+279.0,814.83,5136,Nam Ngum 1,Laos,Nam Ngum
+280.0,817.49,5136,Nam Ngum 1,Laos,Nam Ngum
+281.0,820.13,5136,Nam Ngum 1,Laos,Nam Ngum
+282.0,822.68,5136,Nam Ngum 1,Laos,Nam Ngum
+283.0,825.24,5136,Nam Ngum 1,Laos,Nam Ngum
+284.0,827.81,5136,Nam Ngum 1,Laos,Nam Ngum
+285.0,830.31,5136,Nam Ngum 1,Laos,Nam Ngum
+286.0,832.7,5136,Nam Ngum 1,Laos,Nam Ngum
+287.0,835.09,5136,Nam Ngum 1,Laos,Nam Ngum
+288.0,837.54,5136,Nam Ngum 1,Laos,Nam Ngum
+289.0,839.89,5136,Nam Ngum 1,Laos,Nam Ngum
+290.0,842.21,5136,Nam Ngum 1,Laos,Nam Ngum
+291.0,844.57,5136,Nam Ngum 1,Laos,Nam Ngum
+292.0,846.82,5136,Nam Ngum 1,Laos,Nam Ngum
+293.0,849.02,5136,Nam Ngum 1,Laos,Nam Ngum
+294.0,851.22,5136,Nam Ngum 1,Laos,Nam Ngum
+295.0,853.48,5136,Nam Ngum 1,Laos,Nam Ngum
+296.0,855.64,5136,Nam Ngum 1,Laos,Nam Ngum
+297.0,857.81,5136,Nam Ngum 1,Laos,Nam Ngum
+298.0,859.98,5136,Nam Ngum 1,Laos,Nam Ngum
+299.0,862.07,5136,Nam Ngum 1,Laos,Nam Ngum
+300.0,864.11,5136,Nam Ngum 1,Laos,Nam Ngum
+301.0,866.21,5136,Nam Ngum 1,Laos,Nam Ngum
+302.0,868.32,5136,Nam Ngum 1,Laos,Nam Ngum
+303.0,870.42,5136,Nam Ngum 1,Laos,Nam Ngum
+304.0,872.48,5136,Nam Ngum 1,Laos,Nam Ngum
+305.0,874.57,5136,Nam Ngum 1,Laos,Nam Ngum
+306.0,876.63,5136,Nam Ngum 1,Laos,Nam Ngum
+307.0,878.75,5136,Nam Ngum 1,Laos,Nam Ngum
+308.0,880.86,5136,Nam Ngum 1,Laos,Nam Ngum
+309.0,882.92,5136,Nam Ngum 1,Laos,Nam Ngum
+310.0,885.03,5136,Nam Ngum 1,Laos,Nam Ngum
+311.0,887.13,5136,Nam Ngum 1,Laos,Nam Ngum
+312.0,889.28,5136,Nam Ngum 1,Laos,Nam Ngum
+313.0,891.38,5136,Nam Ngum 1,Laos,Nam Ngum
+314.0,893.49,5136,Nam Ngum 1,Laos,Nam Ngum
+315.0,895.45,5136,Nam Ngum 1,Laos,Nam Ngum
+316.0,897.51,5136,Nam Ngum 1,Laos,Nam Ngum
+317.0,899.5,5136,Nam Ngum 1,Laos,Nam Ngum
+318.0,901.51,5136,Nam Ngum 1,Laos,Nam Ngum
+319.0,903.56,5136,Nam Ngum 1,Laos,Nam Ngum
+320.0,905.54,5136,Nam Ngum 1,Laos,Nam Ngum
+321.0,907.51,5136,Nam Ngum 1,Laos,Nam Ngum
+322.0,909.45,5136,Nam Ngum 1,Laos,Nam Ngum
+323.0,911.39,5136,Nam Ngum 1,Laos,Nam Ngum
+324.0,913.28,5136,Nam Ngum 1,Laos,Nam Ngum
+325.0,915.11,5136,Nam Ngum 1,Laos,Nam Ngum
+326.0,917.01,5136,Nam Ngum 1,Laos,Nam Ngum
+327.0,918.93,5136,Nam Ngum 1,Laos,Nam Ngum
+328.0,920.78,5136,Nam Ngum 1,Laos,Nam Ngum
+329.0,922.69,5136,Nam Ngum 1,Laos,Nam Ngum
+330.0,924.52,5136,Nam Ngum 1,Laos,Nam Ngum
+331.0,926.33,5136,Nam Ngum 1,Laos,Nam Ngum
+332.0,928.17,5136,Nam Ngum 1,Laos,Nam Ngum
+333.0,929.98,5136,Nam Ngum 1,Laos,Nam Ngum
+334.0,931.86,5136,Nam Ngum 1,Laos,Nam Ngum
+335.0,933.67,5136,Nam Ngum 1,Laos,Nam Ngum
+336.0,935.46,5136,Nam Ngum 1,Laos,Nam Ngum
+337.0,937.23,5136,Nam Ngum 1,Laos,Nam Ngum
+338.0,938.97,5136,Nam Ngum 1,Laos,Nam Ngum
+339.0,940.71,5136,Nam Ngum 1,Laos,Nam Ngum
+340.0,942.44,5136,Nam Ngum 1,Laos,Nam Ngum
+341.0,944.2,5136,Nam Ngum 1,Laos,Nam Ngum
+342.0,945.91,5136,Nam Ngum 1,Laos,Nam Ngum
+343.0,947.62,5136,Nam Ngum 1,Laos,Nam Ngum
+344.0,949.4,5136,Nam Ngum 1,Laos,Nam Ngum
+345.0,951.09,5136,Nam Ngum 1,Laos,Nam Ngum
+346.0,952.86,5136,Nam Ngum 1,Laos,Nam Ngum
+347.0,954.58,5136,Nam Ngum 1,Laos,Nam Ngum
+348.0,956.27,5136,Nam Ngum 1,Laos,Nam Ngum
+349.0,957.97,5136,Nam Ngum 1,Laos,Nam Ngum
+350.0,959.69,5136,Nam Ngum 1,Laos,Nam Ngum
+351.0,961.4,5136,Nam Ngum 1,Laos,Nam Ngum
+352.0,963.11,5136,Nam Ngum 1,Laos,Nam Ngum
+353.0,964.85,5136,Nam Ngum 1,Laos,Nam Ngum
+354.0,966.57,5136,Nam Ngum 1,Laos,Nam Ngum
+355.0,968.29,5136,Nam Ngum 1,Laos,Nam Ngum
+356.0,970.01,5136,Nam Ngum 1,Laos,Nam Ngum
+357.0,971.68,5136,Nam Ngum 1,Laos,Nam Ngum
+358.0,973.39,5136,Nam Ngum 1,Laos,Nam Ngum
+359.0,975.06,5136,Nam Ngum 1,Laos,Nam Ngum
+360.0,976.67,5136,Nam Ngum 1,Laos,Nam Ngum
+361.0,978.3,5136,Nam Ngum 1,Laos,Nam Ngum
+362.0,979.93,5136,Nam Ngum 1,Laos,Nam Ngum
+363.0,981.61,5136,Nam Ngum 1,Laos,Nam Ngum
+364.0,983.27,5136,Nam Ngum 1,Laos,Nam Ngum
+365.0,984.9,5136,Nam Ngum 1,Laos,Nam Ngum
+366.0,986.49,5136,Nam Ngum 1,Laos,Nam Ngum
+367.0,988.12,5136,Nam Ngum 1,Laos,Nam Ngum
+368.0,989.7,5136,Nam Ngum 1,Laos,Nam Ngum
+369.0,991.24,5136,Nam Ngum 1,Laos,Nam Ngum
+370.0,992.85,5136,Nam Ngum 1,Laos,Nam Ngum
+371.0,994.41,5136,Nam Ngum 1,Laos,Nam Ngum
+372.0,995.95,5136,Nam Ngum 1,Laos,Nam Ngum
+373.0,997.49,5136,Nam Ngum 1,Laos,Nam Ngum
+374.0,999.1,5136,Nam Ngum 1,Laos,Nam Ngum
+375.0,1000.59,5136,Nam Ngum 1,Laos,Nam Ngum
+376.0,1002.12,5136,Nam Ngum 1,Laos,Nam Ngum
+377.0,1003.64,5136,Nam Ngum 1,Laos,Nam Ngum
+378.0,1005.18,5136,Nam Ngum 1,Laos,Nam Ngum
+379.0,1006.67,5136,Nam Ngum 1,Laos,Nam Ngum
+380.0,1008.11,5136,Nam Ngum 1,Laos,Nam Ngum
+381.0,1009.61,5136,Nam Ngum 1,Laos,Nam Ngum
+382.0,1011.05,5136,Nam Ngum 1,Laos,Nam Ngum
+383.0,1012.47,5136,Nam Ngum 1,Laos,Nam Ngum
+384.0,1013.87,5136,Nam Ngum 1,Laos,Nam Ngum
+385.0,1015.25,5136,Nam Ngum 1,Laos,Nam Ngum
+386.0,1016.62,5136,Nam Ngum 1,Laos,Nam Ngum
+387.0,1018.01,5136,Nam Ngum 1,Laos,Nam Ngum
+388.0,1019.38,5136,Nam Ngum 1,Laos,Nam Ngum
+389.0,1020.71,5136,Nam Ngum 1,Laos,Nam Ngum
+390.0,1021.99,5136,Nam Ngum 1,Laos,Nam Ngum
+391.0,1023.24,5136,Nam Ngum 1,Laos,Nam Ngum
+392.0,1024.51,5136,Nam Ngum 1,Laos,Nam Ngum
+393.0,1025.78,5136,Nam Ngum 1,Laos,Nam Ngum
+394.0,1026.98,5136,Nam Ngum 1,Laos,Nam Ngum
+395.0,1028.23,5136,Nam Ngum 1,Laos,Nam Ngum
+396.0,1029.4,5136,Nam Ngum 1,Laos,Nam Ngum
+397.0,1030.61,5136,Nam Ngum 1,Laos,Nam Ngum
+398.0,1031.83,5136,Nam Ngum 1,Laos,Nam Ngum
+399.0,1033.06,5136,Nam Ngum 1,Laos,Nam Ngum
+400.0,1034.21,5136,Nam Ngum 1,Laos,Nam Ngum
+401.0,1035.36,5136,Nam Ngum 1,Laos,Nam Ngum
+402.0,1036.55,5136,Nam Ngum 1,Laos,Nam Ngum
+403.0,1037.75,5136,Nam Ngum 1,Laos,Nam Ngum
+404.0,1040.26,5136,Nam Ngum 1,Laos,Nam Ngum
+405.0,1041.47,5136,Nam Ngum 1,Laos,Nam Ngum
+406.0,1042.57,5136,Nam Ngum 1,Laos,Nam Ngum
+407.0,1043.73,5136,Nam Ngum 1,Laos,Nam Ngum
+408.0,1044.86,5136,Nam Ngum 1,Laos,Nam Ngum
+409.0,1045.97,5136,Nam Ngum 1,Laos,Nam Ngum
+410.0,1047.12,5136,Nam Ngum 1,Laos,Nam Ngum
+411.0,1048.25,5136,Nam Ngum 1,Laos,Nam Ngum
+412.0,1049.38,5136,Nam Ngum 1,Laos,Nam Ngum
+413.0,1050.55,5136,Nam Ngum 1,Laos,Nam Ngum
+414.0,1051.65,5136,Nam Ngum 1,Laos,Nam Ngum
+415.0,1052.82,5136,Nam Ngum 1,Laos,Nam Ngum
+416.0,1053.93,5136,Nam Ngum 1,Laos,Nam Ngum
+417.0,1055.11,5136,Nam Ngum 1,Laos,Nam Ngum
+418.0,1056.2,5136,Nam Ngum 1,Laos,Nam Ngum
+419.0,1057.37,5136,Nam Ngum 1,Laos,Nam Ngum
+420.0,1058.55,5136,Nam Ngum 1,Laos,Nam Ngum
+421.0,1059.64,5136,Nam Ngum 1,Laos,Nam Ngum
+422.0,1060.79,5136,Nam Ngum 1,Laos,Nam Ngum
+423.0,1061.86,5136,Nam Ngum 1,Laos,Nam Ngum
+424.0,1062.95,5136,Nam Ngum 1,Laos,Nam Ngum
+425.0,1064.05,5136,Nam Ngum 1,Laos,Nam Ngum
+426.0,1065.14,5136,Nam Ngum 1,Laos,Nam Ngum
+427.0,1066.26,5136,Nam Ngum 1,Laos,Nam Ngum
+428.0,1067.28,5136,Nam Ngum 1,Laos,Nam Ngum
+429.0,1068.4,5136,Nam Ngum 1,Laos,Nam Ngum
+430.0,1069.5,5136,Nam Ngum 1,Laos,Nam Ngum
+431.0,1070.6,5136,Nam Ngum 1,Laos,Nam Ngum
+432.0,1071.68,5136,Nam Ngum 1,Laos,Nam Ngum
+433.0,1072.78,5136,Nam Ngum 1,Laos,Nam Ngum
+434.0,1073.84,5136,Nam Ngum 1,Laos,Nam Ngum
+435.0,1074.91,5136,Nam Ngum 1,Laos,Nam Ngum
+436.0,1076.01,5136,Nam Ngum 1,Laos,Nam Ngum
+437.0,1077.12,5136,Nam Ngum 1,Laos,Nam Ngum
+438.0,1078.22,5136,Nam Ngum 1,Laos,Nam Ngum
+439.0,1079.32,5136,Nam Ngum 1,Laos,Nam Ngum
+440.0,1080.42,5136,Nam Ngum 1,Laos,Nam Ngum
+441.0,1081.55,5136,Nam Ngum 1,Laos,Nam Ngum
+442.0,1082.62,5136,Nam Ngum 1,Laos,Nam Ngum
+443.0,1083.7,5136,Nam Ngum 1,Laos,Nam Ngum
+444.0,1084.85,5136,Nam Ngum 1,Laos,Nam Ngum
+445.0,1085.94,5136,Nam Ngum 1,Laos,Nam Ngum
+446.0,1086.99,5136,Nam Ngum 1,Laos,Nam Ngum
+447.0,1088.07,5136,Nam Ngum 1,Laos,Nam Ngum
+448.0,1089.2,5136,Nam Ngum 1,Laos,Nam Ngum
+449.0,1090.27,5136,Nam Ngum 1,Laos,Nam Ngum
+450.0,1091.4,5136,Nam Ngum 1,Laos,Nam Ngum
+451.0,1092.51,5136,Nam Ngum 1,Laos,Nam Ngum
+452.0,1093.62,5136,Nam Ngum 1,Laos,Nam Ngum
+453.0,1094.74,5136,Nam Ngum 1,Laos,Nam Ngum
+454.0,1095.86,5136,Nam Ngum 1,Laos,Nam Ngum
+455.0,1096.96,5136,Nam Ngum 1,Laos,Nam Ngum
+456.0,1098.06,5136,Nam Ngum 1,Laos,Nam Ngum
+457.0,1099.18,5136,Nam Ngum 1,Laos,Nam Ngum
+458.0,1100.26,5136,Nam Ngum 1,Laos,Nam Ngum
+459.0,1101.4,5136,Nam Ngum 1,Laos,Nam Ngum
+460.0,1102.49,5136,Nam Ngum 1,Laos,Nam Ngum
+461.0,1103.58,5136,Nam Ngum 1,Laos,Nam Ngum
+462.0,1104.66,5136,Nam Ngum 1,Laos,Nam Ngum
+463.0,1105.76,5136,Nam Ngum 1,Laos,Nam Ngum
+464.0,1106.77,5136,Nam Ngum 1,Laos,Nam Ngum
+465.0,1107.83,5136,Nam Ngum 1,Laos,Nam Ngum
+466.0,1108.94,5136,Nam Ngum 1,Laos,Nam Ngum
+467.0,1110.0,5136,Nam Ngum 1,Laos,Nam Ngum
+468.0,1111.0,5136,Nam Ngum 1,Laos,Nam Ngum
+469.0,1112.03,5136,Nam Ngum 1,Laos,Nam Ngum
+470.0,1113.16,5136,Nam Ngum 1,Laos,Nam Ngum
+471.0,1114.18,5136,Nam Ngum 1,Laos,Nam Ngum
+472.0,1115.3,5136,Nam Ngum 1,Laos,Nam Ngum
+473.0,1116.32,5136,Nam Ngum 1,Laos,Nam Ngum
+474.0,1117.37,5136,Nam Ngum 1,Laos,Nam Ngum
+475.0,1118.36,5136,Nam Ngum 1,Laos,Nam Ngum
+476.0,1119.36,5136,Nam Ngum 1,Laos,Nam Ngum
+477.0,1120.36,5136,Nam Ngum 1,Laos,Nam Ngum
+478.0,1121.39,5136,Nam Ngum 1,Laos,Nam Ngum
+479.0,1122.39,5136,Nam Ngum 1,Laos,Nam Ngum
+480.0,1123.41,5136,Nam Ngum 1,Laos,Nam Ngum
+481.0,1124.41,5136,Nam Ngum 1,Laos,Nam Ngum
+482.0,1125.45,5136,Nam Ngum 1,Laos,Nam Ngum
+483.0,1126.45,5136,Nam Ngum 1,Laos,Nam Ngum
+484.0,1127.45,5136,Nam Ngum 1,Laos,Nam Ngum
+485.0,1128.5,5136,Nam Ngum 1,Laos,Nam Ngum
+486.0,1129.45,5136,Nam Ngum 1,Laos,Nam Ngum
+487.0,1130.43,5136,Nam Ngum 1,Laos,Nam Ngum
+488.0,1131.42,5136,Nam Ngum 1,Laos,Nam Ngum
+489.0,1132.39,5136,Nam Ngum 1,Laos,Nam Ngum
+490.0,1133.41,5136,Nam Ngum 1,Laos,Nam Ngum
+491.0,1134.41,5136,Nam Ngum 1,Laos,Nam Ngum
+492.0,1135.4,5136,Nam Ngum 1,Laos,Nam Ngum
+493.0,1136.42,5136,Nam Ngum 1,Laos,Nam Ngum
+494.0,1137.32,5136,Nam Ngum 1,Laos,Nam Ngum
+495.0,1138.31,5136,Nam Ngum 1,Laos,Nam Ngum
+496.0,1139.29,5136,Nam Ngum 1,Laos,Nam Ngum
+497.0,1140.24,5136,Nam Ngum 1,Laos,Nam Ngum
+498.0,1141.17,5136,Nam Ngum 1,Laos,Nam Ngum
+499.0,1142.13,5136,Nam Ngum 1,Laos,Nam Ngum
+500.0,1143.05,5136,Nam Ngum 1,Laos,Nam Ngum
+501.0,1144.0,5136,Nam Ngum 1,Laos,Nam Ngum
+502.0,1145.0,5136,Nam Ngum 1,Laos,Nam Ngum
+503.0,1145.92,5136,Nam Ngum 1,Laos,Nam Ngum
+504.0,1146.89,5136,Nam Ngum 1,Laos,Nam Ngum
+505.0,1147.9,5136,Nam Ngum 1,Laos,Nam Ngum
+506.0,1148.92,5136,Nam Ngum 1,Laos,Nam Ngum
+507.0,1149.87,5136,Nam Ngum 1,Laos,Nam Ngum
+508.0,1150.87,5136,Nam Ngum 1,Laos,Nam Ngum
+509.0,1151.87,5136,Nam Ngum 1,Laos,Nam Ngum
+510.0,1152.87,5136,Nam Ngum 1,Laos,Nam Ngum
+511.0,1153.92,5136,Nam Ngum 1,Laos,Nam Ngum
+512.0,1154.84,5136,Nam Ngum 1,Laos,Nam Ngum
+513.0,1155.8,5136,Nam Ngum 1,Laos,Nam Ngum
+514.0,1156.73,5136,Nam Ngum 1,Laos,Nam Ngum
+515.0,1157.63,5136,Nam Ngum 1,Laos,Nam Ngum
+516.0,1158.58,5136,Nam Ngum 1,Laos,Nam Ngum
+517.0,1159.5,5136,Nam Ngum 1,Laos,Nam Ngum
+518.0,1160.41,5136,Nam Ngum 1,Laos,Nam Ngum
+519.0,1161.4,5136,Nam Ngum 1,Laos,Nam Ngum
+520.0,1162.32,5136,Nam Ngum 1,Laos,Nam Ngum
+521.0,1163.28,5136,Nam Ngum 1,Laos,Nam Ngum
+522.0,1164.23,5136,Nam Ngum 1,Laos,Nam Ngum
+523.0,1165.17,5136,Nam Ngum 1,Laos,Nam Ngum
+524.0,1166.11,5136,Nam Ngum 1,Laos,Nam Ngum
+525.0,1167.05,5136,Nam Ngum 1,Laos,Nam Ngum
+526.0,1167.94,5136,Nam Ngum 1,Laos,Nam Ngum
+527.0,1168.88,5136,Nam Ngum 1,Laos,Nam Ngum
+528.0,1169.82,5136,Nam Ngum 1,Laos,Nam Ngum
+529.0,1170.78,5136,Nam Ngum 1,Laos,Nam Ngum
+530.0,1171.7,5136,Nam Ngum 1,Laos,Nam Ngum
+531.0,1172.68,5136,Nam Ngum 1,Laos,Nam Ngum
+532.0,1173.57,5136,Nam Ngum 1,Laos,Nam Ngum
+533.0,1174.46,5136,Nam Ngum 1,Laos,Nam Ngum
+534.0,1175.39,5136,Nam Ngum 1,Laos,Nam Ngum
+535.0,1176.35,5136,Nam Ngum 1,Laos,Nam Ngum
+536.0,1177.27,5136,Nam Ngum 1,Laos,Nam Ngum
+537.0,1178.13,5136,Nam Ngum 1,Laos,Nam Ngum
+538.0,1179.03,5136,Nam Ngum 1,Laos,Nam Ngum
+539.0,1179.92,5136,Nam Ngum 1,Laos,Nam Ngum
+540.0,1180.86,5136,Nam Ngum 1,Laos,Nam Ngum
+541.0,1181.74,5136,Nam Ngum 1,Laos,Nam Ngum
+542.0,1182.68,5136,Nam Ngum 1,Laos,Nam Ngum
+543.0,1183.58,5136,Nam Ngum 1,Laos,Nam Ngum
+544.0,1184.45,5136,Nam Ngum 1,Laos,Nam Ngum
+545.0,1185.34,5136,Nam Ngum 1,Laos,Nam Ngum
+546.0,1186.24,5136,Nam Ngum 1,Laos,Nam Ngum
+547.0,1187.14,5136,Nam Ngum 1,Laos,Nam Ngum
+548.0,1188.0,5136,Nam Ngum 1,Laos,Nam Ngum
+549.0,1188.87,5136,Nam Ngum 1,Laos,Nam Ngum
+550.0,1189.73,5136,Nam Ngum 1,Laos,Nam Ngum
+551.0,1190.54,5136,Nam Ngum 1,Laos,Nam Ngum
+552.0,1191.35,5136,Nam Ngum 1,Laos,Nam Ngum
+553.0,1192.24,5136,Nam Ngum 1,Laos,Nam Ngum
+554.0,1193.05,5136,Nam Ngum 1,Laos,Nam Ngum
+555.0,1193.91,5136,Nam Ngum 1,Laos,Nam Ngum
+556.0,1194.75,5136,Nam Ngum 1,Laos,Nam Ngum
+557.0,1195.59,5136,Nam Ngum 1,Laos,Nam Ngum
+558.0,1196.47,5136,Nam Ngum 1,Laos,Nam Ngum
+559.0,1197.3,5136,Nam Ngum 1,Laos,Nam Ngum
+560.0,1198.13,5136,Nam Ngum 1,Laos,Nam Ngum
+561.0,1198.97,5136,Nam Ngum 1,Laos,Nam Ngum
+562.0,1199.8,5136,Nam Ngum 1,Laos,Nam Ngum
+563.0,1200.61,5136,Nam Ngum 1,Laos,Nam Ngum
+564.0,1201.47,5136,Nam Ngum 1,Laos,Nam Ngum
+565.0,1202.37,5136,Nam Ngum 1,Laos,Nam Ngum
+566.0,1203.34,5136,Nam Ngum 1,Laos,Nam Ngum
+567.0,1204.24,5136,Nam Ngum 1,Laos,Nam Ngum
+568.0,1205.12,5136,Nam Ngum 1,Laos,Nam Ngum
+569.0,1206.06,5136,Nam Ngum 1,Laos,Nam Ngum
+570.0,1206.93,5136,Nam Ngum 1,Laos,Nam Ngum
+571.0,1207.81,5136,Nam Ngum 1,Laos,Nam Ngum
+572.0,1208.69,5136,Nam Ngum 1,Laos,Nam Ngum
+573.0,1209.57,5136,Nam Ngum 1,Laos,Nam Ngum
+574.0,1210.44,5136,Nam Ngum 1,Laos,Nam Ngum
+575.0,1211.32,5136,Nam Ngum 1,Laos,Nam Ngum
+576.0,1212.19,5136,Nam Ngum 1,Laos,Nam Ngum
+577.0,1213.1,5136,Nam Ngum 1,Laos,Nam Ngum
+578.0,1214.0,5136,Nam Ngum 1,Laos,Nam Ngum
+579.0,1214.92,5136,Nam Ngum 1,Laos,Nam Ngum
+580.0,1215.8,5136,Nam Ngum 1,Laos,Nam Ngum
+581.0,1216.73,5136,Nam Ngum 1,Laos,Nam Ngum
+582.0,1217.66,5136,Nam Ngum 1,Laos,Nam Ngum
+583.0,1218.59,5136,Nam Ngum 1,Laos,Nam Ngum
+584.0,1219.5,5136,Nam Ngum 1,Laos,Nam Ngum
+585.0,1220.42,5136,Nam Ngum 1,Laos,Nam Ngum
+586.0,1221.32,5136,Nam Ngum 1,Laos,Nam Ngum
+587.0,1222.21,5136,Nam Ngum 1,Laos,Nam Ngum
+588.0,1223.14,5136,Nam Ngum 1,Laos,Nam Ngum
+589.0,1224.11,5136,Nam Ngum 1,Laos,Nam Ngum
+590.0,1225.11,5136,Nam Ngum 1,Laos,Nam Ngum
+591.0,1226.09,5136,Nam Ngum 1,Laos,Nam Ngum
+592.0,1227.09,5136,Nam Ngum 1,Laos,Nam Ngum
+593.0,1228.04,5136,Nam Ngum 1,Laos,Nam Ngum
+594.0,1229.0,5136,Nam Ngum 1,Laos,Nam Ngum
+595.0,1229.98,5136,Nam Ngum 1,Laos,Nam Ngum
+596.0,1230.98,5136,Nam Ngum 1,Laos,Nam Ngum
+597.0,1232.03,5136,Nam Ngum 1,Laos,Nam Ngum
+598.0,1233.05,5136,Nam Ngum 1,Laos,Nam Ngum
+599.0,1234.08,5136,Nam Ngum 1,Laos,Nam Ngum
+600.0,1235.14,5136,Nam Ngum 1,Laos,Nam Ngum
+601.0,1236.16,5136,Nam Ngum 1,Laos,Nam Ngum
+602.0,1237.13,5136,Nam Ngum 1,Laos,Nam Ngum
+603.0,1238.08,5136,Nam Ngum 1,Laos,Nam Ngum
+604.0,1239.09,5136,Nam Ngum 1,Laos,Nam Ngum
+605.0,1240.1,5136,Nam Ngum 1,Laos,Nam Ngum
+606.0,1241.04,5136,Nam Ngum 1,Laos,Nam Ngum
+607.0,1242.01,5136,Nam Ngum 1,Laos,Nam Ngum
+608.0,1242.99,5136,Nam Ngum 1,Laos,Nam Ngum
+609.0,1243.99,5136,Nam Ngum 1,Laos,Nam Ngum
+610.0,1244.92,5136,Nam Ngum 1,Laos,Nam Ngum
+611.0,1245.83,5136,Nam Ngum 1,Laos,Nam Ngum
+612.0,1246.74,5136,Nam Ngum 1,Laos,Nam Ngum
+613.0,1247.67,5136,Nam Ngum 1,Laos,Nam Ngum
+614.0,1248.61,5136,Nam Ngum 1,Laos,Nam Ngum
+615.0,1249.61,5136,Nam Ngum 1,Laos,Nam Ngum
+616.0,1250.6,5136,Nam Ngum 1,Laos,Nam Ngum
+617.0,1251.53,5136,Nam Ngum 1,Laos,Nam Ngum
+618.0,1252.45,5136,Nam Ngum 1,Laos,Nam Ngum
+619.0,1253.39,5136,Nam Ngum 1,Laos,Nam Ngum
+620.0,1254.33,5136,Nam Ngum 1,Laos,Nam Ngum
+621.0,1255.23,5136,Nam Ngum 1,Laos,Nam Ngum
+622.0,1256.17,5136,Nam Ngum 1,Laos,Nam Ngum
+623.0,1257.1,5136,Nam Ngum 1,Laos,Nam Ngum
+624.0,1258.01,5136,Nam Ngum 1,Laos,Nam Ngum
+625.0,1258.93,5136,Nam Ngum 1,Laos,Nam Ngum
+626.0,1259.77,5136,Nam Ngum 1,Laos,Nam Ngum
+627.0,1260.64,5136,Nam Ngum 1,Laos,Nam Ngum
+628.0,1261.47,5136,Nam Ngum 1,Laos,Nam Ngum
+629.0,1262.26,5136,Nam Ngum 1,Laos,Nam Ngum
+630.0,1263.08,5136,Nam Ngum 1,Laos,Nam Ngum
+631.0,1263.9,5136,Nam Ngum 1,Laos,Nam Ngum
+632.0,1264.71,5136,Nam Ngum 1,Laos,Nam Ngum
+633.0,1265.48,5136,Nam Ngum 1,Laos,Nam Ngum
+634.0,1266.26,5136,Nam Ngum 1,Laos,Nam Ngum
+635.0,1267.06,5136,Nam Ngum 1,Laos,Nam Ngum
+636.0,1267.85,5136,Nam Ngum 1,Laos,Nam Ngum
+637.0,1268.62,5136,Nam Ngum 1,Laos,Nam Ngum
+638.0,1269.39,5136,Nam Ngum 1,Laos,Nam Ngum
+639.0,1270.15,5136,Nam Ngum 1,Laos,Nam Ngum
+640.0,1270.91,5136,Nam Ngum 1,Laos,Nam Ngum
+641.0,1271.66,5136,Nam Ngum 1,Laos,Nam Ngum
+642.0,1272.42,5136,Nam Ngum 1,Laos,Nam Ngum
+643.0,1273.19,5136,Nam Ngum 1,Laos,Nam Ngum
+644.0,1273.94,5136,Nam Ngum 1,Laos,Nam Ngum
+645.0,1274.7,5136,Nam Ngum 1,Laos,Nam Ngum
+646.0,1275.41,5136,Nam Ngum 1,Laos,Nam Ngum
+647.0,1276.21,5136,Nam Ngum 1,Laos,Nam Ngum
+648.0,1276.99,5136,Nam Ngum 1,Laos,Nam Ngum
+649.0,1277.73,5136,Nam Ngum 1,Laos,Nam Ngum
+650.0,1278.49,5136,Nam Ngum 1,Laos,Nam Ngum
+651.0,1279.27,5136,Nam Ngum 1,Laos,Nam Ngum
+652.0,1280.02,5136,Nam Ngum 1,Laos,Nam Ngum
+653.0,1280.78,5136,Nam Ngum 1,Laos,Nam Ngum
+654.0,1281.54,5136,Nam Ngum 1,Laos,Nam Ngum
+655.0,1282.28,5136,Nam Ngum 1,Laos,Nam Ngum
+656.0,1283.09,5136,Nam Ngum 1,Laos,Nam Ngum
+657.0,1283.82,5136,Nam Ngum 1,Laos,Nam Ngum
+658.0,1284.57,5136,Nam Ngum 1,Laos,Nam Ngum
+659.0,1285.31,5136,Nam Ngum 1,Laos,Nam Ngum
+660.0,1286.07,5136,Nam Ngum 1,Laos,Nam Ngum
+661.0,1286.79,5136,Nam Ngum 1,Laos,Nam Ngum
+662.0,1287.56,5136,Nam Ngum 1,Laos,Nam Ngum
+663.0,1288.33,5136,Nam Ngum 1,Laos,Nam Ngum
+664.0,1289.05,5136,Nam Ngum 1,Laos,Nam Ngum
+665.0,1289.79,5136,Nam Ngum 1,Laos,Nam Ngum
+666.0,1290.56,5136,Nam Ngum 1,Laos,Nam Ngum
+667.0,1291.31,5136,Nam Ngum 1,Laos,Nam Ngum
+668.0,1292.05,5136,Nam Ngum 1,Laos,Nam Ngum
+669.0,1292.84,5136,Nam Ngum 1,Laos,Nam Ngum
+670.0,1293.58,5136,Nam Ngum 1,Laos,Nam Ngum
+671.0,1294.3,5136,Nam Ngum 1,Laos,Nam Ngum
+672.0,1295.1,5136,Nam Ngum 1,Laos,Nam Ngum
+673.0,1295.8,5136,Nam Ngum 1,Laos,Nam Ngum
+674.0,1296.55,5136,Nam Ngum 1,Laos,Nam Ngum
+675.0,1297.3,5136,Nam Ngum 1,Laos,Nam Ngum
+676.0,1298.05,5136,Nam Ngum 1,Laos,Nam Ngum
+677.0,1298.83,5136,Nam Ngum 1,Laos,Nam Ngum
+678.0,1299.54,5136,Nam Ngum 1,Laos,Nam Ngum
+679.0,1300.3,5136,Nam Ngum 1,Laos,Nam Ngum
+680.0,1301.09,5136,Nam Ngum 1,Laos,Nam Ngum
+681.0,1301.87,5136,Nam Ngum 1,Laos,Nam Ngum
+682.0,1302.59,5136,Nam Ngum 1,Laos,Nam Ngum
+683.0,1303.3,5136,Nam Ngum 1,Laos,Nam Ngum
+684.0,1304.03,5136,Nam Ngum 1,Laos,Nam Ngum
+685.0,1304.76,5136,Nam Ngum 1,Laos,Nam Ngum
+686.0,1305.48,5136,Nam Ngum 1,Laos,Nam Ngum
+687.0,1306.22,5136,Nam Ngum 1,Laos,Nam Ngum
+688.0,1306.92,5136,Nam Ngum 1,Laos,Nam Ngum
+689.0,1307.66,5136,Nam Ngum 1,Laos,Nam Ngum
+690.0,1308.42,5136,Nam Ngum 1,Laos,Nam Ngum
+691.0,1309.09,5136,Nam Ngum 1,Laos,Nam Ngum
+692.0,1309.82,5136,Nam Ngum 1,Laos,Nam Ngum
+693.0,1310.58,5136,Nam Ngum 1,Laos,Nam Ngum
+694.0,1311.32,5136,Nam Ngum 1,Laos,Nam Ngum
+695.0,1312.05,5136,Nam Ngum 1,Laos,Nam Ngum
+696.0,1312.81,5136,Nam Ngum 1,Laos,Nam Ngum
+697.0,1313.55,5136,Nam Ngum 1,Laos,Nam Ngum
+698.0,1314.3,5136,Nam Ngum 1,Laos,Nam Ngum
+699.0,1314.99,5136,Nam Ngum 1,Laos,Nam Ngum
+700.0,1315.69,5136,Nam Ngum 1,Laos,Nam Ngum
+701.0,1316.42,5136,Nam Ngum 1,Laos,Nam Ngum
+702.0,1317.09,5136,Nam Ngum 1,Laos,Nam Ngum
+703.0,1317.84,5136,Nam Ngum 1,Laos,Nam Ngum
+704.0,1318.54,5136,Nam Ngum 1,Laos,Nam Ngum
+705.0,1319.26,5136,Nam Ngum 1,Laos,Nam Ngum
+706.0,1319.98,5136,Nam Ngum 1,Laos,Nam Ngum
+707.0,1320.69,5136,Nam Ngum 1,Laos,Nam Ngum
+708.0,1321.37,5136,Nam Ngum 1,Laos,Nam Ngum
+709.0,1322.13,5136,Nam Ngum 1,Laos,Nam Ngum
+710.0,1322.79,5136,Nam Ngum 1,Laos,Nam Ngum
+711.0,1323.49,5136,Nam Ngum 1,Laos,Nam Ngum
+712.0,1324.23,5136,Nam Ngum 1,Laos,Nam Ngum
+713.0,1324.92,5136,Nam Ngum 1,Laos,Nam Ngum
+714.0,1325.61,5136,Nam Ngum 1,Laos,Nam Ngum
+715.0,1326.28,5136,Nam Ngum 1,Laos,Nam Ngum
+716.0,1326.92,5136,Nam Ngum 1,Laos,Nam Ngum
+717.0,1327.63,5136,Nam Ngum 1,Laos,Nam Ngum
+718.0,1328.31,5136,Nam Ngum 1,Laos,Nam Ngum
+719.0,1328.97,5136,Nam Ngum 1,Laos,Nam Ngum
+720.0,1329.62,5136,Nam Ngum 1,Laos,Nam Ngum
+721.0,1330.31,5136,Nam Ngum 1,Laos,Nam Ngum
+722.0,1331.0,5136,Nam Ngum 1,Laos,Nam Ngum
+723.0,1331.68,5136,Nam Ngum 1,Laos,Nam Ngum
+724.0,1332.31,5136,Nam Ngum 1,Laos,Nam Ngum
+725.0,1333.04,5136,Nam Ngum 1,Laos,Nam Ngum
+726.0,1333.7,5136,Nam Ngum 1,Laos,Nam Ngum
+727.0,1334.3,5136,Nam Ngum 1,Laos,Nam Ngum
+728.0,1334.93,5136,Nam Ngum 1,Laos,Nam Ngum
+729.0,1335.54,5136,Nam Ngum 1,Laos,Nam Ngum
+730.0,1336.14,5136,Nam Ngum 1,Laos,Nam Ngum
+731.0,1336.75,5136,Nam Ngum 1,Laos,Nam Ngum
+732.0,1337.34,5136,Nam Ngum 1,Laos,Nam Ngum
+733.0,1337.96,5136,Nam Ngum 1,Laos,Nam Ngum
+734.0,1338.58,5136,Nam Ngum 1,Laos,Nam Ngum
+735.0,1339.18,5136,Nam Ngum 1,Laos,Nam Ngum
+736.0,1339.76,5136,Nam Ngum 1,Laos,Nam Ngum
+737.0,1340.38,5136,Nam Ngum 1,Laos,Nam Ngum
+738.0,1340.97,5136,Nam Ngum 1,Laos,Nam Ngum
+739.0,1341.57,5136,Nam Ngum 1,Laos,Nam Ngum
+740.0,1342.17,5136,Nam Ngum 1,Laos,Nam Ngum
+741.0,1342.78,5136,Nam Ngum 1,Laos,Nam Ngum
+742.0,1343.39,5136,Nam Ngum 1,Laos,Nam Ngum
+743.0,1344.02,5136,Nam Ngum 1,Laos,Nam Ngum
+744.0,1344.63,5136,Nam Ngum 1,Laos,Nam Ngum
+745.0,1345.2,5136,Nam Ngum 1,Laos,Nam Ngum
+746.0,1345.76,5136,Nam Ngum 1,Laos,Nam Ngum
+747.0,1346.32,5136,Nam Ngum 1,Laos,Nam Ngum
+748.0,1346.87,5136,Nam Ngum 1,Laos,Nam Ngum
+749.0,1347.4,5136,Nam Ngum 1,Laos,Nam Ngum
+750.0,1347.97,5136,Nam Ngum 1,Laos,Nam Ngum
+751.0,1348.54,5136,Nam Ngum 1,Laos,Nam Ngum
+752.0,1349.08,5136,Nam Ngum 1,Laos,Nam Ngum
+753.0,1349.6,5136,Nam Ngum 1,Laos,Nam Ngum
+754.0,1350.17,5136,Nam Ngum 1,Laos,Nam Ngum
+755.0,1350.7,5136,Nam Ngum 1,Laos,Nam Ngum
+756.0,1351.23,5136,Nam Ngum 1,Laos,Nam Ngum
+757.0,1351.8,5136,Nam Ngum 1,Laos,Nam Ngum
+758.0,1352.38,5136,Nam Ngum 1,Laos,Nam Ngum
+759.0,1352.93,5136,Nam Ngum 1,Laos,Nam Ngum
+760.0,1353.47,5136,Nam Ngum 1,Laos,Nam Ngum
+761.0,1354.05,5136,Nam Ngum 1,Laos,Nam Ngum
+762.0,1354.61,5136,Nam Ngum 1,Laos,Nam Ngum
+763.0,1355.16,5136,Nam Ngum 1,Laos,Nam Ngum
+764.0,1355.73,5136,Nam Ngum 1,Laos,Nam Ngum
+765.0,1356.32,5136,Nam Ngum 1,Laos,Nam Ngum
+766.0,1356.87,5136,Nam Ngum 1,Laos,Nam Ngum
+767.0,1357.47,5136,Nam Ngum 1,Laos,Nam Ngum
+768.0,1358.06,5136,Nam Ngum 1,Laos,Nam Ngum
+769.0,1358.55,5136,Nam Ngum 1,Laos,Nam Ngum
+770.0,1359.14,5136,Nam Ngum 1,Laos,Nam Ngum
+771.0,1359.64,5136,Nam Ngum 1,Laos,Nam Ngum
+772.0,1360.18,5136,Nam Ngum 1,Laos,Nam Ngum
+773.0,1360.71,5136,Nam Ngum 1,Laos,Nam Ngum
+774.0,1361.25,5136,Nam Ngum 1,Laos,Nam Ngum
+775.0,1361.76,5136,Nam Ngum 1,Laos,Nam Ngum
+776.0,1362.29,5136,Nam Ngum 1,Laos,Nam Ngum
+777.0,1362.78,5136,Nam Ngum 1,Laos,Nam Ngum
+778.0,1363.26,5136,Nam Ngum 1,Laos,Nam Ngum
+779.0,1363.79,5136,Nam Ngum 1,Laos,Nam Ngum
+780.0,1364.28,5136,Nam Ngum 1,Laos,Nam Ngum
+781.0,1364.79,5136,Nam Ngum 1,Laos,Nam Ngum
+782.0,1365.3,5136,Nam Ngum 1,Laos,Nam Ngum
+783.0,1365.79,5136,Nam Ngum 1,Laos,Nam Ngum
+784.0,1366.24,5136,Nam Ngum 1,Laos,Nam Ngum
+785.0,1366.73,5136,Nam Ngum 1,Laos,Nam Ngum
+786.0,1367.21,5136,Nam Ngum 1,Laos,Nam Ngum
+787.0,1367.7,5136,Nam Ngum 1,Laos,Nam Ngum
+788.0,1368.19,5136,Nam Ngum 1,Laos,Nam Ngum
+789.0,1368.7,5136,Nam Ngum 1,Laos,Nam Ngum
+790.0,1369.13,5136,Nam Ngum 1,Laos,Nam Ngum
+791.0,1369.62,5136,Nam Ngum 1,Laos,Nam Ngum
+792.0,1370.07,5136,Nam Ngum 1,Laos,Nam Ngum
+793.0,1370.49,5136,Nam Ngum 1,Laos,Nam Ngum
+794.0,1370.95,5136,Nam Ngum 1,Laos,Nam Ngum
+795.0,1371.4,5136,Nam Ngum 1,Laos,Nam Ngum
+796.0,1371.83,5136,Nam Ngum 1,Laos,Nam Ngum
+797.0,1372.26,5136,Nam Ngum 1,Laos,Nam Ngum
+798.0,1372.74,5136,Nam Ngum 1,Laos,Nam Ngum
+799.0,1373.19,5136,Nam Ngum 1,Laos,Nam Ngum
+800.0,1373.6,5136,Nam Ngum 1,Laos,Nam Ngum
+801.0,1374.03,5136,Nam Ngum 1,Laos,Nam Ngum
+802.0,1374.45,5136,Nam Ngum 1,Laos,Nam Ngum
+803.0,1374.89,5136,Nam Ngum 1,Laos,Nam Ngum
+804.0,1375.31,5136,Nam Ngum 1,Laos,Nam Ngum
+805.0,1375.74,5136,Nam Ngum 1,Laos,Nam Ngum
+806.0,1376.16,5136,Nam Ngum 1,Laos,Nam Ngum
+807.0,1376.58,5136,Nam Ngum 1,Laos,Nam Ngum
+808.0,1377.04,5136,Nam Ngum 1,Laos,Nam Ngum
+809.0,1377.45,5136,Nam Ngum 1,Laos,Nam Ngum
+810.0,1377.84,5136,Nam Ngum 1,Laos,Nam Ngum
+811.0,1378.24,5136,Nam Ngum 1,Laos,Nam Ngum
+812.0,1378.7,5136,Nam Ngum 1,Laos,Nam Ngum
+813.0,1379.12,5136,Nam Ngum 1,Laos,Nam Ngum
+814.0,1379.5,5136,Nam Ngum 1,Laos,Nam Ngum
+815.0,1379.93,5136,Nam Ngum 1,Laos,Nam Ngum
+816.0,1380.35,5136,Nam Ngum 1,Laos,Nam Ngum
+817.0,1380.76,5136,Nam Ngum 1,Laos,Nam Ngum
+818.0,1381.17,5136,Nam Ngum 1,Laos,Nam Ngum
+819.0,1381.6,5136,Nam Ngum 1,Laos,Nam Ngum
+820.0,1382.07,5136,Nam Ngum 1,Laos,Nam Ngum
+821.0,1382.47,5136,Nam Ngum 1,Laos,Nam Ngum
+822.0,1382.86,5136,Nam Ngum 1,Laos,Nam Ngum
+823.0,1383.26,5136,Nam Ngum 1,Laos,Nam Ngum
+824.0,1383.67,5136,Nam Ngum 1,Laos,Nam Ngum
+825.0,1384.05,5136,Nam Ngum 1,Laos,Nam Ngum
+826.0,1384.48,5136,Nam Ngum 1,Laos,Nam Ngum
+827.0,1384.91,5136,Nam Ngum 1,Laos,Nam Ngum
+828.0,1385.3,5136,Nam Ngum 1,Laos,Nam Ngum
+829.0,1385.69,5136,Nam Ngum 1,Laos,Nam Ngum
+830.0,1386.03,5136,Nam Ngum 1,Laos,Nam Ngum
+831.0,1386.4,5136,Nam Ngum 1,Laos,Nam Ngum
+832.0,1386.79,5136,Nam Ngum 1,Laos,Nam Ngum
+833.0,1387.19,5136,Nam Ngum 1,Laos,Nam Ngum
+834.0,1387.59,5136,Nam Ngum 1,Laos,Nam Ngum
+835.0,1387.94,5136,Nam Ngum 1,Laos,Nam Ngum
+836.0,1388.31,5136,Nam Ngum 1,Laos,Nam Ngum
+837.0,1388.71,5136,Nam Ngum 1,Laos,Nam Ngum
+838.0,1389.11,5136,Nam Ngum 1,Laos,Nam Ngum
+839.0,1389.47,5136,Nam Ngum 1,Laos,Nam Ngum
+840.0,1389.83,5136,Nam Ngum 1,Laos,Nam Ngum
+841.0,1390.22,5136,Nam Ngum 1,Laos,Nam Ngum
+842.0,1390.6,5136,Nam Ngum 1,Laos,Nam Ngum
+843.0,1390.96,5136,Nam Ngum 1,Laos,Nam Ngum
+844.0,1391.36,5136,Nam Ngum 1,Laos,Nam Ngum
+845.0,1391.75,5136,Nam Ngum 1,Laos,Nam Ngum
+846.0,1392.11,5136,Nam Ngum 1,Laos,Nam Ngum
+847.0,1392.46,5136,Nam Ngum 1,Laos,Nam Ngum
+848.0,1392.82,5136,Nam Ngum 1,Laos,Nam Ngum
+849.0,1393.14,5136,Nam Ngum 1,Laos,Nam Ngum
+850.0,1393.5,5136,Nam Ngum 1,Laos,Nam Ngum
+851.0,1393.87,5136,Nam Ngum 1,Laos,Nam Ngum
+852.0,1394.21,5136,Nam Ngum 1,Laos,Nam Ngum
+853.0,1394.57,5136,Nam Ngum 1,Laos,Nam Ngum
+854.0,1394.95,5136,Nam Ngum 1,Laos,Nam Ngum
+855.0,1395.28,5136,Nam Ngum 1,Laos,Nam Ngum
+856.0,1395.64,5136,Nam Ngum 1,Laos,Nam Ngum
+857.0,1395.98,5136,Nam Ngum 1,Laos,Nam Ngum
+858.0,1396.35,5136,Nam Ngum 1,Laos,Nam Ngum
+859.0,1396.7,5136,Nam Ngum 1,Laos,Nam Ngum
+860.0,1397.04,5136,Nam Ngum 1,Laos,Nam Ngum
+861.0,1397.34,5136,Nam Ngum 1,Laos,Nam Ngum
+862.0,1397.67,5136,Nam Ngum 1,Laos,Nam Ngum
+863.0,1398.02,5136,Nam Ngum 1,Laos,Nam Ngum
+864.0,1398.33,5136,Nam Ngum 1,Laos,Nam Ngum
+865.0,1398.64,5136,Nam Ngum 1,Laos,Nam Ngum
+866.0,1398.99,5136,Nam Ngum 1,Laos,Nam Ngum
+867.0,1399.31,5136,Nam Ngum 1,Laos,Nam Ngum
+868.0,1399.62,5136,Nam Ngum 1,Laos,Nam Ngum
+869.0,1399.97,5136,Nam Ngum 1,Laos,Nam Ngum
+870.0,1400.31,5136,Nam Ngum 1,Laos,Nam Ngum
+871.0,1400.64,5136,Nam Ngum 1,Laos,Nam Ngum
+872.0,1400.96,5136,Nam Ngum 1,Laos,Nam Ngum
+873.0,1401.29,5136,Nam Ngum 1,Laos,Nam Ngum
+874.0,1401.62,5136,Nam Ngum 1,Laos,Nam Ngum
+875.0,1401.97,5136,Nam Ngum 1,Laos,Nam Ngum
+876.0,1402.32,5136,Nam Ngum 1,Laos,Nam Ngum
+877.0,1402.65,5136,Nam Ngum 1,Laos,Nam Ngum
+878.0,1402.97,5136,Nam Ngum 1,Laos,Nam Ngum
+879.0,1403.27,5136,Nam Ngum 1,Laos,Nam Ngum
+880.0,1403.6,5136,Nam Ngum 1,Laos,Nam Ngum
+881.0,1403.91,5136,Nam Ngum 1,Laos,Nam Ngum
+882.0,1404.21,5136,Nam Ngum 1,Laos,Nam Ngum
+883.0,1404.48,5136,Nam Ngum 1,Laos,Nam Ngum
+884.0,1404.82,5136,Nam Ngum 1,Laos,Nam Ngum
+885.0,1405.12,5136,Nam Ngum 1,Laos,Nam Ngum
+886.0,1405.4,5136,Nam Ngum 1,Laos,Nam Ngum
+887.0,1405.7,5136,Nam Ngum 1,Laos,Nam Ngum
+888.0,1406.04,5136,Nam Ngum 1,Laos,Nam Ngum
+889.0,1406.36,5136,Nam Ngum 1,Laos,Nam Ngum
+890.0,1406.64,5136,Nam Ngum 1,Laos,Nam Ngum
+891.0,1406.99,5136,Nam Ngum 1,Laos,Nam Ngum
+892.0,1407.31,5136,Nam Ngum 1,Laos,Nam Ngum
+893.0,1407.57,5136,Nam Ngum 1,Laos,Nam Ngum
+894.0,1407.86,5136,Nam Ngum 1,Laos,Nam Ngum
+895.0,1408.19,5136,Nam Ngum 1,Laos,Nam Ngum
+896.0,1408.52,5136,Nam Ngum 1,Laos,Nam Ngum
+897.0,1408.79,5136,Nam Ngum 1,Laos,Nam Ngum
+898.0,1409.12,5136,Nam Ngum 1,Laos,Nam Ngum
+899.0,1409.44,5136,Nam Ngum 1,Laos,Nam Ngum
+900.0,1409.78,5136,Nam Ngum 1,Laos,Nam Ngum
+901.0,1410.1,5136,Nam Ngum 1,Laos,Nam Ngum
+902.0,1410.41,5136,Nam Ngum 1,Laos,Nam Ngum
+903.0,1410.7,5136,Nam Ngum 1,Laos,Nam Ngum
+904.0,1411.01,5136,Nam Ngum 1,Laos,Nam Ngum
+905.0,1411.3,5136,Nam Ngum 1,Laos,Nam Ngum
+906.0,1411.59,5136,Nam Ngum 1,Laos,Nam Ngum
+907.0,1411.9,5136,Nam Ngum 1,Laos,Nam Ngum
+908.0,1412.21,5136,Nam Ngum 1,Laos,Nam Ngum
+909.0,1412.51,5136,Nam Ngum 1,Laos,Nam Ngum
+910.0,1412.78,5136,Nam Ngum 1,Laos,Nam Ngum
+911.0,1413.05,5136,Nam Ngum 1,Laos,Nam Ngum
+912.0,1413.34,5136,Nam Ngum 1,Laos,Nam Ngum
+913.0,1413.65,5136,Nam Ngum 1,Laos,Nam Ngum
+914.0,1413.94,5136,Nam Ngum 1,Laos,Nam Ngum
+915.0,1414.24,5136,Nam Ngum 1,Laos,Nam Ngum
+916.0,1414.53,5136,Nam Ngum 1,Laos,Nam Ngum
+917.0,1414.85,5136,Nam Ngum 1,Laos,Nam Ngum
+918.0,1415.14,5136,Nam Ngum 1,Laos,Nam Ngum
+919.0,1415.42,5136,Nam Ngum 1,Laos,Nam Ngum
+920.0,1415.73,5136,Nam Ngum 1,Laos,Nam Ngum
+921.0,1415.98,5136,Nam Ngum 1,Laos,Nam Ngum
+922.0,1416.24,5136,Nam Ngum 1,Laos,Nam Ngum
+923.0,1416.5,5136,Nam Ngum 1,Laos,Nam Ngum
+924.0,1416.78,5136,Nam Ngum 1,Laos,Nam Ngum
+925.0,1417.04,5136,Nam Ngum 1,Laos,Nam Ngum
+926.0,1417.3,5136,Nam Ngum 1,Laos,Nam Ngum
+927.0,1417.57,5136,Nam Ngum 1,Laos,Nam Ngum
+928.0,1417.84,5136,Nam Ngum 1,Laos,Nam Ngum
+929.0,1418.09,5136,Nam Ngum 1,Laos,Nam Ngum
+930.0,1418.35,5136,Nam Ngum 1,Laos,Nam Ngum
+931.0,1418.64,5136,Nam Ngum 1,Laos,Nam Ngum
+932.0,1418.88,5136,Nam Ngum 1,Laos,Nam Ngum
+933.0,1419.12,5136,Nam Ngum 1,Laos,Nam Ngum
+934.0,1419.39,5136,Nam Ngum 1,Laos,Nam Ngum
+935.0,1419.65,5136,Nam Ngum 1,Laos,Nam Ngum
+936.0,1419.92,5136,Nam Ngum 1,Laos,Nam Ngum
+937.0,1420.18,5136,Nam Ngum 1,Laos,Nam Ngum
+938.0,1420.44,5136,Nam Ngum 1,Laos,Nam Ngum
+939.0,1420.69,5136,Nam Ngum 1,Laos,Nam Ngum
+940.0,1420.96,5136,Nam Ngum 1,Laos,Nam Ngum
+941.0,1421.21,5136,Nam Ngum 1,Laos,Nam Ngum
+942.0,1421.47,5136,Nam Ngum 1,Laos,Nam Ngum
+943.0,1421.72,5136,Nam Ngum 1,Laos,Nam Ngum
+944.0,1421.98,5136,Nam Ngum 1,Laos,Nam Ngum
+945.0,1422.23,5136,Nam Ngum 1,Laos,Nam Ngum
+946.0,1422.46,5136,Nam Ngum 1,Laos,Nam Ngum
+947.0,1422.71,5136,Nam Ngum 1,Laos,Nam Ngum
+948.0,1422.95,5136,Nam Ngum 1,Laos,Nam Ngum
+949.0,1423.2,5136,Nam Ngum 1,Laos,Nam Ngum
+950.0,1423.45,5136,Nam Ngum 1,Laos,Nam Ngum
+951.0,1423.7,5136,Nam Ngum 1,Laos,Nam Ngum
+952.0,1423.95,5136,Nam Ngum 1,Laos,Nam Ngum
+953.0,1424.17,5136,Nam Ngum 1,Laos,Nam Ngum
+954.0,1424.43,5136,Nam Ngum 1,Laos,Nam Ngum
+955.0,1424.66,5136,Nam Ngum 1,Laos,Nam Ngum
+956.0,1424.93,5136,Nam Ngum 1,Laos,Nam Ngum
+957.0,1425.18,5136,Nam Ngum 1,Laos,Nam Ngum
+958.0,1425.44,5136,Nam Ngum 1,Laos,Nam Ngum
+959.0,1425.71,5136,Nam Ngum 1,Laos,Nam Ngum
+960.0,1425.94,5136,Nam Ngum 1,Laos,Nam Ngum
+961.0,1426.19,5136,Nam Ngum 1,Laos,Nam Ngum
+962.0,1426.45,5136,Nam Ngum 1,Laos,Nam Ngum
+963.0,1426.67,5136,Nam Ngum 1,Laos,Nam Ngum
+964.0,1426.9,5136,Nam Ngum 1,Laos,Nam Ngum
+965.0,1427.16,5136,Nam Ngum 1,Laos,Nam Ngum
+966.0,1427.41,5136,Nam Ngum 1,Laos,Nam Ngum
+967.0,1427.65,5136,Nam Ngum 1,Laos,Nam Ngum
+968.0,1427.89,5136,Nam Ngum 1,Laos,Nam Ngum
+969.0,1428.14,5136,Nam Ngum 1,Laos,Nam Ngum
+970.0,1428.4,5136,Nam Ngum 1,Laos,Nam Ngum
+971.0,1428.62,5136,Nam Ngum 1,Laos,Nam Ngum
+972.0,1428.88,5136,Nam Ngum 1,Laos,Nam Ngum
+973.0,1429.11,5136,Nam Ngum 1,Laos,Nam Ngum
+974.0,1429.32,5136,Nam Ngum 1,Laos,Nam Ngum
+975.0,1429.54,5136,Nam Ngum 1,Laos,Nam Ngum
+976.0,1429.78,5136,Nam Ngum 1,Laos,Nam Ngum
+977.0,1429.99,5136,Nam Ngum 1,Laos,Nam Ngum
+978.0,1430.21,5136,Nam Ngum 1,Laos,Nam Ngum
+979.0,1430.44,5136,Nam Ngum 1,Laos,Nam Ngum
+980.0,1430.68,5136,Nam Ngum 1,Laos,Nam Ngum
+981.0,1430.92,5136,Nam Ngum 1,Laos,Nam Ngum
+982.0,1431.13,5136,Nam Ngum 1,Laos,Nam Ngum
+983.0,1431.35,5136,Nam Ngum 1,Laos,Nam Ngum
+984.0,1431.57,5136,Nam Ngum 1,Laos,Nam Ngum
+985.0,1431.77,5136,Nam Ngum 1,Laos,Nam Ngum
+986.0,1432.04,5136,Nam Ngum 1,Laos,Nam Ngum
+987.0,1432.27,5136,Nam Ngum 1,Laos,Nam Ngum
+988.0,1432.52,5136,Nam Ngum 1,Laos,Nam Ngum
+989.0,1432.75,5136,Nam Ngum 1,Laos,Nam Ngum
+990.0,1432.99,5136,Nam Ngum 1,Laos,Nam Ngum
+991.0,1433.24,5136,Nam Ngum 1,Laos,Nam Ngum
+992.0,1433.5,5136,Nam Ngum 1,Laos,Nam Ngum
+993.0,1433.76,5136,Nam Ngum 1,Laos,Nam Ngum
+994.0,1434.01,5136,Nam Ngum 1,Laos,Nam Ngum
+995.0,1434.24,5136,Nam Ngum 1,Laos,Nam Ngum
+996.0,1434.47,5136,Nam Ngum 1,Laos,Nam Ngum
+997.0,1434.69,5136,Nam Ngum 1,Laos,Nam Ngum
+998.0,1434.95,5136,Nam Ngum 1,Laos,Nam Ngum
+999.0,1435.18,5136,Nam Ngum 1,Laos,Nam Ngum
+1000.0,1435.43,5136,Nam Ngum 1,Laos,Nam Ngum
+1001.0,1435.69,5136,Nam Ngum 1,Laos,Nam Ngum
+1002.0,1435.96,5136,Nam Ngum 1,Laos,Nam Ngum
+1003.0,1436.23,5136,Nam Ngum 1,Laos,Nam Ngum
+1004.0,1436.47,5136,Nam Ngum 1,Laos,Nam Ngum
+1005.0,1436.71,5136,Nam Ngum 1,Laos,Nam Ngum
+1006.0,1437.0,5136,Nam Ngum 1,Laos,Nam Ngum
+1007.0,1437.28,5136,Nam Ngum 1,Laos,Nam Ngum
+1008.0,1437.54,5136,Nam Ngum 1,Laos,Nam Ngum
+1009.0,1437.83,5136,Nam Ngum 1,Laos,Nam Ngum
+1010.0,1438.09,5136,Nam Ngum 1,Laos,Nam Ngum
+1011.0,1438.35,5136,Nam Ngum 1,Laos,Nam Ngum
+1012.0,1438.6,5136,Nam Ngum 1,Laos,Nam Ngum
+1013.0,1438.87,5136,Nam Ngum 1,Laos,Nam Ngum
+1014.0,1439.13,5136,Nam Ngum 1,Laos,Nam Ngum
+1015.0,1439.4,5136,Nam Ngum 1,Laos,Nam Ngum
+1016.0,1439.67,5136,Nam Ngum 1,Laos,Nam Ngum
+1017.0,1439.93,5136,Nam Ngum 1,Laos,Nam Ngum
+1018.0,1440.21,5136,Nam Ngum 1,Laos,Nam Ngum
+1019.0,1440.46,5136,Nam Ngum 1,Laos,Nam Ngum
+1020.0,1440.7,5136,Nam Ngum 1,Laos,Nam Ngum
+1021.0,1440.94,5136,Nam Ngum 1,Laos,Nam Ngum
+1022.0,1441.22,5136,Nam Ngum 1,Laos,Nam Ngum
+1023.0,1441.5,5136,Nam Ngum 1,Laos,Nam Ngum
+1024.0,1441.78,5136,Nam Ngum 1,Laos,Nam Ngum
+1025.0,1442.04,5136,Nam Ngum 1,Laos,Nam Ngum
+1026.0,1442.28,5136,Nam Ngum 1,Laos,Nam Ngum
+1027.0,1442.56,5136,Nam Ngum 1,Laos,Nam Ngum
+1028.0,1442.82,5136,Nam Ngum 1,Laos,Nam Ngum
+1029.0,1443.05,5136,Nam Ngum 1,Laos,Nam Ngum
+1030.0,1443.35,5136,Nam Ngum 1,Laos,Nam Ngum
+1031.0,1443.62,5136,Nam Ngum 1,Laos,Nam Ngum
+1032.0,1443.89,5136,Nam Ngum 1,Laos,Nam Ngum
+1033.0,1444.12,5136,Nam Ngum 1,Laos,Nam Ngum
+1034.0,1444.38,5136,Nam Ngum 1,Laos,Nam Ngum
+1035.0,1444.62,5136,Nam Ngum 1,Laos,Nam Ngum
+1036.0,1444.86,5136,Nam Ngum 1,Laos,Nam Ngum
+1037.0,1445.1,5136,Nam Ngum 1,Laos,Nam Ngum
+1038.0,1445.35,5136,Nam Ngum 1,Laos,Nam Ngum
+1039.0,1445.6,5136,Nam Ngum 1,Laos,Nam Ngum
+1040.0,1445.83,5136,Nam Ngum 1,Laos,Nam Ngum
+1041.0,1446.07,5136,Nam Ngum 1,Laos,Nam Ngum
+1042.0,1446.3,5136,Nam Ngum 1,Laos,Nam Ngum
+1043.0,1446.53,5136,Nam Ngum 1,Laos,Nam Ngum
+1044.0,1446.74,5136,Nam Ngum 1,Laos,Nam Ngum
+1045.0,1446.96,5136,Nam Ngum 1,Laos,Nam Ngum
+1046.0,1447.19,5136,Nam Ngum 1,Laos,Nam Ngum
+1047.0,1447.44,5136,Nam Ngum 1,Laos,Nam Ngum
+1048.0,1447.66,5136,Nam Ngum 1,Laos,Nam Ngum
+1049.0,1447.9,5136,Nam Ngum 1,Laos,Nam Ngum
+1050.0,1448.13,5136,Nam Ngum 1,Laos,Nam Ngum
+1051.0,1448.35,5136,Nam Ngum 1,Laos,Nam Ngum
+1052.0,1448.56,5136,Nam Ngum 1,Laos,Nam Ngum
+1053.0,1448.8,5136,Nam Ngum 1,Laos,Nam Ngum
+1054.0,1449.05,5136,Nam Ngum 1,Laos,Nam Ngum
+1055.0,1449.27,5136,Nam Ngum 1,Laos,Nam Ngum
+1056.0,1449.48,5136,Nam Ngum 1,Laos,Nam Ngum
+1057.0,1449.69,5136,Nam Ngum 1,Laos,Nam Ngum
+1058.0,1449.91,5136,Nam Ngum 1,Laos,Nam Ngum
+1059.0,1450.12,5136,Nam Ngum 1,Laos,Nam Ngum
+1060.0,1450.34,5136,Nam Ngum 1,Laos,Nam Ngum
+1061.0,1450.55,5136,Nam Ngum 1,Laos,Nam Ngum
+1062.0,1450.76,5136,Nam Ngum 1,Laos,Nam Ngum
+1063.0,1450.95,5136,Nam Ngum 1,Laos,Nam Ngum
+1064.0,1451.16,5136,Nam Ngum 1,Laos,Nam Ngum
+1065.0,1451.34,5136,Nam Ngum 1,Laos,Nam Ngum
+1066.0,1451.53,5136,Nam Ngum 1,Laos,Nam Ngum
+1067.0,1451.72,5136,Nam Ngum 1,Laos,Nam Ngum
+1068.0,1451.91,5136,Nam Ngum 1,Laos,Nam Ngum
+1069.0,1452.11,5136,Nam Ngum 1,Laos,Nam Ngum
+1070.0,1452.31,5136,Nam Ngum 1,Laos,Nam Ngum
+1071.0,1452.49,5136,Nam Ngum 1,Laos,Nam Ngum
+1072.0,1452.66,5136,Nam Ngum 1,Laos,Nam Ngum
+1073.0,1452.87,5136,Nam Ngum 1,Laos,Nam Ngum
+1074.0,1453.06,5136,Nam Ngum 1,Laos,Nam Ngum
+1075.0,1453.23,5136,Nam Ngum 1,Laos,Nam Ngum
+1076.0,1453.41,5136,Nam Ngum 1,Laos,Nam Ngum
+1077.0,1453.59,5136,Nam Ngum 1,Laos,Nam Ngum
+1078.0,1453.77,5136,Nam Ngum 1,Laos,Nam Ngum
+1079.0,1453.96,5136,Nam Ngum 1,Laos,Nam Ngum
+1080.0,1454.15,5136,Nam Ngum 1,Laos,Nam Ngum
+1081.0,1454.31,5136,Nam Ngum 1,Laos,Nam Ngum
+1082.0,1454.51,5136,Nam Ngum 1,Laos,Nam Ngum
+1083.0,1454.69,5136,Nam Ngum 1,Laos,Nam Ngum
+1084.0,1454.89,5136,Nam Ngum 1,Laos,Nam Ngum
+1085.0,1455.08,5136,Nam Ngum 1,Laos,Nam Ngum
+1086.0,1455.26,5136,Nam Ngum 1,Laos,Nam Ngum
+1087.0,1455.46,5136,Nam Ngum 1,Laos,Nam Ngum
+1088.0,1455.68,5136,Nam Ngum 1,Laos,Nam Ngum
+1089.0,1455.85,5136,Nam Ngum 1,Laos,Nam Ngum
+1090.0,1456.04,5136,Nam Ngum 1,Laos,Nam Ngum
+1091.0,1456.22,5136,Nam Ngum 1,Laos,Nam Ngum
+1092.0,1456.39,5136,Nam Ngum 1,Laos,Nam Ngum
+1093.0,1456.56,5136,Nam Ngum 1,Laos,Nam Ngum
+1094.0,1456.76,5136,Nam Ngum 1,Laos,Nam Ngum
+1095.0,1456.95,5136,Nam Ngum 1,Laos,Nam Ngum
+1096.0,1457.13,5136,Nam Ngum 1,Laos,Nam Ngum
+1097.0,1457.31,5136,Nam Ngum 1,Laos,Nam Ngum
+1098.0,1457.48,5136,Nam Ngum 1,Laos,Nam Ngum
+1099.0,1457.65,5136,Nam Ngum 1,Laos,Nam Ngum
+1100.0,1457.82,5136,Nam Ngum 1,Laos,Nam Ngum
+1101.0,1457.96,5136,Nam Ngum 1,Laos,Nam Ngum
+1102.0,1458.14,5136,Nam Ngum 1,Laos,Nam Ngum
+1103.0,1458.31,5136,Nam Ngum 1,Laos,Nam Ngum
+1104.0,1458.5,5136,Nam Ngum 1,Laos,Nam Ngum
+1105.0,1458.66,5136,Nam Ngum 1,Laos,Nam Ngum
+1106.0,1458.81,5136,Nam Ngum 1,Laos,Nam Ngum
+1107.0,1458.97,5136,Nam Ngum 1,Laos,Nam Ngum
+1108.0,1459.14,5136,Nam Ngum 1,Laos,Nam Ngum
+1109.0,1459.3,5136,Nam Ngum 1,Laos,Nam Ngum
+1110.0,1459.45,5136,Nam Ngum 1,Laos,Nam Ngum
+1111.0,1459.61,5136,Nam Ngum 1,Laos,Nam Ngum
+1112.0,1459.77,5136,Nam Ngum 1,Laos,Nam Ngum
+1113.0,1459.92,5136,Nam Ngum 1,Laos,Nam Ngum
+1114.0,1460.09,5136,Nam Ngum 1,Laos,Nam Ngum
+1115.0,1460.27,5136,Nam Ngum 1,Laos,Nam Ngum
+1116.0,1460.43,5136,Nam Ngum 1,Laos,Nam Ngum
+1117.0,1460.61,5136,Nam Ngum 1,Laos,Nam Ngum
+1118.0,1460.76,5136,Nam Ngum 1,Laos,Nam Ngum
+1119.0,1460.94,5136,Nam Ngum 1,Laos,Nam Ngum
+1120.0,1461.11,5136,Nam Ngum 1,Laos,Nam Ngum
+1121.0,1461.28,5136,Nam Ngum 1,Laos,Nam Ngum
+1122.0,1461.45,5136,Nam Ngum 1,Laos,Nam Ngum
+1123.0,1461.6,5136,Nam Ngum 1,Laos,Nam Ngum
+1124.0,1461.77,5136,Nam Ngum 1,Laos,Nam Ngum
+1125.0,1461.95,5136,Nam Ngum 1,Laos,Nam Ngum
+1126.0,1462.1,5136,Nam Ngum 1,Laos,Nam Ngum
+1127.0,1462.27,5136,Nam Ngum 1,Laos,Nam Ngum
+1128.0,1462.43,5136,Nam Ngum 1,Laos,Nam Ngum
+1129.0,1462.58,5136,Nam Ngum 1,Laos,Nam Ngum
+1130.0,1462.73,5136,Nam Ngum 1,Laos,Nam Ngum
+1131.0,1462.9,5136,Nam Ngum 1,Laos,Nam Ngum
+1132.0,1463.07,5136,Nam Ngum 1,Laos,Nam Ngum
+1133.0,1463.22,5136,Nam Ngum 1,Laos,Nam Ngum
+1134.0,1463.39,5136,Nam Ngum 1,Laos,Nam Ngum
+1135.0,1463.54,5136,Nam Ngum 1,Laos,Nam Ngum
+1136.0,1463.72,5136,Nam Ngum 1,Laos,Nam Ngum
+1137.0,1463.89,5136,Nam Ngum 1,Laos,Nam Ngum
+1138.0,1464.02,5136,Nam Ngum 1,Laos,Nam Ngum
+1139.0,1464.19,5136,Nam Ngum 1,Laos,Nam Ngum
+1140.0,1464.32,5136,Nam Ngum 1,Laos,Nam Ngum
+1141.0,1464.48,5136,Nam Ngum 1,Laos,Nam Ngum
+1142.0,1464.64,5136,Nam Ngum 1,Laos,Nam Ngum
+1143.0,1464.79,5136,Nam Ngum 1,Laos,Nam Ngum
+1144.0,1464.95,5136,Nam Ngum 1,Laos,Nam Ngum
+1145.0,1465.13,5136,Nam Ngum 1,Laos,Nam Ngum
+1146.0,1465.29,5136,Nam Ngum 1,Laos,Nam Ngum
+1147.0,1465.44,5136,Nam Ngum 1,Laos,Nam Ngum
+1148.0,1465.6,5136,Nam Ngum 1,Laos,Nam Ngum
+1149.0,1465.73,5136,Nam Ngum 1,Laos,Nam Ngum
+1150.0,1465.88,5136,Nam Ngum 1,Laos,Nam Ngum
+1151.0,1466.03,5136,Nam Ngum 1,Laos,Nam Ngum
+1152.0,1466.19,5136,Nam Ngum 1,Laos,Nam Ngum
+1153.0,1466.35,5136,Nam Ngum 1,Laos,Nam Ngum
+1154.0,1466.51,5136,Nam Ngum 1,Laos,Nam Ngum
+1155.0,1466.66,5136,Nam Ngum 1,Laos,Nam Ngum
+1156.0,1466.82,5136,Nam Ngum 1,Laos,Nam Ngum
+1157.0,1466.97,5136,Nam Ngum 1,Laos,Nam Ngum
+1158.0,1467.17,5136,Nam Ngum 1,Laos,Nam Ngum
+1159.0,1467.32,5136,Nam Ngum 1,Laos,Nam Ngum
+1160.0,1467.48,5136,Nam Ngum 1,Laos,Nam Ngum
+1161.0,1467.63,5136,Nam Ngum 1,Laos,Nam Ngum
+1162.0,1467.8,5136,Nam Ngum 1,Laos,Nam Ngum
+1163.0,1467.93,5136,Nam Ngum 1,Laos,Nam Ngum
+1164.0,1468.08,5136,Nam Ngum 1,Laos,Nam Ngum
+1165.0,1468.26,5136,Nam Ngum 1,Laos,Nam Ngum
+1166.0,1468.4,5136,Nam Ngum 1,Laos,Nam Ngum
+1167.0,1468.55,5136,Nam Ngum 1,Laos,Nam Ngum
+1168.0,1468.7,5136,Nam Ngum 1,Laos,Nam Ngum
+1169.0,1468.84,5136,Nam Ngum 1,Laos,Nam Ngum
+1170.0,1469.02,5136,Nam Ngum 1,Laos,Nam Ngum
+1171.0,1469.15,5136,Nam Ngum 1,Laos,Nam Ngum
+1172.0,1469.31,5136,Nam Ngum 1,Laos,Nam Ngum
+1173.0,1469.47,5136,Nam Ngum 1,Laos,Nam Ngum
+1174.0,1469.63,5136,Nam Ngum 1,Laos,Nam Ngum
+1175.0,1469.76,5136,Nam Ngum 1,Laos,Nam Ngum
+1176.0,1469.9,5136,Nam Ngum 1,Laos,Nam Ngum
+1177.0,1470.04,5136,Nam Ngum 1,Laos,Nam Ngum
+1178.0,1470.17,5136,Nam Ngum 1,Laos,Nam Ngum
+1179.0,1470.32,5136,Nam Ngum 1,Laos,Nam Ngum
+1180.0,1470.47,5136,Nam Ngum 1,Laos,Nam Ngum
+1181.0,1470.63,5136,Nam Ngum 1,Laos,Nam Ngum
+1182.0,1470.76,5136,Nam Ngum 1,Laos,Nam Ngum
+1183.0,1470.94,5136,Nam Ngum 1,Laos,Nam Ngum
+1184.0,1471.07,5136,Nam Ngum 1,Laos,Nam Ngum
+1185.0,1471.23,5136,Nam Ngum 1,Laos,Nam Ngum
+1186.0,1471.39,5136,Nam Ngum 1,Laos,Nam Ngum
+1187.0,1471.52,5136,Nam Ngum 1,Laos,Nam Ngum
+1188.0,1471.66,5136,Nam Ngum 1,Laos,Nam Ngum
+1189.0,1471.8,5136,Nam Ngum 1,Laos,Nam Ngum
+1190.0,1471.96,5136,Nam Ngum 1,Laos,Nam Ngum
+1191.0,1472.11,5136,Nam Ngum 1,Laos,Nam Ngum
+1192.0,1472.26,5136,Nam Ngum 1,Laos,Nam Ngum
+1193.0,1472.4,5136,Nam Ngum 1,Laos,Nam Ngum
+1194.0,1472.52,5136,Nam Ngum 1,Laos,Nam Ngum
+1195.0,1472.67,5136,Nam Ngum 1,Laos,Nam Ngum
+1196.0,1472.81,5136,Nam Ngum 1,Laos,Nam Ngum
+1197.0,1472.94,5136,Nam Ngum 1,Laos,Nam Ngum
+1198.0,1473.08,5136,Nam Ngum 1,Laos,Nam Ngum
+1199.0,1473.21,5136,Nam Ngum 1,Laos,Nam Ngum
+1200.0,1473.33,5136,Nam Ngum 1,Laos,Nam Ngum
+1201.0,1473.46,5136,Nam Ngum 1,Laos,Nam Ngum
+1202.0,1473.6,5136,Nam Ngum 1,Laos,Nam Ngum
+1203.0,1473.72,5136,Nam Ngum 1,Laos,Nam Ngum
+1204.0,1473.84,5136,Nam Ngum 1,Laos,Nam Ngum
+1205.0,1473.97,5136,Nam Ngum 1,Laos,Nam Ngum
+1206.0,1474.07,5136,Nam Ngum 1,Laos,Nam Ngum
+1207.0,1474.18,5136,Nam Ngum 1,Laos,Nam Ngum
+1208.0,1474.3,5136,Nam Ngum 1,Laos,Nam Ngum
+1209.0,1474.43,5136,Nam Ngum 1,Laos,Nam Ngum
+1210.0,1474.57,5136,Nam Ngum 1,Laos,Nam Ngum
+1211.0,1474.67,5136,Nam Ngum 1,Laos,Nam Ngum
+1212.0,1474.79,5136,Nam Ngum 1,Laos,Nam Ngum
+1213.0,1474.9,5136,Nam Ngum 1,Laos,Nam Ngum
+1214.0,1475.01,5136,Nam Ngum 1,Laos,Nam Ngum
+1215.0,1475.13,5136,Nam Ngum 1,Laos,Nam Ngum
+1216.0,1475.24,5136,Nam Ngum 1,Laos,Nam Ngum
+1217.0,1475.35,5136,Nam Ngum 1,Laos,Nam Ngum
+1218.0,1475.44,5136,Nam Ngum 1,Laos,Nam Ngum
+1219.0,1475.55,5136,Nam Ngum 1,Laos,Nam Ngum
+1220.0,1475.67,5136,Nam Ngum 1,Laos,Nam Ngum
+1221.0,1475.77,5136,Nam Ngum 1,Laos,Nam Ngum
+1222.0,1475.88,5136,Nam Ngum 1,Laos,Nam Ngum
+1223.0,1475.99,5136,Nam Ngum 1,Laos,Nam Ngum
+1224.0,1476.1,5136,Nam Ngum 1,Laos,Nam Ngum
+1225.0,1476.21,5136,Nam Ngum 1,Laos,Nam Ngum
+1226.0,1476.31,5136,Nam Ngum 1,Laos,Nam Ngum
+1227.0,1476.43,5136,Nam Ngum 1,Laos,Nam Ngum
+1228.0,1476.52,5136,Nam Ngum 1,Laos,Nam Ngum
+1229.0,1476.64,5136,Nam Ngum 1,Laos,Nam Ngum
+1230.0,1476.76,5136,Nam Ngum 1,Laos,Nam Ngum
+1231.0,1476.85,5136,Nam Ngum 1,Laos,Nam Ngum
+1232.0,1476.97,5136,Nam Ngum 1,Laos,Nam Ngum
+1233.0,1477.08,5136,Nam Ngum 1,Laos,Nam Ngum
+1234.0,1477.18,5136,Nam Ngum 1,Laos,Nam Ngum
+1235.0,1477.27,5136,Nam Ngum 1,Laos,Nam Ngum
+1236.0,1477.37,5136,Nam Ngum 1,Laos,Nam Ngum
+1237.0,1477.48,5136,Nam Ngum 1,Laos,Nam Ngum
+1238.0,1477.59,5136,Nam Ngum 1,Laos,Nam Ngum
+1239.0,1477.67,5136,Nam Ngum 1,Laos,Nam Ngum
+1240.0,1477.78,5136,Nam Ngum 1,Laos,Nam Ngum
+1241.0,1477.88,5136,Nam Ngum 1,Laos,Nam Ngum
+1242.0,1477.98,5136,Nam Ngum 1,Laos,Nam Ngum
+1243.0,1478.07,5136,Nam Ngum 1,Laos,Nam Ngum
+1244.0,1478.17,5136,Nam Ngum 1,Laos,Nam Ngum
+1245.0,1478.27,5136,Nam Ngum 1,Laos,Nam Ngum
+1246.0,1478.36,5136,Nam Ngum 1,Laos,Nam Ngum
+1247.0,1478.46,5136,Nam Ngum 1,Laos,Nam Ngum
+1248.0,1478.55,5136,Nam Ngum 1,Laos,Nam Ngum
+1249.0,1478.65,5136,Nam Ngum 1,Laos,Nam Ngum
+1250.0,1478.73,5136,Nam Ngum 1,Laos,Nam Ngum
+1251.0,1478.81,5136,Nam Ngum 1,Laos,Nam Ngum
+1252.0,1478.9,5136,Nam Ngum 1,Laos,Nam Ngum
+1253.0,1478.98,5136,Nam Ngum 1,Laos,Nam Ngum
+1254.0,1479.07,5136,Nam Ngum 1,Laos,Nam Ngum
+1255.0,1479.16,5136,Nam Ngum 1,Laos,Nam Ngum
+1256.0,1479.24,5136,Nam Ngum 1,Laos,Nam Ngum
+1257.0,1479.32,5136,Nam Ngum 1,Laos,Nam Ngum
+1258.0,1479.42,5136,Nam Ngum 1,Laos,Nam Ngum
+1259.0,1479.49,5136,Nam Ngum 1,Laos,Nam Ngum
+1260.0,1479.6,5136,Nam Ngum 1,Laos,Nam Ngum
+1261.0,1479.68,5136,Nam Ngum 1,Laos,Nam Ngum
+1262.0,1479.77,5136,Nam Ngum 1,Laos,Nam Ngum
+1263.0,1479.85,5136,Nam Ngum 1,Laos,Nam Ngum
+1264.0,1479.94,5136,Nam Ngum 1,Laos,Nam Ngum
+1265.0,1480.03,5136,Nam Ngum 1,Laos,Nam Ngum
+1266.0,1480.11,5136,Nam Ngum 1,Laos,Nam Ngum
+1267.0,1480.19,5136,Nam Ngum 1,Laos,Nam Ngum
+1268.0,1480.27,5136,Nam Ngum 1,Laos,Nam Ngum
+1269.0,1480.36,5136,Nam Ngum 1,Laos,Nam Ngum
+1270.0,1480.44,5136,Nam Ngum 1,Laos,Nam Ngum
+1271.0,1480.53,5136,Nam Ngum 1,Laos,Nam Ngum
+1272.0,1480.62,5136,Nam Ngum 1,Laos,Nam Ngum
+1273.0,1480.7,5136,Nam Ngum 1,Laos,Nam Ngum
+1274.0,1480.78,5136,Nam Ngum 1,Laos,Nam Ngum
+1275.0,1480.86,5136,Nam Ngum 1,Laos,Nam Ngum
+1276.0,1480.93,5136,Nam Ngum 1,Laos,Nam Ngum
+1277.0,1481.02,5136,Nam Ngum 1,Laos,Nam Ngum
+1278.0,1481.1,5136,Nam Ngum 1,Laos,Nam Ngum
+1279.0,1481.16,5136,Nam Ngum 1,Laos,Nam Ngum
+1280.0,1481.25,5136,Nam Ngum 1,Laos,Nam Ngum
+1281.0,1481.33,5136,Nam Ngum 1,Laos,Nam Ngum
+1282.0,1481.42,5136,Nam Ngum 1,Laos,Nam Ngum
+1283.0,1481.49,5136,Nam Ngum 1,Laos,Nam Ngum
+1284.0,1481.55,5136,Nam Ngum 1,Laos,Nam Ngum
+1285.0,1481.63,5136,Nam Ngum 1,Laos,Nam Ngum
+1286.0,1481.71,5136,Nam Ngum 1,Laos,Nam Ngum
+1287.0,1481.78,5136,Nam Ngum 1,Laos,Nam Ngum
+1288.0,1481.87,5136,Nam Ngum 1,Laos,Nam Ngum
+1289.0,1481.94,5136,Nam Ngum 1,Laos,Nam Ngum
+1290.0,1482.03,5136,Nam Ngum 1,Laos,Nam Ngum
+1291.0,1482.09,5136,Nam Ngum 1,Laos,Nam Ngum
+1292.0,1482.18,5136,Nam Ngum 1,Laos,Nam Ngum
+1293.0,1482.23,5136,Nam Ngum 1,Laos,Nam Ngum
+1294.0,1482.3,5136,Nam Ngum 1,Laos,Nam Ngum
+1295.0,1482.37,5136,Nam Ngum 1,Laos,Nam Ngum
+1296.0,1482.45,5136,Nam Ngum 1,Laos,Nam Ngum
+1297.0,1482.51,5136,Nam Ngum 1,Laos,Nam Ngum
+1298.0,1482.58,5136,Nam Ngum 1,Laos,Nam Ngum
+1299.0,1482.65,5136,Nam Ngum 1,Laos,Nam Ngum
+1300.0,1482.71,5136,Nam Ngum 1,Laos,Nam Ngum
+1301.0,1482.79,5136,Nam Ngum 1,Laos,Nam Ngum
+1302.0,1482.86,5136,Nam Ngum 1,Laos,Nam Ngum
+1303.0,1482.94,5136,Nam Ngum 1,Laos,Nam Ngum
+1304.0,1483.01,5136,Nam Ngum 1,Laos,Nam Ngum
+1305.0,1483.1,5136,Nam Ngum 1,Laos,Nam Ngum
+1306.0,1483.19,5136,Nam Ngum 1,Laos,Nam Ngum
+1307.0,1483.26,5136,Nam Ngum 1,Laos,Nam Ngum
+1308.0,1483.33,5136,Nam Ngum 1,Laos,Nam Ngum
+1309.0,1483.4,5136,Nam Ngum 1,Laos,Nam Ngum
+1310.0,1483.47,5136,Nam Ngum 1,Laos,Nam Ngum
+1311.0,1483.54,5136,Nam Ngum 1,Laos,Nam Ngum
+1312.0,1483.61,5136,Nam Ngum 1,Laos,Nam Ngum
+1313.0,1483.68,5136,Nam Ngum 1,Laos,Nam Ngum
+1314.0,1483.75,5136,Nam Ngum 1,Laos,Nam Ngum
+1315.0,1483.82,5136,Nam Ngum 1,Laos,Nam Ngum
+1316.0,1483.89,5136,Nam Ngum 1,Laos,Nam Ngum
+1317.0,1483.96,5136,Nam Ngum 1,Laos,Nam Ngum
+1318.0,1484.03,5136,Nam Ngum 1,Laos,Nam Ngum
+1319.0,1484.1,5136,Nam Ngum 1,Laos,Nam Ngum
+1320.0,1484.16,5136,Nam Ngum 1,Laos,Nam Ngum
+1321.0,1484.23,5136,Nam Ngum 1,Laos,Nam Ngum
+1322.0,1484.29,5136,Nam Ngum 1,Laos,Nam Ngum
+1323.0,1484.37,5136,Nam Ngum 1,Laos,Nam Ngum
+1324.0,1484.44,5136,Nam Ngum 1,Laos,Nam Ngum
+1325.0,1484.51,5136,Nam Ngum 1,Laos,Nam Ngum
+1326.0,1484.58,5136,Nam Ngum 1,Laos,Nam Ngum
+1327.0,1484.64,5136,Nam Ngum 1,Laos,Nam Ngum
+1328.0,1484.71,5136,Nam Ngum 1,Laos,Nam Ngum
+1329.0,1484.78,5136,Nam Ngum 1,Laos,Nam Ngum
+1330.0,1484.84,5136,Nam Ngum 1,Laos,Nam Ngum
+1331.0,1484.89,5136,Nam Ngum 1,Laos,Nam Ngum
+1332.0,1484.95,5136,Nam Ngum 1,Laos,Nam Ngum
+1333.0,1485.02,5136,Nam Ngum 1,Laos,Nam Ngum
+1334.0,1485.08,5136,Nam Ngum 1,Laos,Nam Ngum
+1335.0,1485.14,5136,Nam Ngum 1,Laos,Nam Ngum
+1336.0,1485.2,5136,Nam Ngum 1,Laos,Nam Ngum
+1337.0,1485.24,5136,Nam Ngum 1,Laos,Nam Ngum
+1338.0,1485.3,5136,Nam Ngum 1,Laos,Nam Ngum
+1339.0,1485.36,5136,Nam Ngum 1,Laos,Nam Ngum
+1340.0,1485.43,5136,Nam Ngum 1,Laos,Nam Ngum
+1341.0,1485.47,5136,Nam Ngum 1,Laos,Nam Ngum
+1342.0,1485.53,5136,Nam Ngum 1,Laos,Nam Ngum
+1343.0,1485.6,5136,Nam Ngum 1,Laos,Nam Ngum
+1344.0,1485.65,5136,Nam Ngum 1,Laos,Nam Ngum
+1345.0,1485.71,5136,Nam Ngum 1,Laos,Nam Ngum
+1346.0,1485.77,5136,Nam Ngum 1,Laos,Nam Ngum
+1347.0,1485.83,5136,Nam Ngum 1,Laos,Nam Ngum
+1348.0,1485.89,5136,Nam Ngum 1,Laos,Nam Ngum
+1349.0,1485.96,5136,Nam Ngum 1,Laos,Nam Ngum
+1350.0,1486.0,5136,Nam Ngum 1,Laos,Nam Ngum
+1351.0,1486.05,5136,Nam Ngum 1,Laos,Nam Ngum
+1352.0,1486.11,5136,Nam Ngum 1,Laos,Nam Ngum
+1353.0,1486.15,5136,Nam Ngum 1,Laos,Nam Ngum
+1354.0,1486.22,5136,Nam Ngum 1,Laos,Nam Ngum
+1355.0,1486.28,5136,Nam Ngum 1,Laos,Nam Ngum
+1356.0,1486.34,5136,Nam Ngum 1,Laos,Nam Ngum
+1357.0,1486.39,5136,Nam Ngum 1,Laos,Nam Ngum
+1358.0,1486.45,5136,Nam Ngum 1,Laos,Nam Ngum
+1359.0,1486.49,5136,Nam Ngum 1,Laos,Nam Ngum
+1360.0,1486.55,5136,Nam Ngum 1,Laos,Nam Ngum
+1361.0,1486.58,5136,Nam Ngum 1,Laos,Nam Ngum
+1362.0,1486.64,5136,Nam Ngum 1,Laos,Nam Ngum
+1363.0,1486.7,5136,Nam Ngum 1,Laos,Nam Ngum
+1364.0,1486.76,5136,Nam Ngum 1,Laos,Nam Ngum
+1365.0,1486.81,5136,Nam Ngum 1,Laos,Nam Ngum
+1366.0,1486.86,5136,Nam Ngum 1,Laos,Nam Ngum
+1367.0,1486.91,5136,Nam Ngum 1,Laos,Nam Ngum
+1368.0,1486.96,5136,Nam Ngum 1,Laos,Nam Ngum
+1369.0,1487.01,5136,Nam Ngum 1,Laos,Nam Ngum
+1370.0,1487.07,5136,Nam Ngum 1,Laos,Nam Ngum
+1371.0,1487.13,5136,Nam Ngum 1,Laos,Nam Ngum
+1372.0,1487.17,5136,Nam Ngum 1,Laos,Nam Ngum
+1373.0,1487.23,5136,Nam Ngum 1,Laos,Nam Ngum
+1374.0,1487.29,5136,Nam Ngum 1,Laos,Nam Ngum
+1375.0,1487.33,5136,Nam Ngum 1,Laos,Nam Ngum
+1376.0,1487.38,5136,Nam Ngum 1,Laos,Nam Ngum
+1377.0,1487.41,5136,Nam Ngum 1,Laos,Nam Ngum
+1378.0,1487.46,5136,Nam Ngum 1,Laos,Nam Ngum
+1379.0,1487.52,5136,Nam Ngum 1,Laos,Nam Ngum
+1380.0,1487.57,5136,Nam Ngum 1,Laos,Nam Ngum
+1381.0,1487.62,5136,Nam Ngum 1,Laos,Nam Ngum
+1382.0,1487.68,5136,Nam Ngum 1,Laos,Nam Ngum
+1383.0,1487.74,5136,Nam Ngum 1,Laos,Nam Ngum
+1384.0,1487.77,5136,Nam Ngum 1,Laos,Nam Ngum
+1385.0,1487.84,5136,Nam Ngum 1,Laos,Nam Ngum
+1386.0,1487.89,5136,Nam Ngum 1,Laos,Nam Ngum
+1387.0,1487.93,5136,Nam Ngum 1,Laos,Nam Ngum
+1388.0,1487.98,5136,Nam Ngum 1,Laos,Nam Ngum
+1389.0,1488.03,5136,Nam Ngum 1,Laos,Nam Ngum
+1390.0,1488.09,5136,Nam Ngum 1,Laos,Nam Ngum
+1391.0,1488.14,5136,Nam Ngum 1,Laos,Nam Ngum
+1392.0,1488.19,5136,Nam Ngum 1,Laos,Nam Ngum
+1393.0,1488.23,5136,Nam Ngum 1,Laos,Nam Ngum
+1394.0,1488.28,5136,Nam Ngum 1,Laos,Nam Ngum
+1395.0,1488.34,5136,Nam Ngum 1,Laos,Nam Ngum
+1396.0,1488.39,5136,Nam Ngum 1,Laos,Nam Ngum
+1397.0,1488.44,5136,Nam Ngum 1,Laos,Nam Ngum
+1398.0,1488.48,5136,Nam Ngum 1,Laos,Nam Ngum
+1399.0,1488.53,5136,Nam Ngum 1,Laos,Nam Ngum
+1400.0,1488.58,5136,Nam Ngum 1,Laos,Nam Ngum
+1401.0,1488.63,5136,Nam Ngum 1,Laos,Nam Ngum
+1402.0,1488.67,5136,Nam Ngum 1,Laos,Nam Ngum
+1403.0,1488.72,5136,Nam Ngum 1,Laos,Nam Ngum
+1404.0,1488.78,5136,Nam Ngum 1,Laos,Nam Ngum
+1405.0,1488.85,5136,Nam Ngum 1,Laos,Nam Ngum
+1406.0,1488.9,5136,Nam Ngum 1,Laos,Nam Ngum
+1407.0,1488.95,5136,Nam Ngum 1,Laos,Nam Ngum
+1408.0,1489.0,5136,Nam Ngum 1,Laos,Nam Ngum
+1409.0,1489.06,5136,Nam Ngum 1,Laos,Nam Ngum
+1410.0,1489.13,5136,Nam Ngum 1,Laos,Nam Ngum
+1411.0,1489.19,5136,Nam Ngum 1,Laos,Nam Ngum
+1412.0,1489.26,5136,Nam Ngum 1,Laos,Nam Ngum
+1413.0,1489.32,5136,Nam Ngum 1,Laos,Nam Ngum
+1414.0,1489.37,5136,Nam Ngum 1,Laos,Nam Ngum
+1415.0,1489.44,5136,Nam Ngum 1,Laos,Nam Ngum
+1416.0,1489.5,5136,Nam Ngum 1,Laos,Nam Ngum
+1417.0,1489.55,5136,Nam Ngum 1,Laos,Nam Ngum
+1418.0,1489.61,5136,Nam Ngum 1,Laos,Nam Ngum
+1419.0,1489.67,5136,Nam Ngum 1,Laos,Nam Ngum
+1420.0,1489.72,5136,Nam Ngum 1,Laos,Nam Ngum
+1421.0,1489.78,5136,Nam Ngum 1,Laos,Nam Ngum
+1422.0,1489.84,5136,Nam Ngum 1,Laos,Nam Ngum
+1423.0,1489.9,5136,Nam Ngum 1,Laos,Nam Ngum
+1424.0,1489.95,5136,Nam Ngum 1,Laos,Nam Ngum
+1425.0,1489.99,5136,Nam Ngum 1,Laos,Nam Ngum
+1426.0,1490.05,5136,Nam Ngum 1,Laos,Nam Ngum
+1427.0,1490.1,5136,Nam Ngum 1,Laos,Nam Ngum
+1428.0,1490.17,5136,Nam Ngum 1,Laos,Nam Ngum
+1429.0,1490.23,5136,Nam Ngum 1,Laos,Nam Ngum
+1430.0,1490.29,5136,Nam Ngum 1,Laos,Nam Ngum
+1431.0,1490.35,5136,Nam Ngum 1,Laos,Nam Ngum
+1432.0,1490.42,5136,Nam Ngum 1,Laos,Nam Ngum
+1433.0,1490.48,5136,Nam Ngum 1,Laos,Nam Ngum
+1434.0,1490.54,5136,Nam Ngum 1,Laos,Nam Ngum
+1435.0,1490.59,5136,Nam Ngum 1,Laos,Nam Ngum
+1436.0,1490.64,5136,Nam Ngum 1,Laos,Nam Ngum
+1437.0,1490.69,5136,Nam Ngum 1,Laos,Nam Ngum
+1438.0,1490.74,5136,Nam Ngum 1,Laos,Nam Ngum
+1439.0,1490.8,5136,Nam Ngum 1,Laos,Nam Ngum
+1440.0,1490.86,5136,Nam Ngum 1,Laos,Nam Ngum
+1441.0,1490.91,5136,Nam Ngum 1,Laos,Nam Ngum
+1442.0,1490.95,5136,Nam Ngum 1,Laos,Nam Ngum
+1443.0,1490.99,5136,Nam Ngum 1,Laos,Nam Ngum
+1444.0,1491.04,5136,Nam Ngum 1,Laos,Nam Ngum
+1445.0,1491.09,5136,Nam Ngum 1,Laos,Nam Ngum
+1446.0,1491.13,5136,Nam Ngum 1,Laos,Nam Ngum
+1447.0,1491.17,5136,Nam Ngum 1,Laos,Nam Ngum
+1448.0,1491.21,5136,Nam Ngum 1,Laos,Nam Ngum
+1449.0,1491.27,5136,Nam Ngum 1,Laos,Nam Ngum
+1450.0,1491.31,5136,Nam Ngum 1,Laos,Nam Ngum
+1451.0,1491.35,5136,Nam Ngum 1,Laos,Nam Ngum
+1452.0,1491.39,5136,Nam Ngum 1,Laos,Nam Ngum
+1453.0,1491.44,5136,Nam Ngum 1,Laos,Nam Ngum
+1454.0,1491.48,5136,Nam Ngum 1,Laos,Nam Ngum
+1455.0,1491.54,5136,Nam Ngum 1,Laos,Nam Ngum
+1456.0,1491.58,5136,Nam Ngum 1,Laos,Nam Ngum
+1457.0,1491.63,5136,Nam Ngum 1,Laos,Nam Ngum
+1458.0,1491.67,5136,Nam Ngum 1,Laos,Nam Ngum
+1459.0,1491.72,5136,Nam Ngum 1,Laos,Nam Ngum
+1460.0,1491.77,5136,Nam Ngum 1,Laos,Nam Ngum
+1461.0,1491.81,5136,Nam Ngum 1,Laos,Nam Ngum
+1462.0,1491.86,5136,Nam Ngum 1,Laos,Nam Ngum
+1463.0,1491.91,5136,Nam Ngum 1,Laos,Nam Ngum
+1464.0,1491.94,5136,Nam Ngum 1,Laos,Nam Ngum
+1465.0,1491.98,5136,Nam Ngum 1,Laos,Nam Ngum
+1466.0,1492.03,5136,Nam Ngum 1,Laos,Nam Ngum
+1467.0,1492.09,5136,Nam Ngum 1,Laos,Nam Ngum
+1468.0,1492.13,5136,Nam Ngum 1,Laos,Nam Ngum
+1469.0,1492.17,5136,Nam Ngum 1,Laos,Nam Ngum
+1470.0,1492.23,5136,Nam Ngum 1,Laos,Nam Ngum
+1471.0,1492.27,5136,Nam Ngum 1,Laos,Nam Ngum
+1472.0,1492.31,5136,Nam Ngum 1,Laos,Nam Ngum
+1473.0,1492.35,5136,Nam Ngum 1,Laos,Nam Ngum
+1474.0,1492.39,5136,Nam Ngum 1,Laos,Nam Ngum
+1475.0,1492.42,5136,Nam Ngum 1,Laos,Nam Ngum
+1476.0,1492.45,5136,Nam Ngum 1,Laos,Nam Ngum
+1477.0,1492.49,5136,Nam Ngum 1,Laos,Nam Ngum
+1478.0,1492.52,5136,Nam Ngum 1,Laos,Nam Ngum
+1479.0,1492.56,5136,Nam Ngum 1,Laos,Nam Ngum
+1480.0,1492.6,5136,Nam Ngum 1,Laos,Nam Ngum
+1481.0,1492.63,5136,Nam Ngum 1,Laos,Nam Ngum
+1482.0,1492.66,5136,Nam Ngum 1,Laos,Nam Ngum
+1483.0,1492.69,5136,Nam Ngum 1,Laos,Nam Ngum
+1484.0,1492.71,5136,Nam Ngum 1,Laos,Nam Ngum
+1485.0,1492.75,5136,Nam Ngum 1,Laos,Nam Ngum
+1486.0,1492.78,5136,Nam Ngum 1,Laos,Nam Ngum
+1487.0,1492.81,5136,Nam Ngum 1,Laos,Nam Ngum
+1488.0,1492.84,5136,Nam Ngum 1,Laos,Nam Ngum
+1489.0,1492.88,5136,Nam Ngum 1,Laos,Nam Ngum
+1490.0,1492.91,5136,Nam Ngum 1,Laos,Nam Ngum
+1491.0,1492.94,5136,Nam Ngum 1,Laos,Nam Ngum
+1492.0,1492.99,5136,Nam Ngum 1,Laos,Nam Ngum
+1494.0,1493.03,5136,Nam Ngum 1,Laos,Nam Ngum
+1495.0,1493.06,5136,Nam Ngum 1,Laos,Nam Ngum
+1496.0,1493.09,5136,Nam Ngum 1,Laos,Nam Ngum
+1497.0,1493.13,5136,Nam Ngum 1,Laos,Nam Ngum
+1498.0,1493.15,5136,Nam Ngum 1,Laos,Nam Ngum
+1499.0,1493.19,5136,Nam Ngum 1,Laos,Nam Ngum
+1500.0,1493.22,5136,Nam Ngum 1,Laos,Nam Ngum
+1501.0,1493.24,5136,Nam Ngum 1,Laos,Nam Ngum
+1502.0,1493.28,5136,Nam Ngum 1,Laos,Nam Ngum
+1503.0,1493.3,5136,Nam Ngum 1,Laos,Nam Ngum
+1504.0,1493.33,5136,Nam Ngum 1,Laos,Nam Ngum
+1505.0,1493.35,5136,Nam Ngum 1,Laos,Nam Ngum
+1506.0,1493.39,5136,Nam Ngum 1,Laos,Nam Ngum
+1507.0,1493.41,5136,Nam Ngum 1,Laos,Nam Ngum
+1508.0,1493.45,5136,Nam Ngum 1,Laos,Nam Ngum
+1509.0,1493.49,5136,Nam Ngum 1,Laos,Nam Ngum
+1510.0,1493.52,5136,Nam Ngum 1,Laos,Nam Ngum
+1511.0,1493.55,5136,Nam Ngum 1,Laos,Nam Ngum
+1512.0,1493.58,5136,Nam Ngum 1,Laos,Nam Ngum
+1513.0,1493.6,5136,Nam Ngum 1,Laos,Nam Ngum
+1514.0,1493.63,5136,Nam Ngum 1,Laos,Nam Ngum
+1516.0,1493.67,5136,Nam Ngum 1,Laos,Nam Ngum
+1517.0,1493.7,5136,Nam Ngum 1,Laos,Nam Ngum
+1518.0,1493.73,5136,Nam Ngum 1,Laos,Nam Ngum
+1519.0,1493.76,5136,Nam Ngum 1,Laos,Nam Ngum
+1520.0,1493.78,5136,Nam Ngum 1,Laos,Nam Ngum
+1521.0,1493.8,5136,Nam Ngum 1,Laos,Nam Ngum
+1522.0,1493.83,5136,Nam Ngum 1,Laos,Nam Ngum
+1523.0,1493.85,5136,Nam Ngum 1,Laos,Nam Ngum
+1524.0,1493.88,5136,Nam Ngum 1,Laos,Nam Ngum
+1525.0,1493.91,5136,Nam Ngum 1,Laos,Nam Ngum
+1526.0,1493.93,5136,Nam Ngum 1,Laos,Nam Ngum
+1527.0,1493.96,5136,Nam Ngum 1,Laos,Nam Ngum
+1528.0,1493.99,5136,Nam Ngum 1,Laos,Nam Ngum
+1529.0,1494.01,5136,Nam Ngum 1,Laos,Nam Ngum
+1530.0,1494.03,5136,Nam Ngum 1,Laos,Nam Ngum
+1531.0,1494.06,5136,Nam Ngum 1,Laos,Nam Ngum
+1532.0,1494.08,5136,Nam Ngum 1,Laos,Nam Ngum
+1533.0,1494.1,5136,Nam Ngum 1,Laos,Nam Ngum
+1534.0,1494.12,5136,Nam Ngum 1,Laos,Nam Ngum
+1535.0,1494.14,5136,Nam Ngum 1,Laos,Nam Ngum
+1536.0,1494.17,5136,Nam Ngum 1,Laos,Nam Ngum
+1537.0,1494.2,5136,Nam Ngum 1,Laos,Nam Ngum
+1539.0,1494.24,5136,Nam Ngum 1,Laos,Nam Ngum
+1540.0,1494.26,5136,Nam Ngum 1,Laos,Nam Ngum
+1541.0,1494.28,5136,Nam Ngum 1,Laos,Nam Ngum
+1542.0,1494.3,5136,Nam Ngum 1,Laos,Nam Ngum
+1543.0,1494.32,5136,Nam Ngum 1,Laos,Nam Ngum
+1544.0,1494.34,5136,Nam Ngum 1,Laos,Nam Ngum
+1545.0,1494.37,5136,Nam Ngum 1,Laos,Nam Ngum
+1547.0,1494.39,5136,Nam Ngum 1,Laos,Nam Ngum
+1548.0,1494.41,5136,Nam Ngum 1,Laos,Nam Ngum
+1549.0,1494.44,5136,Nam Ngum 1,Laos,Nam Ngum
+1550.0,1494.46,5136,Nam Ngum 1,Laos,Nam Ngum
+1551.0,1494.48,5136,Nam Ngum 1,Laos,Nam Ngum
+1552.0,1494.5,5136,Nam Ngum 1,Laos,Nam Ngum
+1553.0,1494.53,5136,Nam Ngum 1,Laos,Nam Ngum
+1554.0,1494.54,5136,Nam Ngum 1,Laos,Nam Ngum
+1555.0,1494.57,5136,Nam Ngum 1,Laos,Nam Ngum
+1557.0,1494.6,5136,Nam Ngum 1,Laos,Nam Ngum
+1558.0,1494.63,5136,Nam Ngum 1,Laos,Nam Ngum
+1560.0,1494.66,5136,Nam Ngum 1,Laos,Nam Ngum
+1561.0,1494.69,5136,Nam Ngum 1,Laos,Nam Ngum
+1562.0,1494.71,5136,Nam Ngum 1,Laos,Nam Ngum
+1563.0,1494.73,5136,Nam Ngum 1,Laos,Nam Ngum
+1564.0,1494.75,5136,Nam Ngum 1,Laos,Nam Ngum
+1565.0,1494.77,5136,Nam Ngum 1,Laos,Nam Ngum
+1567.0,1494.81,5136,Nam Ngum 1,Laos,Nam Ngum
+1569.0,1494.84,5136,Nam Ngum 1,Laos,Nam Ngum
+1571.0,1494.87,5136,Nam Ngum 1,Laos,Nam Ngum
+1573.0,1494.9,5136,Nam Ngum 1,Laos,Nam Ngum
+1574.0,1494.92,5136,Nam Ngum 1,Laos,Nam Ngum
+1578.0,1494.97,5136,Nam Ngum 1,Laos,Nam Ngum
+1581.0,1495.01,5136,Nam Ngum 1,Laos,Nam Ngum
+1583.0,1495.04,5136,Nam Ngum 1,Laos,Nam Ngum
+1585.0,1495.06,5136,Nam Ngum 1,Laos,Nam Ngum
+1587.0,1495.09,5136,Nam Ngum 1,Laos,Nam Ngum
+1592.0,1495.14,5136,Nam Ngum 1,Laos,Nam Ngum
+1616.0,1495.29,5136,Nam Ngum 1,Laos,Nam Ngum
+551.0,4.51,6999,Nam Theun 2,Laos,Nam Theun
+552.0,10.03,6999,Nam Theun 2,Laos,Nam Theun
+553.0,15.55,6999,Nam Theun 2,Laos,Nam Theun
+554.0,21.07,6999,Nam Theun 2,Laos,Nam Theun
+555.0,26.59,6999,Nam Theun 2,Laos,Nam Theun
+556.0,52.77,6999,Nam Theun 2,Laos,Nam Theun
+557.0,79.18,6999,Nam Theun 2,Laos,Nam Theun
+558.0,105.18,6999,Nam Theun 2,Laos,Nam Theun
+559.0,131.07,6999,Nam Theun 2,Laos,Nam Theun
+560.0,156.99,6999,Nam Theun 2,Laos,Nam Theun
+561.0,182.45,6999,Nam Theun 2,Laos,Nam Theun
+562.0,207.71,6999,Nam Theun 2,Laos,Nam Theun
+563.0,232.66,6999,Nam Theun 2,Laos,Nam Theun
+564.0,256.9,6999,Nam Theun 2,Laos,Nam Theun
+565.0,280.67,6999,Nam Theun 2,Laos,Nam Theun
+566.0,303.5,6999,Nam Theun 2,Laos,Nam Theun
+567.0,325.76,6999,Nam Theun 2,Laos,Nam Theun
+568.0,346.87,6999,Nam Theun 2,Laos,Nam Theun
+569.0,366.6,6999,Nam Theun 2,Laos,Nam Theun
+570.0,385.65,6999,Nam Theun 2,Laos,Nam Theun
+571.0,403.54,6999,Nam Theun 2,Laos,Nam Theun
+572.0,420.45,6999,Nam Theun 2,Laos,Nam Theun
+573.0,436.33,6999,Nam Theun 2,Laos,Nam Theun
+574.0,451.12,6999,Nam Theun 2,Laos,Nam Theun
+575.0,464.91,6999,Nam Theun 2,Laos,Nam Theun
+576.0,477.9,6999,Nam Theun 2,Laos,Nam Theun
+577.0,490.19,6999,Nam Theun 2,Laos,Nam Theun
+578.0,501.82,6999,Nam Theun 2,Laos,Nam Theun
+579.0,512.8,6999,Nam Theun 2,Laos,Nam Theun
+580.0,523.19,6999,Nam Theun 2,Laos,Nam Theun
+581.0,533.22,6999,Nam Theun 2,Laos,Nam Theun
+582.0,542.69,6999,Nam Theun 2,Laos,Nam Theun
+583.0,551.69,6999,Nam Theun 2,Laos,Nam Theun
+584.0,560.4,6999,Nam Theun 2,Laos,Nam Theun
+585.0,568.71,6999,Nam Theun 2,Laos,Nam Theun
+586.0,576.61,6999,Nam Theun 2,Laos,Nam Theun
+587.0,584.32,6999,Nam Theun 2,Laos,Nam Theun
+588.0,591.6,6999,Nam Theun 2,Laos,Nam Theun
+589.0,598.58,6999,Nam Theun 2,Laos,Nam Theun
+590.0,605.53,6999,Nam Theun 2,Laos,Nam Theun
+591.0,612.16,6999,Nam Theun 2,Laos,Nam Theun
+592.0,618.5,6999,Nam Theun 2,Laos,Nam Theun
+593.0,624.63,6999,Nam Theun 2,Laos,Nam Theun
+594.0,630.54,6999,Nam Theun 2,Laos,Nam Theun
+595.0,636.25,6999,Nam Theun 2,Laos,Nam Theun
+596.0,641.84,6999,Nam Theun 2,Laos,Nam Theun
+597.0,647.23,6999,Nam Theun 2,Laos,Nam Theun
+598.0,652.42,6999,Nam Theun 2,Laos,Nam Theun
+599.0,657.43,6999,Nam Theun 2,Laos,Nam Theun
+600.0,662.46,6999,Nam Theun 2,Laos,Nam Theun
+601.0,667.34,6999,Nam Theun 2,Laos,Nam Theun
+602.0,672.15,6999,Nam Theun 2,Laos,Nam Theun
+603.0,676.73,6999,Nam Theun 2,Laos,Nam Theun
+604.0,681.3,6999,Nam Theun 2,Laos,Nam Theun
+605.0,685.74,6999,Nam Theun 2,Laos,Nam Theun
+606.0,690.1,6999,Nam Theun 2,Laos,Nam Theun
+607.0,694.32,6999,Nam Theun 2,Laos,Nam Theun
+608.0,698.69,6999,Nam Theun 2,Laos,Nam Theun
+609.0,702.97,6999,Nam Theun 2,Laos,Nam Theun
+610.0,707.19,6999,Nam Theun 2,Laos,Nam Theun
+611.0,711.49,6999,Nam Theun 2,Laos,Nam Theun
+612.0,715.81,6999,Nam Theun 2,Laos,Nam Theun
+613.0,720.01,6999,Nam Theun 2,Laos,Nam Theun
+614.0,724.23,6999,Nam Theun 2,Laos,Nam Theun
+615.0,728.4,6999,Nam Theun 2,Laos,Nam Theun
+616.0,732.52,6999,Nam Theun 2,Laos,Nam Theun
+617.0,736.47,6999,Nam Theun 2,Laos,Nam Theun
+618.0,740.47,6999,Nam Theun 2,Laos,Nam Theun
+619.0,744.56,6999,Nam Theun 2,Laos,Nam Theun
+620.0,748.52,6999,Nam Theun 2,Laos,Nam Theun
+621.0,752.44,6999,Nam Theun 2,Laos,Nam Theun
+622.0,756.43,6999,Nam Theun 2,Laos,Nam Theun
+623.0,760.31,6999,Nam Theun 2,Laos,Nam Theun
+624.0,764.18,6999,Nam Theun 2,Laos,Nam Theun
+625.0,768.02,6999,Nam Theun 2,Laos,Nam Theun
+626.0,771.85,6999,Nam Theun 2,Laos,Nam Theun
+627.0,775.66,6999,Nam Theun 2,Laos,Nam Theun
+628.0,779.37,6999,Nam Theun 2,Laos,Nam Theun
+629.0,782.99,6999,Nam Theun 2,Laos,Nam Theun
+630.0,786.73,6999,Nam Theun 2,Laos,Nam Theun
+631.0,790.31,6999,Nam Theun 2,Laos,Nam Theun
+632.0,793.91,6999,Nam Theun 2,Laos,Nam Theun
+633.0,797.45,6999,Nam Theun 2,Laos,Nam Theun
+634.0,800.98,6999,Nam Theun 2,Laos,Nam Theun
+635.0,804.49,6999,Nam Theun 2,Laos,Nam Theun
+636.0,807.95,6999,Nam Theun 2,Laos,Nam Theun
+637.0,811.5,6999,Nam Theun 2,Laos,Nam Theun
+638.0,814.97,6999,Nam Theun 2,Laos,Nam Theun
+639.0,818.48,6999,Nam Theun 2,Laos,Nam Theun
+640.0,821.91,6999,Nam Theun 2,Laos,Nam Theun
+641.0,825.37,6999,Nam Theun 2,Laos,Nam Theun
+642.0,828.79,6999,Nam Theun 2,Laos,Nam Theun
+643.0,832.23,6999,Nam Theun 2,Laos,Nam Theun
+644.0,835.65,6999,Nam Theun 2,Laos,Nam Theun
+645.0,838.99,6999,Nam Theun 2,Laos,Nam Theun
+646.0,842.24,6999,Nam Theun 2,Laos,Nam Theun
+647.0,845.54,6999,Nam Theun 2,Laos,Nam Theun
+648.0,848.88,6999,Nam Theun 2,Laos,Nam Theun
+649.0,852.04,6999,Nam Theun 2,Laos,Nam Theun
+650.0,855.27,6999,Nam Theun 2,Laos,Nam Theun
+651.0,858.47,6999,Nam Theun 2,Laos,Nam Theun
+652.0,861.54,6999,Nam Theun 2,Laos,Nam Theun
+653.0,864.6,6999,Nam Theun 2,Laos,Nam Theun
+654.0,867.77,6999,Nam Theun 2,Laos,Nam Theun
+655.0,870.91,6999,Nam Theun 2,Laos,Nam Theun
+656.0,874.06,6999,Nam Theun 2,Laos,Nam Theun
+657.0,877.17,6999,Nam Theun 2,Laos,Nam Theun
+658.0,880.22,6999,Nam Theun 2,Laos,Nam Theun
+659.0,883.14,6999,Nam Theun 2,Laos,Nam Theun
+660.0,886.23,6999,Nam Theun 2,Laos,Nam Theun
+661.0,889.24,6999,Nam Theun 2,Laos,Nam Theun
+662.0,892.27,6999,Nam Theun 2,Laos,Nam Theun
+663.0,895.27,6999,Nam Theun 2,Laos,Nam Theun
+664.0,898.22,6999,Nam Theun 2,Laos,Nam Theun
+665.0,901.16,6999,Nam Theun 2,Laos,Nam Theun
+666.0,904.17,6999,Nam Theun 2,Laos,Nam Theun
+667.0,907.16,6999,Nam Theun 2,Laos,Nam Theun
+668.0,910.14,6999,Nam Theun 2,Laos,Nam Theun
+669.0,913.09,6999,Nam Theun 2,Laos,Nam Theun
+670.0,915.97,6999,Nam Theun 2,Laos,Nam Theun
+671.0,918.94,6999,Nam Theun 2,Laos,Nam Theun
+672.0,921.93,6999,Nam Theun 2,Laos,Nam Theun
+673.0,924.92,6999,Nam Theun 2,Laos,Nam Theun
+674.0,927.94,6999,Nam Theun 2,Laos,Nam Theun
+675.0,930.8,6999,Nam Theun 2,Laos,Nam Theun
+676.0,933.6,6999,Nam Theun 2,Laos,Nam Theun
+677.0,936.5,6999,Nam Theun 2,Laos,Nam Theun
+678.0,939.34,6999,Nam Theun 2,Laos,Nam Theun
+679.0,942.18,6999,Nam Theun 2,Laos,Nam Theun
+680.0,944.98,6999,Nam Theun 2,Laos,Nam Theun
+681.0,947.8,6999,Nam Theun 2,Laos,Nam Theun
+682.0,950.55,6999,Nam Theun 2,Laos,Nam Theun
+683.0,953.28,6999,Nam Theun 2,Laos,Nam Theun
+684.0,956.01,6999,Nam Theun 2,Laos,Nam Theun
+685.0,958.7,6999,Nam Theun 2,Laos,Nam Theun
+686.0,961.34,6999,Nam Theun 2,Laos,Nam Theun
+687.0,964.01,6999,Nam Theun 2,Laos,Nam Theun
+688.0,966.74,6999,Nam Theun 2,Laos,Nam Theun
+689.0,969.28,6999,Nam Theun 2,Laos,Nam Theun
+690.0,971.88,6999,Nam Theun 2,Laos,Nam Theun
+691.0,974.51,6999,Nam Theun 2,Laos,Nam Theun
+692.0,977.09,6999,Nam Theun 2,Laos,Nam Theun
+693.0,979.66,6999,Nam Theun 2,Laos,Nam Theun
+694.0,982.31,6999,Nam Theun 2,Laos,Nam Theun
+695.0,984.98,6999,Nam Theun 2,Laos,Nam Theun
+696.0,987.73,6999,Nam Theun 2,Laos,Nam Theun
+697.0,990.25,6999,Nam Theun 2,Laos,Nam Theun
+698.0,992.85,6999,Nam Theun 2,Laos,Nam Theun
+699.0,995.41,6999,Nam Theun 2,Laos,Nam Theun
+700.0,998.05,6999,Nam Theun 2,Laos,Nam Theun
+701.0,1000.55,6999,Nam Theun 2,Laos,Nam Theun
+702.0,1003.13,6999,Nam Theun 2,Laos,Nam Theun
+703.0,1005.72,6999,Nam Theun 2,Laos,Nam Theun
+704.0,1008.39,6999,Nam Theun 2,Laos,Nam Theun
+705.0,1011.03,6999,Nam Theun 2,Laos,Nam Theun
+706.0,1013.6,6999,Nam Theun 2,Laos,Nam Theun
+707.0,1016.19,6999,Nam Theun 2,Laos,Nam Theun
+708.0,1018.84,6999,Nam Theun 2,Laos,Nam Theun
+709.0,1021.53,6999,Nam Theun 2,Laos,Nam Theun
+710.0,1024.17,6999,Nam Theun 2,Laos,Nam Theun
+711.0,1026.83,6999,Nam Theun 2,Laos,Nam Theun
+712.0,1029.47,6999,Nam Theun 2,Laos,Nam Theun
+713.0,1032.01,6999,Nam Theun 2,Laos,Nam Theun
+714.0,1034.56,6999,Nam Theun 2,Laos,Nam Theun
+715.0,1037.09,6999,Nam Theun 2,Laos,Nam Theun
+716.0,1039.67,6999,Nam Theun 2,Laos,Nam Theun
+717.0,1042.23,6999,Nam Theun 2,Laos,Nam Theun
+718.0,1044.81,6999,Nam Theun 2,Laos,Nam Theun
+719.0,1047.36,6999,Nam Theun 2,Laos,Nam Theun
+720.0,1049.8,6999,Nam Theun 2,Laos,Nam Theun
+721.0,1052.27,6999,Nam Theun 2,Laos,Nam Theun
+722.0,1054.81,6999,Nam Theun 2,Laos,Nam Theun
+723.0,1057.32,6999,Nam Theun 2,Laos,Nam Theun
+724.0,1059.75,6999,Nam Theun 2,Laos,Nam Theun
+725.0,1062.22,6999,Nam Theun 2,Laos,Nam Theun
+726.0,1064.55,6999,Nam Theun 2,Laos,Nam Theun
+727.0,1066.97,6999,Nam Theun 2,Laos,Nam Theun
+728.0,1069.38,6999,Nam Theun 2,Laos,Nam Theun
+729.0,1071.73,6999,Nam Theun 2,Laos,Nam Theun
+730.0,1074.13,6999,Nam Theun 2,Laos,Nam Theun
+731.0,1076.43,6999,Nam Theun 2,Laos,Nam Theun
+732.0,1078.81,6999,Nam Theun 2,Laos,Nam Theun
+733.0,1081.19,6999,Nam Theun 2,Laos,Nam Theun
+734.0,1083.49,6999,Nam Theun 2,Laos,Nam Theun
+735.0,1085.85,6999,Nam Theun 2,Laos,Nam Theun
+736.0,1088.14,6999,Nam Theun 2,Laos,Nam Theun
+737.0,1090.51,6999,Nam Theun 2,Laos,Nam Theun
+738.0,1092.87,6999,Nam Theun 2,Laos,Nam Theun
+739.0,1095.16,6999,Nam Theun 2,Laos,Nam Theun
+740.0,1097.53,6999,Nam Theun 2,Laos,Nam Theun
+741.0,1099.86,6999,Nam Theun 2,Laos,Nam Theun
+742.0,1102.15,6999,Nam Theun 2,Laos,Nam Theun
+743.0,1104.38,6999,Nam Theun 2,Laos,Nam Theun
+744.0,1106.71,6999,Nam Theun 2,Laos,Nam Theun
+745.0,1108.98,6999,Nam Theun 2,Laos,Nam Theun
+746.0,1111.22,6999,Nam Theun 2,Laos,Nam Theun
+747.0,1113.56,6999,Nam Theun 2,Laos,Nam Theun
+748.0,1115.76,6999,Nam Theun 2,Laos,Nam Theun
+749.0,1118.01,6999,Nam Theun 2,Laos,Nam Theun
+750.0,1120.13,6999,Nam Theun 2,Laos,Nam Theun
+751.0,1122.28,6999,Nam Theun 2,Laos,Nam Theun
+752.0,1124.34,6999,Nam Theun 2,Laos,Nam Theun
+753.0,1126.45,6999,Nam Theun 2,Laos,Nam Theun
+754.0,1128.53,6999,Nam Theun 2,Laos,Nam Theun
+755.0,1130.75,6999,Nam Theun 2,Laos,Nam Theun
+756.0,1132.79,6999,Nam Theun 2,Laos,Nam Theun
+757.0,1134.81,6999,Nam Theun 2,Laos,Nam Theun
+758.0,1136.85,6999,Nam Theun 2,Laos,Nam Theun
+759.0,1138.9,6999,Nam Theun 2,Laos,Nam Theun
+760.0,1140.94,6999,Nam Theun 2,Laos,Nam Theun
+761.0,1142.93,6999,Nam Theun 2,Laos,Nam Theun
+762.0,1144.87,6999,Nam Theun 2,Laos,Nam Theun
+763.0,1146.86,6999,Nam Theun 2,Laos,Nam Theun
+764.0,1148.87,6999,Nam Theun 2,Laos,Nam Theun
+765.0,1150.8,6999,Nam Theun 2,Laos,Nam Theun
+766.0,1152.73,6999,Nam Theun 2,Laos,Nam Theun
+767.0,1154.67,6999,Nam Theun 2,Laos,Nam Theun
+768.0,1156.57,6999,Nam Theun 2,Laos,Nam Theun
+769.0,1158.44,6999,Nam Theun 2,Laos,Nam Theun
+770.0,1160.28,6999,Nam Theun 2,Laos,Nam Theun
+771.0,1162.1,6999,Nam Theun 2,Laos,Nam Theun
+772.0,1163.94,6999,Nam Theun 2,Laos,Nam Theun
+773.0,1165.72,6999,Nam Theun 2,Laos,Nam Theun
+774.0,1167.49,6999,Nam Theun 2,Laos,Nam Theun
+775.0,1169.23,6999,Nam Theun 2,Laos,Nam Theun
+776.0,1170.96,6999,Nam Theun 2,Laos,Nam Theun
+777.0,1172.77,6999,Nam Theun 2,Laos,Nam Theun
+778.0,1174.38,6999,Nam Theun 2,Laos,Nam Theun
+779.0,1175.94,6999,Nam Theun 2,Laos,Nam Theun
+780.0,1177.58,6999,Nam Theun 2,Laos,Nam Theun
+781.0,1179.2,6999,Nam Theun 2,Laos,Nam Theun
+782.0,1180.82,6999,Nam Theun 2,Laos,Nam Theun
+783.0,1182.48,6999,Nam Theun 2,Laos,Nam Theun
+784.0,1184.17,6999,Nam Theun 2,Laos,Nam Theun
+785.0,1185.67,6999,Nam Theun 2,Laos,Nam Theun
+786.0,1187.24,6999,Nam Theun 2,Laos,Nam Theun
+787.0,1188.69,6999,Nam Theun 2,Laos,Nam Theun
+788.0,1190.18,6999,Nam Theun 2,Laos,Nam Theun
+789.0,1191.64,6999,Nam Theun 2,Laos,Nam Theun
+790.0,1193.15,6999,Nam Theun 2,Laos,Nam Theun
+791.0,1194.59,6999,Nam Theun 2,Laos,Nam Theun
+792.0,1196.04,6999,Nam Theun 2,Laos,Nam Theun
+793.0,1197.5,6999,Nam Theun 2,Laos,Nam Theun
+794.0,1198.91,6999,Nam Theun 2,Laos,Nam Theun
+795.0,1200.25,6999,Nam Theun 2,Laos,Nam Theun
+796.0,1201.59,6999,Nam Theun 2,Laos,Nam Theun
+797.0,1202.89,6999,Nam Theun 2,Laos,Nam Theun
+798.0,1204.25,6999,Nam Theun 2,Laos,Nam Theun
+799.0,1205.58,6999,Nam Theun 2,Laos,Nam Theun
+800.0,1206.83,6999,Nam Theun 2,Laos,Nam Theun
+801.0,1208.04,6999,Nam Theun 2,Laos,Nam Theun
+802.0,1209.31,6999,Nam Theun 2,Laos,Nam Theun
+803.0,1210.49,6999,Nam Theun 2,Laos,Nam Theun
+804.0,1211.66,6999,Nam Theun 2,Laos,Nam Theun
+805.0,1212.78,6999,Nam Theun 2,Laos,Nam Theun
+806.0,1213.85,6999,Nam Theun 2,Laos,Nam Theun
+807.0,1215.01,6999,Nam Theun 2,Laos,Nam Theun
+808.0,1216.14,6999,Nam Theun 2,Laos,Nam Theun
+809.0,1217.15,6999,Nam Theun 2,Laos,Nam Theun
+810.0,1218.23,6999,Nam Theun 2,Laos,Nam Theun
+811.0,1219.31,6999,Nam Theun 2,Laos,Nam Theun
+812.0,1220.36,6999,Nam Theun 2,Laos,Nam Theun
+813.0,1221.42,6999,Nam Theun 2,Laos,Nam Theun
+814.0,1222.39,6999,Nam Theun 2,Laos,Nam Theun
+815.0,1223.36,6999,Nam Theun 2,Laos,Nam Theun
+816.0,1224.34,6999,Nam Theun 2,Laos,Nam Theun
+817.0,1225.34,6999,Nam Theun 2,Laos,Nam Theun
+818.0,1226.32,6999,Nam Theun 2,Laos,Nam Theun
+819.0,1227.36,6999,Nam Theun 2,Laos,Nam Theun
+820.0,1228.31,6999,Nam Theun 2,Laos,Nam Theun
+821.0,1229.29,6999,Nam Theun 2,Laos,Nam Theun
+822.0,1230.25,6999,Nam Theun 2,Laos,Nam Theun
+823.0,1231.25,6999,Nam Theun 2,Laos,Nam Theun
+824.0,1232.23,6999,Nam Theun 2,Laos,Nam Theun
+825.0,1233.17,6999,Nam Theun 2,Laos,Nam Theun
+826.0,1234.07,6999,Nam Theun 2,Laos,Nam Theun
+827.0,1234.99,6999,Nam Theun 2,Laos,Nam Theun
+828.0,1235.9,6999,Nam Theun 2,Laos,Nam Theun
+829.0,1236.81,6999,Nam Theun 2,Laos,Nam Theun
+830.0,1237.62,6999,Nam Theun 2,Laos,Nam Theun
+831.0,1238.47,6999,Nam Theun 2,Laos,Nam Theun
+832.0,1239.34,6999,Nam Theun 2,Laos,Nam Theun
+833.0,1240.19,6999,Nam Theun 2,Laos,Nam Theun
+834.0,1241.02,6999,Nam Theun 2,Laos,Nam Theun
+835.0,1241.85,6999,Nam Theun 2,Laos,Nam Theun
+836.0,1242.66,6999,Nam Theun 2,Laos,Nam Theun
+837.0,1243.51,6999,Nam Theun 2,Laos,Nam Theun
+838.0,1244.31,6999,Nam Theun 2,Laos,Nam Theun
+839.0,1245.06,6999,Nam Theun 2,Laos,Nam Theun
+840.0,1245.81,6999,Nam Theun 2,Laos,Nam Theun
+841.0,1246.59,6999,Nam Theun 2,Laos,Nam Theun
+842.0,1247.35,6999,Nam Theun 2,Laos,Nam Theun
+843.0,1248.08,6999,Nam Theun 2,Laos,Nam Theun
+844.0,1248.84,6999,Nam Theun 2,Laos,Nam Theun
+845.0,1249.53,6999,Nam Theun 2,Laos,Nam Theun
+846.0,1250.2,6999,Nam Theun 2,Laos,Nam Theun
+847.0,1250.88,6999,Nam Theun 2,Laos,Nam Theun
+848.0,1251.56,6999,Nam Theun 2,Laos,Nam Theun
+849.0,1252.26,6999,Nam Theun 2,Laos,Nam Theun
+850.0,1252.96,6999,Nam Theun 2,Laos,Nam Theun
+851.0,1253.63,6999,Nam Theun 2,Laos,Nam Theun
+852.0,1254.3,6999,Nam Theun 2,Laos,Nam Theun
+853.0,1254.95,6999,Nam Theun 2,Laos,Nam Theun
+854.0,1255.54,6999,Nam Theun 2,Laos,Nam Theun
+855.0,1256.19,6999,Nam Theun 2,Laos,Nam Theun
+856.0,1256.81,6999,Nam Theun 2,Laos,Nam Theun
+857.0,1257.45,6999,Nam Theun 2,Laos,Nam Theun
+858.0,1258.01,6999,Nam Theun 2,Laos,Nam Theun
+859.0,1258.6,6999,Nam Theun 2,Laos,Nam Theun
+860.0,1259.16,6999,Nam Theun 2,Laos,Nam Theun
+861.0,1259.72,6999,Nam Theun 2,Laos,Nam Theun
+862.0,1260.28,6999,Nam Theun 2,Laos,Nam Theun
+863.0,1260.86,6999,Nam Theun 2,Laos,Nam Theun
+864.0,1261.42,6999,Nam Theun 2,Laos,Nam Theun
+865.0,1261.94,6999,Nam Theun 2,Laos,Nam Theun
+866.0,1262.49,6999,Nam Theun 2,Laos,Nam Theun
+867.0,1263.0,6999,Nam Theun 2,Laos,Nam Theun
+868.0,1263.52,6999,Nam Theun 2,Laos,Nam Theun
+869.0,1264.04,6999,Nam Theun 2,Laos,Nam Theun
+870.0,1264.58,6999,Nam Theun 2,Laos,Nam Theun
+871.0,1265.09,6999,Nam Theun 2,Laos,Nam Theun
+872.0,1265.55,6999,Nam Theun 2,Laos,Nam Theun
+873.0,1266.04,6999,Nam Theun 2,Laos,Nam Theun
+874.0,1266.51,6999,Nam Theun 2,Laos,Nam Theun
+875.0,1266.98,6999,Nam Theun 2,Laos,Nam Theun
+876.0,1267.42,6999,Nam Theun 2,Laos,Nam Theun
+877.0,1267.87,6999,Nam Theun 2,Laos,Nam Theun
+878.0,1268.28,6999,Nam Theun 2,Laos,Nam Theun
+879.0,1268.71,6999,Nam Theun 2,Laos,Nam Theun
+880.0,1269.09,6999,Nam Theun 2,Laos,Nam Theun
+881.0,1269.53,6999,Nam Theun 2,Laos,Nam Theun
+882.0,1269.93,6999,Nam Theun 2,Laos,Nam Theun
+883.0,1270.35,6999,Nam Theun 2,Laos,Nam Theun
+884.0,1270.73,6999,Nam Theun 2,Laos,Nam Theun
+885.0,1271.13,6999,Nam Theun 2,Laos,Nam Theun
+886.0,1271.52,6999,Nam Theun 2,Laos,Nam Theun
+887.0,1271.87,6999,Nam Theun 2,Laos,Nam Theun
+888.0,1272.22,6999,Nam Theun 2,Laos,Nam Theun
+889.0,1272.57,6999,Nam Theun 2,Laos,Nam Theun
+890.0,1272.88,6999,Nam Theun 2,Laos,Nam Theun
+891.0,1273.26,6999,Nam Theun 2,Laos,Nam Theun
+892.0,1273.6,6999,Nam Theun 2,Laos,Nam Theun
+893.0,1273.96,6999,Nam Theun 2,Laos,Nam Theun
+894.0,1274.29,6999,Nam Theun 2,Laos,Nam Theun
+895.0,1274.62,6999,Nam Theun 2,Laos,Nam Theun
+896.0,1274.93,6999,Nam Theun 2,Laos,Nam Theun
+897.0,1275.27,6999,Nam Theun 2,Laos,Nam Theun
+898.0,1275.6,6999,Nam Theun 2,Laos,Nam Theun
+899.0,1275.88,6999,Nam Theun 2,Laos,Nam Theun
+900.0,1276.21,6999,Nam Theun 2,Laos,Nam Theun
+901.0,1276.49,6999,Nam Theun 2,Laos,Nam Theun
+902.0,1276.75,6999,Nam Theun 2,Laos,Nam Theun
+903.0,1277.03,6999,Nam Theun 2,Laos,Nam Theun
+904.0,1277.31,6999,Nam Theun 2,Laos,Nam Theun
+905.0,1277.57,6999,Nam Theun 2,Laos,Nam Theun
+906.0,1277.85,6999,Nam Theun 2,Laos,Nam Theun
+907.0,1278.14,6999,Nam Theun 2,Laos,Nam Theun
+908.0,1278.4,6999,Nam Theun 2,Laos,Nam Theun
+909.0,1278.67,6999,Nam Theun 2,Laos,Nam Theun
+910.0,1278.93,6999,Nam Theun 2,Laos,Nam Theun
+911.0,1279.16,6999,Nam Theun 2,Laos,Nam Theun
+912.0,1279.41,6999,Nam Theun 2,Laos,Nam Theun
+913.0,1279.64,6999,Nam Theun 2,Laos,Nam Theun
+914.0,1279.9,6999,Nam Theun 2,Laos,Nam Theun
+915.0,1280.14,6999,Nam Theun 2,Laos,Nam Theun
+916.0,1280.39,6999,Nam Theun 2,Laos,Nam Theun
+917.0,1280.61,6999,Nam Theun 2,Laos,Nam Theun
+918.0,1280.86,6999,Nam Theun 2,Laos,Nam Theun
+919.0,1281.1,6999,Nam Theun 2,Laos,Nam Theun
+920.0,1281.34,6999,Nam Theun 2,Laos,Nam Theun
+921.0,1281.58,6999,Nam Theun 2,Laos,Nam Theun
+922.0,1281.81,6999,Nam Theun 2,Laos,Nam Theun
+923.0,1282.05,6999,Nam Theun 2,Laos,Nam Theun
+924.0,1282.25,6999,Nam Theun 2,Laos,Nam Theun
+925.0,1282.49,6999,Nam Theun 2,Laos,Nam Theun
+926.0,1282.71,6999,Nam Theun 2,Laos,Nam Theun
+927.0,1282.9,6999,Nam Theun 2,Laos,Nam Theun
+928.0,1283.11,6999,Nam Theun 2,Laos,Nam Theun
+929.0,1283.31,6999,Nam Theun 2,Laos,Nam Theun
+930.0,1283.51,6999,Nam Theun 2,Laos,Nam Theun
+931.0,1283.7,6999,Nam Theun 2,Laos,Nam Theun
+932.0,1283.91,6999,Nam Theun 2,Laos,Nam Theun
+933.0,1284.12,6999,Nam Theun 2,Laos,Nam Theun
+934.0,1284.29,6999,Nam Theun 2,Laos,Nam Theun
+935.0,1284.46,6999,Nam Theun 2,Laos,Nam Theun
+936.0,1284.65,6999,Nam Theun 2,Laos,Nam Theun
+937.0,1284.79,6999,Nam Theun 2,Laos,Nam Theun
+938.0,1284.96,6999,Nam Theun 2,Laos,Nam Theun
+939.0,1285.15,6999,Nam Theun 2,Laos,Nam Theun
+940.0,1285.31,6999,Nam Theun 2,Laos,Nam Theun
+941.0,1285.49,6999,Nam Theun 2,Laos,Nam Theun
+942.0,1285.67,6999,Nam Theun 2,Laos,Nam Theun
+943.0,1285.85,6999,Nam Theun 2,Laos,Nam Theun
+944.0,1285.99,6999,Nam Theun 2,Laos,Nam Theun
+945.0,1286.15,6999,Nam Theun 2,Laos,Nam Theun
+946.0,1286.31,6999,Nam Theun 2,Laos,Nam Theun
+947.0,1286.46,6999,Nam Theun 2,Laos,Nam Theun
+948.0,1286.61,6999,Nam Theun 2,Laos,Nam Theun
+949.0,1286.76,6999,Nam Theun 2,Laos,Nam Theun
+950.0,1286.9,6999,Nam Theun 2,Laos,Nam Theun
+951.0,1287.06,6999,Nam Theun 2,Laos,Nam Theun
+952.0,1287.2,6999,Nam Theun 2,Laos,Nam Theun
+953.0,1287.32,6999,Nam Theun 2,Laos,Nam Theun
+954.0,1287.45,6999,Nam Theun 2,Laos,Nam Theun
+955.0,1287.58,6999,Nam Theun 2,Laos,Nam Theun
+956.0,1287.71,6999,Nam Theun 2,Laos,Nam Theun
+957.0,1287.84,6999,Nam Theun 2,Laos,Nam Theun
+958.0,1287.95,6999,Nam Theun 2,Laos,Nam Theun
+959.0,1288.09,6999,Nam Theun 2,Laos,Nam Theun
+960.0,1288.19,6999,Nam Theun 2,Laos,Nam Theun
+961.0,1288.3,6999,Nam Theun 2,Laos,Nam Theun
+962.0,1288.42,6999,Nam Theun 2,Laos,Nam Theun
+963.0,1288.54,6999,Nam Theun 2,Laos,Nam Theun
+964.0,1288.67,6999,Nam Theun 2,Laos,Nam Theun
+965.0,1288.77,6999,Nam Theun 2,Laos,Nam Theun
+966.0,1288.89,6999,Nam Theun 2,Laos,Nam Theun
+967.0,1289.0,6999,Nam Theun 2,Laos,Nam Theun
+968.0,1289.11,6999,Nam Theun 2,Laos,Nam Theun
+969.0,1289.24,6999,Nam Theun 2,Laos,Nam Theun
+970.0,1289.34,6999,Nam Theun 2,Laos,Nam Theun
+971.0,1289.44,6999,Nam Theun 2,Laos,Nam Theun
+972.0,1289.56,6999,Nam Theun 2,Laos,Nam Theun
+973.0,1289.67,6999,Nam Theun 2,Laos,Nam Theun
+974.0,1289.78,6999,Nam Theun 2,Laos,Nam Theun
+975.0,1289.86,6999,Nam Theun 2,Laos,Nam Theun
+976.0,1289.96,6999,Nam Theun 2,Laos,Nam Theun
+977.0,1290.06,6999,Nam Theun 2,Laos,Nam Theun
+978.0,1290.15,6999,Nam Theun 2,Laos,Nam Theun
+979.0,1290.25,6999,Nam Theun 2,Laos,Nam Theun
+980.0,1290.35,6999,Nam Theun 2,Laos,Nam Theun
+981.0,1290.47,6999,Nam Theun 2,Laos,Nam Theun
+982.0,1290.56,6999,Nam Theun 2,Laos,Nam Theun
+983.0,1290.64,6999,Nam Theun 2,Laos,Nam Theun
+984.0,1290.73,6999,Nam Theun 2,Laos,Nam Theun
+985.0,1290.81,6999,Nam Theun 2,Laos,Nam Theun
+986.0,1290.9,6999,Nam Theun 2,Laos,Nam Theun
+987.0,1290.99,6999,Nam Theun 2,Laos,Nam Theun
+988.0,1291.08,6999,Nam Theun 2,Laos,Nam Theun
+989.0,1291.15,6999,Nam Theun 2,Laos,Nam Theun
+990.0,1291.25,6999,Nam Theun 2,Laos,Nam Theun
+991.0,1291.33,6999,Nam Theun 2,Laos,Nam Theun
+992.0,1291.4,6999,Nam Theun 2,Laos,Nam Theun
+993.0,1291.48,6999,Nam Theun 2,Laos,Nam Theun
+994.0,1291.56,6999,Nam Theun 2,Laos,Nam Theun
+995.0,1291.63,6999,Nam Theun 2,Laos,Nam Theun
+996.0,1291.7,6999,Nam Theun 2,Laos,Nam Theun
+997.0,1291.78,6999,Nam Theun 2,Laos,Nam Theun
+998.0,1291.86,6999,Nam Theun 2,Laos,Nam Theun
+999.0,1291.94,6999,Nam Theun 2,Laos,Nam Theun
+1000.0,1292.01,6999,Nam Theun 2,Laos,Nam Theun
+1001.0,1292.07,6999,Nam Theun 2,Laos,Nam Theun
+1002.0,1292.12,6999,Nam Theun 2,Laos,Nam Theun
+1003.0,1292.18,6999,Nam Theun 2,Laos,Nam Theun
+1004.0,1292.24,6999,Nam Theun 2,Laos,Nam Theun
+1005.0,1292.31,6999,Nam Theun 2,Laos,Nam Theun
+1006.0,1292.37,6999,Nam Theun 2,Laos,Nam Theun
+1007.0,1292.42,6999,Nam Theun 2,Laos,Nam Theun
+1008.0,1292.49,6999,Nam Theun 2,Laos,Nam Theun
+1009.0,1292.55,6999,Nam Theun 2,Laos,Nam Theun
+1010.0,1292.61,6999,Nam Theun 2,Laos,Nam Theun
+1011.0,1292.66,6999,Nam Theun 2,Laos,Nam Theun
+1012.0,1292.71,6999,Nam Theun 2,Laos,Nam Theun
+1013.0,1292.77,6999,Nam Theun 2,Laos,Nam Theun
+1014.0,1292.81,6999,Nam Theun 2,Laos,Nam Theun
+1015.0,1292.87,6999,Nam Theun 2,Laos,Nam Theun
+1016.0,1292.91,6999,Nam Theun 2,Laos,Nam Theun
+1017.0,1292.97,6999,Nam Theun 2,Laos,Nam Theun
+1018.0,1293.02,6999,Nam Theun 2,Laos,Nam Theun
+1019.0,1293.07,6999,Nam Theun 2,Laos,Nam Theun
+1020.0,1293.12,6999,Nam Theun 2,Laos,Nam Theun
+1021.0,1293.15,6999,Nam Theun 2,Laos,Nam Theun
+1022.0,1293.2,6999,Nam Theun 2,Laos,Nam Theun
+1023.0,1293.25,6999,Nam Theun 2,Laos,Nam Theun
+1024.0,1293.29,6999,Nam Theun 2,Laos,Nam Theun
+1025.0,1293.34,6999,Nam Theun 2,Laos,Nam Theun
+1026.0,1293.37,6999,Nam Theun 2,Laos,Nam Theun
+1027.0,1293.4,6999,Nam Theun 2,Laos,Nam Theun
+1028.0,1293.45,6999,Nam Theun 2,Laos,Nam Theun
+1029.0,1293.48,6999,Nam Theun 2,Laos,Nam Theun
+1030.0,1293.51,6999,Nam Theun 2,Laos,Nam Theun
+1031.0,1293.54,6999,Nam Theun 2,Laos,Nam Theun
+1032.0,1293.59,6999,Nam Theun 2,Laos,Nam Theun
+1033.0,1293.64,6999,Nam Theun 2,Laos,Nam Theun
+1034.0,1293.68,6999,Nam Theun 2,Laos,Nam Theun
+1035.0,1293.72,6999,Nam Theun 2,Laos,Nam Theun
+1036.0,1293.75,6999,Nam Theun 2,Laos,Nam Theun
+1037.0,1293.8,6999,Nam Theun 2,Laos,Nam Theun
+1038.0,1293.83,6999,Nam Theun 2,Laos,Nam Theun
+1039.0,1293.86,6999,Nam Theun 2,Laos,Nam Theun
+1040.0,1293.9,6999,Nam Theun 2,Laos,Nam Theun
+1041.0,1293.94,6999,Nam Theun 2,Laos,Nam Theun
+1042.0,1293.98,6999,Nam Theun 2,Laos,Nam Theun
+1043.0,1294.01,6999,Nam Theun 2,Laos,Nam Theun
+1044.0,1294.04,6999,Nam Theun 2,Laos,Nam Theun
+1045.0,1294.08,6999,Nam Theun 2,Laos,Nam Theun
+1046.0,1294.1,6999,Nam Theun 2,Laos,Nam Theun
+1047.0,1294.13,6999,Nam Theun 2,Laos,Nam Theun
+1048.0,1294.15,6999,Nam Theun 2,Laos,Nam Theun
+1049.0,1294.17,6999,Nam Theun 2,Laos,Nam Theun
+1050.0,1294.19,6999,Nam Theun 2,Laos,Nam Theun
+1051.0,1294.22,6999,Nam Theun 2,Laos,Nam Theun
+1052.0,1294.24,6999,Nam Theun 2,Laos,Nam Theun
+1053.0,1294.26,6999,Nam Theun 2,Laos,Nam Theun
+1054.0,1294.28,6999,Nam Theun 2,Laos,Nam Theun
+1055.0,1294.3,6999,Nam Theun 2,Laos,Nam Theun
+1056.0,1294.32,6999,Nam Theun 2,Laos,Nam Theun
+1057.0,1294.34,6999,Nam Theun 2,Laos,Nam Theun
+1058.0,1294.36,6999,Nam Theun 2,Laos,Nam Theun
+1060.0,1294.39,6999,Nam Theun 2,Laos,Nam Theun
+1061.0,1294.41,6999,Nam Theun 2,Laos,Nam Theun
+1062.0,1294.42,6999,Nam Theun 2,Laos,Nam Theun
+1063.0,1294.44,6999,Nam Theun 2,Laos,Nam Theun
+1064.0,1294.46,6999,Nam Theun 2,Laos,Nam Theun
+1065.0,1294.48,6999,Nam Theun 2,Laos,Nam Theun
+1066.0,1294.49,6999,Nam Theun 2,Laos,Nam Theun
+1067.0,1294.51,6999,Nam Theun 2,Laos,Nam Theun
+1068.0,1294.53,6999,Nam Theun 2,Laos,Nam Theun
+1070.0,1294.55,6999,Nam Theun 2,Laos,Nam Theun
+1072.0,1294.57,6999,Nam Theun 2,Laos,Nam Theun
+1073.0,1294.59,6999,Nam Theun 2,Laos,Nam Theun
+1075.0,1294.61,6999,Nam Theun 2,Laos,Nam Theun
+1076.0,1294.63,6999,Nam Theun 2,Laos,Nam Theun
+1078.0,1294.65,6999,Nam Theun 2,Laos,Nam Theun
+1080.0,1294.67,6999,Nam Theun 2,Laos,Nam Theun
+1082.0,1294.69,6999,Nam Theun 2,Laos,Nam Theun
+1083.0,1294.7,6999,Nam Theun 2,Laos,Nam Theun
+1085.0,1294.72,6999,Nam Theun 2,Laos,Nam Theun
+1087.0,1294.74,6999,Nam Theun 2,Laos,Nam Theun
+1089.0,1294.76,6999,Nam Theun 2,Laos,Nam Theun
+1092.0,1294.78,6999,Nam Theun 2,Laos,Nam Theun
+1095.0,1294.8,6999,Nam Theun 2,Laos,Nam Theun
+1101.0,1294.82,6999,Nam Theun 2,Laos,Nam Theun
+86.0,14.37,7303,Lower Sesan 2,Cambodia,Sesan
+87.0,56.94,7303,Lower Sesan 2,Cambodia,Sesan
+88.0,113.65,7303,Lower Sesan 2,Cambodia,Sesan
+89.0,170.25,7303,Lower Sesan 2,Cambodia,Sesan
+90.0,226.74,7303,Lower Sesan 2,Cambodia,Sesan
+91.0,283.41,7303,Lower Sesan 2,Cambodia,Sesan
+92.0,340.3,7303,Lower Sesan 2,Cambodia,Sesan
+93.0,396.18,7303,Lower Sesan 2,Cambodia,Sesan
+94.0,450.78,7303,Lower Sesan 2,Cambodia,Sesan
+95.0,504.09,7303,Lower Sesan 2,Cambodia,Sesan
+96.0,554.33,7303,Lower Sesan 2,Cambodia,Sesan
+97.0,602.04,7303,Lower Sesan 2,Cambodia,Sesan
+98.0,646.28,7303,Lower Sesan 2,Cambodia,Sesan
+99.0,687.63,7303,Lower Sesan 2,Cambodia,Sesan
+100.0,725.5,7303,Lower Sesan 2,Cambodia,Sesan
+101.0,759.65,7303,Lower Sesan 2,Cambodia,Sesan
+102.0,791.52,7303,Lower Sesan 2,Cambodia,Sesan
+103.0,820.99,7303,Lower Sesan 2,Cambodia,Sesan
+104.0,848.21,7303,Lower Sesan 2,Cambodia,Sesan
+105.0,872.58,7303,Lower Sesan 2,Cambodia,Sesan
+106.0,894.18,7303,Lower Sesan 2,Cambodia,Sesan
+107.0,912.75,7303,Lower Sesan 2,Cambodia,Sesan
+108.0,929.0,7303,Lower Sesan 2,Cambodia,Sesan
+109.0,943.14,7303,Lower Sesan 2,Cambodia,Sesan
+110.0,955.68,7303,Lower Sesan 2,Cambodia,Sesan
+111.0,967.07,7303,Lower Sesan 2,Cambodia,Sesan
+112.0,976.96,7303,Lower Sesan 2,Cambodia,Sesan
+113.0,985.92,7303,Lower Sesan 2,Cambodia,Sesan
+114.0,993.31,7303,Lower Sesan 2,Cambodia,Sesan
+115.0,999.63,7303,Lower Sesan 2,Cambodia,Sesan
+116.0,1005.11,7303,Lower Sesan 2,Cambodia,Sesan
+117.0,1009.6,7303,Lower Sesan 2,Cambodia,Sesan
+118.0,1013.37,7303,Lower Sesan 2,Cambodia,Sesan
+119.0,1016.33,7303,Lower Sesan 2,Cambodia,Sesan
+120.0,1018.72,7303,Lower Sesan 2,Cambodia,Sesan
+121.0,1020.73,7303,Lower Sesan 2,Cambodia,Sesan
+122.0,1022.27,7303,Lower Sesan 2,Cambodia,Sesan
+123.0,1023.48,7303,Lower Sesan 2,Cambodia,Sesan
+124.0,1024.46,7303,Lower Sesan 2,Cambodia,Sesan
+125.0,1025.32,7303,Lower Sesan 2,Cambodia,Sesan
+126.0,1026.05,7303,Lower Sesan 2,Cambodia,Sesan
+127.0,1026.7,7303,Lower Sesan 2,Cambodia,Sesan
+128.0,1027.36,7303,Lower Sesan 2,Cambodia,Sesan
+129.0,1027.88,7303,Lower Sesan 2,Cambodia,Sesan
+130.0,1028.36,7303,Lower Sesan 2,Cambodia,Sesan
+131.0,1028.79,7303,Lower Sesan 2,Cambodia,Sesan
+132.0,1029.21,7303,Lower Sesan 2,Cambodia,Sesan
+133.0,1029.62,7303,Lower Sesan 2,Cambodia,Sesan
+134.0,1030.05,7303,Lower Sesan 2,Cambodia,Sesan
+135.0,1030.43,7303,Lower Sesan 2,Cambodia,Sesan
+136.0,1030.8,7303,Lower Sesan 2,Cambodia,Sesan
+137.0,1031.16,7303,Lower Sesan 2,Cambodia,Sesan
+138.0,1031.48,7303,Lower Sesan 2,Cambodia,Sesan
+139.0,1031.82,7303,Lower Sesan 2,Cambodia,Sesan
+140.0,1032.1,7303,Lower Sesan 2,Cambodia,Sesan
+141.0,1032.35,7303,Lower Sesan 2,Cambodia,Sesan
+142.0,1032.62,7303,Lower Sesan 2,Cambodia,Sesan
+143.0,1032.85,7303,Lower Sesan 2,Cambodia,Sesan
+144.0,1033.09,7303,Lower Sesan 2,Cambodia,Sesan
+145.0,1033.31,7303,Lower Sesan 2,Cambodia,Sesan
+146.0,1033.56,7303,Lower Sesan 2,Cambodia,Sesan
+147.0,1033.78,7303,Lower Sesan 2,Cambodia,Sesan
+148.0,1033.99,7303,Lower Sesan 2,Cambodia,Sesan
+149.0,1034.2,7303,Lower Sesan 2,Cambodia,Sesan
+150.0,1034.4,7303,Lower Sesan 2,Cambodia,Sesan
+151.0,1034.6,7303,Lower Sesan 2,Cambodia,Sesan
+152.0,1034.77,7303,Lower Sesan 2,Cambodia,Sesan
+153.0,1034.96,7303,Lower Sesan 2,Cambodia,Sesan
+154.0,1035.14,7303,Lower Sesan 2,Cambodia,Sesan
+155.0,1035.31,7303,Lower Sesan 2,Cambodia,Sesan
+156.0,1035.48,7303,Lower Sesan 2,Cambodia,Sesan
+157.0,1035.65,7303,Lower Sesan 2,Cambodia,Sesan
+158.0,1035.8,7303,Lower Sesan 2,Cambodia,Sesan
+159.0,1035.94,7303,Lower Sesan 2,Cambodia,Sesan
+160.0,1036.09,7303,Lower Sesan 2,Cambodia,Sesan
+161.0,1036.21,7303,Lower Sesan 2,Cambodia,Sesan
+162.0,1036.33,7303,Lower Sesan 2,Cambodia,Sesan
+163.0,1036.46,7303,Lower Sesan 2,Cambodia,Sesan
+164.0,1036.59,7303,Lower Sesan 2,Cambodia,Sesan
+165.0,1036.7,7303,Lower Sesan 2,Cambodia,Sesan
+166.0,1036.82,7303,Lower Sesan 2,Cambodia,Sesan
+167.0,1036.97,7303,Lower Sesan 2,Cambodia,Sesan
+168.0,1037.08,7303,Lower Sesan 2,Cambodia,Sesan
+169.0,1037.18,7303,Lower Sesan 2,Cambodia,Sesan
+170.0,1037.24,7303,Lower Sesan 2,Cambodia,Sesan
+171.0,1037.28,7303,Lower Sesan 2,Cambodia,Sesan
+172.0,1037.3,7303,Lower Sesan 2,Cambodia,Sesan
+173.0,1037.32,7303,Lower Sesan 2,Cambodia,Sesan
+176.0,1037.35,7303,Lower Sesan 2,Cambodia,Sesan
+181.0,1037.39,7303,Lower Sesan 2,Cambodia,Sesan
+197.0,1037.51,7303,Lower Sesan 2,Cambodia,Sesan
+129.0,16.88,5796,Sirindhorn,Thailand,Lam Dom Noi
+130.0,36.69,5796,Sirindhorn,Thailand,Lam Dom Noi
+131.0,56.5,5796,Sirindhorn,Thailand,Lam Dom Noi
+132.0,76.3,5796,Sirindhorn,Thailand,Lam Dom Noi
+133.0,96.11,5796,Sirindhorn,Thailand,Lam Dom Noi
+134.0,115.92,5796,Sirindhorn,Thailand,Lam Dom Noi
+135.0,135.73,5796,Sirindhorn,Thailand,Lam Dom Noi
+136.0,155.54,5796,Sirindhorn,Thailand,Lam Dom Noi
+137.0,175.35,5796,Sirindhorn,Thailand,Lam Dom Noi
+138.0,195.15,5796,Sirindhorn,Thailand,Lam Dom Noi
+139.0,214.96,5796,Sirindhorn,Thailand,Lam Dom Noi
+140.0,234.77,5796,Sirindhorn,Thailand,Lam Dom Noi
+141.0,254.58,5796,Sirindhorn,Thailand,Lam Dom Noi
+142.0,263.0,5796,Sirindhorn,Thailand,Lam Dom Noi
+143.0,272.47,5796,Sirindhorn,Thailand,Lam Dom Noi
+144.0,284.06,5796,Sirindhorn,Thailand,Lam Dom Noi
+145.0,298.32,5796,Sirindhorn,Thailand,Lam Dom Noi
+146.0,314.47,5796,Sirindhorn,Thailand,Lam Dom Noi
+147.0,332.33,5796,Sirindhorn,Thailand,Lam Dom Noi
+148.0,351.67,5796,Sirindhorn,Thailand,Lam Dom Noi
+149.0,373.01,5796,Sirindhorn,Thailand,Lam Dom Noi
+150.0,396.49,5796,Sirindhorn,Thailand,Lam Dom Noi
+151.0,422.2,5796,Sirindhorn,Thailand,Lam Dom Noi
+152.0,450.11,5796,Sirindhorn,Thailand,Lam Dom Noi
+153.0,478.87,5796,Sirindhorn,Thailand,Lam Dom Noi
+154.0,508.54,5796,Sirindhorn,Thailand,Lam Dom Noi
+155.0,538.87,5796,Sirindhorn,Thailand,Lam Dom Noi
+156.0,569.95,5796,Sirindhorn,Thailand,Lam Dom Noi
+157.0,600.64,5796,Sirindhorn,Thailand,Lam Dom Noi
+158.0,631.25,5796,Sirindhorn,Thailand,Lam Dom Noi
+159.0,660.75,5796,Sirindhorn,Thailand,Lam Dom Noi
+160.0,689.57,5796,Sirindhorn,Thailand,Lam Dom Noi
+161.0,716.95,5796,Sirindhorn,Thailand,Lam Dom Noi
+162.0,741.75,5796,Sirindhorn,Thailand,Lam Dom Noi
+163.0,764.25,5796,Sirindhorn,Thailand,Lam Dom Noi
+164.0,784.73,5796,Sirindhorn,Thailand,Lam Dom Noi
+165.0,802.53,5796,Sirindhorn,Thailand,Lam Dom Noi
+166.0,818.09,5796,Sirindhorn,Thailand,Lam Dom Noi
+167.0,831.7,5796,Sirindhorn,Thailand,Lam Dom Noi
+168.0,843.66,5796,Sirindhorn,Thailand,Lam Dom Noi
+169.0,854.26,5796,Sirindhorn,Thailand,Lam Dom Noi
+170.0,863.28,5796,Sirindhorn,Thailand,Lam Dom Noi
+171.0,871.43,5796,Sirindhorn,Thailand,Lam Dom Noi
+172.0,878.92,5796,Sirindhorn,Thailand,Lam Dom Noi
+173.0,885.75,5796,Sirindhorn,Thailand,Lam Dom Noi
+174.0,892.0,5796,Sirindhorn,Thailand,Lam Dom Noi
+175.0,897.64,5796,Sirindhorn,Thailand,Lam Dom Noi
+176.0,902.95,5796,Sirindhorn,Thailand,Lam Dom Noi
+177.0,907.83,5796,Sirindhorn,Thailand,Lam Dom Noi
+178.0,912.3,5796,Sirindhorn,Thailand,Lam Dom Noi
+179.0,916.41,5796,Sirindhorn,Thailand,Lam Dom Noi
+180.0,920.26,5796,Sirindhorn,Thailand,Lam Dom Noi
+181.0,923.89,5796,Sirindhorn,Thailand,Lam Dom Noi
+182.0,927.17,5796,Sirindhorn,Thailand,Lam Dom Noi
+183.0,930.15,5796,Sirindhorn,Thailand,Lam Dom Noi
+184.0,932.71,5796,Sirindhorn,Thailand,Lam Dom Noi
+185.0,935.07,5796,Sirindhorn,Thailand,Lam Dom Noi
+186.0,937.22,5796,Sirindhorn,Thailand,Lam Dom Noi
+187.0,939.24,5796,Sirindhorn,Thailand,Lam Dom Noi
+188.0,941.09,5796,Sirindhorn,Thailand,Lam Dom Noi
+189.0,942.77,5796,Sirindhorn,Thailand,Lam Dom Noi
+190.0,944.38,5796,Sirindhorn,Thailand,Lam Dom Noi
+191.0,945.8,5796,Sirindhorn,Thailand,Lam Dom Noi
+192.0,947.17,5796,Sirindhorn,Thailand,Lam Dom Noi
+193.0,948.4,5796,Sirindhorn,Thailand,Lam Dom Noi
+194.0,949.61,5796,Sirindhorn,Thailand,Lam Dom Noi
+195.0,950.73,5796,Sirindhorn,Thailand,Lam Dom Noi
+196.0,951.65,5796,Sirindhorn,Thailand,Lam Dom Noi
+197.0,952.54,5796,Sirindhorn,Thailand,Lam Dom Noi
+198.0,953.39,5796,Sirindhorn,Thailand,Lam Dom Noi
+199.0,954.11,5796,Sirindhorn,Thailand,Lam Dom Noi
+200.0,954.84,5796,Sirindhorn,Thailand,Lam Dom Noi
+201.0,955.5,5796,Sirindhorn,Thailand,Lam Dom Noi
+202.0,956.15,5796,Sirindhorn,Thailand,Lam Dom Noi
+203.0,956.74,5796,Sirindhorn,Thailand,Lam Dom Noi
+204.0,957.33,5796,Sirindhorn,Thailand,Lam Dom Noi
+205.0,957.91,5796,Sirindhorn,Thailand,Lam Dom Noi
+206.0,958.47,5796,Sirindhorn,Thailand,Lam Dom Noi
+207.0,958.97,5796,Sirindhorn,Thailand,Lam Dom Noi
+208.0,959.52,5796,Sirindhorn,Thailand,Lam Dom Noi
+209.0,960.03,5796,Sirindhorn,Thailand,Lam Dom Noi
+210.0,960.46,5796,Sirindhorn,Thailand,Lam Dom Noi
+211.0,960.92,5796,Sirindhorn,Thailand,Lam Dom Noi
+212.0,961.34,5796,Sirindhorn,Thailand,Lam Dom Noi
+213.0,961.78,5796,Sirindhorn,Thailand,Lam Dom Noi
+214.0,962.26,5796,Sirindhorn,Thailand,Lam Dom Noi
+215.0,962.71,5796,Sirindhorn,Thailand,Lam Dom Noi
+216.0,963.19,5796,Sirindhorn,Thailand,Lam Dom Noi
+217.0,963.64,5796,Sirindhorn,Thailand,Lam Dom Noi
+218.0,964.09,5796,Sirindhorn,Thailand,Lam Dom Noi
+219.0,964.59,5796,Sirindhorn,Thailand,Lam Dom Noi
+220.0,965.04,5796,Sirindhorn,Thailand,Lam Dom Noi
+221.0,965.49,5796,Sirindhorn,Thailand,Lam Dom Noi
+222.0,965.88,5796,Sirindhorn,Thailand,Lam Dom Noi
+223.0,966.29,5796,Sirindhorn,Thailand,Lam Dom Noi
+224.0,966.66,5796,Sirindhorn,Thailand,Lam Dom Noi
+225.0,967.01,5796,Sirindhorn,Thailand,Lam Dom Noi
+226.0,967.37,5796,Sirindhorn,Thailand,Lam Dom Noi
+227.0,967.68,5796,Sirindhorn,Thailand,Lam Dom Noi
+228.0,968.01,5796,Sirindhorn,Thailand,Lam Dom Noi
+229.0,968.31,5796,Sirindhorn,Thailand,Lam Dom Noi
+230.0,968.58,5796,Sirindhorn,Thailand,Lam Dom Noi
+231.0,968.86,5796,Sirindhorn,Thailand,Lam Dom Noi
+232.0,969.15,5796,Sirindhorn,Thailand,Lam Dom Noi
+233.0,969.41,5796,Sirindhorn,Thailand,Lam Dom Noi
+234.0,969.69,5796,Sirindhorn,Thailand,Lam Dom Noi
+235.0,969.94,5796,Sirindhorn,Thailand,Lam Dom Noi
+236.0,970.17,5796,Sirindhorn,Thailand,Lam Dom Noi
+237.0,970.39,5796,Sirindhorn,Thailand,Lam Dom Noi
+238.0,970.61,5796,Sirindhorn,Thailand,Lam Dom Noi
+239.0,970.81,5796,Sirindhorn,Thailand,Lam Dom Noi
+240.0,971.01,5796,Sirindhorn,Thailand,Lam Dom Noi
+241.0,971.23,5796,Sirindhorn,Thailand,Lam Dom Noi
+242.0,971.41,5796,Sirindhorn,Thailand,Lam Dom Noi
+243.0,971.59,5796,Sirindhorn,Thailand,Lam Dom Noi
+244.0,971.75,5796,Sirindhorn,Thailand,Lam Dom Noi
+245.0,971.93,5796,Sirindhorn,Thailand,Lam Dom Noi
+246.0,972.11,5796,Sirindhorn,Thailand,Lam Dom Noi
+247.0,972.27,5796,Sirindhorn,Thailand,Lam Dom Noi
+248.0,972.43,5796,Sirindhorn,Thailand,Lam Dom Noi
+249.0,972.57,5796,Sirindhorn,Thailand,Lam Dom Noi
+250.0,972.68,5796,Sirindhorn,Thailand,Lam Dom Noi
+251.0,972.83,5796,Sirindhorn,Thailand,Lam Dom Noi
+252.0,972.98,5796,Sirindhorn,Thailand,Lam Dom Noi
+253.0,973.11,5796,Sirindhorn,Thailand,Lam Dom Noi
+254.0,973.22,5796,Sirindhorn,Thailand,Lam Dom Noi
+255.0,973.36,5796,Sirindhorn,Thailand,Lam Dom Noi
+256.0,973.47,5796,Sirindhorn,Thailand,Lam Dom Noi
+257.0,973.57,5796,Sirindhorn,Thailand,Lam Dom Noi
+258.0,973.67,5796,Sirindhorn,Thailand,Lam Dom Noi
+259.0,973.77,5796,Sirindhorn,Thailand,Lam Dom Noi
+260.0,973.88,5796,Sirindhorn,Thailand,Lam Dom Noi
+261.0,973.98,5796,Sirindhorn,Thailand,Lam Dom Noi
+262.0,974.09,5796,Sirindhorn,Thailand,Lam Dom Noi
+263.0,974.2,5796,Sirindhorn,Thailand,Lam Dom Noi
+264.0,974.29,5796,Sirindhorn,Thailand,Lam Dom Noi
+265.0,974.37,5796,Sirindhorn,Thailand,Lam Dom Noi
+266.0,974.49,5796,Sirindhorn,Thailand,Lam Dom Noi
+267.0,974.57,5796,Sirindhorn,Thailand,Lam Dom Noi
+268.0,974.65,5796,Sirindhorn,Thailand,Lam Dom Noi
+269.0,974.73,5796,Sirindhorn,Thailand,Lam Dom Noi
+270.0,974.83,5796,Sirindhorn,Thailand,Lam Dom Noi
+271.0,974.89,5796,Sirindhorn,Thailand,Lam Dom Noi
+272.0,974.97,5796,Sirindhorn,Thailand,Lam Dom Noi
+273.0,975.04,5796,Sirindhorn,Thailand,Lam Dom Noi
+274.0,975.12,5796,Sirindhorn,Thailand,Lam Dom Noi
+275.0,975.18,5796,Sirindhorn,Thailand,Lam Dom Noi
+276.0,975.25,5796,Sirindhorn,Thailand,Lam Dom Noi
+277.0,975.32,5796,Sirindhorn,Thailand,Lam Dom Noi
+278.0,975.38,5796,Sirindhorn,Thailand,Lam Dom Noi
+279.0,975.43,5796,Sirindhorn,Thailand,Lam Dom Noi
+280.0,975.47,5796,Sirindhorn,Thailand,Lam Dom Noi
+281.0,975.52,5796,Sirindhorn,Thailand,Lam Dom Noi
+282.0,975.56,5796,Sirindhorn,Thailand,Lam Dom Noi
+283.0,975.61,5796,Sirindhorn,Thailand,Lam Dom Noi
+284.0,975.65,5796,Sirindhorn,Thailand,Lam Dom Noi
+285.0,975.68,5796,Sirindhorn,Thailand,Lam Dom Noi
+286.0,975.71,5796,Sirindhorn,Thailand,Lam Dom Noi
+287.0,975.74,5796,Sirindhorn,Thailand,Lam Dom Noi
+288.0,975.77,5796,Sirindhorn,Thailand,Lam Dom Noi
+289.0,975.79,5796,Sirindhorn,Thailand,Lam Dom Noi
+290.0,975.82,5796,Sirindhorn,Thailand,Lam Dom Noi
+291.0,975.84,5796,Sirindhorn,Thailand,Lam Dom Noi
+292.0,975.86,5796,Sirindhorn,Thailand,Lam Dom Noi
+293.0,975.88,5796,Sirindhorn,Thailand,Lam Dom Noi
+294.0,975.91,5796,Sirindhorn,Thailand,Lam Dom Noi
+295.0,975.93,5796,Sirindhorn,Thailand,Lam Dom Noi
+296.0,975.95,5796,Sirindhorn,Thailand,Lam Dom Noi
+298.0,975.98,5796,Sirindhorn,Thailand,Lam Dom Noi
+300.0,976.01,5796,Sirindhorn,Thailand,Lam Dom Noi
+302.0,976.04,5796,Sirindhorn,Thailand,Lam Dom Noi
+304.0,976.07,5796,Sirindhorn,Thailand,Lam Dom Noi
+311.0,976.14,5796,Sirindhorn,Thailand,Lam Dom Noi
+312.0,976.16,5796,Sirindhorn,Thailand,Lam Dom Noi
+153.0,4.4,5150,Lam Pao,Thailand,Chi
+154.0,32.57,5150,Lam Pao,Thailand,Chi
+155.0,60.74,5150,Lam Pao,Thailand,Chi
+156.0,88.91,5150,Lam Pao,Thailand,Chi
+157.0,117.09,5150,Lam Pao,Thailand,Chi
+158.0,145.26,5150,Lam Pao,Thailand,Chi
+159.0,173.43,5150,Lam Pao,Thailand,Chi
+160.0,201.6,5150,Lam Pao,Thailand,Chi
+161.0,210.4,5150,Lam Pao,Thailand,Chi
+162.0,227.9,5150,Lam Pao,Thailand,Chi
+163.0,258.66,5150,Lam Pao,Thailand,Chi
+164.0,297.4,5150,Lam Pao,Thailand,Chi
+165.0,337.01,5150,Lam Pao,Thailand,Chi
+166.0,378.23,5150,Lam Pao,Thailand,Chi
+167.0,421.73,5150,Lam Pao,Thailand,Chi
+168.0,468.45,5150,Lam Pao,Thailand,Chi
+169.0,517.99,5150,Lam Pao,Thailand,Chi
+170.0,570.4,5150,Lam Pao,Thailand,Chi
+171.0,624.25,5150,Lam Pao,Thailand,Chi
+172.0,678.64,5150,Lam Pao,Thailand,Chi
+173.0,733.58,5150,Lam Pao,Thailand,Chi
+174.0,788.19,5150,Lam Pao,Thailand,Chi
+175.0,842.21,5150,Lam Pao,Thailand,Chi
+176.0,894.47,5150,Lam Pao,Thailand,Chi
+177.0,944.0,5150,Lam Pao,Thailand,Chi
+178.0,991.05,5150,Lam Pao,Thailand,Chi
+179.0,1035.39,5150,Lam Pao,Thailand,Chi
+180.0,1077.15,5150,Lam Pao,Thailand,Chi
+181.0,1115.9,5150,Lam Pao,Thailand,Chi
+182.0,1151.71,5150,Lam Pao,Thailand,Chi
+183.0,1184.74,5150,Lam Pao,Thailand,Chi
+184.0,1215.07,5150,Lam Pao,Thailand,Chi
+185.0,1242.37,5150,Lam Pao,Thailand,Chi
+186.0,1267.29,5150,Lam Pao,Thailand,Chi
+187.0,1290.14,5150,Lam Pao,Thailand,Chi
+188.0,1310.75,5150,Lam Pao,Thailand,Chi
+189.0,1329.41,5150,Lam Pao,Thailand,Chi
+190.0,1345.61,5150,Lam Pao,Thailand,Chi
+191.0,1360.46,5150,Lam Pao,Thailand,Chi
+192.0,1373.43,5150,Lam Pao,Thailand,Chi
+193.0,1385.24,5150,Lam Pao,Thailand,Chi
+194.0,1395.86,5150,Lam Pao,Thailand,Chi
+195.0,1405.43,5150,Lam Pao,Thailand,Chi
+196.0,1413.93,5150,Lam Pao,Thailand,Chi
+197.0,1421.3,5150,Lam Pao,Thailand,Chi
+198.0,1427.64,5150,Lam Pao,Thailand,Chi
+199.0,1433.42,5150,Lam Pao,Thailand,Chi
+200.0,1438.53,5150,Lam Pao,Thailand,Chi
+201.0,1442.77,5150,Lam Pao,Thailand,Chi
+202.0,1446.48,5150,Lam Pao,Thailand,Chi
+203.0,1449.74,5150,Lam Pao,Thailand,Chi
+204.0,1452.55,5150,Lam Pao,Thailand,Chi
+205.0,1455.05,5150,Lam Pao,Thailand,Chi
+206.0,1457.29,5150,Lam Pao,Thailand,Chi
+207.0,1459.13,5150,Lam Pao,Thailand,Chi
+208.0,1460.75,5150,Lam Pao,Thailand,Chi
+209.0,1462.15,5150,Lam Pao,Thailand,Chi
+210.0,1463.4,5150,Lam Pao,Thailand,Chi
+211.0,1464.45,5150,Lam Pao,Thailand,Chi
+212.0,1465.38,5150,Lam Pao,Thailand,Chi
+213.0,1466.17,5150,Lam Pao,Thailand,Chi
+214.0,1466.92,5150,Lam Pao,Thailand,Chi
+215.0,1467.61,5150,Lam Pao,Thailand,Chi
+216.0,1468.22,5150,Lam Pao,Thailand,Chi
+217.0,1468.75,5150,Lam Pao,Thailand,Chi
+218.0,1469.28,5150,Lam Pao,Thailand,Chi
+219.0,1469.85,5150,Lam Pao,Thailand,Chi
+220.0,1470.36,5150,Lam Pao,Thailand,Chi
+221.0,1470.85,5150,Lam Pao,Thailand,Chi
+222.0,1471.35,5150,Lam Pao,Thailand,Chi
+223.0,1471.82,5150,Lam Pao,Thailand,Chi
+224.0,1472.28,5150,Lam Pao,Thailand,Chi
+225.0,1472.73,5150,Lam Pao,Thailand,Chi
+226.0,1473.2,5150,Lam Pao,Thailand,Chi
+227.0,1473.66,5150,Lam Pao,Thailand,Chi
+228.0,1474.08,5150,Lam Pao,Thailand,Chi
+229.0,1474.48,5150,Lam Pao,Thailand,Chi
+230.0,1474.92,5150,Lam Pao,Thailand,Chi
+231.0,1475.32,5150,Lam Pao,Thailand,Chi
+232.0,1475.72,5150,Lam Pao,Thailand,Chi
+233.0,1476.14,5150,Lam Pao,Thailand,Chi
+234.0,1476.54,5150,Lam Pao,Thailand,Chi
+235.0,1476.9,5150,Lam Pao,Thailand,Chi
+236.0,1477.27,5150,Lam Pao,Thailand,Chi
+237.0,1477.62,5150,Lam Pao,Thailand,Chi
+238.0,1477.89,5150,Lam Pao,Thailand,Chi
+239.0,1478.12,5150,Lam Pao,Thailand,Chi
+240.0,1478.36,5150,Lam Pao,Thailand,Chi
+241.0,1478.56,5150,Lam Pao,Thailand,Chi
+242.0,1478.77,5150,Lam Pao,Thailand,Chi
+243.0,1478.97,5150,Lam Pao,Thailand,Chi
+244.0,1479.14,5150,Lam Pao,Thailand,Chi
+245.0,1479.33,5150,Lam Pao,Thailand,Chi
+246.0,1479.53,5150,Lam Pao,Thailand,Chi
+247.0,1479.72,5150,Lam Pao,Thailand,Chi
+248.0,1479.9,5150,Lam Pao,Thailand,Chi
+249.0,1480.08,5150,Lam Pao,Thailand,Chi
+250.0,1480.23,5150,Lam Pao,Thailand,Chi
+251.0,1480.38,5150,Lam Pao,Thailand,Chi
+252.0,1480.53,5150,Lam Pao,Thailand,Chi
+253.0,1480.67,5150,Lam Pao,Thailand,Chi
+254.0,1480.82,5150,Lam Pao,Thailand,Chi
+255.0,1480.95,5150,Lam Pao,Thailand,Chi
+256.0,1481.07,5150,Lam Pao,Thailand,Chi
+257.0,1481.18,5150,Lam Pao,Thailand,Chi
+258.0,1481.28,5150,Lam Pao,Thailand,Chi
+259.0,1481.39,5150,Lam Pao,Thailand,Chi
+260.0,1481.52,5150,Lam Pao,Thailand,Chi
+261.0,1481.61,5150,Lam Pao,Thailand,Chi
+262.0,1481.7,5150,Lam Pao,Thailand,Chi
+263.0,1481.78,5150,Lam Pao,Thailand,Chi
+264.0,1481.87,5150,Lam Pao,Thailand,Chi
+265.0,1481.93,5150,Lam Pao,Thailand,Chi
+266.0,1482.0,5150,Lam Pao,Thailand,Chi
+267.0,1482.07,5150,Lam Pao,Thailand,Chi
+268.0,1482.15,5150,Lam Pao,Thailand,Chi
+269.0,1482.21,5150,Lam Pao,Thailand,Chi
+270.0,1482.28,5150,Lam Pao,Thailand,Chi
+271.0,1482.34,5150,Lam Pao,Thailand,Chi
+272.0,1482.4,5150,Lam Pao,Thailand,Chi
+273.0,1482.48,5150,Lam Pao,Thailand,Chi
+274.0,1482.55,5150,Lam Pao,Thailand,Chi
+275.0,1482.63,5150,Lam Pao,Thailand,Chi
+276.0,1482.71,5150,Lam Pao,Thailand,Chi
+277.0,1482.79,5150,Lam Pao,Thailand,Chi
+278.0,1482.86,5150,Lam Pao,Thailand,Chi
+279.0,1482.93,5150,Lam Pao,Thailand,Chi
+280.0,1483.01,5150,Lam Pao,Thailand,Chi
+281.0,1483.08,5150,Lam Pao,Thailand,Chi
+282.0,1483.15,5150,Lam Pao,Thailand,Chi
+283.0,1483.22,5150,Lam Pao,Thailand,Chi
+284.0,1483.29,5150,Lam Pao,Thailand,Chi
+285.0,1483.36,5150,Lam Pao,Thailand,Chi
+286.0,1483.43,5150,Lam Pao,Thailand,Chi
+287.0,1483.47,5150,Lam Pao,Thailand,Chi
+288.0,1483.52,5150,Lam Pao,Thailand,Chi
+289.0,1483.59,5150,Lam Pao,Thailand,Chi
+290.0,1483.66,5150,Lam Pao,Thailand,Chi
+291.0,1483.72,5150,Lam Pao,Thailand,Chi
+292.0,1483.79,5150,Lam Pao,Thailand,Chi
+293.0,1483.86,5150,Lam Pao,Thailand,Chi
+294.0,1483.95,5150,Lam Pao,Thailand,Chi
+295.0,1484.01,5150,Lam Pao,Thailand,Chi
+296.0,1484.11,5150,Lam Pao,Thailand,Chi
+297.0,1484.18,5150,Lam Pao,Thailand,Chi
+298.0,1484.26,5150,Lam Pao,Thailand,Chi
+299.0,1484.33,5150,Lam Pao,Thailand,Chi
+300.0,1484.4,5150,Lam Pao,Thailand,Chi
+301.0,1484.47,5150,Lam Pao,Thailand,Chi
+302.0,1484.52,5150,Lam Pao,Thailand,Chi
+303.0,1484.58,5150,Lam Pao,Thailand,Chi
+304.0,1484.64,5150,Lam Pao,Thailand,Chi
+305.0,1484.7,5150,Lam Pao,Thailand,Chi
+306.0,1484.76,5150,Lam Pao,Thailand,Chi
+307.0,1484.81,5150,Lam Pao,Thailand,Chi
+308.0,1484.86,5150,Lam Pao,Thailand,Chi
+309.0,1484.91,5150,Lam Pao,Thailand,Chi
+310.0,1484.97,5150,Lam Pao,Thailand,Chi
+311.0,1485.02,5150,Lam Pao,Thailand,Chi
+312.0,1485.07,5150,Lam Pao,Thailand,Chi
+313.0,1485.12,5150,Lam Pao,Thailand,Chi
+314.0,1485.16,5150,Lam Pao,Thailand,Chi
+315.0,1485.21,5150,Lam Pao,Thailand,Chi
+316.0,1485.25,5150,Lam Pao,Thailand,Chi
+317.0,1485.29,5150,Lam Pao,Thailand,Chi
+318.0,1485.34,5150,Lam Pao,Thailand,Chi
+319.0,1485.38,5150,Lam Pao,Thailand,Chi
+320.0,1485.42,5150,Lam Pao,Thailand,Chi
+321.0,1485.46,5150,Lam Pao,Thailand,Chi
+322.0,1485.5,5150,Lam Pao,Thailand,Chi
+323.0,1485.54,5150,Lam Pao,Thailand,Chi
+324.0,1485.58,5150,Lam Pao,Thailand,Chi
+325.0,1485.62,5150,Lam Pao,Thailand,Chi
+326.0,1485.67,5150,Lam Pao,Thailand,Chi
+327.0,1485.7,5150,Lam Pao,Thailand,Chi
+328.0,1485.74,5150,Lam Pao,Thailand,Chi
+329.0,1485.77,5150,Lam Pao,Thailand,Chi
+330.0,1485.8,5150,Lam Pao,Thailand,Chi
+331.0,1485.84,5150,Lam Pao,Thailand,Chi
+332.0,1485.87,5150,Lam Pao,Thailand,Chi
+333.0,1485.92,5150,Lam Pao,Thailand,Chi
+334.0,1485.96,5150,Lam Pao,Thailand,Chi
+335.0,1486.0,5150,Lam Pao,Thailand,Chi
+336.0,1486.03,5150,Lam Pao,Thailand,Chi
+337.0,1486.07,5150,Lam Pao,Thailand,Chi
+338.0,1486.12,5150,Lam Pao,Thailand,Chi
+339.0,1486.16,5150,Lam Pao,Thailand,Chi
+340.0,1486.22,5150,Lam Pao,Thailand,Chi
+341.0,1486.27,5150,Lam Pao,Thailand,Chi
+342.0,1486.3,5150,Lam Pao,Thailand,Chi
+343.0,1486.35,5150,Lam Pao,Thailand,Chi
+344.0,1486.39,5150,Lam Pao,Thailand,Chi
+345.0,1486.43,5150,Lam Pao,Thailand,Chi
+346.0,1486.47,5150,Lam Pao,Thailand,Chi
+347.0,1486.54,5150,Lam Pao,Thailand,Chi
+348.0,1486.61,5150,Lam Pao,Thailand,Chi
+349.0,1486.66,5150,Lam Pao,Thailand,Chi
+350.0,1486.7,5150,Lam Pao,Thailand,Chi
+351.0,1486.74,5150,Lam Pao,Thailand,Chi
+352.0,1486.76,5150,Lam Pao,Thailand,Chi
+353.0,1486.79,5150,Lam Pao,Thailand,Chi
+354.0,1486.82,5150,Lam Pao,Thailand,Chi
+355.0,1486.84,5150,Lam Pao,Thailand,Chi
+356.0,1486.88,5150,Lam Pao,Thailand,Chi
+357.0,1486.91,5150,Lam Pao,Thailand,Chi
+358.0,1486.94,5150,Lam Pao,Thailand,Chi
+359.0,1486.98,5150,Lam Pao,Thailand,Chi
+360.0,1487.0,5150,Lam Pao,Thailand,Chi
+362.0,1487.03,5150,Lam Pao,Thailand,Chi
+413.0,1487.17,5150,Lam Pao,Thailand,Chi

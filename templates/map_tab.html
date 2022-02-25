@@ -233,24 +233,24 @@
                     </div>
                 </div>  -->
 
-                <!-- OSM Basemap -->
-                <div class="card basemap-card active m-4" data-layer="osm">
-                    <div class="d-flex flex-row bd-highlight">
-                        <div class="bd-highlight"><img src="{% static 'images/osm.png' %}" class="basemap-img"
-                                height="60px" width="60px" alt="OSM World Streets Map"></div>
-                        <div class="bd-highlight pt-3 ps-4">
-                            <h6>OpenStreetMap<br><small>OSM World Streets Map</small></h6>
-                        </div>
-                    </div>
-                </div>
                 <!-- Basemap from Esri -->
-                <div class="card basemap-card m-4" data-layer="street">
+                <div class="card basemap-card active m-4" data-layer="street">
                     <div class="d-flex flex-row bd-highlight">
                         <div class="bd-highlight"><img src="{% static 'images/esri-street.png' %}"
                                 class="basemap-img" height="60px" width="60px" alt="Esri World Streets Basemap">
                         </div>
                         <div class="bd-highlight pt-3 ps-4">
                             <h6>Esri Streets<br><small>Esri World Streets Basemap</small></h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- OSM Basemap -->
+                <div class="card basemap-card m-4" data-layer="osm">
+                    <div class="d-flex flex-row bd-highlight">
+                        <div class="bd-highlight"><img src="{% static 'images/osm.png' %}" class="basemap-img"
+                                height="60px" width="60px" alt="OSM World Streets Map"></div>
+                        <div class="bd-highlight pt-3 ps-4">
+                            <h6>OpenStreetMap<br><small>OSM World Streets Map</small></h6>
                         </div>
                     </div>
                 </div>

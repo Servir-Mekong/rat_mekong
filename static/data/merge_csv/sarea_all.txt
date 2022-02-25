@@ -1,0 +1,724 @@
+Date,NDWI,id,name,country,river
+2013-04-16,2.1,7000,Nam Mang 3,Laos,Nam Gnong
+2013-05-16,2.73,7000,Nam Mang 3,Laos,Nam Gnong
+2013-06-16,2.23,7000,Nam Mang 3,Laos,Nam Gnong
+2013-07-16,6.88,7000,Nam Mang 3,Laos,Nam Gnong
+2013-08-16,3.99,7000,Nam Mang 3,Laos,Nam Gnong
+2013-09-16,8.9,7000,Nam Mang 3,Laos,Nam Gnong
+2013-11-16,10.31,7000,Nam Mang 3,Laos,Nam Gnong
+2013-12-16,8.6,7000,Nam Mang 3,Laos,Nam Gnong
+2014-01-16,8.54,7000,Nam Mang 3,Laos,Nam Gnong
+2014-02-16,6.91,7000,Nam Mang 3,Laos,Nam Gnong
+2014-03-16,5.28,7000,Nam Mang 3,Laos,Nam Gnong
+2014-04-16,4.05,7000,Nam Mang 3,Laos,Nam Gnong
+2014-05-16,4.4,7000,Nam Mang 3,Laos,Nam Gnong
+2014-06-16,4.75,7000,Nam Mang 3,Laos,Nam Gnong
+2014-07-16,6.88,7000,Nam Mang 3,Laos,Nam Gnong
+2014-08-16,3.99,7000,Nam Mang 3,Laos,Nam Gnong
+2014-09-16,8.32,7000,Nam Mang 3,Laos,Nam Gnong
+2014-11-16,9.63,7000,Nam Mang 3,Laos,Nam Gnong
+2014-12-16,11.99,7000,Nam Mang 3,Laos,Nam Gnong
+2015-01-16,8.82,7000,Nam Mang 3,Laos,Nam Gnong
+2015-02-16,7.65,7000,Nam Mang 3,Laos,Nam Gnong
+2015-03-16,6.49,7000,Nam Mang 3,Laos,Nam Gnong
+2015-04-16,4.79,7000,Nam Mang 3,Laos,Nam Gnong
+2015-05-16,3.13,7000,Nam Mang 3,Laos,Nam Gnong
+2015-06-16,1.48,7000,Nam Mang 3,Laos,Nam Gnong
+2015-07-16,5.92,7000,Nam Mang 3,Laos,Nam Gnong
+2015-08-16,10.36,7000,Nam Mang 3,Laos,Nam Gnong
+2015-09-16,9.85,7000,Nam Mang 3,Laos,Nam Gnong
+2015-11-16,10.84,7000,Nam Mang 3,Laos,Nam Gnong
+2015-12-16,8.99,7000,Nam Mang 3,Laos,Nam Gnong
+2016-01-16,7.4,7000,Nam Mang 3,Laos,Nam Gnong
+2016-02-16,9.28,7000,Nam Mang 3,Laos,Nam Gnong
+2016-03-16,9.24,7000,Nam Mang 3,Laos,Nam Gnong
+2016-04-16,7.89,7000,Nam Mang 3,Laos,Nam Gnong
+2016-05-16,7.5,7000,Nam Mang 3,Laos,Nam Gnong
+2016-06-16,9.12,7000,Nam Mang 3,Laos,Nam Gnong
+2016-07-16,10.74,7000,Nam Mang 3,Laos,Nam Gnong
+2016-08-16,9.49,7000,Nam Mang 3,Laos,Nam Gnong
+2016-09-16,8.24,7000,Nam Mang 3,Laos,Nam Gnong
+2016-11-16,8.08,7000,Nam Mang 3,Laos,Nam Gnong
+2016-12-16,7.26,7000,Nam Mang 3,Laos,Nam Gnong
+2017-01-16,9.87,7000,Nam Mang 3,Laos,Nam Gnong
+2017-02-16,7.76,7000,Nam Mang 3,Laos,Nam Gnong
+2017-03-16,6.02,7000,Nam Mang 3,Laos,Nam Gnong
+2017-04-16,2.87,7000,Nam Mang 3,Laos,Nam Gnong
+2017-05-16,4.92,7000,Nam Mang 3,Laos,Nam Gnong
+2017-06-16,2.56,7000,Nam Mang 3,Laos,Nam Gnong
+2017-07-16,6.88,7000,Nam Mang 3,Laos,Nam Gnong
+2017-08-16,0.0,7000,Nam Mang 3,Laos,Nam Gnong
+2017-09-16,8.9,7000,Nam Mang 3,Laos,Nam Gnong
+2017-11-16,10.52,7000,Nam Mang 3,Laos,Nam Gnong
+2017-12-16,9.18,7000,Nam Mang 3,Laos,Nam Gnong
+2018-01-16,8.27,7000,Nam Mang 3,Laos,Nam Gnong
+2018-02-16,7.18,7000,Nam Mang 3,Laos,Nam Gnong
+2018-03-16,6.75,7000,Nam Mang 3,Laos,Nam Gnong
+2018-04-16,4.93,7000,Nam Mang 3,Laos,Nam Gnong
+2018-05-16,3.23,7000,Nam Mang 3,Laos,Nam Gnong
+2018-06-16,2.56,7000,Nam Mang 3,Laos,Nam Gnong
+2018-07-16,6.88,7000,Nam Mang 3,Laos,Nam Gnong
+2018-08-16,3.99,7000,Nam Mang 3,Laos,Nam Gnong
+2018-09-16,8.9,7000,Nam Mang 3,Laos,Nam Gnong
+2018-11-16,10.52,7000,Nam Mang 3,Laos,Nam Gnong
+2018-12-16,9.98,7000,Nam Mang 3,Laos,Nam Gnong
+2019-01-16,9.48,7000,Nam Mang 3,Laos,Nam Gnong
+2019-02-16,7.5,7000,Nam Mang 3,Laos,Nam Gnong
+2019-03-16,6.6,7000,Nam Mang 3,Laos,Nam Gnong
+2019-04-16,3.14,7000,Nam Mang 3,Laos,Nam Gnong
+2019-05-16,3.56,7000,Nam Mang 3,Laos,Nam Gnong
+2019-06-16,2.56,7000,Nam Mang 3,Laos,Nam Gnong
+2019-07-16,0.46,7000,Nam Mang 3,Laos,Nam Gnong
+2019-08-16,3.01,7000,Nam Mang 3,Laos,Nam Gnong
+2019-09-16,5.57,7000,Nam Mang 3,Laos,Nam Gnong
+2019-11-16,10.06,7000,Nam Mang 3,Laos,Nam Gnong
+2019-12-16,8.33,7000,Nam Mang 3,Laos,Nam Gnong
+2020-01-16,8.15,7000,Nam Mang 3,Laos,Nam Gnong
+2020-02-16,7.32,7000,Nam Mang 3,Laos,Nam Gnong
+2020-03-16,6.49,7000,Nam Mang 3,Laos,Nam Gnong
+2020-04-16,4.54,7000,Nam Mang 3,Laos,Nam Gnong
+2020-05-16,3.79,7000,Nam Mang 3,Laos,Nam Gnong
+2020-06-16,5.33,7000,Nam Mang 3,Laos,Nam Gnong
+2020-07-16,6.88,7000,Nam Mang 3,Laos,Nam Gnong
+2020-08-16,3.99,7000,Nam Mang 3,Laos,Nam Gnong
+2020-09-16,8.9,7000,Nam Mang 3,Laos,Nam Gnong
+2020-11-16,9.74,7000,Nam Mang 3,Laos,Nam Gnong
+2020-12-16,9.97,7000,Nam Mang 3,Laos,Nam Gnong
+2021-01-16,8.39,7000,Nam Mang 3,Laos,Nam Gnong
+2021-02-16,8.76,7000,Nam Mang 3,Laos,Nam Gnong
+2021-03-16,5.93,7000,Nam Mang 3,Laos,Nam Gnong
+2021-04-16,4.62,7000,Nam Mang 3,Laos,Nam Gnong
+2021-05-16,3.3,7000,Nam Mang 3,Laos,Nam Gnong
+2021-06-16,2.56,7000,Nam Mang 3,Laos,Nam Gnong
+2021-07-16,6.88,7000,Nam Mang 3,Laos,Nam Gnong
+2021-08-16,3.99,7000,Nam Mang 3,Laos,Nam Gnong
+2021-09-16,8.9,7000,Nam Mang 3,Laos,Nam Gnong
+2013-04-16,40.04,7203,Se San 4,Vietnam,Se San
+2013-05-16,45.29,7203,Se San 4,Vietnam,Se San
+2013-06-16,45.73,7203,Se San 4,Vietnam,Se San
+2013-11-16,52.62,7203,Se San 4,Vietnam,Se San
+2013-12-16,49.99,7203,Se San 4,Vietnam,Se San
+2014-01-16,45.92,7203,Se San 4,Vietnam,Se San
+2014-02-16,46.64,7203,Se San 4,Vietnam,Se San
+2014-03-16,43.77,7203,Se San 4,Vietnam,Se San
+2014-04-16,24.93,7203,Se San 4,Vietnam,Se San
+2014-05-16,43.38,7203,Se San 4,Vietnam,Se San
+2014-09-16,50.56,7203,Se San 4,Vietnam,Se San
+2014-11-16,48.14,7203,Se San 4,Vietnam,Se San
+2014-12-16,48.99,7203,Se San 4,Vietnam,Se San
+2015-01-16,48.05,7203,Se San 4,Vietnam,Se San
+2015-02-16,43.08,7203,Se San 4,Vietnam,Se San
+2015-03-16,41.04,7203,Se San 4,Vietnam,Se San
+2015-04-16,42.04,7203,Se San 4,Vietnam,Se San
+2015-05-16,42.53,7203,Se San 4,Vietnam,Se San
+2015-06-16,43.01,7203,Se San 4,Vietnam,Se San
+2015-07-16,44.68,7203,Se San 4,Vietnam,Se San
+2015-08-16,46.35,7203,Se San 4,Vietnam,Se San
+2015-09-16,42.01,7203,Se San 4,Vietnam,Se San
+2015-11-16,42.21,7203,Se San 4,Vietnam,Se San
+2015-12-16,44.01,7203,Se San 4,Vietnam,Se San
+2016-01-16,38.97,7203,Se San 4,Vietnam,Se San
+2016-02-16,40.0,7203,Se San 4,Vietnam,Se San
+2016-03-16,37.39,7203,Se San 4,Vietnam,Se San
+2016-04-16,37.76,7203,Se San 4,Vietnam,Se San
+2016-05-16,37.56,7203,Se San 4,Vietnam,Se San
+2016-06-16,36.64,7203,Se San 4,Vietnam,Se San
+2016-07-16,43.92,7203,Se San 4,Vietnam,Se San
+2016-11-16,43.92,7203,Se San 4,Vietnam,Se San
+2016-12-16,50.5,7203,Se San 4,Vietnam,Se San
+2017-01-16,44.95,7203,Se San 4,Vietnam,Se San
+2017-02-16,48.62,7203,Se San 4,Vietnam,Se San
+2017-03-16,45.37,7203,Se San 4,Vietnam,Se San
+2017-04-16,33.66,7203,Se San 4,Vietnam,Se San
+2017-05-16,37.59,7203,Se San 4,Vietnam,Se San
+2017-06-16,46.16,7203,Se San 4,Vietnam,Se San
+2017-07-16,52.61,7203,Se San 4,Vietnam,Se San
+2017-08-16,59.06,7203,Se San 4,Vietnam,Se San
+2017-09-16,52.39,7203,Se San 4,Vietnam,Se San
+2017-11-16,41.8,7203,Se San 4,Vietnam,Se San
+2017-12-16,49.31,7203,Se San 4,Vietnam,Se San
+2018-01-16,49.24,7203,Se San 4,Vietnam,Se San
+2018-02-16,47.45,7203,Se San 4,Vietnam,Se San
+2018-03-16,40.53,7203,Se San 4,Vietnam,Se San
+2018-04-16,37.3,7203,Se San 4,Vietnam,Se San
+2018-08-16,31.23,7203,Se San 4,Vietnam,Se San
+2018-09-16,50.09,7203,Se San 4,Vietnam,Se San
+2018-11-16,42.74,7203,Se San 4,Vietnam,Se San
+2018-12-16,42.94,7203,Se San 4,Vietnam,Se San
+2019-01-16,40.53,7203,Se San 4,Vietnam,Se San
+2019-02-16,43.3,7203,Se San 4,Vietnam,Se San
+2019-03-16,38.17,7203,Se San 4,Vietnam,Se San
+2019-04-16,42.55,7203,Se San 4,Vietnam,Se San
+2019-05-16,41.35,7203,Se San 4,Vietnam,Se San
+2019-06-16,36.74,7203,Se San 4,Vietnam,Se San
+2019-09-16,48.6,7203,Se San 4,Vietnam,Se San
+2019-11-16,45.72,7203,Se San 4,Vietnam,Se San
+2019-12-16,45.62,7203,Se San 4,Vietnam,Se San
+2020-01-16,46.19,7203,Se San 4,Vietnam,Se San
+2020-02-16,45.56,7203,Se San 4,Vietnam,Se San
+2020-03-16,44.62,7203,Se San 4,Vietnam,Se San
+2020-04-16,32.73,7203,Se San 4,Vietnam,Se San
+2020-05-16,40.49,7203,Se San 4,Vietnam,Se San
+2020-06-16,28.58,7203,Se San 4,Vietnam,Se San
+2020-08-16,39.89,7203,Se San 4,Vietnam,Se San
+2020-09-16,33.55,7203,Se San 4,Vietnam,Se San
+2020-11-16,49.09,7203,Se San 4,Vietnam,Se San
+2020-12-16,49.46,7203,Se San 4,Vietnam,Se San
+2021-01-16,44.53,7203,Se San 4,Vietnam,Se San
+2021-02-16,43.58,7203,Se San 4,Vietnam,Se San
+2021-03-16,41.25,7203,Se San 4,Vietnam,Se San
+2021-04-16,42.84,7203,Se San 4,Vietnam,Se San
+2021-05-16,43.99,7203,Se San 4,Vietnam,Se San
+2021-08-16,31.23,7203,Se San 4,Vietnam,Se San
+2013-04-16,158.88,5149,Ubol Ratana,Thailand,Nam Pong
+2013-05-16,145.79,5149,Ubol Ratana,Thailand,Nam Pong
+2013-06-16,127.28,5149,Ubol Ratana,Thailand,Nam Pong
+2013-07-16,194.45,5149,Ubol Ratana,Thailand,Nam Pong
+2013-08-16,190.67,5149,Ubol Ratana,Thailand,Nam Pong
+2013-09-16,246.73,5149,Ubol Ratana,Thailand,Nam Pong
+2013-11-16,288.98,5149,Ubol Ratana,Thailand,Nam Pong
+2013-12-16,291.96,5149,Ubol Ratana,Thailand,Nam Pong
+2014-01-16,271.26,5149,Ubol Ratana,Thailand,Nam Pong
+2014-02-16,241.81,5149,Ubol Ratana,Thailand,Nam Pong
+2014-03-16,213.3,5149,Ubol Ratana,Thailand,Nam Pong
+2014-04-16,146.8,5149,Ubol Ratana,Thailand,Nam Pong
+2014-05-16,171.87,5149,Ubol Ratana,Thailand,Nam Pong
+2014-06-16,173.04,5149,Ubol Ratana,Thailand,Nam Pong
+2014-07-16,56.38,5149,Ubol Ratana,Thailand,Nam Pong
+2014-08-16,151.88,5149,Ubol Ratana,Thailand,Nam Pong
+2014-09-16,247.38,5149,Ubol Ratana,Thailand,Nam Pong
+2014-11-16,216.04,5149,Ubol Ratana,Thailand,Nam Pong
+2014-12-16,214.67,5149,Ubol Ratana,Thailand,Nam Pong
+2015-01-16,215.46,5149,Ubol Ratana,Thailand,Nam Pong
+2015-02-16,208.24,5149,Ubol Ratana,Thailand,Nam Pong
+2015-03-16,202.72,5149,Ubol Ratana,Thailand,Nam Pong
+2015-04-16,185.6,5149,Ubol Ratana,Thailand,Nam Pong
+2015-05-16,166.66,5149,Ubol Ratana,Thailand,Nam Pong
+2015-06-16,171.13,5149,Ubol Ratana,Thailand,Nam Pong
+2015-07-16,160.37,5149,Ubol Ratana,Thailand,Nam Pong
+2015-08-16,149.6,5149,Ubol Ratana,Thailand,Nam Pong
+2015-09-16,170.52,5149,Ubol Ratana,Thailand,Nam Pong
+2015-11-16,156.98,5149,Ubol Ratana,Thailand,Nam Pong
+2015-12-16,161.39,5149,Ubol Ratana,Thailand,Nam Pong
+2016-01-16,174.68,5149,Ubol Ratana,Thailand,Nam Pong
+2016-02-16,158.38,5149,Ubol Ratana,Thailand,Nam Pong
+2016-03-16,152.12,5149,Ubol Ratana,Thailand,Nam Pong
+2016-04-16,138.15,5149,Ubol Ratana,Thailand,Nam Pong
+2016-05-16,136.66,5149,Ubol Ratana,Thailand,Nam Pong
+2016-06-16,126.34,5149,Ubol Ratana,Thailand,Nam Pong
+2016-07-16,116.01,5149,Ubol Ratana,Thailand,Nam Pong
+2016-08-16,177.62,5149,Ubol Ratana,Thailand,Nam Pong
+2016-09-16,239.24,5149,Ubol Ratana,Thailand,Nam Pong
+2016-11-16,327.53,5149,Ubol Ratana,Thailand,Nam Pong
+2016-12-16,313.15,5149,Ubol Ratana,Thailand,Nam Pong
+2017-01-16,293.2,5149,Ubol Ratana,Thailand,Nam Pong
+2017-02-16,281.42,5149,Ubol Ratana,Thailand,Nam Pong
+2017-03-16,254.78,5149,Ubol Ratana,Thailand,Nam Pong
+2017-04-16,236.59,5149,Ubol Ratana,Thailand,Nam Pong
+2017-05-16,190.1,5149,Ubol Ratana,Thailand,Nam Pong
+2017-06-16,187.86,5149,Ubol Ratana,Thailand,Nam Pong
+2017-07-16,180.17,5149,Ubol Ratana,Thailand,Nam Pong
+2017-08-16,270.58,5149,Ubol Ratana,Thailand,Nam Pong
+2017-09-16,289.75,5149,Ubol Ratana,Thailand,Nam Pong
+2017-11-16,331.46,5149,Ubol Ratana,Thailand,Nam Pong
+2017-12-16,340.41,5149,Ubol Ratana,Thailand,Nam Pong
+2018-01-16,317.77,5149,Ubol Ratana,Thailand,Nam Pong
+2018-03-16,270.2,5149,Ubol Ratana,Thailand,Nam Pong
+2018-04-16,230.4,5149,Ubol Ratana,Thailand,Nam Pong
+2018-05-16,194.61,5149,Ubol Ratana,Thailand,Nam Pong
+2018-06-16,190.14,5149,Ubol Ratana,Thailand,Nam Pong
+2018-07-16,194.45,5149,Ubol Ratana,Thailand,Nam Pong
+2018-08-16,190.67,5149,Ubol Ratana,Thailand,Nam Pong
+2018-09-16,246.73,5149,Ubol Ratana,Thailand,Nam Pong
+2018-11-16,183.68,5149,Ubol Ratana,Thailand,Nam Pong
+2018-12-16,180.01,5149,Ubol Ratana,Thailand,Nam Pong
+2019-01-16,174.52,5149,Ubol Ratana,Thailand,Nam Pong
+2019-02-16,166.81,5149,Ubol Ratana,Thailand,Nam Pong
+2019-03-16,154.7,5149,Ubol Ratana,Thailand,Nam Pong
+2019-04-16,146.7,5149,Ubol Ratana,Thailand,Nam Pong
+2019-05-16,163.12,5149,Ubol Ratana,Thailand,Nam Pong
+2019-06-16,152.81,5149,Ubol Ratana,Thailand,Nam Pong
+2019-07-16,142.5,5149,Ubol Ratana,Thailand,Nam Pong
+2019-08-16,127.1,5149,Ubol Ratana,Thailand,Nam Pong
+2019-09-16,111.7,5149,Ubol Ratana,Thailand,Nam Pong
+2019-11-16,142.14,5149,Ubol Ratana,Thailand,Nam Pong
+2019-12-16,135.28,5149,Ubol Ratana,Thailand,Nam Pong
+2020-01-16,125.47,5149,Ubol Ratana,Thailand,Nam Pong
+2020-02-16,118.42,5149,Ubol Ratana,Thailand,Nam Pong
+2020-03-16,109.94,5149,Ubol Ratana,Thailand,Nam Pong
+2020-04-16,102.02,5149,Ubol Ratana,Thailand,Nam Pong
+2020-05-16,95.82,5149,Ubol Ratana,Thailand,Nam Pong
+2020-06-16,105.75,5149,Ubol Ratana,Thailand,Nam Pong
+2020-07-16,105.94,5149,Ubol Ratana,Thailand,Nam Pong
+2020-08-16,52.97,5149,Ubol Ratana,Thailand,Nam Pong
+2020-11-16,247.51,5149,Ubol Ratana,Thailand,Nam Pong
+2020-12-16,246.76,5149,Ubol Ratana,Thailand,Nam Pong
+2021-01-16,232.82,5149,Ubol Ratana,Thailand,Nam Pong
+2021-02-16,231.65,5149,Ubol Ratana,Thailand,Nam Pong
+2021-03-16,205.34,5149,Ubol Ratana,Thailand,Nam Pong
+2021-04-16,165.02,5149,Ubol Ratana,Thailand,Nam Pong
+2021-05-16,191.86,5149,Ubol Ratana,Thailand,Nam Pong
+2021-06-16,187.86,5149,Ubol Ratana,Thailand,Nam Pong
+2021-07-16,194.45,5149,Ubol Ratana,Thailand,Nam Pong
+2021-08-16,190.67,5149,Ubol Ratana,Thailand,Nam Pong
+2021-09-16,246.73,5149,Ubol Ratana,Thailand,Nam Pong
+2013-04-16,373.77,5136,Nam Ngum 1,Laos,Nam Ngum
+2013-05-16,377.81,5136,Nam Ngum 1,Laos,Nam Ngum
+2013-06-16,394.65,5136,Nam Ngum 1,Laos,Nam Ngum
+2013-07-16,318.0,5136,Nam Ngum 1,Laos,Nam Ngum
+2013-09-16,343.57,5136,Nam Ngum 1,Laos,Nam Ngum
+2013-11-16,460.22,5136,Nam Ngum 1,Laos,Nam Ngum
+2013-12-16,445.55,5136,Nam Ngum 1,Laos,Nam Ngum
+2014-01-16,436.34,5136,Nam Ngum 1,Laos,Nam Ngum
+2014-02-16,421.75,5136,Nam Ngum 1,Laos,Nam Ngum
+2014-03-16,421.22,5136,Nam Ngum 1,Laos,Nam Ngum
+2014-04-16,406.91,5136,Nam Ngum 1,Laos,Nam Ngum
+2014-05-16,398.87,5136,Nam Ngum 1,Laos,Nam Ngum
+2014-06-16,433.35,5136,Nam Ngum 1,Laos,Nam Ngum
+2014-09-16,441.04,5136,Nam Ngum 1,Laos,Nam Ngum
+2014-11-16,446.08,5136,Nam Ngum 1,Laos,Nam Ngum
+2014-12-16,439.0,5136,Nam Ngum 1,Laos,Nam Ngum
+2015-01-16,438.41,5136,Nam Ngum 1,Laos,Nam Ngum
+2015-02-16,433.82,5136,Nam Ngum 1,Laos,Nam Ngum
+2015-03-16,421.72,5136,Nam Ngum 1,Laos,Nam Ngum
+2015-04-16,413.58,5136,Nam Ngum 1,Laos,Nam Ngum
+2015-05-16,399.22,5136,Nam Ngum 1,Laos,Nam Ngum
+2015-06-16,398.52,5136,Nam Ngum 1,Laos,Nam Ngum
+2015-07-16,414.92,5136,Nam Ngum 1,Laos,Nam Ngum
+2015-08-16,431.32,5136,Nam Ngum 1,Laos,Nam Ngum
+2015-09-16,472.81,5136,Nam Ngum 1,Laos,Nam Ngum
+2015-11-16,448.22,5136,Nam Ngum 1,Laos,Nam Ngum
+2015-12-16,434.77,5136,Nam Ngum 1,Laos,Nam Ngum
+2016-01-16,476.76,5136,Nam Ngum 1,Laos,Nam Ngum
+2016-02-16,423.26,5136,Nam Ngum 1,Laos,Nam Ngum
+2016-03-16,416.21,5136,Nam Ngum 1,Laos,Nam Ngum
+2016-04-16,395.21,5136,Nam Ngum 1,Laos,Nam Ngum
+2016-06-16,335.15,5136,Nam Ngum 1,Laos,Nam Ngum
+2016-07-16,406.81,5136,Nam Ngum 1,Laos,Nam Ngum
+2016-08-16,321.62,5136,Nam Ngum 1,Laos,Nam Ngum
+2016-09-16,441.85,5136,Nam Ngum 1,Laos,Nam Ngum
+2016-11-16,468.93,5136,Nam Ngum 1,Laos,Nam Ngum
+2016-12-16,436.3,5136,Nam Ngum 1,Laos,Nam Ngum
+2017-01-16,420.62,5136,Nam Ngum 1,Laos,Nam Ngum
+2017-02-16,400.65,5136,Nam Ngum 1,Laos,Nam Ngum
+2017-03-16,383.9,5136,Nam Ngum 1,Laos,Nam Ngum
+2017-05-16,377.11,5136,Nam Ngum 1,Laos,Nam Ngum
+2017-06-16,390.03,5136,Nam Ngum 1,Laos,Nam Ngum
+2017-07-16,395.81,5136,Nam Ngum 1,Laos,Nam Ngum
+2017-09-16,388.34,5136,Nam Ngum 1,Laos,Nam Ngum
+2017-11-16,434.98,5136,Nam Ngum 1,Laos,Nam Ngum
+2017-12-16,390.3,5136,Nam Ngum 1,Laos,Nam Ngum
+2018-01-16,428.79,5136,Nam Ngum 1,Laos,Nam Ngum
+2018-02-16,423.52,5136,Nam Ngum 1,Laos,Nam Ngum
+2018-03-16,413.22,5136,Nam Ngum 1,Laos,Nam Ngum
+2018-04-16,409.97,5136,Nam Ngum 1,Laos,Nam Ngum
+2018-05-16,326.24,5136,Nam Ngum 1,Laos,Nam Ngum
+2018-06-16,329.63,5136,Nam Ngum 1,Laos,Nam Ngum
+2018-07-16,395.81,5136,Nam Ngum 1,Laos,Nam Ngum
+2018-08-16,420.2,5136,Nam Ngum 1,Laos,Nam Ngum
+2018-09-16,438.77,5136,Nam Ngum 1,Laos,Nam Ngum
+2018-11-16,445.94,5136,Nam Ngum 1,Laos,Nam Ngum
+2018-12-16,446.55,5136,Nam Ngum 1,Laos,Nam Ngum
+2019-01-16,439.02,5136,Nam Ngum 1,Laos,Nam Ngum
+2019-02-16,419.65,5136,Nam Ngum 1,Laos,Nam Ngum
+2019-03-16,408.47,5136,Nam Ngum 1,Laos,Nam Ngum
+2019-04-16,376.85,5136,Nam Ngum 1,Laos,Nam Ngum
+2019-05-16,380.68,5136,Nam Ngum 1,Laos,Nam Ngum
+2019-06-16,390.03,5136,Nam Ngum 1,Laos,Nam Ngum
+2019-07-16,381.44,5136,Nam Ngum 1,Laos,Nam Ngum
+2019-08-16,408.77,5136,Nam Ngum 1,Laos,Nam Ngum
+2019-09-16,436.11,5136,Nam Ngum 1,Laos,Nam Ngum
+2019-11-16,421.59,5136,Nam Ngum 1,Laos,Nam Ngum
+2019-12-16,427.82,5136,Nam Ngum 1,Laos,Nam Ngum
+2020-01-16,416.92,5136,Nam Ngum 1,Laos,Nam Ngum
+2020-02-16,368.74,5136,Nam Ngum 1,Laos,Nam Ngum
+2020-03-16,392.64,5136,Nam Ngum 1,Laos,Nam Ngum
+2020-04-16,365.61,5136,Nam Ngum 1,Laos,Nam Ngum
+2020-05-16,361.72,5136,Nam Ngum 1,Laos,Nam Ngum
+2020-06-16,405.57,5136,Nam Ngum 1,Laos,Nam Ngum
+2020-07-16,417.06,5136,Nam Ngum 1,Laos,Nam Ngum
+2020-08-16,396.35,5136,Nam Ngum 1,Laos,Nam Ngum
+2020-09-16,375.63,5136,Nam Ngum 1,Laos,Nam Ngum
+2020-11-16,444.28,5136,Nam Ngum 1,Laos,Nam Ngum
+2020-12-16,440.8,5136,Nam Ngum 1,Laos,Nam Ngum
+2021-01-16,431.18,5136,Nam Ngum 1,Laos,Nam Ngum
+2021-02-16,425.61,5136,Nam Ngum 1,Laos,Nam Ngum
+2021-03-16,384.63,5136,Nam Ngum 1,Laos,Nam Ngum
+2021-04-16,380.95,5136,Nam Ngum 1,Laos,Nam Ngum
+2021-05-16,362.02,5136,Nam Ngum 1,Laos,Nam Ngum
+2021-06-16,390.03,5136,Nam Ngum 1,Laos,Nam Ngum
+2021-07-16,395.81,5136,Nam Ngum 1,Laos,Nam Ngum
+2021-08-16,420.2,5136,Nam Ngum 1,Laos,Nam Ngum
+2021-09-16,432.9,5136,Nam Ngum 1,Laos,Nam Ngum
+2013-04-16,210.14,6999,Nam Theun 2,Laos,Nam Theun
+2013-05-16,119.43,6999,Nam Theun 2,Laos,Nam Theun
+2013-06-16,28.71,6999,Nam Theun 2,Laos,Nam Theun
+2013-07-16,191.42,6999,Nam Theun 2,Laos,Nam Theun
+2013-08-16,354.13,6999,Nam Theun 2,Laos,Nam Theun
+2013-09-16,85.62,6999,Nam Theun 2,Laos,Nam Theun
+2013-11-16,368.85,6999,Nam Theun 2,Laos,Nam Theun
+2013-12-16,381.55,6999,Nam Theun 2,Laos,Nam Theun
+2014-01-16,402.7,6999,Nam Theun 2,Laos,Nam Theun
+2014-02-16,373.86,6999,Nam Theun 2,Laos,Nam Theun
+2014-03-16,333.54,6999,Nam Theun 2,Laos,Nam Theun
+2014-04-16,129.34,6999,Nam Theun 2,Laos,Nam Theun
+2014-05-16,125.03,6999,Nam Theun 2,Laos,Nam Theun
+2014-06-16,221.67,6999,Nam Theun 2,Laos,Nam Theun
+2014-07-16,318.32,6999,Nam Theun 2,Laos,Nam Theun
+2014-08-16,373.02,6999,Nam Theun 2,Laos,Nam Theun
+2014-09-16,386.74,6999,Nam Theun 2,Laos,Nam Theun
+2014-11-16,395.99,6999,Nam Theun 2,Laos,Nam Theun
+2014-12-16,396.92,6999,Nam Theun 2,Laos,Nam Theun
+2015-01-16,388.62,6999,Nam Theun 2,Laos,Nam Theun
+2015-02-16,371.31,6999,Nam Theun 2,Laos,Nam Theun
+2015-03-16,315.18,6999,Nam Theun 2,Laos,Nam Theun
+2015-04-16,272.49,6999,Nam Theun 2,Laos,Nam Theun
+2015-05-16,230.5,6999,Nam Theun 2,Laos,Nam Theun
+2015-06-16,170.42,6999,Nam Theun 2,Laos,Nam Theun
+2015-07-16,142.44,6999,Nam Theun 2,Laos,Nam Theun
+2015-08-16,207.75,6999,Nam Theun 2,Laos,Nam Theun
+2015-09-16,360.26,6999,Nam Theun 2,Laos,Nam Theun
+2015-11-16,386.57,6999,Nam Theun 2,Laos,Nam Theun
+2015-12-16,367.62,6999,Nam Theun 2,Laos,Nam Theun
+2016-01-16,206.35,6999,Nam Theun 2,Laos,Nam Theun
+2016-02-16,340.68,6999,Nam Theun 2,Laos,Nam Theun
+2016-03-16,298.5,6999,Nam Theun 2,Laos,Nam Theun
+2016-04-16,265.48,6999,Nam Theun 2,Laos,Nam Theun
+2016-05-16,133.47,6999,Nam Theun 2,Laos,Nam Theun
+2016-06-16,185.97,6999,Nam Theun 2,Laos,Nam Theun
+2016-07-16,105.94,6999,Nam Theun 2,Laos,Nam Theun
+2016-08-16,254.86,6999,Nam Theun 2,Laos,Nam Theun
+2016-09-16,18.89,6999,Nam Theun 2,Laos,Nam Theun
+2016-11-16,293.14,6999,Nam Theun 2,Laos,Nam Theun
+2016-12-16,390.61,6999,Nam Theun 2,Laos,Nam Theun
+2017-01-16,300.34,6999,Nam Theun 2,Laos,Nam Theun
+2017-02-16,372.97,6999,Nam Theun 2,Laos,Nam Theun
+2017-03-16,338.38,6999,Nam Theun 2,Laos,Nam Theun
+2017-04-16,303.79,6999,Nam Theun 2,Laos,Nam Theun
+2017-05-16,248.67,6999,Nam Theun 2,Laos,Nam Theun
+2017-06-16,211.31,6999,Nam Theun 2,Laos,Nam Theun
+2017-07-16,105.94,6999,Nam Theun 2,Laos,Nam Theun
+2017-08-16,254.86,6999,Nam Theun 2,Laos,Nam Theun
+2017-09-16,18.89,6999,Nam Theun 2,Laos,Nam Theun
+2017-11-16,396.24,6999,Nam Theun 2,Laos,Nam Theun
+2017-12-16,394.0,6999,Nam Theun 2,Laos,Nam Theun
+2018-01-16,385.42,6999,Nam Theun 2,Laos,Nam Theun
+2018-02-16,368.37,6999,Nam Theun 2,Laos,Nam Theun
+2018-03-16,312.34,6999,Nam Theun 2,Laos,Nam Theun
+2018-04-16,276.22,6999,Nam Theun 2,Laos,Nam Theun
+2018-05-16,216.16,6999,Nam Theun 2,Laos,Nam Theun
+2018-06-16,6.71,6999,Nam Theun 2,Laos,Nam Theun
+2018-07-16,105.94,6999,Nam Theun 2,Laos,Nam Theun
+2018-08-16,254.86,6999,Nam Theun 2,Laos,Nam Theun
+2018-09-16,451.98,6999,Nam Theun 2,Laos,Nam Theun
+2018-11-16,379.85,6999,Nam Theun 2,Laos,Nam Theun
+2018-12-16,368.49,6999,Nam Theun 2,Laos,Nam Theun
+2019-01-16,346.45,6999,Nam Theun 2,Laos,Nam Theun
+2019-02-16,275.52,6999,Nam Theun 2,Laos,Nam Theun
+2019-03-16,279.32,6999,Nam Theun 2,Laos,Nam Theun
+2019-04-16,227.37,6999,Nam Theun 2,Laos,Nam Theun
+2019-05-16,92.11,6999,Nam Theun 2,Laos,Nam Theun
+2019-06-16,94.11,6999,Nam Theun 2,Laos,Nam Theun
+2019-07-16,96.1,6999,Nam Theun 2,Laos,Nam Theun
+2019-08-16,252.59,6999,Nam Theun 2,Laos,Nam Theun
+2019-09-16,409.09,6999,Nam Theun 2,Laos,Nam Theun
+2019-11-16,432.58,6999,Nam Theun 2,Laos,Nam Theun
+2019-12-16,385.83,6999,Nam Theun 2,Laos,Nam Theun
+2020-01-16,365.92,6999,Nam Theun 2,Laos,Nam Theun
+2020-02-16,288.02,6999,Nam Theun 2,Laos,Nam Theun
+2020-03-16,313.64,6999,Nam Theun 2,Laos,Nam Theun
+2020-04-16,100.58,6999,Nam Theun 2,Laos,Nam Theun
+2020-05-16,185.59,6999,Nam Theun 2,Laos,Nam Theun
+2020-06-16,141.64,6999,Nam Theun 2,Laos,Nam Theun
+2020-07-16,102.76,6999,Nam Theun 2,Laos,Nam Theun
+2020-08-16,91.87,6999,Nam Theun 2,Laos,Nam Theun
+2020-09-16,80.99,6999,Nam Theun 2,Laos,Nam Theun
+2020-11-16,333.95,6999,Nam Theun 2,Laos,Nam Theun
+2020-12-16,329.67,6999,Nam Theun 2,Laos,Nam Theun
+2021-01-16,317.57,6999,Nam Theun 2,Laos,Nam Theun
+2021-02-16,287.98,6999,Nam Theun 2,Laos,Nam Theun
+2021-03-16,256.27,6999,Nam Theun 2,Laos,Nam Theun
+2021-04-16,138.6,6999,Nam Theun 2,Laos,Nam Theun
+2021-05-16,112.3,6999,Nam Theun 2,Laos,Nam Theun
+2021-06-16,115.6,6999,Nam Theun 2,Laos,Nam Theun
+2021-07-16,105.94,6999,Nam Theun 2,Laos,Nam Theun
+2021-08-16,254.86,6999,Nam Theun 2,Laos,Nam Theun
+2021-09-16,18.89,6999,Nam Theun 2,Laos,Nam Theun
+2013-04-16,24.06,7303,Lower Sesan 2,Cambodia,Sesan
+2013-05-16,25.07,7303,Lower Sesan 2,Cambodia,Sesan
+2013-06-16,26.08,7303,Lower Sesan 2,Cambodia,Sesan
+2013-07-16,19.46,7303,Lower Sesan 2,Cambodia,Sesan
+2013-08-16,30.44,7303,Lower Sesan 2,Cambodia,Sesan
+2013-09-16,32.22,7303,Lower Sesan 2,Cambodia,Sesan
+2013-11-16,31.61,7303,Lower Sesan 2,Cambodia,Sesan
+2013-12-16,32.28,7303,Lower Sesan 2,Cambodia,Sesan
+2014-01-16,30.86,7303,Lower Sesan 2,Cambodia,Sesan
+2014-02-16,31.05,7303,Lower Sesan 2,Cambodia,Sesan
+2014-03-16,20.71,7303,Lower Sesan 2,Cambodia,Sesan
+2014-04-16,7.48,7303,Lower Sesan 2,Cambodia,Sesan
+2014-05-16,28.1,7303,Lower Sesan 2,Cambodia,Sesan
+2014-06-16,29.23,7303,Lower Sesan 2,Cambodia,Sesan
+2014-07-16,30.87,7303,Lower Sesan 2,Cambodia,Sesan
+2014-08-16,30.44,7303,Lower Sesan 2,Cambodia,Sesan
+2014-09-16,33.18,7303,Lower Sesan 2,Cambodia,Sesan
+2014-11-16,30.42,7303,Lower Sesan 2,Cambodia,Sesan
+2014-12-16,29.27,7303,Lower Sesan 2,Cambodia,Sesan
+2015-01-16,29.73,7303,Lower Sesan 2,Cambodia,Sesan
+2015-02-16,31.16,7303,Lower Sesan 2,Cambodia,Sesan
+2015-03-16,28.62,7303,Lower Sesan 2,Cambodia,Sesan
+2015-04-16,25.93,7303,Lower Sesan 2,Cambodia,Sesan
+2015-05-16,23.51,7303,Lower Sesan 2,Cambodia,Sesan
+2015-06-16,29.23,7303,Lower Sesan 2,Cambodia,Sesan
+2015-07-16,30.87,7303,Lower Sesan 2,Cambodia,Sesan
+2015-08-16,28.11,7303,Lower Sesan 2,Cambodia,Sesan
+2015-09-16,21.9,7303,Lower Sesan 2,Cambodia,Sesan
+2015-11-16,30.79,7303,Lower Sesan 2,Cambodia,Sesan
+2015-12-16,29.64,7303,Lower Sesan 2,Cambodia,Sesan
+2016-01-16,31.23,7303,Lower Sesan 2,Cambodia,Sesan
+2016-02-16,26.76,7303,Lower Sesan 2,Cambodia,Sesan
+2016-03-16,21.17,7303,Lower Sesan 2,Cambodia,Sesan
+2016-04-16,15.92,7303,Lower Sesan 2,Cambodia,Sesan
+2016-05-16,22.64,7303,Lower Sesan 2,Cambodia,Sesan
+2016-06-16,18.78,7303,Lower Sesan 2,Cambodia,Sesan
+2016-07-16,30.87,7303,Lower Sesan 2,Cambodia,Sesan
+2016-08-16,30.44,7303,Lower Sesan 2,Cambodia,Sesan
+2016-09-16,32.22,7303,Lower Sesan 2,Cambodia,Sesan
+2016-11-16,31.01,7303,Lower Sesan 2,Cambodia,Sesan
+2016-12-16,31.27,7303,Lower Sesan 2,Cambodia,Sesan
+2017-01-16,32.72,7303,Lower Sesan 2,Cambodia,Sesan
+2017-02-16,33.44,7303,Lower Sesan 2,Cambodia,Sesan
+2017-03-16,28.39,7303,Lower Sesan 2,Cambodia,Sesan
+2017-04-16,24.82,7303,Lower Sesan 2,Cambodia,Sesan
+2017-05-16,11.77,7303,Lower Sesan 2,Cambodia,Sesan
+2017-06-16,29.23,7303,Lower Sesan 2,Cambodia,Sesan
+2017-07-16,30.87,7303,Lower Sesan 2,Cambodia,Sesan
+2017-08-16,34.68,7303,Lower Sesan 2,Cambodia,Sesan
+2017-09-16,32.23,7303,Lower Sesan 2,Cambodia,Sesan
+2017-11-16,195.18,7303,Lower Sesan 2,Cambodia,Sesan
+2017-12-16,200.23,7303,Lower Sesan 2,Cambodia,Sesan
+2018-01-16,216.44,7303,Lower Sesan 2,Cambodia,Sesan
+2018-02-16,222.2,7303,Lower Sesan 2,Cambodia,Sesan
+2018-03-16,212.94,7303,Lower Sesan 2,Cambodia,Sesan
+2018-04-16,218.04,7303,Lower Sesan 2,Cambodia,Sesan
+2018-05-16,26.67,7303,Lower Sesan 2,Cambodia,Sesan
+2018-06-16,29.23,7303,Lower Sesan 2,Cambodia,Sesan
+2018-07-16,30.87,7303,Lower Sesan 2,Cambodia,Sesan
+2018-08-16,30.44,7303,Lower Sesan 2,Cambodia,Sesan
+2018-09-16,247.35,7303,Lower Sesan 2,Cambodia,Sesan
+2018-11-16,240.56,7303,Lower Sesan 2,Cambodia,Sesan
+2018-12-16,233.42,7303,Lower Sesan 2,Cambodia,Sesan
+2019-01-16,222.76,7303,Lower Sesan 2,Cambodia,Sesan
+2019-02-16,252.76,7303,Lower Sesan 2,Cambodia,Sesan
+2019-03-16,264.28,7303,Lower Sesan 2,Cambodia,Sesan
+2019-04-16,269.08,7303,Lower Sesan 2,Cambodia,Sesan
+2019-05-16,244.21,7303,Lower Sesan 2,Cambodia,Sesan
+2019-06-16,219.34,7303,Lower Sesan 2,Cambodia,Sesan
+2019-07-16,30.87,7303,Lower Sesan 2,Cambodia,Sesan
+2019-08-16,30.44,7303,Lower Sesan 2,Cambodia,Sesan
+2019-09-16,32.22,7303,Lower Sesan 2,Cambodia,Sesan
+2019-11-16,274.42,7303,Lower Sesan 2,Cambodia,Sesan
+2019-12-16,270.37,7303,Lower Sesan 2,Cambodia,Sesan
+2020-01-16,255.75,7303,Lower Sesan 2,Cambodia,Sesan
+2020-02-16,272.64,7303,Lower Sesan 2,Cambodia,Sesan
+2020-03-16,267.61,7303,Lower Sesan 2,Cambodia,Sesan
+2020-04-16,201.94,7303,Lower Sesan 2,Cambodia,Sesan
+2020-05-16,239.75,7303,Lower Sesan 2,Cambodia,Sesan
+2020-06-16,234.38,7303,Lower Sesan 2,Cambodia,Sesan
+2020-07-16,229.02,7303,Lower Sesan 2,Cambodia,Sesan
+2020-08-16,257.15,7303,Lower Sesan 2,Cambodia,Sesan
+2020-09-16,285.29,7303,Lower Sesan 2,Cambodia,Sesan
+2020-11-16,271.64,7303,Lower Sesan 2,Cambodia,Sesan
+2020-12-16,219.64,7303,Lower Sesan 2,Cambodia,Sesan
+2021-01-16,238.19,7303,Lower Sesan 2,Cambodia,Sesan
+2021-02-16,377.74,7303,Lower Sesan 2,Cambodia,Sesan
+2021-03-16,262.8,7303,Lower Sesan 2,Cambodia,Sesan
+2021-04-16,269.24,7303,Lower Sesan 2,Cambodia,Sesan
+2021-05-16,269.73,7303,Lower Sesan 2,Cambodia,Sesan
+2021-06-16,270.21,7303,Lower Sesan 2,Cambodia,Sesan
+2021-07-16,30.87,7303,Lower Sesan 2,Cambodia,Sesan
+2021-08-16,30.44,7303,Lower Sesan 2,Cambodia,Sesan
+2021-09-16,32.22,7303,Lower Sesan 2,Cambodia,Sesan
+2013-04-16,145.99,5796,Sirindhorn,Thailand,Lam Dom Noi
+2013-05-16,162.5,5796,Sirindhorn,Thailand,Lam Dom Noi
+2013-06-16,251.96,5796,Sirindhorn,Thailand,Lam Dom Noi
+2013-07-16,239.27,5796,Sirindhorn,Thailand,Lam Dom Noi
+2013-08-16,212.81,5796,Sirindhorn,Thailand,Lam Dom Noi
+2013-09-16,228.65,5796,Sirindhorn,Thailand,Lam Dom Noi
+2013-11-16,265.52,5796,Sirindhorn,Thailand,Lam Dom Noi
+2013-12-16,239.0,5796,Sirindhorn,Thailand,Lam Dom Noi
+2014-01-16,233.94,5796,Sirindhorn,Thailand,Lam Dom Noi
+2014-02-16,203.97,5796,Sirindhorn,Thailand,Lam Dom Noi
+2014-03-16,204.49,5796,Sirindhorn,Thailand,Lam Dom Noi
+2014-04-16,188.88,5796,Sirindhorn,Thailand,Lam Dom Noi
+2014-05-16,168.34,5796,Sirindhorn,Thailand,Lam Dom Noi
+2014-07-16,122.74,5796,Sirindhorn,Thailand,Lam Dom Noi
+2014-08-16,229.72,5796,Sirindhorn,Thailand,Lam Dom Noi
+2014-09-16,235.06,5796,Sirindhorn,Thailand,Lam Dom Noi
+2014-11-16,241.19,5796,Sirindhorn,Thailand,Lam Dom Noi
+2014-12-16,233.27,5796,Sirindhorn,Thailand,Lam Dom Noi
+2015-01-16,222.25,5796,Sirindhorn,Thailand,Lam Dom Noi
+2015-02-16,204.14,5796,Sirindhorn,Thailand,Lam Dom Noi
+2015-03-16,195.2,5796,Sirindhorn,Thailand,Lam Dom Noi
+2015-04-16,178.17,5796,Sirindhorn,Thailand,Lam Dom Noi
+2015-05-16,172.69,5796,Sirindhorn,Thailand,Lam Dom Noi
+2015-06-16,167.2,5796,Sirindhorn,Thailand,Lam Dom Noi
+2015-07-16,169.23,5796,Sirindhorn,Thailand,Lam Dom Noi
+2015-08-16,147.04,5796,Sirindhorn,Thailand,Lam Dom Noi
+2015-09-16,255.9,5796,Sirindhorn,Thailand,Lam Dom Noi
+2015-11-16,215.91,5796,Sirindhorn,Thailand,Lam Dom Noi
+2015-12-16,209.41,5796,Sirindhorn,Thailand,Lam Dom Noi
+2016-01-16,210.14,5796,Sirindhorn,Thailand,Lam Dom Noi
+2016-02-16,199.57,5796,Sirindhorn,Thailand,Lam Dom Noi
+2016-03-16,189.01,5796,Sirindhorn,Thailand,Lam Dom Noi
+2016-04-16,181.22,5796,Sirindhorn,Thailand,Lam Dom Noi
+2016-05-16,166.59,5796,Sirindhorn,Thailand,Lam Dom Noi
+2016-09-16,225.03,5796,Sirindhorn,Thailand,Lam Dom Noi
+2016-11-16,257.44,5796,Sirindhorn,Thailand,Lam Dom Noi
+2016-12-16,229.62,5796,Sirindhorn,Thailand,Lam Dom Noi
+2017-01-16,221.85,5796,Sirindhorn,Thailand,Lam Dom Noi
+2017-02-16,214.01,5796,Sirindhorn,Thailand,Lam Dom Noi
+2017-03-16,193.61,5796,Sirindhorn,Thailand,Lam Dom Noi
+2017-04-16,187.94,5796,Sirindhorn,Thailand,Lam Dom Noi
+2017-05-16,196.05,5796,Sirindhorn,Thailand,Lam Dom Noi
+2017-06-16,184.27,5796,Sirindhorn,Thailand,Lam Dom Noi
+2017-07-16,172.5,5796,Sirindhorn,Thailand,Lam Dom Noi
+2017-08-16,188.95,5796,Sirindhorn,Thailand,Lam Dom Noi
+2017-09-16,205.39,5796,Sirindhorn,Thailand,Lam Dom Noi
+2017-11-16,237.75,5796,Sirindhorn,Thailand,Lam Dom Noi
+2017-12-16,226.72,5796,Sirindhorn,Thailand,Lam Dom Noi
+2018-01-16,218.96,5796,Sirindhorn,Thailand,Lam Dom Noi
+2018-02-16,214.71,5796,Sirindhorn,Thailand,Lam Dom Noi
+2018-03-16,196.76,5796,Sirindhorn,Thailand,Lam Dom Noi
+2018-04-16,133.31,5796,Sirindhorn,Thailand,Lam Dom Noi
+2018-05-16,185.11,5796,Sirindhorn,Thailand,Lam Dom Noi
+2018-06-16,182.47,5796,Sirindhorn,Thailand,Lam Dom Noi
+2018-07-16,189.79,5796,Sirindhorn,Thailand,Lam Dom Noi
+2018-08-16,161.12,5796,Sirindhorn,Thailand,Lam Dom Noi
+2018-09-16,220.46,5796,Sirindhorn,Thailand,Lam Dom Noi
+2018-11-16,209.22,5796,Sirindhorn,Thailand,Lam Dom Noi
+2018-12-16,199.82,5796,Sirindhorn,Thailand,Lam Dom Noi
+2019-01-16,189.67,5796,Sirindhorn,Thailand,Lam Dom Noi
+2019-02-16,179.99,5796,Sirindhorn,Thailand,Lam Dom Noi
+2019-03-16,159.08,5796,Sirindhorn,Thailand,Lam Dom Noi
+2019-04-16,144.31,5796,Sirindhorn,Thailand,Lam Dom Noi
+2019-05-16,160.23,5796,Sirindhorn,Thailand,Lam Dom Noi
+2019-06-16,134.38,5796,Sirindhorn,Thailand,Lam Dom Noi
+2019-07-16,141.75,5796,Sirindhorn,Thailand,Lam Dom Noi
+2019-08-16,185.2,5796,Sirindhorn,Thailand,Lam Dom Noi
+2019-09-16,228.65,5796,Sirindhorn,Thailand,Lam Dom Noi
+2019-11-16,242.36,5796,Sirindhorn,Thailand,Lam Dom Noi
+2019-12-16,239.98,5796,Sirindhorn,Thailand,Lam Dom Noi
+2020-01-16,236.66,5796,Sirindhorn,Thailand,Lam Dom Noi
+2020-02-16,224.13,5796,Sirindhorn,Thailand,Lam Dom Noi
+2020-03-16,211.61,5796,Sirindhorn,Thailand,Lam Dom Noi
+2020-04-16,198.72,5796,Sirindhorn,Thailand,Lam Dom Noi
+2020-05-16,138.88,5796,Sirindhorn,Thailand,Lam Dom Noi
+2020-06-16,188.71,5796,Sirindhorn,Thailand,Lam Dom Noi
+2020-07-16,211.77,5796,Sirindhorn,Thailand,Lam Dom Noi
+2020-08-16,207.43,5796,Sirindhorn,Thailand,Lam Dom Noi
+2020-09-16,212.28,5796,Sirindhorn,Thailand,Lam Dom Noi
+2020-11-16,227.93,5796,Sirindhorn,Thailand,Lam Dom Noi
+2020-12-16,233.36,5796,Sirindhorn,Thailand,Lam Dom Noi
+2021-01-16,227.0,5796,Sirindhorn,Thailand,Lam Dom Noi
+2021-02-16,223.92,5796,Sirindhorn,Thailand,Lam Dom Noi
+2021-03-16,213.69,5796,Sirindhorn,Thailand,Lam Dom Noi
+2021-04-16,191.69,5796,Sirindhorn,Thailand,Lam Dom Noi
+2021-05-16,192.41,5796,Sirindhorn,Thailand,Lam Dom Noi
+2021-06-16,182.47,5796,Sirindhorn,Thailand,Lam Dom Noi
+2021-07-16,189.79,5796,Sirindhorn,Thailand,Lam Dom Noi
+2021-08-16,205.25,5796,Sirindhorn,Thailand,Lam Dom Noi
+2021-09-16,225.03,5796,Sirindhorn,Thailand,Lam Dom Noi
+2013-04-16,32.83,5150,Lam Pao,Thailand,Chi
+2013-05-16,47.47,5150,Lam Pao,Thailand,Chi
+2013-06-16,14.79,5150,Lam Pao,Thailand,Chi
+2013-07-16,84.2,5150,Lam Pao,Thailand,Chi
+2013-08-16,153.61,5150,Lam Pao,Thailand,Chi
+2013-09-16,158.77,5150,Lam Pao,Thailand,Chi
+2013-11-16,156.05,5150,Lam Pao,Thailand,Chi
+2013-12-16,164.45,5150,Lam Pao,Thailand,Chi
+2014-01-16,148.58,5150,Lam Pao,Thailand,Chi
+2014-02-16,122.36,5150,Lam Pao,Thailand,Chi
+2014-03-16,98.29,5150,Lam Pao,Thailand,Chi
+2014-04-16,82.81,5150,Lam Pao,Thailand,Chi
+2014-05-16,40.91,5150,Lam Pao,Thailand,Chi
+2014-06-16,80.57,5150,Lam Pao,Thailand,Chi
+2014-07-16,111.37,5150,Lam Pao,Thailand,Chi
+2014-08-16,144.92,5150,Lam Pao,Thailand,Chi
+2014-09-16,256.86,5150,Lam Pao,Thailand,Chi
+2014-11-16,194.32,5150,Lam Pao,Thailand,Chi
+2014-12-16,193.72,5150,Lam Pao,Thailand,Chi
+2015-01-16,183.13,5150,Lam Pao,Thailand,Chi
+2015-02-16,206.29,5150,Lam Pao,Thailand,Chi
+2015-03-16,134.86,5150,Lam Pao,Thailand,Chi
+2015-04-16,105.68,5150,Lam Pao,Thailand,Chi
+2015-05-16,82.27,5150,Lam Pao,Thailand,Chi
+2015-06-16,68.89,5150,Lam Pao,Thailand,Chi
+2015-07-16,94.76,5150,Lam Pao,Thailand,Chi
+2015-08-16,120.63,5150,Lam Pao,Thailand,Chi
+2015-09-16,137.96,5150,Lam Pao,Thailand,Chi
+2015-11-16,147.73,5150,Lam Pao,Thailand,Chi
+2015-12-16,155.87,5150,Lam Pao,Thailand,Chi
+2016-01-16,144.7,5150,Lam Pao,Thailand,Chi
+2016-02-16,133.52,5150,Lam Pao,Thailand,Chi
+2016-03-16,110.8,5150,Lam Pao,Thailand,Chi
+2016-04-16,96.31,5150,Lam Pao,Thailand,Chi
+2016-05-16,52.47,5150,Lam Pao,Thailand,Chi
+2016-06-16,41.17,5150,Lam Pao,Thailand,Chi
+2016-07-16,87.0,5150,Lam Pao,Thailand,Chi
+2016-08-16,146.59,5150,Lam Pao,Thailand,Chi
+2016-09-16,206.19,5150,Lam Pao,Thailand,Chi
+2016-11-16,171.47,5150,Lam Pao,Thailand,Chi
+2016-12-16,172.33,5150,Lam Pao,Thailand,Chi
+2017-01-16,162.83,5150,Lam Pao,Thailand,Chi
+2017-02-16,149.99,5150,Lam Pao,Thailand,Chi
+2017-03-16,118.25,5150,Lam Pao,Thailand,Chi
+2017-04-16,102.14,5150,Lam Pao,Thailand,Chi
+2017-05-16,112.6,5150,Lam Pao,Thailand,Chi
+2017-06-16,123.06,5150,Lam Pao,Thailand,Chi
+2017-07-16,161.13,5150,Lam Pao,Thailand,Chi
+2017-08-16,199.2,5150,Lam Pao,Thailand,Chi
+2017-09-16,265.12,5150,Lam Pao,Thailand,Chi
+2017-11-16,240.69,5150,Lam Pao,Thailand,Chi
+2017-12-16,261.67,5150,Lam Pao,Thailand,Chi
+2018-01-16,254.27,5150,Lam Pao,Thailand,Chi
+2018-02-16,179.14,5150,Lam Pao,Thailand,Chi
+2018-03-16,221.3,5150,Lam Pao,Thailand,Chi
+2018-04-16,173.92,5150,Lam Pao,Thailand,Chi
+2018-05-16,162.55,5150,Lam Pao,Thailand,Chi
+2018-06-16,104.95,5150,Lam Pao,Thailand,Chi
+2018-07-16,111.37,5150,Lam Pao,Thailand,Chi
+2018-08-16,144.92,5150,Lam Pao,Thailand,Chi
+2018-09-16,207.74,5150,Lam Pao,Thailand,Chi
+2018-11-16,197.42,5150,Lam Pao,Thailand,Chi
+2018-12-16,189.44,5150,Lam Pao,Thailand,Chi
+2019-01-16,184.08,5150,Lam Pao,Thailand,Chi
+2019-02-16,163.56,5150,Lam Pao,Thailand,Chi
+2019-03-16,144.44,5150,Lam Pao,Thailand,Chi
+2019-04-16,85.5,5150,Lam Pao,Thailand,Chi
+2019-05-16,113.1,5150,Lam Pao,Thailand,Chi
+2019-06-16,90.55,5150,Lam Pao,Thailand,Chi
+2019-07-16,67.99,5150,Lam Pao,Thailand,Chi
+2019-08-16,160.45,5150,Lam Pao,Thailand,Chi
+2019-09-16,252.9,5150,Lam Pao,Thailand,Chi
+2019-11-16,242.72,5150,Lam Pao,Thailand,Chi
+2019-12-16,237.91,5150,Lam Pao,Thailand,Chi
+2020-01-16,217.39,5150,Lam Pao,Thailand,Chi
+2020-02-16,205.81,5150,Lam Pao,Thailand,Chi
+2020-03-16,155.05,5150,Lam Pao,Thailand,Chi
+2020-04-16,92.84,5150,Lam Pao,Thailand,Chi
+2020-05-16,118.77,5150,Lam Pao,Thailand,Chi
+2020-06-16,117.92,5150,Lam Pao,Thailand,Chi
+2020-07-16,115.38,5150,Lam Pao,Thailand,Chi
+2020-08-16,144.92,5150,Lam Pao,Thailand,Chi
+2020-09-16,207.74,5150,Lam Pao,Thailand,Chi
+2020-11-16,159.66,5150,Lam Pao,Thailand,Chi
+2020-12-16,160.15,5150,Lam Pao,Thailand,Chi
+2021-01-16,150.56,5150,Lam Pao,Thailand,Chi
+2021-02-16,145.74,5150,Lam Pao,Thailand,Chi
+2021-03-16,113.64,5150,Lam Pao,Thailand,Chi
+2021-04-16,100.42,5150,Lam Pao,Thailand,Chi
+2021-05-16,86.19,5150,Lam Pao,Thailand,Chi
+2021-06-16,111.07,5150,Lam Pao,Thailand,Chi
+2021-07-16,111.37,5150,Lam Pao,Thailand,Chi
+2021-08-16,144.92,5150,Lam Pao,Thailand,Chi
+2021-09-16,207.74,5150,Lam Pao,Thailand,Chi
