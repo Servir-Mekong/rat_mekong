@@ -6,8 +6,9 @@ static/vendor/*
 static/data/backup/*
 static/data/*.txt
 static/data/test/*
-static/js/table.js
-static/js/map.js
+# static/js/table.js
+# static/js/map.js
+static/js/index.js
 static/css/backup.css
 static/data/*
 scripts/*
