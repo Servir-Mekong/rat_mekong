@@ -169,7 +169,6 @@ var greenIcon = L.icon(iconOptionsGreen);
 var blueIcon = L.icon(iconOptionsBlue);
 var yellowIcon = L.icon(iconOptionsYellow);
 
-
 var reservoirName = document.getElementById("reservoir_name");
 
 // Filter by reservoir/dam name
@@ -221,7 +220,6 @@ $("#reservoir_name").on('change', function(){
         for (var i = 0; i < checkboxes.length; i++) {
                 checkboxes[i].checked = false;
         }
-
         // remove layers from map
         map.eachLayer(function (layer) {
             if ( layer.layerTag && layer.layerTag === "GeoJSONLayer") {
@@ -237,7 +235,6 @@ $("#reservoir_name").on('change', function(){
         }).addTo(map);
         map.fitBounds(selectedReservoirLayer.getBounds());
     }
-
 });
 
 //filter by country
@@ -1337,3 +1334,376 @@ $(document).ready(function() {
         }
     }); 
 });
+
+
+//  $(document).ready(function() {
+//     $.ajax({
+//        url: '/static/data/json/aec_all.json',
+//        type: 'GET',
+//        async: true,
+//        dataType: "json",
+//        success: function (data) {
+//            console.log(data);
+//        }
+//      });
+//     });
+
+// // <!--- Reading reservoir outflow data  --->
+// function outflowdata()
+// {
+//     dataset = '';
+//     // AJAX in the data file
+//     $.ajax({
+//         type: "GET",
+//         url: "/static/data/outflow/5136.txt",
+//         async: false,
+//         dataType: "text",
+//         success: function(data){
+//           dataset=String(data);
+//         }
+//         });
+//         return dataset;
+// }
+
+//         function loadoutflow()
+// 	{
+
+$(document).ready(function() {
+    $("#rsvName").on('change', function(){
+        var inflowData;
+        var outflowData;
+
+        var reservoirValue = this.value;
+        var reservoirName = $("#rsvName option:selected").text();
+
+        //console.log(reservoirName);
+        //console.log(reservoirValue);
+
+        if (reservoirName == reservoirName){
+            $.ajax({
+                type: "GET",
+                url: "/static/data/inflow/"+ reservoirValue +".txt",
+                async: false,
+                success: function(data){
+                    inflowData = data;
+
+                    // var inflow = []
+                    // // data = outflowdata();
+                    // testlines = data.split('\n');
+                    // for (i = 1; i < testlines.length; i++) {
+                    // var items = testlines[i].split(',');
+                    //     inflow.push([new Date(items[0]).getTime(), +items[1]]);
+                    // }
+                    // Highcharts.setOptions({
+                    //     global: {
+                    //        useUTC: false
+                    //     }
+                    // });
+                    // var chart = Highcharts.chart('chartDiv', {
+                    //     chart: {
+                    //         zoomType: 'x',
+                    //         panning: true,
+                    //         panKey: 'shift',
+                    //         style: {
+                    //             fontFamily: 'serif',
+                    //             fontSize: '12px',
+                    //             color: "#000000"
+                    //         }
+                    //     },
+                    //     title: {
+                    //         text: "Outflow",
+                    //         style: {
+                    //             font: '20px bold Times New Roman, sans-serif',
+                    //             color: "#000000"
+                    //         }
+                    //     },
+                    //     // subtitle: {
+                    //     //     text: "Dam: " + decodeURIComponent(damname) + ", Grand ID: " + station + ", River: " + decodeURIComponent(river),
+                    //     //     style: {
+                    //     //         font: '18px Times New Roman, sans-serif',
+                    //     //         color: "#000000"
+                    //     //     }
+                    //     // },
+                    //     xAxis: {
+                    //         type: 'datetime',
+                    //         title: {
+                    //             text: 'Date',
+                    //             style: {
+                    //                 font: '16px bold Times New Roman, sans-serif',
+                    //                 color: "#000000"
+                    //             }
+                    //         },
+                    //         labels: {
+                    //             style: {
+                    //                 font: '16px Times New Roman, sans-serif',
+                    //                 color: "#000000"
+                    //             }
+                    //         }
+                    //     },
+                    //     yAxis: {
+                    //         title: {
+                    //             text: 'Outflow (cumecs)',
+                    //             style: {
+                    //                 font: '16px bold Times New Roman, sans-serif',
+                    //                 color: "#000000"
+                    //             }
+                    //         },
+                    //         labels: {
+                    //             format: '{value:.1f}',
+                    //             style: {
+                    //                 font: '16px Times New Roman, sans-serif',
+                    //                 color: "#000000"
+                    //             }				
+                    //         },
+                    //         minTickInterval: 0.1
+                    //     },
+                    //     tooltip: {
+                    //         xDateFormat: '%d-%m-%Y',
+                    //         crosshairs: true,
+                    //         shared: true,
+                    //         valueDecimals: 1,
+                    //         valueSuffix: " cumecs"
+                    //     },
+                    //     legend: {},
+                    //     series: [
+                    //         {
+                    //             name: 'Reservoir Outflow (including diversion)',
+                    //             data: inflow,
+                    //             type: 'spline',
+                    //             marker: {
+                    //                 enabled: false
+                    //             },
+                    //             color:'green',
+                    //             zIndex: 1,
+                    //             states: {
+                    //                 hover: {			
+                    //                 lineWidthPlus: 0
+                    //                 }
+                    //             }
+                    //         },
+
+                    //         {
+                    //             name: 'Reservoir Outflow (including diversion)',
+                    //             data: outflow,
+                    //             type: 'spline',
+                    //             marker: {
+                    //                 enabled: false
+                    //             },
+                    //             color:'green',
+                    //             zIndex: 1,
+                    //             states: {
+                    //                 hover: {			
+                    //                 lineWidthPlus: 0
+                    //                 }
+                    //             }
+                    //         },
+                    //     ]
+                    // });
+                }
+            });
+            $.ajax({
+                type: "GET",
+                url: "/static/data/outflow/"+ reservoirValue +".txt",
+                async: false,
+                success: function(data){
+                    outflowData = data;
+                }
+            });
+        }
+
+        var inflow = []
+        var outflow = []
+                    // data = outflowdata();
+                    testlines = inflowData.split('\n');
+                    for (i = 1; i < testlines.length; i++) {
+                    var items = testlines[i].split(',');
+                        inflow.push([new Date(items[0]).getTime(), +items[1]]);
+                    }
+
+             // data = outflowdata();
+             testlines2 = outflowData.split('\n');
+             for (i = 1; i < testlines2.length; i++) {
+             var items = testlines2[i].split(',');
+                 outflow.push([new Date(items[0]).getTime(), +items[1]]);
+             }
+                    Highcharts.setOptions({
+                        global: {
+                           useUTC: false
+                        }
+                    });
+                    var chart = Highcharts.chart('chartDiv', {
+                        chart: {
+                            zoomType: 'x',
+                            panning: true,
+                            panKey: 'shift',
+                            style: {
+                                fontFamily: 'serif',
+                                fontSize: '12px',
+                                color: "#000000"
+                            }
+                        },
+                        title: {
+                            text: "Comparison of Reservoir Inflow-Outflow Data",
+                            style: {
+                                font: '20px bold Times New Roman, sans-serif',
+                                color: "#000000"
+                            }
+                        },
+                        // subtitle: {
+                        //     text: "Dam: " + decodeURIComponent(damname) + ", Grand ID: " + station + ", River: " + decodeURIComponent(river),
+                        //     style: {
+                        //         font: '18px Times New Roman, sans-serif',
+                        //         color: "#000000"
+                        //     }
+                        // },
+                        xAxis: {
+                            type: 'datetime',
+                            title: {
+                                text: 'Year',
+                                style: {
+                                    font: '16px bold Times New Roman, sans-serif',
+                                    color: "#000000"
+                                }
+                            },
+                            labels: {
+                                style: {
+                                    font: '16px Times New Roman, sans-serif',
+                                    color: "#000000"
+                                }
+                            }
+                        },
+                        yAxis: {
+                            title: {
+                                text: 'Flow (cumecs)',
+                                style: {
+                                    font: '16px bold Times New Roman, sans-serif',
+                                    color: "#000000"
+                                }
+                            },
+                            labels: {
+                                format: '{value:.1f}',
+                                style: {
+                                    font: '16px Times New Roman, sans-serif',
+                                    color: "#000000"
+                                }				
+                            },
+                            minTickInterval: 0.1
+                        },
+                        tooltip: {
+                            xDateFormat: '%d-%m-%Y',
+                            crosshairs: true,
+                            shared: true,
+                            valueDecimals: 1,
+                            valueSuffix: "cumecs"
+                        },
+                        legend: {},
+                        series: [
+                            {
+                                name: 'Reservoir Inflow',
+                                data: inflow,
+                                type: 'spline',
+                                marker: {
+                                    enabled: false
+                                },
+                                color:'#31a354',
+                                zIndex: 1,
+                                states: {
+                                    hover: {			
+                                    lineWidthPlus: 0
+                                    }
+                                }
+                            },
+
+                            {
+                                name: 'Reservoir Outflow (including diversion)',
+                                data: outflow,
+                                type: 'spline',
+                                marker: {
+                                    enabled: false
+                                },
+                                color:'#FF5733',
+                                zIndex: 1,
+                                states: {
+                                    hover: {			
+                                    lineWidthPlus: 0
+                                    }
+                                }
+                            },
+                        ]
+                    });
+
+        // console.log(inflowData);
+        // console.log(outflowData);
+        // var clickBtn = document.getElementById('compareBtn');
+        // clickBtn.onclick = function(){
+        //     var chartCrd = document.getElementById('chartCard');
+        //     chartCrd.style.display = block;
+        // }
+        // $("#compareBtn").click(function(){
+        //     $("chartCard").show();
+        // });
+    }); 
+
+    // Highcharts.setOptions({
+    //     colors: ['#ef9a9a', '#c5e1a5', '#fff59d', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4']
+    // });
+    // Highcharts.chart('container', {
+    //     chart: {
+    //         type: 'line'
+    //     },
+    //     title: {
+    //         text: 'Historic and Estimated Worldwide Population Growth by Region'
+    //     },
+    //     subtitle: {
+    //         text: 'Source: Wikipedia.org'
+    //     },
+    //     xAxis: {
+    //         categories: ['1750', '1800', '1850', '1900', '1950', '1999', '2050'],
+    //         tickmarkPlacement: 'on',
+    //         title: {
+    //             enabled: false
+    //         }
+    //     },
+    //     yAxis: {
+    //         title: {
+    //             text: 'Billions'
+    //         },
+    //         labels: {
+    //             formatter: function() {
+    //                 return this.value / 1000;
+    //             }
+    //         }
+    //     },
+    //     tooltip: {
+    //         split: true,
+    //         valueSuffix: ' millions'
+    //     },
+    //     plotOptions: {
+    //         line: {
+    //             lineWidth: 1,
+    //             marker: {
+    //                 enabled: false
+    //             }
+    //         }
+    //     },
+    //     series: [{
+    //         name: 'Asia',
+    //         data: [502, 635, 809, 947, 1402, 3634, 5268]
+    //     }, {
+    //         name: 'Africa',
+    //         data: [106, 107, 111, 133, 221, 767, 1766]
+    //     }, {
+    //         name: 'Europe',
+    //         data: [163, 203, 276, 408, 547, 729, 628]
+    //     }, {
+    //         name: 'America',
+    //         data: [18, 31, 54, 156, 339, 818, 1201]
+    //     }, {
+    //         name: 'Oceania',
+    //         data: [2, 2, 2, 6, 13, 30, 46]
+    //     }]
+    // });
+
+});
+
+

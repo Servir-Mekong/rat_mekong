@@ -55,3 +55,6 @@ class TestIframePage(TemplateView):
 class DisclaimerPage(TemplateView):
     template_name = "disclaimer.html"
 
+def getDate(request):
+    data = pd.read_csv("/static/data/map_data/outflow/Lam_Pao.txt")
+    print(data)

@@ -9,6 +9,8 @@ static/data/test/*
 static/js/table.js
 static/js/map.js
 static/css/backup.css
+static/data/*
+scripts/*
 
 #ignore settings
 rat/local_settings.py
@@ -16,6 +18,11 @@ rat/local_settings.py
 #ignore templates
 templates/map_sidebar.html
 templates/draft_iframe.html
+templates/iframe copy.html
+
+#ignore scripts
+main/scripts/*
+scripts/*
 
 #ignore db
 *.sqlite3

@@ -1,26 +1,5 @@
 {% load static %}
 <div class="tab-pane fade" id="pills-table" role="tabpanel" aria-labelledby="pills-table-tab">
-    
-    <!-- <div class="container">
-        
-        <div class="row mt-5" id="aec_table2">
-          <div class="col-md-12">
-              <table id="aec2" class="table table-hover" style="width:100%">
-                  <thead>
-                      <tr>
-                          
-                          <th>Country</th>
-                          <th>River Basin</th>
-                          <th>Reservoir/Dam Name</th>
-                          <th>Elevation</th>
-                          <th>Cumulative Area</th>
-                      </tr>
-                  </thead>
-              </table>
-          </div>
-        </div>
-    </div> -->
-    
     <div class="container mt-5 mb-5">
         <div class="row">
             <h4 class="fw-bold pb-3">Filter Data:</h4>
@@ -46,14 +25,19 @@ or select All to get data for all reservoirs."><i
                         class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
                 <select id="reservoir" class="form-select" aria-label="Default select country">
                     <option value="" selected>All</option>
+                    <option value="Battambang 1">Battambang 1</option>
+                    <option value="Lam Pao">Lam Pao</option>
                     <option value="Lower Sesan 2">Lower Sesan 2</option>
+                    <option value="Nam Mang 3">Nam Mang 3</option>
                     <option value="Nam Ngum 1">Nam Ngum 1</option>
                     <option value="Nam Theun 2">Nam Theun 2</option>
-                    <option value="Nam Mang 3">Nam Mang 3</option>
-                    <option value="Lam Pao">Lam Pao</option>
+                    <option value="Nam Ton">Nam Ton</option>
+                    <option value="Phumi Svay Chrum">Phumi Svay Chrum</option>
+                    <option value="Se San 4">Se San 4</option>
                     <option value="Sirindhorn">Sirindhorn</option>
+                    <option value="Sre Pok 4">Sre Pok 4</option>
                     <option value="Ubol Ratana">Ubol Ratana</option>
-                    <option value="Se San 4">Se San 4</option>                        
+                    <option value="Yali">Yali</option>                        
                 </select>
             </div>
             <div class="col-md-3">
@@ -116,13 +100,66 @@ or select All to get data for all basin."><i class="fas fa-info-circle" aria-hid
             <div class="col-md-3"></div>
         </div>
 
+
+        <div class="row mt-3 mt-5">
+            <div class="col-md-4">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Compare Data
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <h6 class="fw-bold">Select Reservoir<span class="ps-2"><button type="button"
+                                    class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                                    data-bs-placement="right" title="Select a reservoir that you want to compare."><i
+                                        class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                                <select id="rsvName" class="form-select" aria-label="Default select country">
+                                    <option value="" disabled selected>Select Reservoir</option>
+                                    <option value="Battambang_1">Battambang 1</option>
+                                    <option value="Lam_Pao">Lam Pao</option>
+                                    <option value="Lower_Sesan_2">Lower Sesan 2</option>
+                                    <option value="Nam_Mang_3">Nam Mang 3</option>
+                                    <option value="Nam_Ngum_1">Nam Ngum 1</option>
+                                    <option value="Nam_Theun_2">Nam Theun 2</option>
+                                    <option value="Nam_Ton">Nam Ton</option>
+                                    <option value="Phumi_Svay_Chrum">Phumi Svay Chrum</option>
+                                    <option value="Sesan_4">Se San 4</option>
+                                    <option value="Sirindhorn">Sirindhorn</option>
+                                    <option value="Sre_Pok_4">Sre Pok 4</option>
+                                    <option value="Ubol_Ratana">Ubol Ratana</option>
+                                    <option value="Yali">Yali</option>                          
+                                </select>
+
+                                <!-- <h6 class="fw-bold mt-5">Select Variable</h6>
+                                <select id="var1" class="form-select" aria-label="Default select data">
+                                    <option value="inflow">Inflow</option>               
+                                </select>
+                                <select id="var1" class="form-select mt-3" aria-label="Default select data">
+                                    <option value="outflow">Outflow</option>               
+                                </select>
+
+                                <button class="btn btn-primary mt-5" id="compareBtn">Compare</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card card-body border -0">
+                    <div id="chartDiv"></div>
+                </div>
+            </div>
+        </div>
+
         <!-- AEC Table -->
         <div class="row mt-5" id="aec_table">
             <div class="col-md-12">
                 <table id="aec" class="table table-hover" style="width:100%">
                     <thead>
                         <tr>
-                            <!-- <th>ID</th> -->
                             <th>Country</th>
                             <th>River Basin</th>
                             <th>Reservoir/Dam Name</th>
@@ -140,7 +177,6 @@ or select All to get data for all basin."><i class="fas fa-info-circle" aria-hid
                 <table id="deltas" class="table table-hover" style="width:100%">
                     <thead>
                         <tr>
-                            <!-- <th>ID</th> -->
                             <th>Country</th>
                             <th>River Basin</th>
                             <th>Reservoir/Dam Name</th>
@@ -158,7 +194,6 @@ or select All to get data for all basin."><i class="fas fa-info-circle" aria-hid
                 <table id="inflow" class="table table-hover" style="width:100%">
                     <thead>
                         <tr>
-                            <!-- <th>ID</th> -->
                             <th>Country</th>
                             <th>River Basin</th>
                             <th>Reservoir/Dam Name</th>
@@ -176,7 +211,6 @@ or select All to get data for all basin."><i class="fas fa-info-circle" aria-hid
                 <table id="outflow" class="table table-hover" style="width:100%">
                     <thead>
                         <tr>
-                            <!-- <th>ID</th> -->
                             <th>Country</th>
                             <th>River Basin</th>
                             <th>Reservoir/Dam Name</th>
@@ -194,7 +228,6 @@ or select All to get data for all basin."><i class="fas fa-info-circle" aria-hid
                 <table id="surface_area" class="table table-hover" style="width:100%">
                     <thead>
                         <tr>
-                            <!-- <th>ID</th> -->
                             <th>Country</th>
                             <th>River Basin</th>
                             <th>Reservoir/Dam Name</th>
@@ -212,7 +245,6 @@ or select All to get data for all basin."><i class="fas fa-info-circle" aria-hid
                 <table id="rcurve" class="table table-hover" style="width:100%">
                     <thead>
                         <tr>
-                            <!-- <th>ID</th> -->
                             <th>Country</th>
                             <th>River Basin</th>
                             <th>Reservoir/Dam Name</th>

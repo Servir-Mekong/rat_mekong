@@ -213,13 +213,12 @@
 
       function loaddeltas() {
         var l8area = [],
-          s1area = [];
 
         l8data = l8deltasdata();
         lines = l8data.split("\n");
         for (i = 0; i < lines.length; i++) {
           var items = lines[i].split(",");
-          l8area.push([new Date(items[0]).getTime(), +items[1]]);
+          l8area.push([new Date(items[0]).getTime(), +items[11]]);
         }
         Highcharts.setOptions({
           global: {
@@ -297,7 +296,7 @@
           legend: {},
           series: [
             {
-              name: "Landsat-8 (NDWI Method) Based Storage Change",
+              name: "Landsat-8 Based Storage Change",
               data: l8area,
               type: "spline",
               marker: {
@@ -442,7 +441,7 @@
         // AJAX in the data file
         $.ajax({
           type: "GET",
-          url: "/static/data/outflow/" + station + ".txt",
+          url: "/static/data/map_data/outflow/" + station + ".txt",
           async: false,
           dataType: "text",
           success: function (data) {
@@ -577,7 +576,7 @@
         lines = sadata.split("\n");
         for (i = 1; i < lines.length; i++) {
           var items = lines[i].split(",");
-          sarea.push([new Date(items[0]).getTime(), +items[1]]);
+          sarea.push([new Date(items[0]).getTime(), +items[3]]);
         }
         Highcharts.setOptions({
           global: {
