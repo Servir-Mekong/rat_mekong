@@ -44,7 +44,7 @@
         // AJAX in the data file
         $.ajax({
           type: "GET",
-          url: "/static/data/aec/" + station + ".txt",
+          url: "/static/data/map_data/aec/" + station + ".txt",
           async: false,
           dataType: "text",
           success: function (data) {
@@ -201,7 +201,7 @@
         $.ajax({
           type: "GET",
           url:
-            "/static/data/deltas/" + station + ".txt",
+            "/static/data/map_data/deltas/" + station + ".txt",
           async: false,
           dataType: "text",
           success: function (data) {
@@ -321,7 +321,7 @@
         // AJAX in the data file
         $.ajax({
           type: "GET",
-          url: "/static/data/inflow/" + station + ".txt",
+          url: "/static/data/map_data/inflow/" + station + ".txt",
           async: false,
           dataType: "text",
           success: function (data) {
@@ -441,7 +441,7 @@
         // AJAX in the data file
         $.ajax({
           type: "GET",
-          url: "/static/data/map_data/outflow/" + station + ".txt",
+          url: "/static/data/map_data/map_data/outflow/" + station + ".txt",
           async: false,
           dataType: "text",
           success: function (data) {
@@ -560,7 +560,7 @@
         // AJAX in the data file
         $.ajax({
           type: "GET",
-          url: "/static/data/sarea/" + station + ".txt",
+          url: "/static/data/map_data/sarea/" + station + ".txt",
           async: false,
           dataType: "text",
           success: function (data) {
@@ -681,7 +681,7 @@
         // AJAX in the data file
         $.ajax({
           type: "GET",
-          url: "/static/data/rcurve/" + station + ".txt",
+          url: "/static/data/map_data/rcurve/" + station + ".txt",
           async: false,
           dataType: "text",
           success: function(data)

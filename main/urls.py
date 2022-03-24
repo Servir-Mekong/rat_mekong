@@ -10,6 +10,6 @@ urlpatterns = [
     path('map/', views.MapPage.as_view(), name='map'),
     path('user-guide/', views.UserGuidePage.as_view(), name='user-guide'),
     path('about/disclaimer/', views.DisclaimerPage.as_view(), name='disclaimer'),
-    path('testiframe/', views.TestIframePage.as_view(), name='testiframe'),
+    path('iframe/', views.TestIframePage.as_view(), name='iframe'),
     path('people/<slug:slug>/', views.TeamDetailView.as_view(), name='team-detail'),
 ]
