@@ -1,0 +1,345 @@
+{% extends "base.html" %}
+{% load static %}
+{% load compress %}
+<!-- CSS files -->
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/table.css' %}">
+{% endblock %}
+
+{% block container %}
+
+{% include 'navigation.html' %}
+
+<div class="topbar" id="topbar">
+    <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" href="/map" role="button"><i class="fas fa-map"></i> Map</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" href="/table" role="button"><i class="fas fa-table"></i> Table</a>
+        </li>
+    </ul>
+</div>
+
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <h4 class="fw-bold pb-3">Filter Data:</h4>
+        <div class="col-md-3">
+            <h6 class="fw-bold">Country<span class="ps-2"><button type="button"
+                class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                data-bs-placement="right" title="Select a country you want to focus 
+or select All to get data for all countries."><i
+                    class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+            <select id="select_country" class="form-select" aria-label="Default select country">
+                <option value="" selected>All</option>
+                <option value="Cambodia">Cambodia</option>
+                <option value="Laos">Lao PDR</option>
+                <option value="Thailand">Thailand</option>
+                <option value="Vietnam">Vietnam</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <h6 class="fw-bold">Reservoir<span class="ps-2"><button type="button"
+                class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                data-bs-placement="right" title="Select a reservoir you want to focus 
+or select All to get data for all reservoirs."><i
+                    class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+            <select id="reservoir" class="form-select" aria-label="Default select country">
+                <option value="" selected>All</option>
+                <option value="Battambang 1">Battambang 1</option>
+                <option value="Lam Pao">Lam Pao</option>
+                <option value="Lower Sesan 2">Lower Sesan 2</option>
+                <option value="Nam Mang 3">Nam Mang 3</option>
+                <option value="Nam Ngum 1">Nam Ngum 1</option>
+                <option value="Nam Theun 2">Nam Theun 2</option>
+                <option value="Nam Ton">Nam Ton</option>
+                <option value="Phumi Svay Chrum">Phumi Svay Chrum</option>
+                <option value="Se San 4">Se San 4</option>
+                <option value="Sirindhorn">Sirindhorn</option>
+                <option value="Sre Pok 4">Sre Pok 4</option>
+                <option value="Ubol Ratana">Ubol Ratana</option>
+                <option value="Yali">Yali</option>                        
+            </select>
+        </div>
+        <div class="col-md-3">
+            <h6 class="fw-bold">River Basin<span class="ps-2"><button type="button"
+                class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                data-bs-placement="right" title="Select a river basin you want to focus 
+or select All to get data for all basin."><i class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+            <select id="select_river_basin" class="form-select" aria-label="Default select country">
+                <option value="" selected>All</option>
+                <option value="Chi">Chi</option>
+                <option value="Lam Dom Noi">Lam Dom Noi</option>
+                <option value="Nam Gnong">Nam Gnong</option>
+                <option value="Nam Ngum">Nam Ngum</option>
+                <option value="Nam Pong">Nam Pong</option>
+                <option value="Nam Theun">Nam Theun</option>
+                <option value="Sesan">Sesan</option>
+                <option value="Se San">Se San</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <h6 class="fw-bold">Reservoir Datasets<span class="ps-2"><button type="button"
+                class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                data-bs-placement="right" title="Select a data from the list that you want to focus."><i
+                    class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+            <select id="reservoir_datasets" class="form-select" aria-label="Default select country">
+                <option value="AEC" selected>Area Elevation Curve (AEC) (Observed and Simulated)</option>
+                <option value="Storage Change">Simulated Storage Change</option>
+                <option value="Inflow">Simulated Inflow</option>
+                <option value="Outflow">Simulated Outflow</option>
+                <option value="Surface Area">Simulated Surface Area</option>
+                <option value="Rule Curve">Simulated Rule Curve</option>
+            </select>
+        </div>
+    </div>
+    <div class="row mt-3" id="dateFilterRow" style="display: none;">
+        <div class="col-md-3">
+            <h6 class="fw-bold">Date<span class="ps-2"><button type="button"
+                class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                data-bs-placement="right" title="Select a date range to filter table data that you want to focus."><i
+                    class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+            
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="mb-3">
+                        <label for="startDate" class="form-label">From</label>
+                        <input type="text" class="form-control" id="min" name="min">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="mb-3">
+                        <label for="endDate" class="form-label">To</label>
+                        <input type="text" class="form-control" id="max" name="max">
+                    </div>
+                </div>
+            </div>    
+            
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+    </div>
+
+    <!-- Compare Data -->
+    <div class="row mt-3 mt-5">
+        <div class="col-md-3">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Compare Inflow Outflow Data
+            </button>
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Comapre Inflow Outflow</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h6 class="pt-3 fw-bold">Select Reservoir<span class="ps-2"><button type="button"
+                            class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                            data-bs-placement="right" title="Select a reservoir that you want to compare."><i
+                                class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                        <select id="rsvName" class="form-select" aria-label="Default select country">
+                            <option value="" disabled selected>Select Reservoir</option>
+                            <option value="Battambang_1">Battambang 1</option>
+                            <option value="Lam_Pao">Lam Pao</option>
+                            <option value="Lower_Sesan_2">Lower Sesan 2</option>
+                            <option value="Nam_Mang_3">Nam Mang 3</option>
+                            <option value="Nam_Ngum_1">Nam Ngum 1</option>
+                            <option value="Nam_Theun_2">Nam Theun 2</option>
+                            <option value="Nam_Ton">Nam Ton</option>
+                            <option value="Phumi_Svay_Chrum">Phumi Svay Chrum</option>
+                            <option value="Sesan_4">Se San 4</option>
+                            <option value="Sirindhorn">Sirindhorn</option>
+                            <option value="Sre_Pok_4">Sre Pok 4</option>
+                            <option value="Ubol_Ratana">Ubol Ratana</option>
+                            <option value="Yali">Yali</option>                          
+                        </select>
+                        <div class="mt-5" id="chartDiv"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+          
+        <!-- <div class="col-md-4">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Compare Data
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h6 class="fw-bold">Select Reservoir<span class="ps-2"><button type="button"
+                                class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
+                                data-bs-placement="right" title="Select a reservoir that you want to compare."><i
+                                    class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
+                            <select id="rsvName" class="form-select" aria-label="Default select country">
+                                <option value="" disabled selected>Select Reservoir</option>
+                                <option value="Battambang_1">Battambang 1</option>
+                                <option value="Lam_Pao">Lam Pao</option>
+                                <option value="Lower_Sesan_2">Lower Sesan 2</option>
+                                <option value="Nam_Mang_3">Nam Mang 3</option>
+                                <option value="Nam_Ngum_1">Nam Ngum 1</option>
+                                <option value="Nam_Theun_2">Nam Theun 2</option>
+                                <option value="Nam_Ton">Nam Ton</option>
+                                <option value="Phumi_Svay_Chrum">Phumi Svay Chrum</option>
+                                <option value="Sesan_4">Se San 4</option>
+                                <option value="Sirindhorn">Sirindhorn</option>
+                                <option value="Sre_Pok_4">Sre Pok 4</option>
+                                <option value="Ubol_Ratana">Ubol Ratana</option>
+                                <option value="Yali">Yali</option>                          
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card card-body border-0">
+                <div id="chartDiv"></div>
+            </div>
+        </div> -->
+    </div>
+
+    <!-- AEC Table -->
+    <div class="row mt-5" id="aec_table">
+        <div class="col-md-12">
+            <table id="aec" class="table table-hover" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>River Basin</th>
+                        <th>Reservoir/Dam Name</th>
+                        <th>Elevation (Observed and Simulated)</th>
+                        <th>Cumulative Area</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+    <!-- Storage Change Table -->
+    <div class="row mt-5" id="deltas_table" style="display: none;">
+        <div class="col-md-12">
+            <table id="deltas" class="table table-hover" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>River Basin</th>
+                        <th>Reservoir/Dam Name</th>
+                        <th>Date</th>
+                        <th>Simulated Storage Change</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+    <!-- Inflow Table -->
+    <div class="row mt-5" id="inflow_table" style="display: none;">
+        <div class="col-md-12">
+            <table id="inflow" class="table table-hover" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>River Basin</th>
+                        <th>Reservoir/Dam Name</th>
+                        <th>Date</th>
+                        <th>Simulated Inflow (Cumecs)</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+    <!-- Outflow Table -->
+    <div class="row mt-5" id="outflow_table" style="display: none;">
+        <div class="col-md-12">
+            <table id="outflow" class="table table-hover" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>River Basin</th>
+                        <th>Reservoir/Dam Name</th>
+                        <th>Date</th>
+                        <th>Simulated Outflow (Cumecs)</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+    <!-- Surface Area Table -->
+    <div class="row mt-5" id="sarea_table" style="display: none;">
+        <div class="col-md-12">
+            <table id="surface_area" class="table table-hover" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>River Basin</th>
+                        <th>Reservoir/Dam Name</th>
+                        <th>Date</th>
+                        <th>Simulated Water Surface Area (Sq.Km)</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+    <!-- Rule Curve Table -->
+    <div class="row mt-5" id="rcurve_table" style="display: none;">
+        <div class="col-md-12">
+            <table id="rcurve" class="table table-hover" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>River Basin</th>
+                        <th>Reservoir/Dam Name</th>
+                        <th>January</th>
+                        <th>February</th>
+                        <th>March</th>
+                        <th>April</th>
+                        <th>May</th>
+                        <th>June</th>
+                        <th>July</th>
+                        <th>August</th>
+                        <th>September</th>
+                        <th>October</th>
+                        <th>November</th>
+                        <th>December</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="d-flex justify-content-center spinner">
+    <div id="loader" class="spinner-grow text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+<div class="container mt-5">
+    {% include 'partners.html' %}
+  </div>
+  {% include 'footer.html' %}
+
+{% endblock container%}
+
+<!-- Extra JS files -->
+{% block extra_script %}
+
+<script src="{% static 'js/table.js' %}"></script>
+<!-- {% compress js %}
+<script src="{% static 'js/table.js' %}"></script>
+{% endcompress %} -->
+
+{% endblock %}

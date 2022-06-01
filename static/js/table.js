@@ -6,7 +6,11 @@ $(document).ready(function() {
     $('#aec').DataTable( {
         "ajax": {
             "url": "/static/data/table_data/aec_all.json",
-            "dataSrc": ""
+            "dataSrc": "",
+            // deferRender: true,
+            // clear: true,
+            // destroy: true,
+            //cache: false,
         },
         dom: 'Bfrtip',
         buttons: [
@@ -44,9 +48,14 @@ $(document).ready(function() {
 
     $('#inflow').DataTable( {
         "ajax": {
-            "url": "/static/data/table_data/inflow_all.json",
-            "dataSrc": ""
+            "url": "/static/data/table_data/inflow_all.json", //  ajax/inflowdata/
+            "dataSrc": "",
+            // deferRender: true,
+            // clear: true,
+            // destroy: true,
+            // cache: false,
         },
+        serverSide: true,
         dom: 'Bfrtip',
         buttons: [
             'pageLength', 'print', 'excel', 'csv', 'pdf'
@@ -65,7 +74,10 @@ $(document).ready(function() {
     $('#outflow').DataTable( {
         "ajax": {
             "url": "/static/data/table_data/outflow_all.json",
-            "dataSrc": ""
+            "dataSrc": "",
+            // deferRender: true,
+            // clear: true,
+            // destroy: true
         },
         dom: 'Bfrtip',
         buttons: [
@@ -521,14 +533,14 @@ $(document).ready(function() {
 
         var inflow = []
         var outflow = []
-        inflowlines = inflowData.split('\n');
+        var inflowlines = inflowData.split('\n');
         for (i = 1; i < inflowlines.length; i++) {
-        var items = inflowlines[i].split(',');
+            var items = inflowlines[i].split(',');
             inflow.push([new Date(items[0]).getTime(), +items[1]]);
         }
 
         // data = outflowdata();
-        outflowlines = outflowData.split('\n');
+        var outflowlines = outflowData.split('\n');
         for (i = 1; i < outflowlines.length; i++) {
         var items = outflowlines[i].split(',');
             outflow.push([new Date(items[0]).getTime(), +items[1]]);
@@ -634,4 +646,8 @@ $(document).ready(function() {
     }); 
 });
 
+var load = document.querySelector("#loader");
 
+function loadfun() {
+    load.style.display = 'none';
+}

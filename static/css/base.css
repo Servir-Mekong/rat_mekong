@@ -47,3 +47,24 @@ html, body {
     outline: none;
     box-shadow: none;
 }
+.spinner{
+    display: block;
+    position: fixed;
+    z-index: 1031; 
+    top: 50%;
+    right: 50%;
+}
+.topbar{
+    /* background-color: #5a94c0; */
+    background-color: #3f51b5;
+}
+.topbar .nav-pills .nav-item .nav-link{
+    color: #fff;
+}
+.topbar .nav-pills .nav-item .nav-link:hover{
+    color: #f0a163;
+}
+.topbar .nav-pills .nav-item .active{
+    color: #000;
+    background-color: #fff;
+}

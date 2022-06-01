@@ -1,0 +1,8 @@
+.btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+.form-control:focus {
+    border-color: #6265e4 !important;
+    box-shadow: 0 0 5px rgba(98, 101, 228, 1) !important;
+}

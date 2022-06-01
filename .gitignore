@@ -17,7 +17,7 @@ scripts/*
 rat/local_settings.py
 
 #ignore templates
-templates/map_sidebar.html
+templates/backup/*.html
 templates/draft_iframe.html
 templates/iframe copy.html
 
