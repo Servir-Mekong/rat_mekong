@@ -84,7 +84,7 @@ or select All to get data for all basin."><i class="fas fa-info-circle" aria-hid
                 data-bs-placement="right" title="Select a data from the list that you want to focus."><i
                     class="fas fa-info-circle" aria-hidden="true"></i></button></span></h6>
             <select id="reservoir_datasets" class="form-select" aria-label="Default select country">
-                <option value="AEC" selected>Area Elevation Curve (AEC) (Observed and Simulated)</option>
+                <option value="AEC" selected>Area Elevation Curve (AEC)</option>
                 <option value="Storage Change">Simulated Storage Change</option>
                 <option value="Inflow">Simulated Inflow</option>
                 <option value="Outflow">Simulated Outflow</option>
@@ -125,7 +125,7 @@ or select All to get data for all basin."><i class="fas fa-info-circle" aria-hid
     <div class="row mt-3 mt-5">
         <div class="col-md-3">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#compareDataModal">
                 Compare Inflow Outflow Data
             </button>
         </div>
@@ -133,11 +133,11 @@ or select All to get data for all basin."><i class="fas fa-info-circle" aria-hid
         <div class="col-md-3"></div>
         <div class="col-md-3"></div>
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
+        <div class="modal fade" id="compareDataModal" tabindex="-1" aria-labelledby="compareDataModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Comapre Inflow Outflow</h5>
+                        <h5 class="modal-title" id="compareDataModalLabel">Comapre Simulated Inflow Outflow</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -219,7 +219,7 @@ or select All to get data for all basin."><i class="fas fa-info-circle" aria-hid
                         <th>Country</th>
                         <th>River Basin</th>
                         <th>Reservoir/Dam Name</th>
-                        <th>Elevation (Observed and Simulated)</th>
+                        <th>Elevation (m)</th>
                         <th>Cumulative Area</th>
                     </tr>
                 </thead>
@@ -237,7 +237,7 @@ or select All to get data for all basin."><i class="fas fa-info-circle" aria-hid
                         <th>River Basin</th>
                         <th>Reservoir/Dam Name</th>
                         <th>Date</th>
-                        <th>Simulated Storage Change</th>
+                        <th>Simulated Storage Change (BCM)</th>
                     </tr>
                 </thead>
             </table>
@@ -254,7 +254,7 @@ or select All to get data for all basin."><i class="fas fa-info-circle" aria-hid
                         <th>River Basin</th>
                         <th>Reservoir/Dam Name</th>
                         <th>Date</th>
-                        <th>Simulated Inflow (Cumecs)</th>
+                        <th>Simulated Inflow (m<sup>3</sup>/s)</th>
                     </tr>
                 </thead>
             </table>
@@ -271,7 +271,7 @@ or select All to get data for all basin."><i class="fas fa-info-circle" aria-hid
                         <th>River Basin</th>
                         <th>Reservoir/Dam Name</th>
                         <th>Date</th>
-                        <th>Simulated Outflow (Cumecs)</th>
+                        <th>Simulated Outflow (m<sup>3</sup>/s)</th>
                     </tr>
                 </thead>
             </table>
@@ -288,7 +288,7 @@ or select All to get data for all basin."><i class="fas fa-info-circle" aria-hid
                         <th>River Basin</th>
                         <th>Reservoir/Dam Name</th>
                         <th>Date</th>
-                        <th>Simulated Water Surface Area (Sq.Km)</th>
+                        <th>Simulated Water Surface Area (Km<sup>2</sup>)</th>
                     </tr>
                 </thead>
             </table>

@@ -586,7 +586,8 @@ $(document).ready(function() {
             },
             yAxis: {
                 title: {
-                    text: 'Flow (cumecs)',
+                    useHTML: true,
+                    text: 'Flow (m<sup>3</sup>/s)',
                     style: {
                         font: '16px bold Times New Roman, sans-serif',
                         color: "#000000"
@@ -602,16 +603,17 @@ $(document).ready(function() {
                 minTickInterval: 0.1
             },
             tooltip: {
+                useHTML: true,
                 xDateFormat: '%d-%m-%Y',
                 crosshairs: true,
                 shared: true,
                 valueDecimals: 1,
-                valueSuffix: "cumecs"
+                valueSuffix: "m<sup>3</sup>/s"
             },
             legend: {},
             series: [
                 {
-                    name: 'Reservoir Inflow',
+                    name: 'Simulated Inflow',
                     data: inflow,
                     type: 'spline',
                     marker: {
@@ -627,7 +629,7 @@ $(document).ready(function() {
                 },
 
                 {
-                    name: 'Reservoir Outflow (including diversion)',
+                    name: 'Simulated Outflow',
                     data: outflow,
                     type: 'spline',
                     marker: {

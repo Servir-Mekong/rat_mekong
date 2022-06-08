@@ -184,7 +184,7 @@ function onEachFeature(feature, reservoirLayer) {
     var rbasin = feature.properties.River;
     var country = feature.properties.Country;
     var slevel = feature.properties.Storage;
-    var content = '<iframe id="encoder_iframe"  width="700" height="460" src="https://ratmekong-servir.adpc.net/iframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
+    var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://localhost:8000/iframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
     var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
     reservoirLayer.bindTooltip(resname);
     // reservoirLayer.on('click', function (e) {
