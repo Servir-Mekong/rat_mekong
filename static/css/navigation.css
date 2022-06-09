@@ -51,10 +51,10 @@
 .navbar .navbar-brand {
     font-size: 20px;
     font-weight: bold;
-    color: rgb(197, 171, 133);
+    color: #fff;
 }
 .navbar .navbar-brand:hover {
-    color: rgb(236, 164, 56);
+    color: #fff;
 }
 /* .navbar .navbar-brand .logo {
     width: 65px;

@@ -7,10 +7,10 @@ $(document).ready(function() {
         "ajax": {
             "url": "/static/data/table_data/aec_all.json",
             "dataSrc": "",
-            // deferRender: true,
-            // clear: true,
-            // destroy: true,
-            //cache: false,
+            deferRender: true,
+            clear: true,
+            destroy: true,
+            cache: false
         },
         dom: 'Bfrtip',
         buttons: [
@@ -29,7 +29,11 @@ $(document).ready(function() {
     $('#deltas').DataTable( {
         "ajax": {
             "url": "/static/data/table_data/deltas_all.json",
-            "dataSrc": ""
+            "dataSrc": "",
+            deferRender: true,
+            clear: true,
+            destroy: true,
+            cache: false
         },
         dom: 'Bfrtip',
         buttons: [
@@ -50,10 +54,10 @@ $(document).ready(function() {
         "ajax": {
             "url": "/static/data/table_data/inflow_all.json", //  ajax/inflowdata/
             "dataSrc": "",
-            // deferRender: true,
-            // clear: true,
-            // destroy: true,
-            // cache: false,
+            deferRender: true,
+            clear: true,
+            destroy: true,
+            cache: false
         },
         serverSide: true,
         dom: 'Bfrtip',
@@ -75,9 +79,10 @@ $(document).ready(function() {
         "ajax": {
             "url": "/static/data/table_data/outflow_all.json",
             "dataSrc": "",
-            // deferRender: true,
-            // clear: true,
-            // destroy: true
+            deferRender: true,
+            clear: true,
+            destroy: true,
+            cache: false
         },
         dom: 'Bfrtip',
         buttons: [
@@ -97,7 +102,11 @@ $(document).ready(function() {
     $('#surface_area').DataTable( {
         "ajax": {
             "url": "/static/data/table_data/sarea_all.json",
-            "dataSrc": ""
+            "dataSrc": "",
+            deferRender: true,
+            clear: true,
+            destroy: true,
+            cache: false
         },
         dom: 'Bfrtip',
         buttons: [
@@ -117,7 +126,11 @@ $(document).ready(function() {
     $('#rcurve').DataTable( {
         "ajax": {
             "url": "/static/data/table_data/rcurve_all.json",
-            "dataSrc": ""
+            "dataSrc": "",
+            deferRender: true,
+            clear: true,
+            destroy: true,
+            cache: false
         },
         dom: 'Bfrtip',
         buttons: [
