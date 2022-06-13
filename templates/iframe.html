@@ -104,13 +104,15 @@
               },
             },
             labels: {
+              allowDecimals: false,
               format: "{value}",
               style: {
                 font: "16px Times New Roman, sans-serif",
                 color: "#000000",
               },
             },
-            minTickInterval: 0.01,
+            minTickInterval: 1,
+            min: 0.0,
           },
           yAxis: {
             title: {
@@ -129,7 +131,7 @@
                 color: "#000000",
               },
             },
-            minTickInterval: 0.01,
+            minTickInterval: 1,
             min: 0.0,
           },
           tooltip: {

@@ -28,7 +28,7 @@ $(document).ready(function() {
         columnDefs: [ { 
             "targets": [ 3, 4 ],
             "render": function (data, type, full) {
-                return parseFloat(data).toFixed(2);
+                return parseFloat(data).toFixed();
             }
          } ],
         order: [[ 0, 'asc'], [ 1, 'asc'], [ 2, 'asc']]
