@@ -2,6 +2,8 @@
     ** Table Tab Scripts **
 */
 
+
+
 $(document).ready(function() {
     $('#aec').DataTable( {
         "ajax": {
@@ -20,9 +22,15 @@ $(document).ready(function() {
             { "data": "country" },
             { "data": "river" },
             { "data": "name" },
-            { "data": "Elevation" },
+            { "data": "Elevation"},
             { "data": "CumArea" },                                  
         ],
+        columnDefs: [ { 
+            "targets": [ 3, 4 ],
+            "render": function (data, type, full) {
+                return parseFloat(data).toFixed(2);
+            }
+         } ],
         order: [[ 0, 'asc'], [ 1, 'asc'], [ 2, 'asc']]
     });
 
@@ -46,7 +54,15 @@ $(document).ready(function() {
             { "data": "date" },
             { "data": "dS" },                                  
         ],
-        columnDefs: [ { type: 'date', 'targets': [3] } ],
+        columnDefs: [ 
+            { type: 'date', 'targets': [3] },
+            {
+                "targets": [ 4 ],
+                "render": function (data, type, full) {
+                    return parseFloat(data).toFixed(2);
+                }
+            }
+        ],
         order: [[ 0, 'asc'], [ 1, 'asc'], [ 2, 'asc'], [ 3, 'desc' ]]
     });
 
@@ -59,7 +75,7 @@ $(document).ready(function() {
             destroy: true,
             cache: false
         },
-        serverSide: true,
+        //serverSide: true,
         dom: 'Bfrtip',
         buttons: [
             'pageLength', 'print', 'excel', 'csv', 'pdf'
@@ -71,7 +87,15 @@ $(document).ready(function() {
             { "data": "date" },
             { "data": "streamflow" },                                  
         ],
-        columnDefs: [ { type: 'date', 'targets': [3] } ],
+        columnDefs: [ 
+            { type: 'date', 'targets': [3] },
+            {
+                "targets": [ 4 ],
+                "render": function (data, type, full) {
+                    return parseFloat(data).toFixed(2);
+                }
+            }
+        ],
         order: [[ 0, 'asc'], [ 1, 'asc'], [ 2, 'asc'], [ 3, 'desc' ]]
     });
 
@@ -119,7 +143,15 @@ $(document).ready(function() {
             { "data": "mosaic_enddate" },
             { "data": "corrected_area" },                                  
         ],
-        columnDefs: [ { type: 'date', 'targets': [3] } ],
+        columnDefs: [ 
+            { type: 'date', 'targets': [3] }, 
+            {
+                "targets": [ 4 ],
+                "render": function (data, type, full) {
+                    return parseFloat(data).toFixed(2);
+                }
+            }
+        ],
         order: [[ 0, 'asc'], [ 1, 'asc'], [ 2, 'asc'], [ 3, 'desc' ]]
     });
 
