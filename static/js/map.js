@@ -161,13 +161,18 @@ var iconOptionsBlue = {
     iconSize: [22, 30]
 }
 var iconOptionsYellow = {
+    iconUrl: '/static/images/brown.png',
+    iconSize: [22, 30]
+}
+var iconOptionsRed = {
     iconUrl: '/static/images/red.png',
     iconSize: [22, 30]
 }
 
 var greenIcon = L.icon(iconOptionsGreen);
 var blueIcon = L.icon(iconOptionsBlue);
-var yellowIcon = L.icon(iconOptionsYellow);
+var brownIcon = L.icon(iconOptionsYellow);
+var redIcon = L.icon(iconOptionsRed);
 
 
 var reservoirName = document.getElementById("reservoir_name");
@@ -177,6 +182,124 @@ function filterByReservoirName(feature) {
     if(feature.properties.Name==reservoirName.value)
     return true
 }
+var Battambang_1_sl;
+$.ajax({
+    type: "GET",
+    data: {'reservoir': 'Battambang_1'},
+    url: '/ajax/storagelevel/Battambang_1',
+    async: false,
+    datatype: "text",
+    success: function(data){ Battambang_1_sl = data; }
+});
+// console.log(Battambang_1_sl);
+var Lam_Pao_sl;
+$.ajax({
+    type: "GET",
+    data: {'reservoir': 'Lam_Pao'},
+    url: '/ajax/storagelevel/Lam_Pao',
+    async: false,
+    datatype: "text",
+    success: function(data){ Lam_Pao_sl = data; }
+});
+var Lower_Sesan_2_sl;
+$.ajax({
+    type: "GET",
+    data: {'reservoir': 'Lower_Sesan_2'},
+    url: '/ajax/storagelevel/Lower_Sesan_2',
+    async: false,
+    datatype: "text",
+    success: function(data){ Lower_Sesan_2_sl = data; }
+});
+var Nam_Mang_3_sl;
+$.ajax({
+    type: "GET",
+    data: {'reservoir': 'Nam_Mang_3'},
+    url: '/ajax/storagelevel/Nam_Mang_3',
+    async: false,
+    datatype: "text",
+    success: function(data){ Nam_Mang_3_sl = data; }
+});
+var Nam_Ngum_1_sl;
+$.ajax({
+    type: "GET",
+    data: {'reservoir': 'Nam_Ngum_1'},
+    url: '/ajax/storagelevel/Nam_Ngum_1',
+    async: false,
+    datatype: "text",
+    success: function(data){ Nam_Ngum_1_sl = data; }
+});
+var Nam_Theun_2_sl;
+$.ajax({
+    type: "GET",
+    data: {'reservoir': 'Nam_Theun_2'},
+    url: '/ajax/storagelevel/Nam_Theun_2',
+    async: false,
+    datatype: "text",
+    success: function(data){ Nam_Theun_2_sl = data; }
+});
+// var Nam_Ton_sl;
+// $.ajax({
+//     type: "GET",
+//     data: {'reservoir': 'Nam_Ton'},
+//     url: '/ajax/storagelevel/Nam_Ton',
+//     async: false,
+//     datatype: "text",
+//     success: function(data){ Nam_Ton_sl = data; }
+// });
+var Phumi_Svay_Chrum_sl;
+$.ajax({
+    type: "GET",
+    data: {'reservoir': 'Phumi_Svay_Chrum'},
+    url: '/ajax/storagelevel/Phumi_Svay_Chrum',
+    async: false,
+    datatype: "text",
+    success: function(data){ Phumi_Svay_Chrum_sl = data; }
+});
+var Sesan_4_sl;
+$.ajax({
+    type: "GET",
+    data: {'reservoir': 'Sesan_4'},
+    url: '/ajax/storagelevel/Sesan_4',
+    async: false,
+    datatype: "text",
+    success: function(data){ Sesan_4_sl = data; }
+});
+var Sirindhorn_sl;
+$.ajax({
+    type: "GET",
+    data: {'reservoir': 'Sirindhorn'},
+    url: '/ajax/storagelevel/Sirindhorn',
+    async: false,
+    datatype: "text",
+    success: function(data){ Sirindhorn_sl = data; }
+});
+var Sre_Pok_4_sl;
+$.ajax({
+    type: "GET",
+    data: {'reservoir': 'Sre_Pok_4'},
+    url: '/ajax/storagelevel/Sre_Pok_4',
+    async: false,
+    datatype: "text",
+    success: function(data){ Sre_Pok_4_sl = data; }
+});
+var Ubol_Ratana_sl;
+$.ajax({
+    type: "GET",
+    data: {'reservoir': 'Ubol_Ratana'},
+    url: '/ajax/storagelevel/Ubol_Ratana',
+    async: false,
+    datatype: "text",
+    success: function(data){ Ubol_Ratana_sl = data; }
+});
+var Yali_sl;
+$.ajax({
+    type: "GET",
+    data: {'reservoir': 'Yali'},
+    url: '/ajax/storagelevel/Yali',
+    async: false,
+    datatype: "text",
+    success: function(data){ Yali_sl = data; }
+});
 
 function onEachFeature(feature, reservoirLayer) {
     var resname = feature.properties.Name;
@@ -193,13 +316,72 @@ function onEachFeature(feature, reservoirLayer) {
     reservoirLayer.bindPopup(popupContent); 
     reservoirLayer.layerTag = "GeoJSONLayer"
     //reservoirLayer.setIcon(customIcon);
-    if (slevel === '81%-100%') {
-        reservoirLayer.setIcon(blueIcon); 
-    }else if(slevel === '30%-80%'){
-        reservoirLayer.setIcon(greenIcon);
-    }else {
-        reservoirLayer.setIcon(yellowIcon);
-    }                    
+    // if (slevel === '81%-100%') {
+    //     reservoirLayer.setIcon(blueIcon); 
+    // }else if(slevel === '30%-80%'){
+    //     reservoirLayer.setIcon(greenIcon);
+    // }else {
+    //     reservoirLayer.setIcon(brownIcon);
+    // } 
+    var battambang_1_sl = parseInt(Battambang_1_sl);  
+    var lam_pao_sl = parseInt(Lam_Pao_sl);
+    var lower_sesan_2_sl = parseInt(Lower_Sesan_2_sl);
+    var nam_mang_3_sl = parseInt(Nam_Mang_3_sl);
+    var nam_ngum_1_sl = parseInt(Nam_Ngum_1_sl);
+    var nam_theun_2_sl = parseInt(Nam_Theun_2_sl);
+    var nam_ton_sl = 60;// parseInt(Nam_Ton_sl);
+    var phumi_svay_chrum_sl = parseInt(Phumi_Svay_Chrum_sl);
+    var sesan_4_sl = parseInt(Sesan_4_sl);
+    var sirindhorn_sl = parseInt(Sirindhorn_sl);
+    var sre_pok_4_sl = parseInt(Sre_Pok_4_sl);
+    var ubol_ratana_sl = parseInt(Ubol_Ratana_sl);
+    var yali_sl = parseInt(Yali_sl);
+    // console.log(battambang_1_sl)
+    // console.log(Yali_sl)
+
+    function reservoirIcon(name, sl) {
+    
+        if ( resname == name && sl >= 75 ) {
+            reservoirLayer.setIcon(blueIcon);
+        } 
+        else if ( resname == name && (sl >= 50 && sl < 75) ) {
+            reservoirLayer.setIcon(greenIcon);
+        } 
+        else if ( resname == name && (sl >= 25 && sl < 50) ) {
+            reservoirLayer.setIcon(brownIcon);
+        } 
+        else if ( resname == name && sl < 25 ) {
+            reservoirLayer.setIcon(redIcon);
+        }  
+        return reservoirIcon 
+    }
+
+    reservoirIcon("Battambang 1", battambang_1_sl);
+    reservoirIcon("Lam Pao", lam_pao_sl);
+    reservoirIcon("Lower Sesan 2", lower_sesan_2_sl);
+    reservoirIcon("Nam Mang 3", nam_mang_3_sl);
+    reservoirIcon("Nam Ngum 1", nam_ngum_1_sl);
+    reservoirIcon("Nam Theun 2", nam_theun_2_sl);
+    reservoirIcon("Nam Ton (Monkey Cheek)", nam_ton_sl);
+    reservoirIcon("Phumi Svay Chrum", phumi_svay_chrum_sl);
+    reservoirIcon("Sesan 4", sesan_4_sl);
+    reservoirIcon("Sirindhorn", sirindhorn_sl);
+    reservoirIcon("Sre Pok 4", sre_pok_4_sl);
+    reservoirIcon("Ubol Ratana", ubol_ratana_sl);
+    reservoirIcon("Yali", yali_sl);
+
+    // if ( resname == "Battambang 1" && Battambang_1_sl >= 75 ) {
+    //     reservoirLayer.setIcon(blueIcon);
+    // } 
+    // else if ( resname == "Battambang 1" && (Battambang_1_sl >= 50 && Battambang_1_sl < 75) ) {
+    //     reservoirLayer.setIcon(greenIcon);
+    // } 
+    // else if ( resname == "Battambang 1" && (Battambang_1_sl >= 25 && Battambang_1_sl < 50) ) {
+    //     reservoirLayer.setIcon(brownIcon);
+    // } 
+    // else if ( resname == "Battambang 1" && Battambang_1_sl < 25 ) {
+    //     reservoirLayer.setIcon(redIcon);
+    // }       
 } 
 
 var selectedReservoirLayer;
@@ -651,10 +833,11 @@ var legend = L.control({position: 'bottomright'});
 
 legend.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'legend');
-    div.innerHTML += '<strong>Storage Level</strong>'+ '<br>'
-    div.innerHTML +=  '<img class="pt-2" src="/static/images/blue.png" width="20px">' + ' > 80% ' + '<br>'
-    div.innerHTML +=  '<img class="pt-1" src="/static/images/green.png" width="20px">'  + ' 30% - 80% ' + '<br>'
-    div.innerHTML +=  '<img class="pt-1" src="/static/images/red.png" width="20px">'   +  ' < 30% '
+    div.innerHTML += '<h5 class="fw-bold pb-1">Storage Level</h5>'
+    div.innerHTML +=  '<img class="pt-1" src="/static/images/blue.png" width="20px">' + ' 75-100% Full ' + '<br>'
+    div.innerHTML +=  '<img class="pt-1" src="/static/images/green.png" width="20px">'  + ' 50-75% Full ' + '<br>'
+    div.innerHTML +=  '<img class="pt-1" src="/static/images/brown.png" width="20px">'  + ' 25-50% Full ' + '<br>'
+    div.innerHTML +=  '<img class="pt-1" src="/static/images/red.png" width="20px">'   +  ' 0-25% Full '
 
     return div;
 };
