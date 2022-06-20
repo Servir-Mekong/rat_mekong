@@ -85,7 +85,7 @@ $(document).ready(function() {
             { "data": "river" },
             { "data": "name" },
             { "data": "date" },
-            { "data": "streamflow" },                                  
+            { "data": "inflow" },                                  
         ],
         columnDefs: [ 
             { type: 'date', 'targets': [3] },
@@ -116,8 +116,8 @@ $(document).ready(function() {
             { "data": "country" },
             { "data": "river" },
             { "data": "name" },
-            { "data": "Date" },
-            { "data": "Streamflow" },                                  
+            { "data": "last_date" },
+            { "data": "outflow_rate" },                                  
         ],
         columnDefs: [ { type: 'date', 'targets': [3] } ],
         order: [[ 0, 'asc'], [ 1, 'asc'], [ 2, 'asc'], [ 3, 'desc' ]]
@@ -140,8 +140,8 @@ $(document).ready(function() {
             { "data": "country" },
             { "data": "river" },
             { "data": "name" },
-            { "data": "mosaic_enddate" },
-            { "data": "corrected_area" },                                  
+            { "data": "date" },
+            { "data": "sarea" },                                  
         ],
         columnDefs: [ 
             { type: 'date', 'targets': [3] }, 
