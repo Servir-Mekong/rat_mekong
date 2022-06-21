@@ -220,7 +220,7 @@
         lines = l8data.split("\n");
         for (i = 0; i < lines.length; i++) {
           var items = lines[i].split(",");
-          l8area.push([new Date(items[0]).getTime(), +items[11]]);
+          l8area.push([new Date(items[0]).getTime(), +items[1]]);
         }
         Highcharts.setOptions({
           global: {
@@ -582,7 +582,7 @@
         lines = sadata.split("\n");
         for (i = 1; i < lines.length; i++) {
           var items = lines[i].split(",");
-          sarea.push([new Date(items[0]).getTime(), +items[3]]);
+          sarea.push([new Date(items[0]).getTime(), +items[1]]);
         }
         Highcharts.setOptions({
           global: {
