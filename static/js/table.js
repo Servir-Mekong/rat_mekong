@@ -185,6 +185,14 @@ $(document).ready(function() {
             { "data": "November" },
             { "data": "December" }                               
         ],
+        columnDefs: [ 
+            {
+                "targets": [ 3,4,5,6,7,8,9,10,11,12,13,14 ],
+                "render": function (data, type, full) {
+                    return parseFloat(data).toFixed(2);
+                }
+            }
+        ],
         order: [[ 0, 'asc'], [ 1, 'asc'], [ 2, 'asc']]
     });
 
