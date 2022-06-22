@@ -834,10 +834,10 @@ var legend = L.control({position: 'bottomright'});
 legend.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'legend');
     div.innerHTML += '<h5 class="fw-bold pb-1">Storage Level</h5>'
-    div.innerHTML +=  '<img class="pt-1" src="/static/images/blue.png" width="20px">' + ' 75-100% Full ' + '<br>'
-    div.innerHTML +=  '<img class="pt-1" src="/static/images/green.png" width="20px">'  + ' 50-75% Full ' + '<br>'
-    div.innerHTML +=  '<img class="pt-1" src="/static/images/brown.png" width="20px">'  + ' 25-50% Full ' + '<br>'
-    div.innerHTML +=  '<img class="pt-1" src="/static/images/red.png" width="20px">'   +  ' 0-25% Full '
+    div.innerHTML +=  '<img class="pt-1" src="/static/images/blue.png" width="20px">' + ' 75-100% High ' + '<br>'
+    div.innerHTML +=  '<img class="pt-1" src="/static/images/green.png" width="20px">'  + ' 50-75% Medium ' + '<br>'
+    div.innerHTML +=  '<img class="pt-1" src="/static/images/brown.png" width="20px">'  + ' 25-50% Low ' + '<br>'
+    div.innerHTML +=  '<img class="pt-1" src="/static/images/red.png" width="20px">'   +  ' 0-25% Critical '
 
     return div;
 };
