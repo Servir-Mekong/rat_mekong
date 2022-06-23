@@ -714,7 +714,8 @@
         });
         var chart = Highcharts.chart('pills-rcurve', {
         chart: {
-            type: 'spline',
+            // type: 'spline',
+            type: 'line',
             zoomType: 'x',
             panning: true,
             panKey: 'shift',
@@ -817,7 +818,8 @@
           series: [{
             name: 'Specific Storage (S/Smax)',
             data: rcurve,
-            type: 'spline',
+            // type: 'spline',
+            type: 'line',
             marker: {
             enabled: true,
             radius: 3		
