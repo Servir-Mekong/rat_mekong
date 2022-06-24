@@ -596,7 +596,7 @@ $(document).ready(function() {
         var outflowlines = outflowData.split('\n');
         for (i = 1; i < outflowlines.length; i++) {
         var items = outflowlines[i].split(',');
-            outflow.push([new Date(items[0]).getTime(), +items[1]]);
+            outflow.push([new Date(items[0]).getTime(), +items[6]]);
         }
         Highcharts.setOptions({
             global: {
