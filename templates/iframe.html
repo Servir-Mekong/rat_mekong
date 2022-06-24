@@ -461,7 +461,7 @@
         testlines = data.split("\n");
         for (i = 1; i < testlines.length; i++) {
           var items = testlines[i].split(",");
-          outflow.push([new Date(items[0]).getTime(), +items[1]]);
+          outflow.push([new Date(items[0]).getTime(), +items[6]]);
         }
         Highcharts.setOptions({
           global: {
