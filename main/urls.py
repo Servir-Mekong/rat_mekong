@@ -5,7 +5,7 @@ from django.conf.urls import include, url
 urlpatterns = [
     #path('', views.HomePage.as_view(), name='home'),
     path('', views.TeamList.as_view(), name='home'),
-    path('about-mrc/', views.AboutMRCPage.as_view(), name='about-mrc'),
+    path('technical-note/', views.TechNotePage.as_view(), name='technical-note'),
     path('about/', views.AboutPage.as_view(), name='about'),
     path('map/', views.MapPage.as_view(), name='map'),
     path('table/', views.TablePage.as_view(), name='table'),

@@ -66,8 +66,8 @@
 <div class="navigation mb-0 pb-0">
     <div class="container mb-0 pb-0">
         <nav class="navbar navbar-expand-lg mb-0 pb-0">
-            <a class="navbar-brand ms-0 ps-0" href="/">
-                Reservoir Assessment Tool for Lower Mekong Basin (RAT-Mekong) V1.0 
+            <a class="navbar-brand" href="/">
+               Reservoir Assessment Tool for Lower Mekong Basin (RAT-Mekong)
             </a>
             <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerMenu" aria-controls="navbarTogglerMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span><i class="fa fa-bars text-white"></i></span>
@@ -78,10 +78,6 @@
                     <li class="nav-item {% if request.path == homePage %}active{% endif %}">
                         <a class="nav-link" href="{{ homePage }}">Home</a>
                     </li>
-                    {% url 'about-mrc' as aboutMRCPage %}
-                    <li class="nav-item {% if request.path == aboutMRCPage %}active{% endif %}">
-                        <a class="nav-link" href="{{ aboutMRCPage }}">About MRC</a>
-                    </li>
                     {% url 'about' as aboutPage %}
                     <li class="nav-item {% if request.path == aboutPage %}active{% endif %}">
                         <a class="nav-link" href="{{ aboutPage }}">About RAT-Mekong</a>
@@ -90,6 +86,10 @@
                     <li class="nav-item {% if request.path == mapPage %}active{% endif %}">
                         <a class="nav-link" href="{{  mapPage }}">Map Viewer</a>
                     </li>
+                    {% url 'technical-note' as TechNotePage %}
+                    <li class="nav-item {% if request.path == TechNotePage %}active{% endif %}">
+                        <a class="nav-link" href="{{ TechNotePage }}">Technical Note</a>
+                    </li>
                     {% url 'user-guide' as userGuidePage %}
                     <li class="nav-item dropdown {% if request.path == userGuidePage %}active{% endif %}">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -97,9 +97,9 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                           <li><a class="dropdown-item" href="{%static 'docs/210226 Concept Note_Mekong Reservoir Assessment Tool (RAT).docx' %}">Concept Note</a></li>
-                          <li><a class="dropdown-item" href="{%static 'docs/210920 Working Paper 1v3_RAT-Mekong.docx' %}">Working Paper</a></li>
-                          <li><a class="dropdown-item" href="https://saswe.net/publications/RATPaper.pdf" target="_blank">Research Paper 1</a></li>
+                          <li><a class="dropdown-item" href="{%static 'docs/210920 Working Paper 1v3_RAT-Mekong.docx' %}">Working Paper 1</a></li>
                           <li><a class="dropdown-item" href="{%static 'docs/211118 Working Paper 2v1_RAT-Mekong.docx' %}">Working Paper 2</a></li>
+                          <li><a class="dropdown-item" href="https://saswe.net/publications/RATPaper.pdf" target="_blank">Research Paper</a></li>
                           <li><a class="dropdown-item" href="{%static 'docs/RAT-Mekong_User_Manual_V1.2.pdf' %}" target="_blank">User Manual</a></li>
                           <li><a class="dropdown-item" href="/about/disclaimer">Disclaimer</a></li>
                         </ul>

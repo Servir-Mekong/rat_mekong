@@ -14,61 +14,36 @@
 </div>
 <!-- Main Container -->
 <div class="container pb-5">
-  <p class="fs-4 pt-5 pb-5">
-    Reservoir Assessment Tool (RAT) is an integrated satellite remote sensing-modeling framework with an interactive state-of-the-art web-based visualization interface to facilitate the visualization of past and current reservoir states. The tool was originally developed at the University of Washington SASWE Research Group with support from NASA Applied Sciences Program. University of Houston and SERVIR-Mekong provided additional collaborative support. RAT-Mekong has been designed to monitor the existing reservoirs over the Mekong region. The tool facilitates the visualization of reservoir states (such as storage change, inflow, and outflow), which is useful in understanding downstream impact.
+  <p class="fs-5 p-4 mt-5" style="background-color: rgba(199, 236, 249, 0.5); border-left: 5px solid darkblue; color: navy;">
+    The Reservoir Assessment Tool for the Lower Mekong Basin (RAT-Mekong) was developed under the SERVIR-Mekong program. 
   </p>
-  <p class="fs-4 pt-1 pb-5">
-    The founding principle of RAT is to use satellite data of NASA and other agencies to address limitations faced by stakeholders in regions of limited, absent, or inaccessible reservoir operation data. RAT development has been based on five years of research at the University of Washington with extensive validation in South Asia (80 dams), Southeast Asia (20 dams), and North America (2 dams) (Bonnema et al., 2016; Bonnema and Hossain, 2017 and Biswas et al., 2021). The development of RAT-Mekong is always ongoing. Therefore, the developers of RAT-Mekong do not accept any responsibility for the wrongful application or faulty decision-making based on RAT-Mekong outputs. Users should read the key documentation on RAT (see ‘User Guide’) and refer to the main RAT paper by<span><a href="https://saswe.net/publications/RATPaper.pdf" target="_blank" rel="noopener noreferrer"> Biswas et al. (2021)</a></span>.
+  <h3 class="h-5 fw-bold mt-5">Background of RAT-Mekong</h3>
+  <p class="fs-5 pt-3">
+    <span class="fw-bold ps-5"><a href="https://servir.adpc.net/" target="_blank" rel="noopener noreferrer">SERVIR-Mekong</a></span> works in partnership with leading regional organizations such as the Mekong River Commission (MRC) to help the five countries in the Lower Mekong Region use the information provided by Earth-observing satellites and geospatial technologies to manage climate risks. The region includes Cambodia, Lao PDR, Myanmar (Burma), Thailand, and Vietnam. The Asian Disaster Preparedness Center (ADPC), a recognized leader in strengthening disaster resilience in Asia, is the prime implementer for SERVIR-Mekong. Three other consortium partners, Spatial Informatics Group (SIG), Stockholm Environment Institute (SEI), and Deltares, assist in implementing the SERVIR-Mekong program and bring exceptional capabilities to help deliver services to the region.
   </p>
-  <h3 class="fs-3 fw-bolder">Conceptualization of RAT-Mekong Tool</h3>
-  <p class="fs-4 pt-3">
-    The RAT frameworks have three key modules –Storage Change Module, Data Download Module, and Model Simulation and Post-Processing Module to estimate the reservoir inflow, outflow, and storage changes. The three modules are run in the backend server, and a task scheduler is used to automate the estimation by setting up task duration.
-  </p>
-  <h4 class="fw-bold pt-4">1. Reservoir Storage Change Module</h4>
-  <p class="fs-4 pt-3">
-    The reservoir storage change module, written in a python programming language, is used to produce
-reservoir surface area time series. First, it selects a single reservoir from the reservoir database of the
-RAT framework. Then it creates a buffer polygon around the reservoir based on the distance provided. In
-the current version of RAT-Mekong, only visible (optical) satellite imageries are used with adjustments
-for cloud cover and cloud shadow using a bit-masking algorithm. After removing the scenes with higher
-than threshold cloud cover, the reservoir storage change module mosaics all the scenes and applies the
-threshold-based method to create the water area of the reservoir. Finally, using the area-elevation
-relationship for a reservoir and the water area time series calculated from satellite imageries, the
-module calculates the storage change for the selected reservoir. The module iterates all the reservoirs in
-the same way and generates the reservoir storage change time series for every reservoir. It should be
-noted that in an effort to continually improve accuracy and sampling, a future version of RAT-Mekong is
-likely to incorporate the use of data from multiple sensors in the optical (Landsat, Sentinel-2, MODIS) and
-microwave (Sentinel-1, Jason-3, Sentinel-6) wavelengths.
-  </p>
-  <h4 class="fw-bold pt-4">2. Data Download Module</h4>
-  <p class="fs-4 pt-3">
-    In the current version of RAT-Mekong, the hydrologic model used for simulating reservoir inflow is the Variable Infiltration Capacity (VIC) model.  VIC requires different types of meteorological parameters like precipitation, minimum and maximum temperature, wind speed, etc. to run VIC and Routing model to estimate reservoir inflow. The data download module is developed to download the required data from the relevant portal and reformat & resample into a specific format to run the VIC simulation model.
-  </p>
-  <h4 class="fw-bold pt-4">3. Model Simulation and Post-Processing Module</h4>
-  <p class="fs-4 pt-3 pb-5">
-    This module is used to run the VIC and Route model to get the latest available reservoir inflow
-data.
-After completing data processing data and calculation, the output will save into text (.txt) file format and
-it will be accessed by Django and finally, visualize the data in frontend GUI.
-  </p>
-  <a class="btn btn-primary btn-lg" href="http://saswe.net/publications/RATPaper.pdf" target="_blank" role="button">Know More About RAT Tool</a>
-  <a class="btn btn-primary btn-lg" href="https://github.com/nbiswasuw/rat-reservoir_assessment_tool" target="_blank" role="button">GitHub Repository</a>
-  <a class="btn btn-primary btn-lg" href="https://linktr.ee/pdas47" target="_blank" role="button">Training and Education Resources</a>
-  <p class="fs-5 pt-5 pb-1 fw-bold">
-    References
-  </p>
-  <p class="fs-6 pt-1 pb-1">
-    Biswas, N., F. Hossain, M. Bonnema, H. Lee, F. Chishtie (2021). Towards a Global Reservoir Assessment Tool for Predicting Hydrologic Impacts and Operating Patterns of Existing and Planned Reservoirs, Environmental Modeling & Software, vol. 140 doi:10.1016/j.envsoft.2021.105043, (available at: http://saswe.net/publications/RATPaper.pdf) 
-  </p>
-  <p class="fs-6 pt-1 pb-1">
-    Bonnema, M., F. Hossain, B. Nijssen & G. Holt (2020) Hydropower’s Hidden Transformation of Rivers in the Mekong, Environmental Research Letters, vol. 15(4),  https://doi.org/10.1088/1748-9326/ab763d
-  </p>
-  <p class="fs-6 pt-1 pb-1">
-    Bonnema, M. and F. Hossain. (2017). Inferring reservoir operating patterns across the Mekong Basin using only space observations,  Water Resources Research, vol. 53, pp. 3791–3810, (http://dx.doi.org/10.1002/2016WR019978).
-  </p>
-  <p class="fs-6 pt-1 pb-5">
-    Bonnema, M., S. Sikder, Y. Miao, X. Chen and F. Hossain, I.A. Pervin, S.M. M. Rahman & H. Lee. (2016). Understanding Satellite-based Monthly-to-Seasonal Reservoir Outflow Estimation as a function of Hydrologic controls, Water Resources Res., vol. 52, 4095– 4115, (doi: 10.1002/2015WR017830).”
-  </p>
+  <p class="fs-5 pt-2"><span class="ps-5">RAT-Mekong</span> supports the MRC in developing indicator monitoring of the MRC's Drought Management Strategy (DMS) 2020-2025, referred to as the reservoir monitoring indicator, as well as MRC's Flood Management and Mitigation (FMM) Strategy 2021-2030. The tool has been identified in the MRC multi-year work plan for 2021-2022. Moreover, the reservoir information such as estimated inflows, outflows, and storage changes from the RAT-Mekong have the potential to support and facilitate the implementation of MRC Procedures, including the Procedure of Data Information Exchange and Sharing (PDIES), Procedure for Water Use Monitoring (PWUP) and Procedure for the Maintenance of Flow on the Mainstream (PMFM) of the Mekong River.</p>
+  <p class="fs-5 pt-2"><span class="ps-5">The information</span> produced by RAT-Mekong is intended for supporting reservoir monitoring by the MRC and its member countries for flood and drought management in the Lower Mekong Basin (LMB). RAT-Mekong is a Near Real-Time reservoir monitoring tool using satellite observations and a hydrologic model (Biswas et al., 2021). The tool will fill the data gap in reservoir monitoring at the basin scale due to limited in-situ data and restriction of data-sharing policy. At present, reservoir information in the Upper and Lower Mekong Basins is important for drought and flood management downstream.</p>
+  <p class="fs-5 pt-2"><span class="ps-5">The concept</span> note on RAT-Mekong was presented at the 7th Regional Expert Group Meeting on Data Modeling and Forecasting (EGDFM) on March 3, 2022. The member countries acknowledged and approved the RAT-Mekong for monitoring near real-time (bi-weekly) reservoir behavior, and reservoir operating rules based on long-term records. These outputs, which are made available to the public, can be helpful in data-scarce or data restricted in the basin.</p>
+  <h4 class="h-5 fw-bold mt-5">Objectives of the RAT-Mekong</h4>
+  <p class="fs-5 pt-3">The overall objective of the RAT-Mekong is to provide near-real-time reservoir monitoring information to assist the MRC and the Member Countries in the decision and planning process for drought and flood management in the Lower Mekong Basin. The following are specific objectives of this tool development.</p>
+  <ul class="fs-5 pt-3 ms-3 ps-5 fa-ul">
+    <li class="pb-1"><span class="fa-li"><i class="fas fa-angle-double-right"></i></span> Regularly estimate changes in reservoir storage, surface area, inflow, outflows, and inferred reservoir rule curve (Bonnema et al., 2016; 2017).</li>
+    <li class="pb-1"><span class="fa-li"><i class="fas fa-angle-double-right"></i></span> To develop a user-friendly web-interface system to share reservoir monitoring information and integrate it into the MRC data portal for MRC and relevant users in the Member Countries.</li>
+    <li class="pb-1"><span class="fa-li"><i class="fas fa-angle-double-right"></i></span> To support MRC in developing reservoir monitoring indicators for decision making and planning in drought and flood management.</li>
+    <li class="pb-1"><span class="fa-li"><i class="fas fa-angle-double-right"></i></span> To build the capacity of the MRCS and Member Countries to enhance reservoir assessment capability using satellite observations and the hydrologic model.</li>
+  </ul>
+  <h3 class="h-5 fw-bold mt-5">Benefits of RAT-Mekong</h3>
+  <ul class="fs-5 pt-3 ms-3 ps-5 fa-ul">
+    <li class="pb-1"><span class="fa-li"><i class="fas fa-check-circle"></i></span> Near-real-time (bi-weekly) reservoir behavior and reservoir operating rules based on long-term records are made available to the public, which can be useful in data-scarce or data-restricted regions like some parts of the Mekong Basin.</li>
+    <li class="pb-1"><span class="fa-li"><i class="fas fa-check-circle"></i></span> It will help MRC and MCs derive a global picture of reservoir monitoring, how they are being operated, and how they impact natural river flow and its variability as a function of climate, hydrologic regime, and socio-economic indicators.</li>
+    <li class="pb-1"><span class="fa-li"><i class="fas fa-check-circle"></i></span> With further improvements in hydrological modeling using locally available ground observations, this framework can be used in local, regional, and global scale operational water resources management with its near-real-time (bi-weekly) data availability with higher accuracy.</li>
+    <li class="pb-1"><span class="fa-li"><i class="fas fa-check-circle"></i></span> This framework also facilitates the feasibility study of proposed/planned dams. It can be used to estimate the future reservoir capacity and the inflow availability at any location, which is useful in optimizing reservoir benefits.</li>
+    <li class="pb-1"><span class="fa-li"><i class="fas fa-check-circle"></i></span> This tool provides future possibilities to study the impact of harnessing hydropower on river temperature, greenhouse gas emissions, aquatic habitats, land use, land cover change, and agriculture practices.</li>
+    <li class="pb-1"><span class="fa-li"><i class="fas fa-check-circle"></i></span> This tool can be used to minimize the conflict between riparian countries, including China, as it can be considered an unbiased tool for all the parties and provide data needed to drive a fair and transparent water-sharing agreement.</li>
+    <li class="pb-1"><span class="fa-li"><i class="fas fa-check-circle"></i></span> The information obtained from the RAT could also support the implementation of MRC's Procedures (PDIES, PMFM, PWUM, PNPCA) and monitoring/forecasting activities of the MRC's Regional Flood and Drought Management Centre (RFDMC).</li>
+  </ul>
+  <h3 class="h-5 fw-bold mt-5">About Mekong River Commission (MRC)</h3>
+  <p class="fs-5">The MRC is an intergovernmental organization for regional dialogue and cooperation in the Lower Mekong River Basin, established in 1995 based on the Mekong Agreement between Cambodia, Lao PDR, Thailand, and Viet Nam. The organization serves as a regional platform for water diplomacy and a knowledge hub of water resources management for the region's sustainable development. The MRC is the primary user of RAT-Mekong and has been supporting and taking part in the development of RAT-Mekong from the beginning.</p>
 </div>
 
 <div class="container">{% include 'partners.html' %}</div>

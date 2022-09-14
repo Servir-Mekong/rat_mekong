@@ -26,8 +26,8 @@ class TeamList(ListView):
     template_name = 'home.html'
 
 
-class AboutMRCPage(TemplateView):
-    template_name = "about-mrc.html"
+class TechNotePage(TemplateView):
+    template_name = "technical-note.html"
 
 
 class AboutPage(TemplateView):
