@@ -8,7 +8,7 @@ from datetime import date
 import os
 import pandas as pd
 import json
-
+from . core import MainGEEApi
 
 class TeamDetailView(DetailView):
     model = Team
@@ -101,6 +101,13 @@ def getSL(request):
         # }
         # return JsonResponse(data, safe=False)
         return HttpResponse(sl)
+
+def get_precip_map(request):
+    if request.method == 'GET':
+        date = request.GET['date']
+        core = MainGEEApi()
+        data = core.getPrecipMap(date)
+        return JsonResponse(data, safe=False)
 
 # def getSLSesan4(request):
 #     data_url = 'static/data/storage_level/Sesan_4.csv'
