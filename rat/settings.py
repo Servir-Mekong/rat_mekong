@@ -143,6 +143,13 @@ COMPRESS_CSS_FILTERS = ["compressor.filters.cssmin.CSSMinFilter"]
 COMPRESS_JS_FILTERS = ["compressor.filters.jsmin.JSMinFilter"]
 
 
+import os
+import ee
+service_account = 'hydrafloods@hydrafloods-308007.iam.gserviceaccount.com'
+EE_PRIVATE_KEY_FILE = os.path.join(BASE_DIR, 'credentials/privatekey.json')
+credentials = ee.ServiceAccountCredentials(service_account, EE_PRIVATE_KEY_FILE)
+ee.Initialize(credentials)
+
 try:
     from rat.local_settings import *
 except ImportError:

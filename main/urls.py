@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^ajax/storagelevel/Sre_Pok_4/$', views.getSL),
     url(r'^ajax/storagelevel/Ubol_Ratana/$', views.getSL),
     url(r'^ajax/storagelevel/Yali$', views.getSL),
+    path('precip/', views.get_precip_map, name='precip_map'),
     # url(r'^ajax/sarea_seasan4/$', views.getSLSesan4)
     # url(r'^ajax/chartdata/$', views.getChartData),
     # url(r'^ajax/inflowdata/$', views.getInflow)

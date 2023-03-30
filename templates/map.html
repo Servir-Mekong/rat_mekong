@@ -165,6 +165,25 @@
                     </form>
                 </div>
             </div>
+            <!-- Precipitation Map -->
+            <div class="card filter-card m-2 border-0">
+                <div class="card-body border-0">
+                    <h6 class="fw-bold">Precipitation Map</h6>
+                    <div class="form-check form-switch pt-2 pb-3">
+                        <input class="form-check-input" type="checkbox" name="precip_toggle"
+                            id="precip_toggle" checked>
+                        <label class="form-check-label" for="precip_toggle">Precipitation (GPM - IMERG)</label>
+                    </div>
+                    <div class="pb-3">
+                        <label for="opacity">Opacity:</label><br>
+                        <input type="range" id="precipOpacity" min="0" max="1" value="1" step="0.1">
+                    </div>
+                    <input style="width: 100%; padding: 2px;" type="date" id="precip_date_selection" name="precip_date_selection" value="2023-01-01">
+                    <div class="d-grid gap-2 mt-4">
+                        <button class="btn btn-primary" type="button" id="updatePrecipMap">Update Precipitation Map</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!--Layer tab content area -->

@@ -174,6 +174,69 @@ var blueIcon = L.icon(iconOptionsBlue);
 var brownIcon = L.icon(iconOptionsYellow);
 var redIcon = L.icon(iconOptionsRed);
 
+var precip_date = document.getElementById('precip_date_selection');
+var td = new Date();
+var initial_date = td.toISOString().split('T')[0];
+
+var date_selector = document.querySelector('#precip_date_selection');
+date_selector.value = initial_date;
+
+var precip_layer = L.tileLayer('', {
+    attribution: '&copy; <a href="https://earthengine.google.com/">Google Earth Engine</a> contributors'
+}).addTo(map);
+
+$.ajax({
+    url: '/precip/',
+    type: "GET",
+    data: {
+        'date': initial_date
+    },
+    dataType: 'json',
+    //async: false,
+    success: (data) => {
+        precip_layer.setUrl(data);  
+    },
+    error: (error) => {
+        console.log(error);
+    }
+});
+
+var precip_opacity = document.querySelector("#precipOpacity");
+precip_opacity.addEventListener("input", (event) => {
+    var opac = event.target.value;
+    precip_layer.setOpacity(opac);
+})
+precip_opacity.onChange = () => {
+    var opac = document.querySelector("#precipOpacity").value;
+    precip_layer.setOpacity(opac)
+}
+
+var updatePrecipMapBtn = document.querySelector('#updatePrecipMap');
+updatePrecipMapBtn.onclick = () => {
+    updatePrecipMap();
+}
+
+function updatePrecipMap(){
+    map.removeLayer(precip_layer);
+    var date_selector = document.querySelector('#precip_date_selection').value;
+    var selected_date =  new Date(date_selector).toISOString().split('T')[0];
+    $.ajax({
+        url: '/precip/',
+        type: "GET",
+        data: {
+            'date': selected_date
+        },
+        dataType: 'json',
+        //async: false,
+        success: (data) => {
+            precip_layer.setUrl(data);  
+            map.addLayer(precip_layer);
+        },
+        error: (error) => {
+            console.log(error);
+        }
+    });
+}
 
 var reservoirName = document.getElementById("reservoir_name");
 
@@ -813,6 +876,13 @@ $('input[type=checkbox][name=sub_basin_toggle]').click(function(){
         map.removeLayer(sub_basin_layer);
     }
 });
+$('input[type=checkbox][name=precip_toggle]').click(function(){
+    if(this.checked) {
+        map.addLayer(precip_layer);
+    } else {
+        map.removeLayer(precip_layer);
+    }
+});
 /** End Layer Panel */
 
 /* 
@@ -838,7 +908,8 @@ legend.onAdd = function (map) {
     div.innerHTML +=  '<img class="pt-1" src="/static/images/green.png" width="20px">'  + ' 50-75% Medium ' + '<br>'
     div.innerHTML +=  '<img class="pt-1" src="/static/images/brown.png" width="20px">'  + ' 25-50% Low ' + '<br>'
     div.innerHTML +=  '<img class="pt-1" src="/static/images/red.png" width="20px">'   +  ' 0-25% Critical '
-
+    div.innerHTML += '<h5 class="fw-bold pt-2 pb-0">Precipitation</h5>'
+    div.innerHTML += '<img class="pt-0" src="/static/images/precip_colorbar.png" width="160px">'
     return div;
 };
 

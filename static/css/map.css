@@ -251,11 +251,12 @@ tr.shown td.details-control1 {
     font-weight: bold;
     font-size: 15px;
     text-align: left;
-    width: 160px;
-    height: 180px;
+    width: 200px;
+    height: 260px;
     line-height: 18px;
     background: white;
     opacity: 1;
     padding-top: 10px;
     padding-left: 10px;
+    overflow-y: scroll;
 }
