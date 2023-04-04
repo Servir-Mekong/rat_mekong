@@ -332,6 +332,21 @@
         });
         return dataset;
       }
+      // Reading precipitation data
+      function precipdata() {
+        dataset = "";
+        // AJAX in the data file
+        $.ajax({
+          type: "GET",
+          url: "/static/data/map_data/precip/" + station + ".txt",
+          async: false,
+          dataType: "text",
+          success: function (data) {
+            dataset = String(data);
+          },
+        });
+        return dataset;
+      }
       // Plotting reservoir inflow
       function loadinflow() {
         var inflow = [];
@@ -342,6 +357,14 @@
           inflow.push([new Date(items[0]).getTime(), +items[1]]);
         }
 
+        var precip = [];
+        data = precipdata();
+        testlines = data.split("\n");
+        for (i = 1; i < testlines.length; i++) {
+          var items = testlines[i].split(",");
+          precip.push([new Date(items[0]).getTime(), +items[1]]);
+        }
+
         Highcharts.setOptions({
           global: {
             useUTC: false,
@@ -350,7 +373,7 @@
 
         var chart = Highcharts.chart("pills-inflow", {
           chart: {
-            zoomType: "x",
+            zoomType: "xy",
             panning: true,
             panKey: "shift",
             style: {
@@ -392,24 +415,45 @@
               },
             },
           },
-          yAxis: {
-            title: {
-              useHTML: true,
-              text: "Inflow (m<sup>3</sup>/s)",
-              style: {
-                font: "16px bold Times New Roman, sans-serif",
-                color: "#000000",
+          yAxis: [
+            {
+              title: {
+                useHTML: true,
+                text: "Inflow (m<sup>3</sup>/s)",
+                style: {
+                  font: "16px bold Times New Roman, sans-serif",
+                  color: "#000000",
+                },
               },
-            },
-            labels: {
-              format: "{value:.1f}",
-              style: {
-                font: "16px Times New Roman, sans-serif",
-                color: "#000000",
+              labels: {
+                format: "{value:.1f}",
+                style: {
+                  font: "16px Times New Roman, sans-serif",
+                  color: "#000000",
+                },
               },
+              minTickInterval: 0.1,
             },
-            minTickInterval: 0.1,
-          },
+            {
+              title: {
+                useHTML: true,
+                text: "Precipitation(mm)",
+                style: {
+                  font: "16px bold Times New Roman, sans-serif",
+                  color: "#000000",
+                },
+              },
+              labels: {
+                format: "{value:.2f}",
+                style: {
+                  font: "16px Times New Roman, sans-serif",
+                  color: "#000000",
+                },
+              },
+              minTickInterval: 0.1,
+              opposite: true
+            }
+          ],
           tooltip: {
             useHTML: true,
             xDateFormat: "%d-%m-%Y",
@@ -418,7 +462,17 @@
             valueDecimals: 1,
             valueSuffix: " m<sup>3</sup>/s",
           },
-          legend: {enabled:false},
+          // legend: {enabled:false},
+          legend: {
+            align: 'left',
+            x: 80,
+            verticalAlign: 'top',
+            y: 80,
+            floating: true,
+            backgroundColor:
+              Highcharts.defaultOptions.legend.backgroundColor || // theme
+              'rgba(255,255,255,0.25)'
+          },
           series: [
             {
               name: "Inflow from Model",
@@ -428,6 +482,22 @@
                 enabled: false,
               },
               color: "green",
+              zIndex: 1,
+              states: {
+                hover: {
+                  lineWidthPlus: 0,
+                },
+              },
+            },
+            {
+              name: "Precipitation",
+              data: precip,
+              type: "spline",
+              yAxis: 1,
+              marker: {
+                enabled: false,
+              },
+              color: "red",
               zIndex: 1,
               states: {
                 hover: {
