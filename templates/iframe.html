@@ -432,7 +432,7 @@
                   color: "#000000",
                 },
               },
-              minTickInterval: 0.1,
+              minTickInterval: 0.01,
             },
             {
               title: {
@@ -450,8 +450,9 @@
                   color: "#000000",
                 },
               },
-              minTickInterval: 0.1,
-              opposite: true
+              minTickInterval: 0.01,
+              opposite: true,
+              reversed: true,
             }
           ],
           tooltip: {
@@ -464,11 +465,11 @@
           },
           // legend: {enabled:false},
           legend: {
-            align: 'left',
-            x: 80,
-            verticalAlign: 'top',
-            y: 80,
-            floating: true,
+            align: 'center',
+            x: 0,
+            verticalAlign: 'bottom',
+            y: 0,
+            floating: false,
             backgroundColor:
               Highcharts.defaultOptions.legend.backgroundColor || // theme
               'rgba(255,255,255,0.25)'
