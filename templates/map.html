@@ -80,6 +80,9 @@
                                 <label for="cambodia">
                                     <input type="checkbox" class="country" id="cambodia" name="cambodia"
                                         checked /> Cambodia</label>
+                                <label for="cambodia">
+                                    <input type="checkbox" class="country" id="china" name="china"
+                                        checked /> china</label>
                                 <label for="laos">
                                     <input type="checkbox" class="country" id="laos" name="laos" checked /> Lao
                                     PDR</label>
@@ -101,7 +104,7 @@
                                 class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
                                 data-bs-placement="right" title="Filter reservoir by river basin"><i
                                     class="fas fa-question-circle" aria-hidden="true"></i></button></span></h6>
-                    <form>
+                    <!-- <form>
                         <div class="multiselect">
                             <div class="selectBox" id="filter-river-basin">
                                 <select>
@@ -132,6 +135,13 @@
                                     <input type="checkbox" id="seSan" name="seSan" /> Se San</label>
                             </div>
                         </div>
+                    </form> -->
+                    <form>             
+                        <div class="selectBox">
+                            <select id="river_basin">
+                                
+                            </select>
+                        </div> 
                     </form>
                 </div>
             </div>
@@ -146,7 +156,7 @@
                     <form>             
                         <div class="selectBox">
                             <select id="reservoir_name">
-                                <option value="All">-- Show All --</option>
+                                <!-- <option value="All">-- Show All --</option>
                                 <option value="Battambang 1">Battambang 1</option>
                                 <option value="Lam Pao">Lam Pao</option>
                                 <option value="Lower Sesan 2">Lower Sesan 2</option>
@@ -159,14 +169,14 @@
                                 <option value="Sirindhorn">Sirindhorn</option>
                                 <option value="Sre Pok 4">Sre Pok 4</option>
                                 <option value="Ubol Ratana">Ubol Ratana</option>
-                                <option value="Yali">Yali</option>                   
+                                <option value="Yali">Yali</option>                    -->
                             </select>
                         </div> 
                     </form>
                 </div>
             </div>
             <!-- Precipitation Map -->
-            <div class="card filter-card m-2 border-0">
+            <!-- <div class="card filter-card m-2 border-0">
                 <div class="card-body border-0">
                     <h6 class="fw-bold">Precipitation Map</h6>
                     <div class="form-check form-switch pt-2 pb-3">
@@ -183,7 +193,7 @@
                         <button class="btn btn-primary" type="button" id="updatePrecipMap">Update Precipitation Map</button>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <!--Layer tab content area -->

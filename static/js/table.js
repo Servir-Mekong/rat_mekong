@@ -2,9 +2,38 @@
     ** Table Tab Scripts **
 */
 
-
-
 $(document).ready(function() {
+
+    $.getJSON('/static/data/geojson/reservoirs_v2_main.geojson', function (data) {
+        var reservoirs = [];
+        var rivers = [];
+        data.features.forEach(dothis);
+        function dothis(item){
+            var res = item.properties.Name;
+            var river = item.properties.River;
+            reservoirs.push(res)
+            rivers.push(river)
+        }
+        // console.log(items)
+        var options_str = "";
+        options_str += '<option value="" selected>All</option>'
+        reservoirs.forEach( function(val) {
+            options_str += '<option value="' + val + '">' + val + '</option>';
+        });
+        document.getElementById("reservoir").innerHTML = options_str;
+
+        function onlyUnique(value, index, self) {
+            return self.indexOf(value) === index;
+        }
+        var unique_rivers = rivers.filter(onlyUnique);
+        var options_str_river = "";
+        options_str_river += '<option value="" selected>All</option>'
+        unique_rivers.forEach( function(val) {
+            options_str_river += '<option value="' + val + '">' + val + '</option>';
+        });
+        document.getElementById("select_river_basin").innerHTML = options_str_river;
+    });
+
     $('#aec').DataTable( {
         "ajax": {
             "url": "/static/data/table_data/aec_all.json",
@@ -116,8 +145,8 @@ $(document).ready(function() {
             { "data": "country" },
             { "data": "river" },
             { "data": "name" },
-            { "data": "last_date" },
-            { "data": "outflow_rate" },                                  
+            { "data": "date" },
+            { "data": "outflow" },                                  
         ],
         columnDefs: [ { type: 'date', 'targets': [3] } ],
         order: [[ 0, 'asc'], [ 1, 'asc'], [ 2, 'asc'], [ 3, 'desc' ]]
@@ -596,7 +625,7 @@ $(document).ready(function() {
         var outflowlines = outflowData.split('\n');
         for (i = 1; i < outflowlines.length; i++) {
         var items = outflowlines[i].split(',');
-            outflow.push([new Date(items[0]).getTime(), +items[6]]);
+            outflow.push([new Date(items[0]).getTime(), +items[1]]);
         }
         Highcharts.setOptions({
             global: {

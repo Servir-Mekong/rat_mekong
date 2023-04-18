@@ -39,162 +39,163 @@
       var resname = getParamValue("reservoirname");
 
       // Reading Area Elevation Curve
-      function aecdata() {
-        dataset = "";
-        // AJAX in the data file
-        $.ajax({
-          type: "GET",
-          url: "/static/data/map_data/aec/" + station + ".txt",
-          async: false,
-          dataType: "text",
-          success: function (data) {
-            dataset = String(data);
-          },
-        });
-        return dataset;
-      }
-      function loadaec() {
-        var aec = [];
-        gfsdata = aecdata();
-        lines = gfsdata.split("\n");
-        for (i = 1; i < lines.length; i++) {
-          var items = lines[i].split(",");
-          aec.push([items[0], +items[1]]);
-        }
-        Highcharts.setOptions({
-          global: {
-            useUTC: false,
-          },
-        });
-        var chart = Highcharts.chart("pills-aec", {
-          chart: {
-            type: "spline",
-            zoomType: "x",
-            panning: true,
-            panKey: "shift",
-            style: {
-              fontFamily: "serif",
-              color: "#000000",
-            },
-          },
-          title: {
-            text: "Area Elevation Curve",
-            style: {
-              font: "20px bold Helvetica, sans-serif",
-              color: "#000000",
-              fontWeight: 'bold'
-            },
-            margin: 30
-          },
-          subtitle: {
-            text:
-              "Reservoir: " + decodeURIComponent(resname) + ", River Basin: " + decodeURIComponent(rbasin) + ", Country: " + decodeURIComponent(country),
-            style: {
-              font: "18px Times New Roman, sans-serif",
-              color: "#000000",
-            },
-          },
-          xAxis: {
-            type: "category",
-            title: {
-              text: "Elevation (m) <br><br><p>(Data Source: Mekong River Commission (MRC), 2022)</p>",
-              style: {
-                font: "16px bold Times New Roman, sans-serif",
-                color: "#000000",
-              },
-            },
-            labels: {
-              allowDecimals: false,
-              format: "{value}",
-              style: {
-                font: "16px Times New Roman, sans-serif",
-                color: "#000000",
-              },
-            },
-            minTickInterval: 1,
-            min: 0.0,
-          },
-          yAxis: {
-            title: {
-              useHTML: true,
-              enabled: true,
-              text: "Area (Km<sup>2</sup>)",
-              style: {
-                font: "16px bold Times, sans-serif",
-                color: "#000000",
-              },
-            },
-            labels: {
-              format: "{value:.f}",
-              style: {
-                font: "16px Times New Roman, sans-serif",
-                color: "#000000",
-              },
-            },
-            minTickInterval: 1,
-            min: 0.0,
-          },
-          tooltip: {
-            useHTML: true,
-            crosshairs: true,
-            shared: true,
-            valueDecimals: 2,
-            valueSuffix: " Km<sup>2</sup>",
-          },
-          legend: {enabled:false},
-          plotOptions: {
-            series: {
-              turboThreshold: 0, // Comment out this code to display error
-            },
-            area: {
-              fillColor: {
-                linearGradient: {
-                  x1: 0,
-                  y1: 0,
-                  x2: 0,
-                  y2: 1,
-                },
-                stops: [
-                  [0, Highcharts.getOptions().colors[0]],
-                  [
-                    1,
-                    Highcharts.Color(Highcharts.getOptions().colors[0])
-                      .setOpacity(0)
-                      .get("rgba"),
-                  ],
-                ],
-              },
-              marker: {
-                radius: 2,
-              },
-              lineWidth: 1,
-              states: {
-                hover: {
-                  lineWidth: 1,
-                },
-              },
-              threshold: null,
-            },
-          },
-          series: [
-            {
-              name: "Area",
-              data: aec,
-              type: "area",
-              marker: {
-                enabled: true,
-                radius: 3,
-              },
-              zIndex: 1,
-              states: {
-                hover: {
-                  lineWidthPlus: 0,
-                },
-              },
-            },
-          ],
-        });
-      }
+      // function aecdata() {
+      //   dataset = "";
+      //   // AJAX in the data file
+      //   $.ajax({
+      //     type: "GET",
+      //     url: "/static/data/map_data/aec/" + station + ".txt",
+      //     async: false,
+      //     dataType: "text",
+      //     success: function (data) {
+      //       dataset = String(data);
+      //     },
+      //   });
+      //   return dataset;
+      // }
+      // function loadaec() {
+      //   var aec = [];
+      //   gfsdata = aecdata();
+      //   lines = gfsdata.split("\n");
+      //   for (i = 1; i < lines.length; i++) {
+      //     var items = lines[i].split(",");
+      //     aec.push([items[0], +items[1]]);
+      //   }
+      //   Highcharts.setOptions({
+      //     global: {
+      //       useUTC: false,
+      //     },
+      //   });
+
+      //   var chart = Highcharts.chart("pills-aec", {
+      //     chart: {
+      //       type: "spline",
+      //       zoomType: "x",
+      //       panning: true,
+      //       panKey: "shift",
+      //       style: {
+      //         fontFamily: "serif",
+      //         color: "#000000",
+      //       },
+      //     },
+      //     title: {
+      //       text: "Area Elevation Curve",
+      //       style: {
+      //         font: "20px bold Helvetica, sans-serif",
+      //         color: "#000000",
+      //         fontWeight: 'bold'
+      //       },
+      //       margin: 30
+      //     },
+      //     subtitle: {
+      //       text:
+      //         "Reservoir: " + decodeURIComponent(resname) + ", River Basin: " + decodeURIComponent(rbasin) + ", Country: " + decodeURIComponent(country),
+      //       style: {
+      //         font: "18px Times New Roman, sans-serif",
+      //         color: "#000000",
+      //       },
+      //     },
+      //     xAxis: {
+      //       type: "category",
+      //       title: {
+      //         text: "Elevation (m) <br><br><p>(Data Source: Mekong River Commission (MRC), 2022)</p>",
+      //         style: {
+      //           font: "16px bold Times New Roman, sans-serif",
+      //           color: "#000000",
+      //         },
+      //       },
+      //       labels: {
+      //         allowDecimals: false,
+      //         format: "{value}",
+      //         style: {
+      //           font: "16px Times New Roman, sans-serif",
+      //           color: "#000000",
+      //         },
+      //       },
+      //       minTickInterval: 1,
+      //       min: 0.0,
+      //     },
+      //     yAxis: {
+      //       title: {
+      //         useHTML: true,
+      //         enabled: true,
+      //         text: "Area (Km<sup>2</sup>)",
+      //         style: {
+      //           font: "16px bold Times, sans-serif",
+      //           color: "#000000",
+      //         },
+      //       },
+      //       labels: {
+      //         format: "{value:.f}",
+      //         style: {
+      //           font: "16px Times New Roman, sans-serif",
+      //           color: "#000000",
+      //         },
+      //       },
+      //       minTickInterval: 1,
+      //       min: 0.0,
+      //     },
+      //     tooltip: {
+      //       useHTML: true,
+      //       crosshairs: true,
+      //       shared: true,
+      //       valueDecimals: 2,
+      //       valueSuffix: " Km<sup>2</sup>",
+      //     },
+      //     legend: {enabled:false},
+      //     plotOptions: {
+      //       series: {
+      //         turboThreshold: 0, // Comment out this code to display error
+      //       },
+      //       area: {
+      //         fillColor: {
+      //           linearGradient: {
+      //             x1: 0,
+      //             y1: 0,
+      //             x2: 0,
+      //             y2: 1,
+      //           },
+      //           stops: [
+      //             [0, Highcharts.getOptions().colors[0]],
+      //             [
+      //               1,
+      //               Highcharts.Color(Highcharts.getOptions().colors[0])
+      //                 .setOpacity(0)
+      //                 .get("rgba"),
+      //             ],
+      //           ],
+      //         },
+      //         marker: {
+      //           radius: 2,
+      //         },
+      //         lineWidth: 1,
+      //         states: {
+      //           hover: {
+      //             lineWidth: 1,
+      //           },
+      //         },
+      //         threshold: null,
+      //       },
+      //     },
+      //     series: [
+      //       {
+      //         name: "Area",
+      //         data: aec,
+      //         type: "area",
+      //         marker: {
+      //           enabled: true,
+      //           radius: 3,
+      //         },
+      //         zIndex: 1,
+      //         states: {
+      //           hover: {
+      //             lineWidthPlus: 0,
+      //           },
+      //         },
+      //       },
+      //     ],
+      //   });
+      // }
 
       // Reading reservoir storage change
       function l8deltasdata() {
@@ -227,6 +228,7 @@
             useUTC: false,
           },
         });
+
         var chart = Highcharts.chart("pills-deltas", {
           chart: {
             zoomType: "x",
@@ -532,7 +534,7 @@
         testlines = data.split("\n");
         for (i = 1; i < testlines.length; i++) {
           var items = testlines[i].split(",");
-          outflow.push([new Date(items[0]).getTime(), +items[6]]);
+          outflow.push([new Date(items[0]).getTime(), +items[1]]);
         }
         Highcharts.setOptions({
           global: {
@@ -906,34 +908,34 @@
       }
     </script>
   </head>
-  <body onload="loadaec()">
+  <body onload="loadsarea()">
     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-      <li class="nav-item" role="presentation">
+      <!-- <li class="nav-item" role="presentation">
         <button class="nav-link active" id="pills-aec-tab" onclick="loadaec()" data-bs-toggle="pill" data-bs-target="#pills-aec" type="button" role="tab" aria-controls="pills-aec" aria-selected="true">AEC</button>
-      </li>
+      </li> -->
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-deltas-tab" onclick="loaddeltas()" data-bs-toggle="pill" data-bs-target="#pills-deltas" type="button" role="tab" aria-controls="pills-deltas" aria-selected="false">Storage Change</button>
+        <button  class="nav-link active"  id="pills-sarea-tab"  onclick="loadsarea()"  data-bs-toggle="pill"  data-bs-target="#pills-sarea"  type="button"  role="tab"  aria-controls="pills-sarea"  aria-selected="false">Surface Area</button>
       </li>
       <li class="nav-item" role="presentation">
         <button class="nav-link" id="pills-inflow-tab" onclick="loadinflow()" data-bs-toggle="pill" data-bs-target="#pills-inflow" type="button" role="tab" aria-controls="pills-inflow" aria-selected="false">Inflow</button>
       </li>
       <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-deltas-tab" onclick="loaddeltas()" data-bs-toggle="pill" data-bs-target="#pills-deltas" type="button" role="tab" aria-controls="pills-deltas" aria-selected="false">Storage Change</button>
+      </li>
+      <li class="nav-item" role="presentation">
         <button  class="nav-link" id="pills-outflow-tab" onclick="loadoutflow()" data-bs-toggle="pill" data-bs-target="#pills-outflow" type="button" role="tab" aria-controls="pills-outflow" aria-selected="false">Outflow</button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button  class="nav-link"  id="pills-sarea-tab"  onclick="loadsarea()"  data-bs-toggle="pill"  data-bs-target="#pills-sarea"  type="button"  role="tab"  aria-controls="pills-sarea"  aria-selected="false">Surface Area</button>
-      </li>
-      <li class="nav-item" role="presentation">
+      <!-- <li class="nav-item" role="presentation">
         <button  class="nav-link"  id="pills-rcurve-tab"  onclick="loadrulecurve()"  data-bs-toggle="pill"  data-bs-target="#pills-rcurve"  type="button"  role="tab"  aria-controls="pills-rcurve"  aria-selected="false">Rule Curve</button>
-      </li>
+      </li> -->
     </ul>
     <div class="tab-content" id="pills-tabContent">
-      <div class="tab-pane fade show active"  id="pills-aec"  role="tabpanel"  aria-labelledby="pills-aec-tab"></div>
-      <div class="tab-pane fade" id="pills-deltas" role="tabpanel" aria-labelledby="pills-deltas-tab"></div>
+      <!-- <div class="tab-pane fade show active"  id="pills-aec"  role="tabpanel"  aria-labelledby="pills-aec-tab"></div> -->
+      <div class="tab-pane fade show active" id="pills-sarea" role="tabpanel" aria-labelledby="pills-sarea-tab"></div>
       <div class="tab-pane fade" id="pills-inflow" role="tabpanel" aria-labelledby="pills-inflow-tab"></div>
+      <div class="tab-pane fade" id="pills-deltas" role="tabpanel" aria-labelledby="pills-deltas-tab"></div>
       <div class="tab-pane fade" id="pills-outflow" role="tabpanel" aria-labelledby="pills-outflow-tab"></div>
-      <div class="tab-pane fade" id="pills-sarea" role="tabpanel" aria-labelledby="pills-sarea-tab"></div>
-      <div class="tab-pane fade" id="pills-rcurve" role="tabpanel" aria-labelledby="pills-rcurve-tab"></div>
+      <!-- <div class="tab-pane fade" id="pills-rcurve" role="tabpanel" aria-labelledby="pills-rcurve-tab"></div> -->
     </div>
   </body>
 </html>

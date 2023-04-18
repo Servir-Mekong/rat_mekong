@@ -109,6 +109,56 @@ closeBasemapSidebarContent.onclick = function(){
     Filter Panel 
 */
 
+
+$.getJSON('/static/data/geojson/reservoirs_v2_main.geojson', function (data) {
+    var reservoirs = [];
+    var rivers = [];
+    data.features.forEach(dothis);
+    function dothis(item){
+        var res = item.properties.Name;
+        var river = item.properties.River;
+        reservoirs.push(res)
+        rivers.push(river)
+    }
+    // console.log(items)
+    var options_str = "";
+    options_str += '<option value="All" selected>All</option>'
+    reservoirs.forEach( function(val) {
+        options_str += '<option value="' + val + '">' + val + '</option>';
+    });
+    document.getElementById("reservoir_name").innerHTML = options_str;
+
+    function onlyUnique(value, index, self) {
+        return self.indexOf(value) === index;
+    }
+    var unique_rivers = rivers.filter(onlyUnique);
+
+    // console.log(unique_rivers)
+
+    var rbasin = document.getElementById("river_basin");
+    var options_str_rbasin = "";
+    options_str_rbasin += '<option value="allRivers" selected>All</option>'
+    unique_rivers.forEach( function(val) {
+        options_str_rbasin += '<option value="' + val + '">' + val + '</option>';
+    });
+    rbasin.innerHTML = options_str_rbasin
+    // var rbasin = document.getElementById("riverBasinCheckboxes");
+
+    // var checkbox = "<label for='allRivers'><input type='checkbox' id='allRivers' name='allRivers' onclick='myFunction(this);' value='allRivers' /> Select All</label>";
+
+    // for (var i = 0; i < unique_rivers.length; i++) {
+    //     checkbox += "<label for="+unique_rivers[i]+"><input type='checkbox' id="+unique_rivers[i]+" value="+unique_rivers[i]+" name="+unique_rivers[i]+" onclick='myFunction(this);' /> "+unique_rivers[i]+"</label>";
+    // }
+    // rbasin.innerHTML = checkbox;
+});
+
+
+// function myFunction(checkbox){
+//     if(checkbox.checked){
+//         console.log(checkbox.value)
+//     }
+// }
+
 // Sidebar Dropdown Filter
 var expanded = false;
 
@@ -131,112 +181,26 @@ filterCountry.onclick = function() {
         expanded = false;
     }
 }
-var filterRiverBasin = document.querySelector("#filter-river-basin");
-filterRiverBasin.onclick = function() {
-    var checkboxes = document.getElementById("riverBasinCheckboxes");
-    if (!expanded) {
-        checkboxes.style.display = "block";
-        expanded = true;
-    } else {
-        checkboxes.style.display = "none";
-        expanded = false;
-    }
-}
+// var filterRiverBasin = document.querySelector("#filter-river-basin");
+// filterRiverBasin.onclick = function() {
+//     var checkboxes = document.getElementById("riverBasinCheckboxes");
+//     if (!expanded) {
+//         checkboxes.style.display = "block";
+//         expanded = true;
+//     } else {
+//         checkboxes.style.display = "none";
+//         expanded = false;
+//     }
+// }
 
 // Icon options
 var iconOptions = {
     iconUrl: '/static/images/marker.png',
-    iconSize: [22, 30]
+    iconSize: [15, 22]
 }
 
 // Creating a custom icon
 var customIcon = L.icon(iconOptions);
-
-var iconOptionsGreen = {
-    iconUrl: '/static/images/green.png',
-    iconSize: [22, 30]
-}
-var iconOptionsBlue = {
-    iconUrl: '/static/images/blue.png',
-    iconSize: [22, 30]
-}
-var iconOptionsYellow = {
-    iconUrl: '/static/images/brown.png',
-    iconSize: [22, 30]
-}
-var iconOptionsRed = {
-    iconUrl: '/static/images/red.png',
-    iconSize: [22, 30]
-}
-
-var greenIcon = L.icon(iconOptionsGreen);
-var blueIcon = L.icon(iconOptionsBlue);
-var brownIcon = L.icon(iconOptionsYellow);
-var redIcon = L.icon(iconOptionsRed);
-
-var precip_date = document.getElementById('precip_date_selection');
-var td = new Date();
-var initial_date = td.toISOString().split('T')[0];
-
-var date_selector = document.querySelector('#precip_date_selection');
-date_selector.value = initial_date;
-
-var precip_layer = L.tileLayer('', {
-    attribution: '&copy; <a href="https://earthengine.google.com/">Google Earth Engine</a> contributors'
-}).addTo(map);
-
-$.ajax({
-    url: '/precip/',
-    type: "GET",
-    data: {
-        'date': initial_date
-    },
-    dataType: 'json',
-    //async: false,
-    success: (data) => {
-        precip_layer.setUrl(data);  
-    },
-    error: (error) => {
-        console.log(error);
-    }
-});
-
-var precip_opacity = document.querySelector("#precipOpacity");
-precip_opacity.addEventListener("input", (event) => {
-    var opac = event.target.value;
-    precip_layer.setOpacity(opac);
-})
-precip_opacity.onChange = () => {
-    var opac = document.querySelector("#precipOpacity").value;
-    precip_layer.setOpacity(opac)
-}
-
-var updatePrecipMapBtn = document.querySelector('#updatePrecipMap');
-updatePrecipMapBtn.onclick = () => {
-    updatePrecipMap();
-}
-
-function updatePrecipMap(){
-    map.removeLayer(precip_layer);
-    var date_selector = document.querySelector('#precip_date_selection').value;
-    var selected_date =  new Date(date_selector).toISOString().split('T')[0];
-    $.ajax({
-        url: '/precip/',
-        type: "GET",
-        data: {
-            'date': selected_date
-        },
-        dataType: 'json',
-        //async: false,
-        success: (data) => {
-            precip_layer.setUrl(data);  
-            map.addLayer(precip_layer);
-        },
-        error: (error) => {
-            console.log(error);
-        }
-    });
-}
 
 var reservoirName = document.getElementById("reservoir_name");
 
@@ -245,206 +209,25 @@ function filterByReservoirName(feature) {
     if(feature.properties.Name==reservoirName.value)
     return true
 }
-var Battambang_1_sl;
-$.ajax({
-    type: "GET",
-    data: {'reservoir': 'Battambang_1'},
-    url: '/ajax/storagelevel/Battambang_1',
-    async: false,
-    datatype: "text",
-    success: function(data){ Battambang_1_sl = data; }
-});
-// console.log(Battambang_1_sl);
-var Lam_Pao_sl;
-$.ajax({
-    type: "GET",
-    data: {'reservoir': 'Lam_Pao'},
-    url: '/ajax/storagelevel/Lam_Pao',
-    async: false,
-    datatype: "text",
-    success: function(data){ Lam_Pao_sl = data; }
-});
-var Lower_Sesan_2_sl;
-$.ajax({
-    type: "GET",
-    data: {'reservoir': 'Lower_Sesan_2'},
-    url: '/ajax/storagelevel/Lower_Sesan_2',
-    async: false,
-    datatype: "text",
-    success: function(data){ Lower_Sesan_2_sl = data; }
-});
-var Nam_Mang_3_sl;
-$.ajax({
-    type: "GET",
-    data: {'reservoir': 'Nam_Mang_3'},
-    url: '/ajax/storagelevel/Nam_Mang_3',
-    async: false,
-    datatype: "text",
-    success: function(data){ Nam_Mang_3_sl = data; }
-});
-var Nam_Ngum_1_sl;
-$.ajax({
-    type: "GET",
-    data: {'reservoir': 'Nam_Ngum_1'},
-    url: '/ajax/storagelevel/Nam_Ngum_1',
-    async: false,
-    datatype: "text",
-    success: function(data){ Nam_Ngum_1_sl = data; }
-});
-var Nam_Theun_2_sl;
-$.ajax({
-    type: "GET",
-    data: {'reservoir': 'Nam_Theun_2'},
-    url: '/ajax/storagelevel/Nam_Theun_2',
-    async: false,
-    datatype: "text",
-    success: function(data){ Nam_Theun_2_sl = data; }
-});
-// var Nam_Ton_sl;
-// $.ajax({
-//     type: "GET",
-//     data: {'reservoir': 'Nam_Ton'},
-//     url: '/ajax/storagelevel/Nam_Ton',
-//     async: false,
-//     datatype: "text",
-//     success: function(data){ Nam_Ton_sl = data; }
-// });
-var Phumi_Svay_Chrum_sl;
-$.ajax({
-    type: "GET",
-    data: {'reservoir': 'Phumi_Svay_Chrum'},
-    url: '/ajax/storagelevel/Phumi_Svay_Chrum',
-    async: false,
-    datatype: "text",
-    success: function(data){ Phumi_Svay_Chrum_sl = data; }
-});
-var Sesan_4_sl;
-$.ajax({
-    type: "GET",
-    data: {'reservoir': 'Sesan_4'},
-    url: '/ajax/storagelevel/Sesan_4',
-    async: false,
-    datatype: "text",
-    success: function(data){ Sesan_4_sl = data; }
-});
-var Sirindhorn_sl;
-$.ajax({
-    type: "GET",
-    data: {'reservoir': 'Sirindhorn'},
-    url: '/ajax/storagelevel/Sirindhorn',
-    async: false,
-    datatype: "text",
-    success: function(data){ Sirindhorn_sl = data; }
-});
-var Sre_Pok_4_sl;
-$.ajax({
-    type: "GET",
-    data: {'reservoir': 'Sre_Pok_4'},
-    url: '/ajax/storagelevel/Sre_Pok_4',
-    async: false,
-    datatype: "text",
-    success: function(data){ Sre_Pok_4_sl = data; }
-});
-var Ubol_Ratana_sl;
-$.ajax({
-    type: "GET",
-    data: {'reservoir': 'Ubol_Ratana'},
-    url: '/ajax/storagelevel/Ubol_Ratana',
-    async: false,
-    datatype: "text",
-    success: function(data){ Ubol_Ratana_sl = data; }
-});
-var Yali_sl;
-$.ajax({
-    type: "GET",
-    data: {'reservoir': 'Yali'},
-    url: '/ajax/storagelevel/Yali',
-    async: false,
-    datatype: "text",
-    success: function(data){ Yali_sl = data; }
-});
+
+var riverName = document.getElementById("river_basin");
+
+function filterByRiverName(feature) {
+    if(feature.properties.River==riverName.value)
+    return true
+}
 
 function onEachFeature(feature, reservoirLayer) {
     var resname = feature.properties.Name;
     var stationid = feature.properties.R_ID;
     var rbasin = feature.properties.River;
     var country = feature.properties.Country;
-    var slevel = feature.properties.Storage;
-    var content = '<iframe id="encoder_iframe"  width="700" height="460" src="https://ratmekong-servir.adpc.net/iframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
+    var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://127.0.0.1:8000/iframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
     var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
     reservoirLayer.bindTooltip(resname);
-    // reservoirLayer.on('click', function (e) {
-    //     this.bindPopup(popupContent);
-    // });  
     reservoirLayer.bindPopup(popupContent); 
     reservoirLayer.layerTag = "GeoJSONLayer"
-    //reservoirLayer.setIcon(customIcon);
-    // if (slevel === '81%-100%') {
-    //     reservoirLayer.setIcon(blueIcon); 
-    // }else if(slevel === '30%-80%'){
-    //     reservoirLayer.setIcon(greenIcon);
-    // }else {
-    //     reservoirLayer.setIcon(brownIcon);
-    // } 
-    var battambang_1_sl = parseInt(Battambang_1_sl);  
-    var lam_pao_sl = parseInt(Lam_Pao_sl);
-    var lower_sesan_2_sl = parseInt(Lower_Sesan_2_sl);
-    var nam_mang_3_sl = parseInt(Nam_Mang_3_sl);
-    var nam_ngum_1_sl = parseInt(Nam_Ngum_1_sl);
-    var nam_theun_2_sl = parseInt(Nam_Theun_2_sl);
-    var nam_ton_sl = 60;// parseInt(Nam_Ton_sl);
-    var phumi_svay_chrum_sl = parseInt(Phumi_Svay_Chrum_sl);
-    var sesan_4_sl = parseInt(Sesan_4_sl);
-    var sirindhorn_sl = parseInt(Sirindhorn_sl);
-    var sre_pok_4_sl = parseInt(Sre_Pok_4_sl);
-    var ubol_ratana_sl = parseInt(Ubol_Ratana_sl);
-    var yali_sl = parseInt(Yali_sl);
-    // console.log(battambang_1_sl)
-    // console.log(Yali_sl)
-
-    function reservoirIcon(name, sl) {
-    
-        if ( resname == name && sl >= 75 ) {
-            reservoirLayer.setIcon(blueIcon);
-        } 
-        else if ( resname == name && (sl >= 50 && sl < 75) ) {
-            reservoirLayer.setIcon(greenIcon);
-        } 
-        else if ( resname == name && (sl >= 25 && sl < 50) ) {
-            reservoirLayer.setIcon(brownIcon);
-        } 
-        else if ( resname == name && sl < 25 ) {
-            reservoirLayer.setIcon(redIcon);
-        }  
-        return reservoirIcon 
-    }
-
-    reservoirIcon("Battambang 1", battambang_1_sl);
-    reservoirIcon("Lam Pao", lam_pao_sl);
-    reservoirIcon("Lower Sesan 2", lower_sesan_2_sl);
-    reservoirIcon("Nam Mang 3", nam_mang_3_sl);
-    reservoirIcon("Nam Ngum 1", nam_ngum_1_sl);
-    reservoirIcon("Nam Theun 2", nam_theun_2_sl);
-    reservoirIcon("Nam Ton (Monkey Cheek)", nam_ton_sl);
-    reservoirIcon("Phumi Svay Chrum", phumi_svay_chrum_sl);
-    reservoirIcon("Sesan 4", sesan_4_sl);
-    reservoirIcon("Sirindhorn", sirindhorn_sl);
-    reservoirIcon("Sre Pok 4", sre_pok_4_sl);
-    reservoirIcon("Ubol Ratana", ubol_ratana_sl);
-    reservoirIcon("Yali", yali_sl);
-
-    // if ( resname == "Battambang 1" && Battambang_1_sl >= 75 ) {
-    //     reservoirLayer.setIcon(blueIcon);
-    // } 
-    // else if ( resname == "Battambang 1" && (Battambang_1_sl >= 50 && Battambang_1_sl < 75) ) {
-    //     reservoirLayer.setIcon(greenIcon);
-    // } 
-    // else if ( resname == "Battambang 1" && (Battambang_1_sl >= 25 && Battambang_1_sl < 50) ) {
-    //     reservoirLayer.setIcon(brownIcon);
-    // } 
-    // else if ( resname == "Battambang 1" && Battambang_1_sl < 25 ) {
-    //     reservoirLayer.setIcon(redIcon);
-    // }       
+    reservoirLayer.setIcon(customIcon);
 } 
 
 var selectedReservoirLayer;
@@ -482,12 +265,53 @@ $("#reservoir_name").on('change', function(){
         }).addTo(map);
         map.fitBounds(selectedReservoirLayer.getBounds());
     }
-
 });
 
-//filter by country
+var selectedRbasinLayer;
+$("#river_basin").on('change', function(){
+    var selectedValue = this.value;
+    if (selectedValue == "allRivers"){
+        // unchecked layer;
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        for (var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].checked = true;
+        }
+        selectedRbasinLayer = L.geoJson(reservoirs, {
+            onEachFeature: onEachFeature
+        }).addTo(map);
+        map.fitBounds(selectedRbasinLayer.getBounds());
+    } else if (selectedValue == selectedValue){
+        // unchecked layer;
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        for (var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].checked = false;
+        }
+
+        // remove layers from map
+        map.eachLayer(function (layer) {
+            if ( layer.layerTag && layer.layerTag === "GeoJSONLayer") {
+                map.removeLayer(layer)
+            }
+        });
+        if (selectedRbasinLayer){
+            map.removeLayer(selectedRbasinLayer)
+        }
+        selectedRbasinLayer = L.geoJson(reservoirs, {
+            filter: filterByRiverName, 
+            onEachFeature: onEachFeature
+        }).addTo(map);
+        map.fitBounds(selectedRbasinLayer.getBounds());
+    }
+});
+
+
+// filter by country
 function filterCambodia(feature) {
     if(feature.properties.Country=="Cambodia")
+    return true
+}
+function filterChina(feature) {
+    if(feature.properties.Country=="China")
     return true
 }
 function filterLaos(feature) {
@@ -504,6 +328,10 @@ function filterVietnam(feature) {
 }
 var cambodia_reservoirs = L.geoJson(reservoirs, {
     filter: filterCambodia,
+	onEachFeature: onEachFeature      
+})
+var china_reservoirs = L.geoJson(reservoirs, {
+    filter: filterChina,
 	onEachFeature: onEachFeature      
 })
 var laos_reservoirs = L.geoJson(reservoirs, {
@@ -528,6 +356,7 @@ map.fitBounds(all_reservoirs.getBounds());
 
 document.getElementById("all").checked = true;
 document.getElementById("cambodia").checked = true;
+document.getElementById("china").checked = true;
 document.getElementById("laos").checked = true;
 document.getElementById("thailand").checked = true;
 document.getElementById("vietnam").checked = true;
@@ -547,6 +376,14 @@ $('input[type=checkbox][name=cambodia]').click(function(){
         map.fitBounds(cambodia_reservoirs.getBounds());
     }else {
         map.removeLayer(cambodia_reservoirs);
+    }
+});
+$('input[type=checkbox][name=china]').click(function(){
+    if (this.checked){
+        map.addLayer(china_reservoirs);
+        map.fitBounds(china_reservoirs.getBounds());
+    }else {
+        map.removeLayer(china_reservoirs);
     }
 });
 $('input[type=checkbox][name=laos]').click(function(){
@@ -574,7 +411,7 @@ $('input[type=checkbox][name=vietnam]').click(function(){
     }
 });
 
-//filter by reservoirs
+// filter by reservoirs
 function filterByChi(feature) {
     if(feature.properties.River=="Chi")
     return true
@@ -899,21 +736,21 @@ $(document).ready(function() {
 });
 
 //Legend
-var legend = L.control({position: 'bottomright'});
+// var legend = L.control({position: 'bottomright'});
 
-legend.onAdd = function (map) {
-    var div = L.DomUtil.create('div', 'legend');
-    div.innerHTML += '<h5 class="fw-bold pb-1">Storage Level</h5>'
-    div.innerHTML +=  '<img class="pt-1" src="/static/images/blue.png" width="20px">' + ' 75-100% High ' + '<br>'
-    div.innerHTML +=  '<img class="pt-1" src="/static/images/green.png" width="20px">'  + ' 50-75% Medium ' + '<br>'
-    div.innerHTML +=  '<img class="pt-1" src="/static/images/brown.png" width="20px">'  + ' 25-50% Low ' + '<br>'
-    div.innerHTML +=  '<img class="pt-1" src="/static/images/red.png" width="20px">'   +  ' 0-25% Critical '
-    div.innerHTML += '<h5 class="fw-bold pt-2 pb-0">Precipitation</h5>'
-    div.innerHTML += '<img class="pt-0" src="/static/images/precip_colorbar.png" width="160px">'
-    return div;
-};
+// legend.onAdd = function (map) {
+//     var div = L.DomUtil.create('div', 'legend');
+//     div.innerHTML += '<h5 class="fw-bold pb-1">Storage Level</h5>'
+//     div.innerHTML +=  '<img class="pt-1" src="/static/images/blue.png" width="20px">' + ' 75-100% High ' + '<br>'
+//     div.innerHTML +=  '<img class="pt-1" src="/static/images/green.png" width="20px">'  + ' 50-75% Medium ' + '<br>'
+//     div.innerHTML +=  '<img class="pt-1" src="/static/images/brown.png" width="20px">'  + ' 25-50% Low ' + '<br>'
+//     div.innerHTML +=  '<img class="pt-1" src="/static/images/red.png" width="20px">'   +  ' 0-25% Critical '
+//     div.innerHTML += '<h5 class="fw-bold pt-2 pb-0">Precipitation</h5>'
+//     div.innerHTML += '<img class="pt-0" src="/static/images/precip_colorbar.png" width="160px">'
+//     return div;
+// };
 
-legend.addTo(map);
+// legend.addTo(map);
 
 //Onclick switch basemap 
 $('#nav-basemap div').on('click', function(e) {
