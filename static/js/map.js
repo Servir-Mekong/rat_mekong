@@ -199,6 +199,13 @@ var iconOptions = {
     iconSize: [15, 22]
 }
 
+var iconOptionsGreen = {
+    iconUrl: '/static/images/red.png',
+    iconSize: [15, 22]
+}
+
+var greenIcon = L.icon(iconOptionsGreen);
+
 // Creating a custom icon
 var customIcon = L.icon(iconOptions);
 
@@ -227,9 +234,13 @@ function onEachFeature(feature, reservoirLayer) {
     reservoirLayer.bindTooltip(resname);
     reservoirLayer.bindPopup(popupContent); 
     reservoirLayer.layerTag = "GeoJSONLayer"
-    reservoirLayer.setIcon(customIcon);
+    if(resname == "Ubol Ratana" || resname == "Lam Pao" || resname == "Sirindhorn" || resname == "Nam Theun 2" || resname == "Nam Mang 3" || resname == "Se San IV" || resname == "Lower Sesan II" || resname == "Phumi Svay Chrum" || resname == "Battambang" || resname == "Sre Pok 4" || resname == "Yali" || resname == "Nam Ton" || resname == "Nam Ngum") {
+        reservoirLayer.setIcon(greenIcon);
+    } else {
+        reservoirLayer.setIcon(customIcon);
+    }
 } 
-
+// "Ubol Ratana" || "Lam Pao" || "Sirindhorn" || "Nam Theun 2" || "Nam Mang 3" || "Se San IV" || "Lower Sesan II" || "Phumi Svay Chrum" || "Battambang" || "Sre Pok 4" || "Yali" || "Nam Ton" || "Nam Ngum"
 var selectedReservoirLayer;
 $("#reservoir_name").on('change', function(){
     var selectedValue = this.value;
@@ -577,7 +588,7 @@ var reservoirsBoundaryStyle = {
 
 //Define Mekong region boundary style
 var mekongBoundaryStyle = {
-    color: "#191970",
+    color: "red",
     weight: 1.75,
     //opacity: 0.6,
     //fillOpacity: 0.3,
@@ -666,7 +677,7 @@ var gms_rivers_layer = L.geoJson(gms_rivers_lm, {
 });
 var main_rivers_layer = L.geoJson(main_rivers_lm, {
     style: mainriversStyle
-});
+}).addTo(map);
 var sub_basin_layer = L.geoJson(basinData, {
     style: basinStyle,
 });
