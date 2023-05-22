@@ -418,7 +418,9 @@
             },
           },
           yAxis: [
-            {
+            { 
+              // top: 30,
+              // height: 350,
               title: {
                 useHTML: true,
                 text: "Inflow (m<sup>3</sup>/s)",
@@ -906,6 +908,7 @@
           }]
         });
       }
+      
     </script>
   </head>
   <body onload="loadsarea()">
@@ -930,6 +933,7 @@
       </li> -->
     </ul>
     <div class="tab-content" id="pills-tabContent">
+      <!-- style="overflow-y: scroll; height: 560px;" -->
       <!-- <div class="tab-pane fade show active"  id="pills-aec"  role="tabpanel"  aria-labelledby="pills-aec-tab"></div> -->
       <div class="tab-pane fade show active" id="pills-sarea" role="tabpanel" aria-labelledby="pills-sarea-tab"></div>
       <div class="tab-pane fade" id="pills-inflow" role="tabpanel" aria-labelledby="pills-inflow-tab"></div>

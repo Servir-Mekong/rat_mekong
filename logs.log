@@ -1,0 +1,37 @@
+2023-04-26 03:05:01,139 - googleapiclient.discovery - DEBUG - URL being requested: GET https://earthengine.googleapis.com/$discovery/rest?version=v1alpha&prettyPrint=false
+2023-04-26 03:05:01,166 - google_auth_httplib2 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2023-04-26 03:05:01,170 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2023-04-26 03:05:01,274 - urllib3.connectionpool - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2023-04-26 03:05:01,280 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): earthengine.googleapis.com:443
+2023-04-26 03:05:02,723 - urllib3.connectionpool - DEBUG - https://earthengine.googleapis.com:443 "GET /$discovery/rest?version=v1alpha&prettyPrint=false HTTP/1.1" 200 None
+2023-04-26 03:05:02,947 - googleapiclient.discovery - DEBUG - URL being requested: GET https://earthengine.googleapis.com/$discovery/rest?version=v1alpha&prettyPrint=false
+2023-04-26 03:05:02,951 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): earthengine.googleapis.com:443
+2023-04-26 03:05:04,425 - urllib3.connectionpool - DEBUG - https://earthengine.googleapis.com:443 "GET /$discovery/rest?version=v1alpha&prettyPrint=false HTTP/1.1" 200 None
+2023-04-26 03:05:04,653 - googleapiclient.discovery - DEBUG - URL being requested: GET https://earthengine.googleapis.com/$discovery/rest?version=v1alpha&prettyPrint=false
+2023-04-26 03:05:04,679 - google_auth_httplib2 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2023-04-26 03:05:04,683 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2023-04-26 03:05:04,799 - urllib3.connectionpool - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2023-04-26 03:05:04,806 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): earthengine.googleapis.com:443
+2023-04-26 03:05:06,292 - urllib3.connectionpool - DEBUG - https://earthengine.googleapis.com:443 "GET /$discovery/rest?version=v1alpha&prettyPrint=false HTTP/1.1" 200 None
+2023-04-26 03:05:06,507 - googleapiclient.discovery - DEBUG - URL being requested: GET https://earthengine.googleapis.com/$discovery/rest?version=v1alpha&prettyPrint=false
+2023-04-26 03:05:06,511 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): earthengine.googleapis.com:443
+2023-04-26 03:05:07,989 - urllib3.connectionpool - DEBUG - https://earthengine.googleapis.com:443 "GET /$discovery/rest?version=v1alpha&prettyPrint=false HTTP/1.1" 200 None
+2023-04-26 03:05:08,214 - googleapiclient.discovery - DEBUG - URL being requested: GET https://earthengine.googleapis.com/$discovery/rest?version=v1alpha&prettyPrint=false
+2023-04-26 03:05:08,239 - google_auth_httplib2 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2023-04-26 03:05:08,243 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2023-04-26 03:05:08,348 - urllib3.connectionpool - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2023-04-26 03:05:08,353 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): earthengine.googleapis.com:443
+2023-04-26 03:05:09,796 - urllib3.connectionpool - DEBUG - https://earthengine.googleapis.com:443 "GET /$discovery/rest?version=v1alpha&prettyPrint=false HTTP/1.1" 200 None
+2023-04-26 03:05:10,008 - googleapiclient.discovery - DEBUG - URL being requested: GET https://earthengine.googleapis.com/$discovery/rest?version=v1alpha&prettyPrint=false
+2023-04-26 03:05:10,014 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): earthengine.googleapis.com:443
+2023-04-26 03:05:11,474 - urllib3.connectionpool - DEBUG - https://earthengine.googleapis.com:443 "GET /$discovery/rest?version=v1alpha&prettyPrint=false HTTP/1.1" 200 None
+2023-04-26 03:05:11,874 - googleapiclient.discovery - DEBUG - URL being requested: GET https://earthengine.googleapis.com/$discovery/rest?version=v1alpha&prettyPrint=false
+2023-04-26 03:05:11,901 - google_auth_httplib2 - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2023-04-26 03:05:11,905 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2023-04-26 03:05:12,042 - urllib3.connectionpool - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2023-04-26 03:05:12,048 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): earthengine.googleapis.com:443
+2023-04-26 03:05:13,484 - urllib3.connectionpool - DEBUG - https://earthengine.googleapis.com:443 "GET /$discovery/rest?version=v1alpha&prettyPrint=false HTTP/1.1" 200 None
+2023-04-26 03:05:13,693 - googleapiclient.discovery - DEBUG - URL being requested: GET https://earthengine.googleapis.com/$discovery/rest?version=v1alpha&prettyPrint=false
+2023-04-26 03:05:13,697 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): earthengine.googleapis.com:443
+2023-04-26 03:05:15,144 - urllib3.connectionpool - DEBUG - https://earthengine.googleapis.com:443 "GET /$discovery/rest?version=v1alpha&prettyPrint=false HTTP/1.1" 200 None
+2023-04-26 03:05:15,410 - asyncio - DEBUG - Using selector: EpollSelector
