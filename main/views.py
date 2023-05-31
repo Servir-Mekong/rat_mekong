@@ -9,6 +9,9 @@ import os
 import pandas as pd
 import json
 from . core import MainGEEApi
+from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.clickjacking import xframe_options_exempt
+import geopandas as gpd
 
 class TeamDetailView(DetailView):
     model = Team
@@ -19,103 +22,159 @@ class TeamDetailView(DetailView):
         context['now'] = timezone.now()
         return context
 
-
 class TeamList(ListView):
     context_object_name = 'team_list'
     queryset = Team.objects.all()
     template_name = 'home.html'
 
-
 class TechNotePage(TemplateView):
     template_name = "technical-note.html"
-
 
 class AboutPage(TemplateView):
     template_name = "about.html"
 
-
 class MapPage(TemplateView):
     template_name = "map.html"
-
 
 class TablePage(TemplateView):
     template_name = "table.html"
 
-
 class UserGuidePage(TemplateView):
     template_name = "user-guide.html"
 
-
-class IframePage(TemplateView):
-    template_name = "iframe.html"
-
+# class IframePage(TemplateView):
+#     template_name = "iframe.html"
 
 class DisclaimerPage(TemplateView):
     template_name = "disclaimer.html"
 
-# def getChartData(request):
-#     reservoir = "Lam_Pao"
-#     start_from = 2015
-#     end_to = 2020
-#     data = pd.read_csv("static/data/map_data/outflow/"+reservoir+".txt")
-#     filtered_data = data.loc[(pd.DatetimeIndex(data["Date"]).year >= start_from) & (pd.DatetimeIndex(data["Date"]).year <= end_to)]
-#     # fdata = filtered_data.to_json()
-#     # return JsonResponse(fdata, safe=False)
-#     # return HttpResponse(filtered_data, content_type='text/plain')
-#     filename = "static/data/map_data/dummy.txt"
-#     content = filtered_data
-#     response = HttpResponse(content, content_type='text/plain')
-#     response['Content-Disposition'] = 'attachment; filename={0}'.format(filename)
-#     return response
+# class MapPage2(TemplateView):
+#     template_name = "map2.html"
 
-# def getInflow(request):
-#     data_url = "static/data/table_data/merge/inflow_all.txt"
-#     data = pd.read_csv(data_url)
-#     fdata = data.to_json()
-#     return JsonResponse(fdata, safe=False)
+@csrf_exempt
+@xframe_options_exempt
+def get_aec_chart(request):
+    reservoir = request.GET.get('r_id') #request.GET.get['r_id']
+    data_url = 'static/data/aec/'+reservoir+'.csv'
+    df = pd.read_csv(data_url)
+    data = df.to_json(orient='records')
+    return JsonResponse(data, safe=False)
 
-# 'Battambang_1' : 'Battambang_1',
-# 'Lam_Pao' : 'Lam_Pao',
-# 'Lower_Sesan_2' : 'Lower_Sesan_2',
-# 'Nam_Mang_3' : 'Nam_Mang_3',
-# 'Nam_Ngum_1' : 'Nam_Ngum_1',
-# 'Nam_Theun_2' : 'Nam_Theun_2',
-# 'Nam_Ton' : 'Nam_Ton', # Monkey Cheek
-# 'Phumi_Svay_Chrum' : 'Phumi_Svay_Chrum',
-# 'Sesan_4' : 'Sesan_4',
-# 'Sirindhorn' : 'Sirindhorn',
-# 'Sre_Pok_4' : 'Sre_Pok_4',
-# 'Ubol_Ratana' : 'Ubol_Ratana',
-# 'Yali' : 'Yali'
+@csrf_exempt
+@xframe_options_exempt
+def get_inflow_chart(request):
+    reservoir = request.GET.get('r_id') #request.GET.get['r_id']
+    data_url = 'static/data/inflow/'+reservoir+'.csv'
+    df = pd.read_csv(data_url)
+    ndf = df.rename(columns={"date": "date", "inflow (m3/d)": "inflow"})
+    ndf['inflow'] = ndf['inflow']/10000000000 # (10^10)
+    ndf['inflow'] = ndf['inflow'].round(0)
+    data = ndf.to_json(orient='records')
+    return JsonResponse(data, safe=False)
 
+@csrf_exempt
+@xframe_options_exempt
+def get_outflow_chart(request):
+    reservoir = request.GET.get('r_id') #request.GET.get['r_id']
+    data_url = 'static/data/outflow/'+reservoir+'.csv'
+    df = pd.read_csv(data_url)
+    ndf = df.rename(columns={"date": "date", "outflow (m3/d)": "outflow"})
+    ndf['outflow'] = ndf['outflow']/1000000 # (10^6)
+    ndf['outflow'] = ndf['outflow'].round(0)
+    data = ndf.to_json(orient='records')
+    return JsonResponse(data, safe=False)
 
-def getSL(request):
-    if request.method == 'GET':
-        reservoir = request.GET['reservoir']
-        data_url = 'static/data/storage_level/'+reservoir+'.csv'
-        data = pd.read_csv(data_url)
-        data = data.tail(1)
-        sl = data['storage_level'].values[0]
-        # data = {
-        #     'Storage_Level': int(sl)
-        # }
-        # return JsonResponse(data, safe=False)
-        return HttpResponse(sl)
+@csrf_exempt
+@xframe_options_exempt
+def get_sarea_chart(request):
+    reservoir = request.GET.get('r_id') #request.GET.get['r_id']
+    data_url = 'static/data/sarea_tmsos/'+reservoir+'.csv'
+    df = pd.read_csv(data_url)
+    ndf = df.rename(columns={"date": "date", "area (km2)": "area"})
+    ndf['area'] = ndf['area'].round(0)
+    data = ndf.to_json(orient='records')
+    return JsonResponse(data, safe=False)
 
-def get_precip_map(request):
-    if request.method == 'GET':
-        date = request.GET['date']
-        core = MainGEEApi()
-        data = core.getPrecipMap(date)
-        return JsonResponse(data, safe=False)
+@csrf_exempt
+@xframe_options_exempt
+def get_deltas_chart(request):
+    reservoir = request.GET.get('r_id') #request.GET.get['r_id']
+    data_url = 'static/data/dels/'+reservoir+'.csv'
+    df = pd.read_csv(data_url)
+    ndf = df.rename(columns={"date": "date", "dS (m3)": "dels"})
+    ndf['dels'] = ndf['dels']/1000000 # (10^6)
+    ndf['dels'] = ndf['dels'].round(2)
+    data = ndf.to_json(orient='records')
+    return JsonResponse(data, safe=False)
 
-# def getSLSesan4(request):
-#     data_url = 'static/data/storage_level/Sesan_4.csv'
-#     data = pd.read_csv(data_url)
-#     data = data.tail(1)
-#     sl = data['storage_level'].values[0]
-#     # data = {
-#     #     'Storage_Level': int(sl)
-#     # }
-#     # return JsonResponse(data, safe=False)
-#     return HttpResponse(sl)
+@csrf_exempt
+@xframe_options_exempt
+def get_rc_chart(request):
+    reservoir = request.GET.get('r_id') 
+    data_url = 'static/data/rc/'+reservoir+'.txt'
+    df = pd.read_csv(data_url)
+    ndf = df.rename(columns={"Month": "Month", "S/Smax": "value"})
+    data = ndf.to_json(orient='records')
+    return JsonResponse(data, safe=False)
+
+def getValue(rid):
+    reservoir = rid
+    data_url = 'static/data/sarea_tmsos/'+reservoir+'.csv'
+    df = pd.read_csv(data_url)
+    df = df.rename(columns={"date": "date", "area (km2)": "area"}) 
+    sdf = df.tail(2)
+    d1 = sdf.head(1)
+    d2 = sdf.tail(1)
+    # print(d1)
+    # print(d2)
+    value = d2['area'].values[0] - d1['area'].values[0]
+    data = value.round(3)
+    return data
+
+@csrf_exempt
+@xframe_options_exempt
+def get_increase_decrease(request):
+    data = []
+    path = 'static/data/sarea_tmsos/'
+    for file in os.listdir(path):
+        # print(file)
+        id = file.split(".csv")
+        value = getValue(id[0])
+        json = {
+            'ID': id[0],
+            "Value": value
+        }
+        data.append(json)
+    # print(data)
+    return JsonResponse(data, safe=False)
+
+@csrf_exempt
+@xframe_options_exempt
+def get_reservoir(request):
+    data = 'static/data/geojson/reservoirs_38.geojson'
+    gdf = gpd.read_file(data)
+    gdf = gdf.sort_values('COUNTRY')
+    # print(gdf)
+    data = gdf.to_json()
+    return JsonResponse(data, safe=False)
+
+@csrf_exempt
+@xframe_options_exempt
+def get_reservoir_info(request):
+    reservoir = request.GET.get('r_id') 
+    file = 'static/data/reservoirs_info.csv'
+    df = pd.read_csv(file)
+    df = df.loc[df['ID'] == reservoir]
+    data = df.to_json(orient='records')
+    return JsonResponse(data, safe=False)
+
+@csrf_exempt
+@xframe_options_exempt
+def get_precip(request):
+    reservoir = request.GET.get('r_id') #request.GET.get['r_id']
+    data_url = 'static/data/precip/'+reservoir+'.txt'
+    df = pd.read_csv(data_url)
+    ndf = df.rename(columns={"Date": "date", "Precipitation(mm)": "precip"})
+    ndf['precip'] = ndf['precip'].round(3)
+    data = ndf.to_json(orient='records')
+    return JsonResponse(data, safe=False)

@@ -4,31 +4,16 @@ function loadfun() {
     load.style.display = 'none';
 }
 
-/* 
-    ** Map Tab Scripts **
-*/
-
-//Queryselector
-var sidebarContent = document.querySelector('#sidebar-content');
-//var displayHomeSidebarContent = document.querySelector("#home" );
-var displayFilterSidebarContent = document.querySelector("#filter" );
-var displayLayerSidebarContent = document.querySelector("#layer" );
-var displayBasemapSidebarContent = document.querySelector("#basemap" );
-//var closeHomeSidebarContent = document.querySelector("#close-home-content" );
-var closeFilterSidebarContent = document.querySelector("#close-filter-content" );
-var closeLayerSidebarContent = document.querySelector("#close-layer-content" );
-var closeBasemapSidebarContent = document.querySelector("#close-basemap-content" );
-
-//Define map center
+// Define map center
 var MapOtions = {
-    center: [15.5162, 102.9560],
+    center: [16.5162, 97.0560],
     zoom: 6,
-    minZoom: 5,
+    minZoom: 4,
     maxZoom: 14,
     zoomControl: false
 }
 
-//create map
+// Create map
 var map = L.map('map', MapOtions);
 
 //Set default basemap
@@ -38,541 +23,1901 @@ var basemap_layer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/ser
 
 //Change zoom control postion to right
 L.control.zoom({
-    position: 'topright'
+    position: 'topleft'
 }).addTo(map);
 
-//Add scale control to map
+// Add scale control to map
 var scale = L.control.scale({
-    position:'bottomright'
+    position:'bottomleft'
 }).addTo(map);
 
-//Onlick expand filter sidebar content area
-displayFilterSidebarContent.onclick = function(){
-    if (getComputedStyle(sidebarContent).display === "none"){
-        sidebarContent.style.display ="block";
-        sidebarContent.style.width = "350px";
-        sidebarContent.style.marginLeft = "60px";
-    } else if (sidebarContent.style.display === "block"){
-        sidebarContent.style.width = "350px";
-        sidebarContent.style.marginLeft = "60px";
-    }else {
-        sidebarContent.style.display = "none";
+var sidebarLeftBtn = document.querySelector("#leftBtn");
+var sidebarRightBtn = document.querySelector("#rightBtn");
+
+sidebarLeftBtn.onclick = function(){
+    document.querySelector("#map").style.marginLeft = "0px";
+    // document.querySelector("#sidebar").style.marginLeft = "60%";
+    document.querySelector("#sidebar").style.display = "none";
+    // document.querySelector("#sidebar").style.opacity = 1;
+    document.querySelector("#leftBtn").style.display = "none";
+    document.querySelector("#rightBtn").style.display = "block";
+    document.querySelector(".leaflet-control-container").style.left = "0%";
+    // map.setView(new L.LatLng(19.5162, 100.923));
+}
+sidebarRightBtn.onclick = function(){
+    document.querySelector("#map").style.marginLeft = "-60%";
+    document.querySelector("#sidebar").style.display = "block";
+    // document.querySelector("#sidebar").style.opacity = 1;
+    document.querySelector("#leftBtn").style.display = "block";
+    document.querySelector("#rightBtn").style.display = "none";
+    document.querySelector(".leaflet-control-container").style.left = "60%";
+    // map.setView(new L.LatLng(19.5162, 85.0560), 5);
+}
+
+function getFlagEmoji(countryCode) {
+    const codePoints = countryCode
+      .toUpperCase()
+      .split('')
+      .map(char => 127397 + char.charCodeAt());
+    return String.fromCodePoint(...codePoints);
+}
+
+const url = '/get_increase_decrease/';
+let dataArray = [];
+
+async function fetchData() {
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        // Modify the array within the function
+        dataArray = data;
+    } catch (error) {
+        console.error('Error:', error);
     }
+}
+
+var resData = '/get_reservoir/'; //'/static/data/geojson/reservoirs_38.geojson';
+
+var resLayer, adm0_layer;
+
+var chart = {
+    // type: 'line',
+    zoomType: "x",
+    panning: true,
+    panKey: "shift",
+    style: {
+        fontSize: "12px",
+        color: "#000000",
+    },
+}
+
+var xAxis =  {
+    type: 'datetime',
+    title: {
+        text: "Year",
+        style: {
+            // font: "16px bold Times New Roman, sans-serif",
+            color: "#000000",
+        },
+    },
+    labels: {
+        style: {
+            // font: "16px Times New Roman, sans-serif",
+            color: "#000000",
+        },
+    },
+}
+
+var labels = {
+    // format: "{value:.0f}",
+    style: {
+        // font: "16px Times New Roman, sans-serif",
+        color: "#000000",
+    },
+}
+
+var tooltip = {
+    xDateFormat: "%d-%m-%Y",
+    crosshairs: true,
+    shared: true,
+    valueDecimals: 0,
+    valueSuffix: " (m3/s)",
+}
+
+var states = {
+    hover: {
+        lineWidthPlus: 0,
+    },
+}
+
+// Define country boundary style
+var adm0Style = {
+    color: "#282828",
+    weight: 0.5,
+    fillOpacity: 0.0,
+    fillColor: "#fff",
 };
 
-//Onlick expand layer sidebar content area
-displayLayerSidebarContent.onclick = function(){
-    if (getComputedStyle(sidebarContent).display === "none"){
-        sidebarContent.style.display ="block";
-        sidebarContent.style.width = "350px";
-        sidebarContent.style.marginLeft = "60px";
-    } else if (sidebarContent.style.display === "block"){
-        sidebarContent.style.width = "350px";
-        sidebarContent.style.marginLeft = "60px";
-    } else {
-        sidebarContent.style.display = "none";
-    }
-}
+fetch(resData)
+.then(response => response.json())
+.then(data => {
+    var data = JSON.parse(data);
 
-//Onlick expand basemap sidebar content area
-displayBasemapSidebarContent.onclick=function(){
-    if (getComputedStyle(sidebarContent).display === "none"){
-        sidebarContent.style.display ="block";
-        sidebarContent.style.width = "350px";
-        sidebarContent.style.marginLeft = "60px";
-    } else if (sidebarContent.style.display === "block"){
-        sidebarContent.style.width = "350px";
-        sidebarContent.style.marginLeft = "60px";
-    } else {
-        sidebarContent.style.display = "none";
-    }
-}
+    const tableBody = document.querySelector('#resTable tbody');
 
-// Onclick close sidebar home content area
-// closeHomeSidebarContent.onclick = function(){
-//     sidebarContent.style.display = "none";
-// }
-// Onclick close sidebar home content area
-closeFilterSidebarContent.onclick = function(){
-    sidebarContent.style.display = "none";
-}
-// Onclick close sidebar layer content area
-closeLayerSidebarContent.onclick = function(){
-    sidebarContent.style.display = "none";
-}
-// Onclick close sidebar basemap content area
-closeBasemapSidebarContent.onclick = function(){
-    sidebarContent.style.display = "none";
-}
-
-/* 
-    Filter Panel 
-*/
-
-
-$.getJSON('/static/data/geojson/reservoirs_v2_main.geojson', function (data) {
-    var reservoirs = [];
-    var rivers = [];
     data.features.forEach(dothis);
+
     function dothis(item){
-        var res = item.properties.Name;
-        var river = item.properties.River;
-        reservoirs.push(res)
-        rivers.push(river)
-    }
-    // console.log(items)
-    var options_str = "";
-    options_str += '<option value="All" selected>All</option>'
-    reservoirs.forEach( function(val) {
-        options_str += '<option value="' + val + '">' + val + '</option>';
-    });
-    document.getElementById("reservoir_name").innerHTML = options_str;
+        const row = document.createElement('tr');
 
-    function onlyUnique(value, index, self) {
-        return self.indexOf(value) === index;
-    }
-    var unique_rivers = rivers.filter(onlyUnique);
+        // Set the ID attribute for the row
+        row.setAttribute('data-id', item.properties.ID);
+        row.setAttribute('data-lat', item.properties.LAT_DD);
+        row.setAttribute('data-lng', item.properties.LONG_DD);
+        row.setAttribute('data-country', item.properties.COUNTRY);
+  
+        // Generate table cells for each column
+        const nameCell = document.createElement('td');
+        nameCell.textContent = item.properties.NAME;
+        row.appendChild(nameCell);
 
-    // console.log(unique_rivers)
+        var country = item.properties.COUNTRY;
+        const flagCell = document.createElement('td');
+        flagCell.setAttribute('class', 'fs-3');
 
-    var rbasin = document.getElementById("river_basin");
-    var options_str_rbasin = "";
-    options_str_rbasin += '<option value="allRivers" selected>All</option>'
-    unique_rivers.forEach( function(val) {
-        options_str_rbasin += '<option value="' + val + '">' + val + '</option>';
-    });
-    rbasin.innerHTML = options_str_rbasin
-    // var rbasin = document.getElementById("riverBasinCheckboxes");
-
-    // var checkbox = "<label for='allRivers'><input type='checkbox' id='allRivers' name='allRivers' onclick='myFunction(this);' value='allRivers' /> Select All</label>";
-
-    // for (var i = 0; i < unique_rivers.length; i++) {
-    //     checkbox += "<label for="+unique_rivers[i]+"><input type='checkbox' id="+unique_rivers[i]+" value="+unique_rivers[i]+" name="+unique_rivers[i]+" onclick='myFunction(this);' /> "+unique_rivers[i]+"</label>";
-    // }
-    // rbasin.innerHTML = checkbox;
-});
-
-
-// function myFunction(checkbox){
-//     if(checkbox.checked){
-//         console.log(checkbox.value)
-//     }
-// }
-
-// Sidebar Dropdown Filter
-var expanded = false;
-
-function toggle(source) {
-    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    for (var i = 0; i < checkboxes.length; i++) {
-        if (checkboxes[i] != source)
-            checkboxes[i].checked = source.checked;
-    }
-}    
-
-var filterCountry = document.querySelector("#filter-country");
-filterCountry.onclick = function() {
-    var checkboxes = document.getElementById("countryCheckboxes");
-    if (!expanded) {
-        checkboxes.style.display = "block";
-        expanded = true;
-    } else {
-        checkboxes.style.display = "none";
-        expanded = false;
-    }
-}
-// var filterRiverBasin = document.querySelector("#filter-river-basin");
-// filterRiverBasin.onclick = function() {
-//     var checkboxes = document.getElementById("riverBasinCheckboxes");
-//     if (!expanded) {
-//         checkboxes.style.display = "block";
-//         expanded = true;
-//     } else {
-//         checkboxes.style.display = "none";
-//         expanded = false;
-//     }
-// }
-
-// Icon options
-var iconOptions = {
-    iconUrl: '/static/images/marker.png',
-    iconSize: [15, 22]
-}
-
-var iconOptionsGreen = {
-    iconUrl: '/static/images/red.png',
-    iconSize: [15, 22]
-}
-
-var greenIcon = L.icon(iconOptionsGreen);
-
-// Creating a custom icon
-var customIcon = L.icon(iconOptions);
-
-var reservoirName = document.getElementById("reservoir_name");
-
-// Filter by reservoir/dam name
-function filterByReservoirName(feature) {
-    if(feature.properties.Name==reservoirName.value)
-    return true
-}
-
-var riverName = document.getElementById("river_basin");
-
-function filterByRiverName(feature) {
-    if(feature.properties.River==riverName.value)
-    return true
-}
-
-function onEachFeature(feature, reservoirLayer) {
-    var resname = feature.properties.Name;
-    var stationid = feature.properties.R_ID;
-    var rbasin = feature.properties.River;
-    var country = feature.properties.Country;
-    var content = '<iframe id="encoder_iframe"  width="700" height="460" src="http://127.0.0.1:8000/iframe?stationid=&countryname=&riverbasin=&reservoirname=" frameborder="0"></iframe>';
-    var popupContent = content.replace("stationid=", "stationid=" + stationid).replace("countryname=", "countryname=" + country).replace("riverbasin=", "riverbasin=" + rbasin).replace("reservoirname=", "reservoirname=" + resname);
-    reservoirLayer.bindTooltip(resname);
-    reservoirLayer.bindPopup(popupContent); 
-    reservoirLayer.layerTag = "GeoJSONLayer"
-    if(resname == "Ubol Ratana" || resname == "Lam Pao" || resname == "Sirindhorn" || resname == "Nam Theun 2" || resname == "Nam Mang 3" || resname == "Se San IV" || resname == "Lower Sesan II" || resname == "Phumi Svay Chrum" || resname == "Battambang" || resname == "Sre Pok 4" || resname == "Yali" || resname == "Nam Ton" || resname == "Nam Ngum") {
-        reservoirLayer.setIcon(greenIcon);
-    } else {
-        reservoirLayer.setIcon(customIcon);
-    }
-} 
-// "Ubol Ratana" || "Lam Pao" || "Sirindhorn" || "Nam Theun 2" || "Nam Mang 3" || "Se San IV" || "Lower Sesan II" || "Phumi Svay Chrum" || "Battambang" || "Sre Pok 4" || "Yali" || "Nam Ton" || "Nam Ngum"
-var selectedReservoirLayer;
-$("#reservoir_name").on('change', function(){
-    var selectedValue = this.value;
-    if (selectedValue == "All"){
-        // unchecked layer;
-        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-        for (var i = 0; i < checkboxes.length; i++) {
-                checkboxes[i].checked = true;
+        if (country == 'Cambodia'){
+            var countryCode = "KH"
+            // const flagCell = document.createElement('td');
+            flagCell.innerHTML = getFlagEmoji(countryCode);
+            row.appendChild(flagCell);
+        } else if (country == 'China'){
+            var countryCode = "CN"
+            // const flagCell = document.createElement('td');
+            flagCell.innerHTML = getFlagEmoji(countryCode);
+            row.appendChild(flagCell);
+        } else if (country == 'Laos'){
+            var countryCode = "LA"
+            // const flagCell = document.createElement('td');
+            flagCell.innerHTML = getFlagEmoji(countryCode);
+            row.appendChild(flagCell);
+        } else if (country == 'Thailand'){
+            var countryCode = "TH"
+            // const flagCell = document.createElement('td');
+            flagCell.innerHTML = getFlagEmoji(countryCode);
+            row.appendChild(flagCell);
+        } else if (country == 'Vietnam'){
+            var countryCode = "VN"
+            // const flagCell = document.createElement('td');
+            flagCell.innerHTML = getFlagEmoji(countryCode);
+            row.appendChild(flagCell);
         }
-        selectedReservoirLayer = L.geoJson(reservoirs, {
-            onEachFeature: onEachFeature
-        }).addTo(map);
-        map.fitBounds(selectedReservoirLayer.getBounds());
-    } else if (selectedValue == selectedValue){
-        // unchecked layer;
-        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-        for (var i = 0; i < checkboxes.length; i++) {
-                checkboxes[i].checked = false;
-        }
+        row.appendChild(flagCell);
 
-        // remove layers from map
-        map.eachLayer(function (layer) {
-            if ( layer.layerTag && layer.layerTag === "GeoJSONLayer") {
-                map.removeLayer(layer)
+        const icdcCell = document.createElement('td');
+        icdcCell.setAttribute('id', item.properties.ID);
+        row.appendChild(icdcCell);
+        // console.log(icdcCell)
+        tableBody.appendChild(row);
+    }
+
+    // fetchData()
+    // .then(() => {
+    //     // console.log(dataArray);
+    //     var d = Object.values(dataArray);
+    //     d.forEach((val) => {
+    //         try {
+    //             var id = (val["ID"])
+    //             var value = (val["Value"])
+    //             var getTableCell = document.querySelector("#"+id)
+    //             // console.log(getTableCell)
+    //             if (value < 0){
+    //                 getTableCell.innerHTML = '<i class="fas fa-arrow-down fa-lg"></i>';
+    //             } else if (value > 0){
+    //                 getTableCell.innerHTML = '<i class="fas fa-arrow-up fa-lg"></i>';
+    //             } else {
+    //                 getTableCell.innerHTML = '<i class="far fa-square fa-lg"></i>';
+    //             }
+    //             // getTableCell.innerHTML = value
+
+    //         } catch (error) {
+    //             console.error('Error:', error);
+    //         }
+    //     })
+    // });
+
+    fetchData()
+    .then(()=> {
+        var d = Object.values(dataArray);
+        d.forEach((val) => {
+            try {
+                var id = (val["ID"])
+                var value = (val["Value"])
+                var getTableCell = document.querySelector("#"+id)
+                // console.log(getTableCell)
+                if (value < 0){
+                    getTableCell.innerHTML = '<i class="fas fa-arrow-down fa-lg"></i>';
+                } else if (value > 0){
+                    getTableCell.innerHTML = '<i class="fas fa-arrow-up fa-lg"></i>';
+                } else {
+                    getTableCell.innerHTML = '<i class="far fa-square fa-lg"></i>';
+                }
+                // getTableCell.innerHTML = value
+
+            } catch (error) {
+                console.error('Error:', error);
             }
         });
-        if (selectedReservoirLayer){
-            map.removeLayer(selectedReservoirLayer)
-        }
-        selectedReservoirLayer = L.geoJson(reservoirs, {
-            filter: filterByReservoirName, 
-            onEachFeature: onEachFeature
-        }).addTo(map);
-        map.fitBounds(selectedReservoirLayer.getBounds());
-    }
-});
-
-var selectedRbasinLayer;
-$("#river_basin").on('change', function(){
-    var selectedValue = this.value;
-    if (selectedValue == "allRivers"){
-        // unchecked layer;
-        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-        for (var i = 0; i < checkboxes.length; i++) {
-                checkboxes[i].checked = true;
-        }
-        selectedRbasinLayer = L.geoJson(reservoirs, {
-            onEachFeature: onEachFeature
-        }).addTo(map);
-        map.fitBounds(selectedRbasinLayer.getBounds());
-    } else if (selectedValue == selectedValue){
-        // unchecked layer;
-        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-        for (var i = 0; i < checkboxes.length; i++) {
-                checkboxes[i].checked = false;
-        }
-
-        // remove layers from map
-        map.eachLayer(function (layer) {
-            if ( layer.layerTag && layer.layerTag === "GeoJSONLayer") {
-                map.removeLayer(layer)
+        // const result = d.filter(id => id.ID =="Lam_Pao");
+        // console.log(result[0]["Value"])
+        function getIcon(rid){
+            let data;
+            try {
+                const filterArr = d.filter(x => x.ID == rid);
+                data = filterArr;
+                // console.log(rid)
+                // console.log(data)
+            } catch (error) {
+                console.error('Error:', error);
             }
-        });
-        if (selectedRbasinLayer){
-            map.removeLayer(selectedRbasinLayer)
+            const value = data[0]["Value"];
+            // console.log(value)
+            if(value < 0){
+                iconUrl = '/static/images/brown.png';
+            } else if (value > 0){
+                iconUrl = '/static/images/green.png';
+            }else {
+                iconUrl = '/static/images/blue.png';
+            }
+
+            var iconOptions = {
+                iconUrl: iconUrl,
+                iconSize: [15, 22]
+            };
+            var customIcon = L.icon(iconOptions);
+            return customIcon;
         }
-        selectedRbasinLayer = L.geoJson(reservoirs, {
-            filter: filterByRiverName, 
+
+        function onEachFeature(feature, rLayer){
+            var name = feature.properties.NAME;
+            var id = feature.properties.ID;
+            var icon = getIcon(id);
+            rLayer.bindTooltip(name);
+            rLayer.setIcon(icon);
+            rLayer.on('click', function (e) {
+
+                const profileTabLink = document.querySelector('#pills-profile-tab');
+                profileTabLink.classList.remove('disabled');
+                profileTabLink.classList.add('active');
+                profileTabLink.setAttribute('aria-selected', 'true');
+                
+                const homeTabLink = document.querySelector('#pills-home-tab');
+                // homeTabLink.classList.remove('disabled');
+                homeTabLink.classList.remove('active');
+                homeTabLink.setAttribute('aria-selected', 'false');
+
+                const profileContent = document.querySelector('#pills-profile');
+                const homeContent = document.querySelector('#pills-home');
+                homeContent.classList.remove('active', 'show');
+                profileContent.classList.add('active', 'show');
+
+                var res_id = feature.properties.ID;
+                reservoir_id = res_id
+                
+                const params = new URLSearchParams();
+                params.append('r_id', res_id);
+
+                const url_about = '/get_reservoir_info/?' + params.toString();
+                const url_aec = '/get_aec_chart/?' + params.toString();
+                const url_inflow = '/get_inflow_chart/?' + params.toString();
+                const url_outflow = '/get_outflow_chart/?' + params.toString();
+                const url_sarea = '/get_sarea_chart/?' + params.toString();
+                const url_deltas = '/get_deltas_chart/?' + params.toString();
+                const url_rc = '/get_rc_chart/?' + params.toString();
+                const url_precip = '/get_precip_chart/?' + params.toString();
+
+                // Reservoir Info
+                fetch(url_about)
+                .then(response => response.json())
+                .then(data => {
+                    var data = JSON.parse(data);
+                    // console.log(data);
+                    const resTableBody = document.querySelector('#resInfo tbody');
+                    
+                    var getInfos = Object.values(data);
+                    getInfos.forEach((val) => {
+                        // NAME,COUNTRY,LATITUDE,LONGITITUDE,YEAR,DIS_AVG_LS,AREA_REP,AREA_SKM,CAP_MCM,DEPTH_M,GRAND_ID,CATCH_SKM,ELEV_MASL,CAP_MIN,AREA_POLY,DAM_LEN_M,ID
+                        var name = val["NAME"]
+                        var lat = val["LATITUDE"]
+                        var lng = val["LONGITITUDE"]
+                        var country = val["COUNTRY"]
+                        var year = val["AREA_SKM"]
+                        var area = val["YEAR"]
+                        var cap = val["CAP_MCM"]
+                        var depth = val["DEPTH_M"]
+                        var catchment = val["CATCH_SKM"]
+                        var elv = val["ELEV_MASL"]
+                        var length = val["DAM_LEN_M"]
+
+                        if (country == 'Cambodia'){
+                            var countryCode = "KH"
+                            flag = getFlagEmoji(countryCode);
+                        } else if (country == 'China'){
+                            var countryCode = "CN"
+                            flag = getFlagEmoji(countryCode);
+                        } else if (country == 'Laos'){
+                            var countryCode = "LA"
+                            flag = getFlagEmoji(countryCode);
+                        } else if (country == 'Thailand'){
+                            var countryCode = "TH"
+                            flag = getFlagEmoji(countryCode);
+                        } else if (country == 'Vietnam'){
+                            var countryCode = "VN"
+                            flag = getFlagEmoji(countryCode);
+                        }
+
+                        document.querySelector('#resInfo tbody #resName').innerHTML = name;
+                        document.querySelector('#resInfo tbody #resLocation').innerHTML = flag;
+                        document.querySelector('#resInfo tbody #resLat').innerHTML = lat;
+                        document.querySelector('#resInfo tbody #resLng').innerHTML = lng;
+                        document.querySelector('#resInfo tbody #resYear').innerHTML = year;
+                        document.querySelector('#resInfo tbody #resArea').innerHTML = area;
+                        document.querySelector('#resInfo tbody #resCap').innerHTML = cap;
+                        document.querySelector('#resInfo tbody #resDepth').innerHTML = depth;
+                        document.querySelector('#resInfo tbody #resCatch').innerHTML = catchment;
+                        document.querySelector('#resInfo tbody #resElv').innerHTML = elv;
+                        document.querySelector('#resInfo tbody #resLength').innerHTML = length;
+                    });
+                });
+
+                // AEC chart
+                fetch(url_aec)
+                .then(response => response.json())
+                .then(data => {
+                    // console.log(data)
+                    // Convert dates to JavaScript dates
+                    var data = JSON.parse(data);
+                    var series = data.map(function(d) {
+                        return [new Date(d.date).getTime(), d.value];
+                    });
+                    
+                    // Create Highcharts chart
+                    Highcharts.chart('chartAEC', {
+                        chart: {
+                            // type: "spline",
+                            zoomType: "x",
+                            panning: true,
+                            panKey: "shift",
+                        },
+                        title: false,
+                        xAxis: {
+                            crosshair: true,
+                            type: "category",
+                            title: {
+                                text: "Elevation (m) <br><br><p></p>",
+                            },
+                            labels: {
+                                allowDecimals: false,
+                                format: "{value}",
+                                style: {
+                                    // font: "16px Times New Roman, sans-serif",
+                                    color: "#000000",
+                                },
+                            },
+                            minTickInterval: 1,
+                            min: 0.0,
+                        },
+                        yAxis: {
+                            title: {
+                                useHTML: true,
+                                enabled: true,
+                                text: "Area (Km<sup>2</sup>)",
+                            },
+                            labels: {
+                                format: "{value:.f}",
+                            },
+                            minTickInterval: 1,
+                            min: 0.0,
+                        },
+                        tooltip: {
+                            valueDecimals: 2,
+                            formatter: function() {
+                                return 'Elevation: <b>' + this.x + ' m</b><br> Area: <b>'+this.y+' Km<sup>2</sup></b>'
+                            }
+                        },
+                        legend: {enabled:false},
+                        plotOptions: {
+                            area: {
+                                fillColor: {
+                                    linearGradient: {
+                                        x1: 0,
+                                        y1: 0,
+                                        x2: 0,
+                                        y2: 1
+                                    },
+                                    stops: [
+                                        [0, Highcharts.getOptions().colors[0]],
+                                        [1, Highcharts.color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                                    ]
+                                },
+                                marker: {
+                                    radius: 2
+                                },
+                                lineWidth: 1,
+                                states: {
+                                    hover: {
+                                        lineWidth: 1
+                                    }
+                                },
+                                threshold: null
+                            }
+                        },
+                        series: [{
+                            name: 'Area',
+                            type: 'area',
+                            data: data.map(d => d.area),
+                        }]
+                    });
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+
+                // Inflow chart
+                fetch(url_inflow)
+                .then(response => response.json())
+                .then(data => {
+                    // console.log(data)
+                    // Convert dates to JavaScript dates
+                    var data = JSON.parse(data);
+                    var series = data.map(function(d) {
+                        return [new Date(d.date).getTime(), d.inflow];
+                    });
+
+                    fetch(url_precip)
+                    .then(response => response.json())
+                    .then(pdata => {
+                        var pdata = JSON.parse(pdata);
+                        var pseries = pdata.map(function(d) {
+                            return [new Date(d.date).getTime(), d.precip];
+                        });
+                        
+                        // Create Highcharts chart
+                        Highcharts.chart('chartInflow', {
+                            // chart: chart,
+                            chart: {
+                                zoomType: "xy",
+                                panning: true,
+                                panKey: "shift",
+                                style: {
+                                color: "#000000",
+                                },
+                            },
+                            title: false,
+                            xAxis: xAxis,
+                            yAxis: [
+                                {
+                                    title: {
+                                        text: "Inflow (m3/s)",
+                                        style: {
+                                            // font: "16px bold Times New Roman, sans-serif",
+                                            color: "#000000",
+                                        },
+                                    },
+                                    labels: labels,
+                                },
+                                {
+                                    title: {
+                                        text: "Precipitation (mm)",
+                                        style: {
+                                            // font: "16px bold Times New Roman, sans-serif",
+                                            color: "#000000",
+                                        },
+                                    },
+                                    labels: {
+                                    format: "{value:.2f}",
+                                    },
+                                    // tickPositions: [0, 50, 100, 200, 700, 1000],
+                                    minTickInterval: 0.01,
+                                    opposite: true,
+                                    reversed: true,
+                                    tickPositioner: function(min, max) {
+                                        var mx;
+                                        if (max < 100){
+                                            mx = max + 100;
+                                        } else if (max > 100 && max < 200){
+                                            mx = max + 200;
+                                        } else if (max > 200 && max < 350){
+                                            mx = max + 250;
+                                        } else if (max > 350 && max < 500){
+                                            mx = max + 300;
+                                        } else {
+                                            mx = max + 500;
+                                        }
+                                        var ticks = [], 
+                                            interval = Math.ceil((mx - min) / 5); // divide the range into 5 intervals
+                                    
+                                        // generate ticks at each interval
+                                        for (var i = min; i <= mx; i += interval) {
+                                        ticks.push(i);
+                                        }
+                                        return ticks;
+                                    }
+                                }
+                            ],
+                            tooltip:{
+                                xDateFormat: "%d-%m-%Y",
+                                crosshairs: true,
+                                shared: true,
+                                // valueDecimals: 0,
+                                // valueSuffix: " (m3/s)",
+                            },
+                            legend: {enabled:true},
+                            series: [
+                                {
+                                    name: 'Inflow(m3/s)',
+                                    type: 'line',
+                                    data: series,
+                                    color: "darkblue",
+                                    states: states
+                                },
+                                {
+                                    name: "Precipitation(mm)",
+                                    data: pseries,
+                                    type: "line",
+                                    yAxis: 1,
+                                    color: "red",
+                                    states: states
+                                }
+                            ]
+                        });
+                    })
+                    .catch(error => {
+                        console.error(error);
+                    });
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+
+                // Outflow chart
+                fetch(url_outflow)
+                .then(response => response.json())
+                .then(data => {
+                    // console.log(data)
+                    // Convert dates to JavaScript dates
+                    var data = JSON.parse(data);
+                    var series = data.map(function(d) {
+                        return [new Date(d.date).getTime(), d.outflow];
+                    });
+                    
+                    // Create Highcharts chart
+                    Highcharts.chart('chartOutflow', {
+                        chart: chart,
+                        title: false,
+                        xAxis: xAxis,
+                        yAxis: {
+                            title: {
+                                text: "Outflow (m3/s)",
+                                style: {
+                                    // font: "16px bold Times New Roman, sans-serif",
+                                    color: "#000000",
+                                },
+                            },
+                            labels: labels,
+                            // minTickInterval: 1,
+                        },
+                        tooltip: tooltip,
+                        legend: {enabled:false},
+                        series: [{
+                            name: 'Outflow',
+                            type: 'line',
+                            data: series,
+                            color: "darkblue",
+                            states: states
+                        }]
+                    });
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+
+                // Sarea chart
+                fetch(url_sarea)
+                .then(response => response.json())
+                .then(data => {
+                    // console.log(data)
+                    // Convert dates to JavaScript dates
+                    var data = JSON.parse(data);
+                    var series = data.map(function(d) {
+                        return [new Date(d.date).getTime(), d.area];
+                    });
+                    
+                    // Create Highcharts chart
+                    Highcharts.chart('chartSarea', {
+                        chart: chart,
+                        title: false,
+                        xAxis: xAxis,
+                        yAxis: {
+                            title: {
+                                text: "Area (km2)",
+                                style: {
+                                    // font: "16px bold Times New Roman, sans-serif",
+                                    color: "#000000",
+                                },
+                            },
+                            labels: labels,
+                            // minTickInterval: 1,
+                        },
+                        tooltip: {
+                            xDateFormat: "%d-%m-%Y",
+                            crosshairs: true,
+                            shared: true,
+                            valueDecimals: 0,
+                            valueSuffix: " Km^2",
+                        },
+                        legend: {enabled:false},
+                        series: [{
+                            name: 'Area',
+                            type: 'line',
+                            data: series,
+                            color: "darkblue",
+                            states: states
+                        }]
+                    });
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+
+                // Deltas chart
+                fetch(url_deltas)
+                .then(response => response.json())
+                .then(data => {
+                    // console.log(data)
+                    // Convert dates to JavaScript dates
+                    var data = JSON.parse(data);
+                    var series = data.map(function(d) {
+                        return [new Date(d.date).getTime(), d.dels];
+                    });
+                    
+                    // Create Highcharts chart
+                    Highcharts.chart('chartDeltas', {
+                        chart: chart,
+                        title: false,
+                        xAxis: xAxis,
+                        yAxis: {
+                            title: {
+                                text: "dS (m3)",
+                                style: {
+                                    // font: "16px bold Times New Roman, sans-serif",
+                                    color: "#000000",
+                                },
+                            },
+                            labels: labels,
+                            // minTickInterval: 1,
+                        },
+                        tooltip: {
+                            xDateFormat: "%d-%m-%Y",
+                            crosshairs: true,
+                            shared: true,
+                            valueDecimals: 2,
+                            valueSuffix: " (m3)",
+                        },
+                        legend: {enabled:false},
+                        series: [{
+                            name: 'dS',
+                            type: 'line',
+                            data: series,
+                            color: "darkblue",
+                            states: states
+                        }]
+                    });
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+
+                // Rule curve chart
+                fetch(url_rc)
+                .then(response => response.json())
+                .then(data => {
+                    // console.log(data)
+                    // Convert dates to JavaScript dates
+                    var data = JSON.parse(data);
+        
+                    // Create Highcharts chart
+                    Highcharts.chart('chartRC', {
+                        chart: {
+                            zoomType: 'x',
+                            panning: true,
+                            panKey: 'shift',
+                            style: {
+                                color: "#000000"
+                            }
+                        },
+                        title: false,
+                        xAxis: [{
+                            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                            title: {
+                                text: 'Month',
+                                style: {
+                                    color: "#000000"
+                                }
+                            },
+                            labels: {
+                                format: '{value}',
+                                style: {
+                                    color: "#000000"
+                                }
+                            },
+                            minTickInterval: 0.01
+                        }],
+                        yAxis: {
+                            title: {
+                                useHTML: true,
+                                enabled: true,
+                                text: 'Specific storage (S/S<sub>max</sub>)',
+                                style: {
+                                    color: "#000000"
+                                }
+                            },
+                            labels: {
+                                format: '{value:.2f}',
+                                style: {
+                                    color: "#000000"
+                                }	
+                            },
+                            minTickInterval: 0.01,
+                        },
+                        legend: {enabled:false},
+                        series: [{
+                            name: 'Specific Storage (S/Smax)',
+                            data: data.map(d => d.value),
+                            type: 'spline',
+                            // type: 'line',
+                            color: 'darkblue',
+                            marker: {
+                                enabled: true,
+                                radius: 3		
+                            },
+                            states: states
+                        }]
+                    })
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+            });
+        }
+        
+        resLayer = L.geoJson(data, {
             onEachFeature: onEachFeature
+            // onEachFeature: function (feature, rLayer){
+            //     var name = feature.properties.NAME;
+            //     var id = feature.properties.ID;
+            //     var icon = getIcon(id);
+            //     rLayer.bindTooltip(name);
+            //     rLayer.setIcon(icon);
+                // rLayer.on('click', function (e) {
+
+                //     const profileTabLink = document.querySelector('#pills-profile-tab');
+                //     profileTabLink.classList.remove('disabled');
+                //     profileTabLink.classList.add('active');
+                //     profileTabLink.setAttribute('aria-selected', 'true');
+                    
+                //     const homeTabLink = document.querySelector('#pills-home-tab');
+                //     // homeTabLink.classList.remove('disabled');
+                //     homeTabLink.classList.remove('active');
+                //     homeTabLink.setAttribute('aria-selected', 'false');
+
+                //     const profileContent = document.querySelector('#pills-profile');
+                //     const homeContent = document.querySelector('#pills-home');
+                //     homeContent.classList.remove('active', 'show');
+                //     profileContent.classList.add('active', 'show');
+
+                //     var res_id = feature.properties.ID;
+                //     reservoir_id = res_id
+                    
+                //     const params = new URLSearchParams();
+                //     params.append('r_id', res_id);
+
+                //     const url_about = '/get_reservoir_info/?' + params.toString();
+                //     const url_aec = '/get_aec_chart/?' + params.toString();
+                //     const url_inflow = '/get_inflow_chart/?' + params.toString();
+                //     const url_outflow = '/get_outflow_chart/?' + params.toString();
+                //     const url_sarea = '/get_sarea_chart/?' + params.toString();
+                //     const url_deltas = '/get_deltas_chart/?' + params.toString();
+                //     const url_rc = '/get_rc_chart/?' + params.toString();
+                //     const url_precip = '/get_precip_chart/?' + params.toString();
+
+                //     // Reservoir Info
+                //     fetch(url_about)
+                //     .then(response => response.json())
+                //     .then(data => {
+                //         var data = JSON.parse(data);
+                //         // console.log(data);
+                //         const resTableBody = document.querySelector('#resInfo tbody');
+                        
+                //         var getInfos = Object.values(data);
+                //         getInfos.forEach((val) => {
+                //             // NAME,COUNTRY,LATITUDE,LONGITITUDE,YEAR,DIS_AVG_LS,AREA_REP,AREA_SKM,CAP_MCM,DEPTH_M,GRAND_ID,CATCH_SKM,ELEV_MASL,CAP_MIN,AREA_POLY,DAM_LEN_M,ID
+                //             var name = val["NAME"]
+                //             var lat = val["LATITUDE"]
+                //             var lng = val["LONGITITUDE"]
+                //             var country = val["COUNTRY"]
+                //             var year = val["AREA_SKM"]
+                //             var area = val["YEAR"]
+                //             var cap = val["CAP_MCM"]
+                //             var depth = val["DEPTH_M"]
+                //             var catchment = val["CATCH_SKM"]
+                //             var elv = val["ELEV_MASL"]
+                //             var length = val["DAM_LEN_M"]
+
+                //             if (country == 'Cambodia'){
+                //                 var countryCode = "KH"
+                //                 flag = getFlagEmoji(countryCode);
+                //             } else if (country == 'China'){
+                //                 var countryCode = "CN"
+                //                 flag = getFlagEmoji(countryCode);
+                //             } else if (country == 'Laos'){
+                //                 var countryCode = "LA"
+                //                 flag = getFlagEmoji(countryCode);
+                //             } else if (country == 'Thailand'){
+                //                 var countryCode = "TH"
+                //                 flag = getFlagEmoji(countryCode);
+                //             } else if (country == 'Vietnam'){
+                //                 var countryCode = "VN"
+                //                 flag = getFlagEmoji(countryCode);
+                //             }
+
+                //             document.querySelector('#resInfo tbody #resName').innerHTML = name;
+                //             document.querySelector('#resInfo tbody #resLocation').innerHTML = flag;
+                //             document.querySelector('#resInfo tbody #resLat').innerHTML = lat;
+                //             document.querySelector('#resInfo tbody #resLng').innerHTML = lng;
+                //             document.querySelector('#resInfo tbody #resYear').innerHTML = year;
+                //             document.querySelector('#resInfo tbody #resArea').innerHTML = area;
+                //             document.querySelector('#resInfo tbody #resCap').innerHTML = cap;
+                //             document.querySelector('#resInfo tbody #resDepth').innerHTML = depth;
+                //             document.querySelector('#resInfo tbody #resCatch').innerHTML = catchment;
+                //             document.querySelector('#resInfo tbody #resElv').innerHTML = elv;
+                //             document.querySelector('#resInfo tbody #resLength').innerHTML = length;
+                //         });
+                //     });
+
+                //     // AEC chart
+                //     fetch(url_aec)
+                //     .then(response => response.json())
+                //     .then(data => {
+                //         // console.log(data)
+                //         // Convert dates to JavaScript dates
+                //         var data = JSON.parse(data);
+                //         var series = data.map(function(d) {
+                //             return [new Date(d.date).getTime(), d.value];
+                //         });
+                        
+                //         // Create Highcharts chart
+                //         Highcharts.chart('chartAEC', {
+                //             chart: {
+                //                 // type: "spline",
+                //                 zoomType: "x",
+                //                 panning: true,
+                //                 panKey: "shift",
+                //             },
+                //             title: false,
+                //             xAxis: {
+                //                 crosshair: true,
+                //                 type: "category",
+                //                 title: {
+                //                     text: "Elevation (m) <br><br><p></p>",
+                //                 },
+                //                 labels: {
+                //                     allowDecimals: false,
+                //                     format: "{value}",
+                //                     style: {
+                //                         // font: "16px Times New Roman, sans-serif",
+                //                         color: "#000000",
+                //                     },
+                //                 },
+                //                 minTickInterval: 1,
+                //                 min: 0.0,
+                //             },
+                //             yAxis: {
+                //                 title: {
+                //                     useHTML: true,
+                //                     enabled: true,
+                //                     text: "Area (Km<sup>2</sup>)",
+                //                 },
+                //                 labels: {
+                //                     format: "{value:.f}",
+                //                 },
+                //                 minTickInterval: 1,
+                //                 min: 0.0,
+                //             },
+                //             tooltip: {
+                //                 valueDecimals: 2,
+                //                 formatter: function() {
+                //                     return 'Elevation: <b>' + this.x + ' m</b><br> Area: <b>'+this.y+' Km<sup>2</sup></b>'
+                //                 }
+                //             },
+                //             legend: {enabled:false},
+                //             plotOptions: {
+                //                 area: {
+                //                     fillColor: {
+                //                         linearGradient: {
+                //                             x1: 0,
+                //                             y1: 0,
+                //                             x2: 0,
+                //                             y2: 1
+                //                         },
+                //                         stops: [
+                //                             [0, Highcharts.getOptions().colors[0]],
+                //                             [1, Highcharts.color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                //                         ]
+                //                     },
+                //                     marker: {
+                //                         radius: 2
+                //                     },
+                //                     lineWidth: 1,
+                //                     states: {
+                //                         hover: {
+                //                             lineWidth: 1
+                //                         }
+                //                     },
+                //                     threshold: null
+                //                 }
+                //             },
+                //             series: [{
+                //                 name: 'Area',
+                //                 type: 'area',
+                //                 data: data.map(d => d.area),
+                //             }]
+                //         });
+                //     })
+                //     .catch(error => {
+                //         console.error(error);
+                //     });
+
+                //     // Inflow chart
+                //     fetch(url_inflow)
+                //     .then(response => response.json())
+                //     .then(data => {
+                //         // console.log(data)
+                //         // Convert dates to JavaScript dates
+                //         var data = JSON.parse(data);
+                //         var series = data.map(function(d) {
+                //             return [new Date(d.date).getTime(), d.inflow];
+                //         });
+
+                //         fetch(url_precip)
+                //         .then(response => response.json())
+                //         .then(pdata => {
+                //             var pdata = JSON.parse(pdata);
+                //             var pseries = pdata.map(function(d) {
+                //                 return [new Date(d.date).getTime(), d.precip];
+                //             });
+                            
+                //             // Create Highcharts chart
+                //             Highcharts.chart('chartInflow', {
+                //                 // chart: chart,
+                //                 chart: {
+                //                     zoomType: "xy",
+                //                     panning: true,
+                //                     panKey: "shift",
+                //                     style: {
+                //                     color: "#000000",
+                //                     },
+                //                 },
+                //                 title: false,
+                //                 xAxis: xAxis,
+                //                 yAxis: [
+                //                     {
+                //                         title: {
+                //                             text: "Inflow (m3/s)",
+                //                             style: {
+                //                                 // font: "16px bold Times New Roman, sans-serif",
+                //                                 color: "#000000",
+                //                             },
+                //                         },
+                //                         labels: labels,
+                //                         // tickPositions: [0, 100, 200, 400, 700, 1000],
+                //                         // minTickInterval: 1,
+                //                         // tickPositioner: function(min, max) {
+                //                         //     var mx;
+                //                         //     if (max < 100){
+                //                         //         mx = max + 100;
+                //                         //     } else if (max > 100 && max < 200){
+                //                         //         mx = max + 200;
+                //                         //     } else if (max > 200 && max < 350){
+                //                         //         mx = max + 250;
+                //                         //     } else if (max > 350 && max < 500){
+                //                         //         mx = max + 300;
+                //                         //     } else {
+                //                         //         mx = max + 500;
+                //                         //     }
+                //                         //     var ticks = [], 
+                //                         //         interval = Math.ceil((mx - min) / 5); // divide the range into 5 intervals
+                                        
+                //                         //     // generate ticks at each interval
+                //                         //     for (var i = min; i <= mx; i += interval) {
+                //                         //       ticks.push(i);
+                //                         //     }
+                //                         //     return ticks;
+                //                         // }
+                //                     },
+                //                     {
+                //                         title: {
+                //                             text: "Precipitation (mm)",
+                //                             style: {
+                //                                 // font: "16px bold Times New Roman, sans-serif",
+                //                                 color: "#000000",
+                //                             },
+                //                         },
+                //                         labels: {
+                //                         format: "{value:.2f}",
+                //                         },
+                //                         // tickPositions: [0, 50, 100, 200, 700, 1000],
+                //                         minTickInterval: 0.01,
+                //                         opposite: true,
+                //                         reversed: true,
+                //                         tickPositioner: function(min, max) {
+                //                             var mx;
+                //                             if (max < 100){
+                //                                 mx = max + 100;
+                //                             } else if (max > 100 && max < 200){
+                //                                 mx = max + 200;
+                //                             } else if (max > 200 && max < 350){
+                //                                 mx = max + 250;
+                //                             } else if (max > 350 && max < 500){
+                //                                 mx = max + 300;
+                //                             } else {
+                //                                 mx = max + 500;
+                //                             }
+                //                             var ticks = [], 
+                //                                 interval = Math.ceil((mx - min) / 5); // divide the range into 5 intervals
+                                        
+                //                             // generate ticks at each interval
+                //                             for (var i = min; i <= mx; i += interval) {
+                //                             ticks.push(i);
+                //                             }
+                //                             return ticks;
+                //                         }
+                //                     }
+                //                 ],
+                //                 tooltip:{
+                //                     xDateFormat: "%d-%m-%Y",
+                //                     crosshairs: true,
+                //                     shared: true,
+                //                     // valueDecimals: 0,
+                //                     // valueSuffix: " (m3/s)",
+                //                 },
+                //                 legend: {enabled:true},
+                //                 series: [
+                //                     {
+                //                         name: 'Inflow(m3/s)',
+                //                         type: 'line',
+                //                         data: series,
+                //                         color: "darkblue",
+                //                         states: states
+                //                     },
+                //                     {
+                //                         name: "Precipitation(mm)",
+                //                         data: pseries,
+                //                         type: "line",
+                //                         yAxis: 1,
+                //                         color: "red",
+                //                         states: states
+                //                     }
+                //                 ]
+                //             });
+                //         })
+                //         .catch(error => {
+                //             console.error(error);
+                //         });
+                //     })
+                //     .catch(error => {
+                //         console.error(error);
+                //     });
+
+                //     // Outflow chart
+                //     fetch(url_outflow)
+                //     .then(response => response.json())
+                //     .then(data => {
+                //         // console.log(data)
+                //         // Convert dates to JavaScript dates
+                //         var data = JSON.parse(data);
+                //         var series = data.map(function(d) {
+                //             return [new Date(d.date).getTime(), d.outflow];
+                //         });
+                        
+                //         // Create Highcharts chart
+                //         Highcharts.chart('chartOutflow', {
+                //             chart: chart,
+                //             title: false,
+                //             xAxis: xAxis,
+                //             yAxis: {
+                //                 title: {
+                //                     text: "Outflow (m3/s)",
+                //                     style: {
+                //                         // font: "16px bold Times New Roman, sans-serif",
+                //                         color: "#000000",
+                //                     },
+                //                 },
+                //                 labels: labels,
+                //                 // minTickInterval: 1,
+                //             },
+                //             tooltip: tooltip,
+                //             legend: {enabled:false},
+                //             series: [{
+                //                 name: 'Outflow',
+                //                 type: 'line',
+                //                 data: series,
+                //                 color: "darkblue",
+                //                 states: states
+                //             }]
+                //         });
+                //     })
+                //     .catch(error => {
+                //         console.error(error);
+                //     });
+
+                //     // Sarea chart
+                //     fetch(url_sarea)
+                //     .then(response => response.json())
+                //     .then(data => {
+                //         // console.log(data)
+                //         // Convert dates to JavaScript dates
+                //         var data = JSON.parse(data);
+                //         var series = data.map(function(d) {
+                //             return [new Date(d.date).getTime(), d.area];
+                //         });
+                        
+                //         // Create Highcharts chart
+                //         Highcharts.chart('chartSarea', {
+                //             chart: chart,
+                //             title: false,
+                //             xAxis: xAxis,
+                //             yAxis: {
+                //                 title: {
+                //                     text: "Area (km2)",
+                //                     style: {
+                //                         // font: "16px bold Times New Roman, sans-serif",
+                //                         color: "#000000",
+                //                     },
+                //                 },
+                //                 labels: labels,
+                //                 // minTickInterval: 1,
+                //             },
+                //             tooltip: {
+                //                 xDateFormat: "%d-%m-%Y",
+                //                 crosshairs: true,
+                //                 shared: true,
+                //                 valueDecimals: 0,
+                //                 valueSuffix: " Km^2",
+                //             },
+                //             legend: {enabled:false},
+                //             series: [{
+                //                 name: 'Area',
+                //                 type: 'line',
+                //                 data: series,
+                //                 color: "darkblue",
+                //                 states: states
+                //             }]
+                //         });
+                //     })
+                //     .catch(error => {
+                //         console.error(error);
+                //     });
+
+                //     // Deltas chart
+                //     fetch(url_deltas)
+                //     .then(response => response.json())
+                //     .then(data => {
+                //         // console.log(data)
+                //         // Convert dates to JavaScript dates
+                //         var data = JSON.parse(data);
+                //         var series = data.map(function(d) {
+                //             return [new Date(d.date).getTime(), d.dels];
+                //         });
+                        
+                //         // Create Highcharts chart
+                //         Highcharts.chart('chartDeltas', {
+                //             chart: chart,
+                //             title: false,
+                //             xAxis: xAxis,
+                //             yAxis: {
+                //                 title: {
+                //                     text: "dS (m3)",
+                //                     style: {
+                //                         // font: "16px bold Times New Roman, sans-serif",
+                //                         color: "#000000",
+                //                     },
+                //                 },
+                //                 labels: labels,
+                //                 // minTickInterval: 1,
+                //             },
+                //             tooltip: {
+                //                 xDateFormat: "%d-%m-%Y",
+                //                 crosshairs: true,
+                //                 shared: true,
+                //                 valueDecimals: 2,
+                //                 valueSuffix: " (m3)",
+                //             },
+                //             legend: {enabled:false},
+                //             series: [{
+                //                 name: 'dS',
+                //                 type: 'line',
+                //                 data: series,
+                //                 color: "darkblue",
+                //                 states: states
+                //             }]
+                //         });
+                //     })
+                //     .catch(error => {
+                //         console.error(error);
+                //     });
+
+                //     // Rule curve chart
+                //     fetch(url_rc)
+                //     .then(response => response.json())
+                //     .then(data => {
+                //         // console.log(data)
+                //         // Convert dates to JavaScript dates
+                //         var data = JSON.parse(data);
+            
+                //         // Create Highcharts chart
+                //         Highcharts.chart('chartRC', {
+                //             chart: {
+                //                 zoomType: 'x',
+                //                 panning: true,
+                //                 panKey: 'shift',
+                //                 style: {
+                //                     color: "#000000"
+                //                 }
+                //             },
+                //             title: false,
+                //             xAxis: [{
+                //                 categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                //                 title: {
+                //                     text: 'Month',
+                //                     style: {
+                //                         color: "#000000"
+                //                     }
+                //                 },
+                //                 labels: {
+                //                     format: '{value}',
+                //                     style: {
+                //                         color: "#000000"
+                //                     }
+                //                 },
+                //                 minTickInterval: 0.01
+                //             }],
+                //             yAxis: {
+                //                 title: {
+                //                     useHTML: true,
+                //                     enabled: true,
+                //                     text: 'Specific storage (S/S<sub>max</sub>)',
+                //                     style: {
+                //                         color: "#000000"
+                //                     }
+                //                 },
+                //                 labels: {
+                //                     format: '{value:.2f}',
+                //                     style: {
+                //                         color: "#000000"
+                //                     }	
+                //                 },
+                //                 minTickInterval: 0.01,
+                //             },
+                //             legend: {enabled:false},
+                //             series: [{
+                //                 name: 'Specific Storage (S/Smax)',
+                //                 data: data.map(d => d.value),
+                //                 type: 'spline',
+                //                 // type: 'line',
+                //                 color: 'darkblue',
+                //                 marker: {
+                //                     enabled: true,
+                //                     radius: 3		
+                //                 },
+                //                 states: states
+                //             }]
+                //         })
+                //     })
+                //     .catch(error => {
+                //         console.error(error);
+                //     });
+                // });
+            // }
         }).addTo(map);
-        map.fitBounds(selectedRbasinLayer.getBounds());
-    }
-});
 
+        adm0_layer = L.geoJson(adm0, {
+            style: adm0Style,
+            onEachFeature: function(feature, admin0Layer) {
+                // admin0Layer.bindPopup(feature.properties.NAME_0);  
+                admin0Layer.on('click', function(e){
+                    var countryName = feature.properties.NAME_0;
+                    // console.log(countryName);
+                    if(map.hasLayer(resLayer)){
+                        map.removeLayer(resLayer);
+                    }
+                    adm0_layer.setStyle(adm0Style);
 
-// filter by country
-function filterCambodia(feature) {
-    if(feature.properties.Country=="Cambodia")
-    return true
-}
-function filterChina(feature) {
-    if(feature.properties.Country=="China")
-    return true
-}
-function filterLaos(feature) {
-    if(feature.properties.Country=="Laos")
-    return true
-}
-function filterThailand(feature) {
-    if(feature.properties.Country=="Thailand")
-    return true
-}
-function filterVietnam(feature) {
-    if(feature.properties.Country=="Vietnam")
-    return true
-}
-var cambodia_reservoirs = L.geoJson(reservoirs, {
-    filter: filterCambodia,
-	onEachFeature: onEachFeature      
+                    this.setStyle({
+                        color: "#000",
+                        weight: 1.0,
+                        fillOpacity: 0.3,
+                        fillColor: "yellow",
+                    });
+
+                    resLayer = L.geoJson(data, {
+                        filter: function(feature) {
+                            if(feature.properties.COUNTRY == countryName)
+                            return true;
+                        },
+                        onEachFeature: onEachFeature
+                    }).addTo(map)
+
+                    const tableRows = document.querySelectorAll('#resTable tbody tr');
+                    for (var i = 0; i < tableRows.length; i++) {
+                        var cn = tableRows[i].getAttribute('data-country');
+                        // console.log(cn)
+                        if (cn == countryName){
+                            tableRows[i].style.display = "";
+                        } else {
+                            tableRows[i].style.display = "none";
+                        }
+                    }
+                });        
+            } 
+        }).addTo(map);
+    });
+    
+    const tableRows = document.querySelectorAll('#resTable tbody tr');
+
+    // Add click event listener to each row
+    tableRows.forEach((row) => {
+        row.addEventListener('click', () => {
+            const id = row.getAttribute('data-id');
+            const lat = row.getAttribute('data-lat');
+            const lng = row.getAttribute('data-lng');
+            // map.flyTo([lat, lng], 8)
+            // Adjust the left margin of the map container element
+            const mapContainer = document.getElementById('map');
+            mapContainer.style.marginLeft = '-60%';
+            // mapContainer.style.left = '-60%';
+
+            // document.querySelector("#pills-tabContent").padddingLeft = "-30%";
+            
+            const profileTabLink = document.querySelector('#pills-profile-tab');
+            profileTabLink.classList.remove('disabled');
+            profileTabLink.classList.add('active');
+            profileTabLink.setAttribute('aria-selected', 'true');
+            
+            const homeTabLink = document.querySelector('#pills-home-tab');
+            // homeTabLink.classList.remove('disabled');
+            homeTabLink.classList.remove('active');
+            homeTabLink.setAttribute('aria-selected', 'false');
+
+            const profileContent = document.querySelector('#pills-profile');
+            const homeContent = document.querySelector('#pills-home');
+            homeContent.classList.remove('active', 'show');
+            profileContent.classList.add('active', 'show');
+
+            const params = new URLSearchParams();
+            params.append('r_id', id);
+
+            const url_about = '/get_reservoir_info/?' + params.toString();
+            const url_aec = '/get_aec_chart/?' + params.toString();
+            const url_inflow = '/get_inflow_chart/?' + params.toString();
+            const url_outflow = '/get_outflow_chart/?' + params.toString();
+            const url_sarea = '/get_sarea_chart/?' + params.toString();
+            const url_deltas = '/get_deltas_chart/?' + params.toString();
+            const url_rc = '/get_rc_chart/?' + params.toString();
+            const url_precip = '/get_precip_chart/?' + params.toString();
+
+            // Reservoir Info
+            fetch(url_about)
+            .then(response => response.json())
+            .then(data => {
+                var data = JSON.parse(data);
+                // console.log(data);
+                const resTableBody = document.querySelector('#resInfo tbody');
+                
+                var getInfos = Object.values(data);
+                getInfos.forEach((val) => {
+                    // NAME,COUNTRY,LATITUDE,LONGITITUDE,YEAR,DIS_AVG_LS,AREA_REP,AREA_SKM,CAP_MCM,DEPTH_M,GRAND_ID,CATCH_SKM,ELEV_MASL,CAP_MIN,AREA_POLY,DAM_LEN_M,ID
+                    var name = val["NAME"]
+                    var lat = val["LATITUDE"]
+                    var lng = val["LONGITITUDE"]
+                    var country = val["COUNTRY"]
+                    var year = val["AREA_SKM"]
+                    var area = val["YEAR"]
+                    var cap = val["CAP_MCM"]
+                    var depth = val["DEPTH_M"]
+                    var catchment = val["CATCH_SKM"]
+                    var elv = val["ELEV_MASL"]
+                    var length = val["DAM_LEN_M"]
+
+                    if (country == 'Cambodia'){
+                        var countryCode = "KH"
+                        flag = getFlagEmoji(countryCode);
+                    } else if (country == 'China'){
+                        var countryCode = "CN"
+                        flag = getFlagEmoji(countryCode);
+                    } else if (country == 'Laos'){
+                        var countryCode = "LA"
+                        flag = getFlagEmoji(countryCode);
+                    } else if (country == 'Thailand'){
+                        var countryCode = "TH"
+                        flag = getFlagEmoji(countryCode);
+                    } else if (country == 'Vietnam'){
+                        var countryCode = "VN"
+                        flag = getFlagEmoji(countryCode);
+                    }
+
+                    document.querySelector('#resInfo tbody #resName').innerHTML = name;
+                    document.querySelector('#resInfo tbody #resLocation').innerHTML = flag;
+                    document.querySelector('#resInfo tbody #resLat').innerHTML = lat;
+                    document.querySelector('#resInfo tbody #resLng').innerHTML = lng;
+                    document.querySelector('#resInfo tbody #resYear').innerHTML = year;
+                    document.querySelector('#resInfo tbody #resArea').innerHTML = area;
+                    document.querySelector('#resInfo tbody #resCap').innerHTML = cap;
+                    document.querySelector('#resInfo tbody #resDepth').innerHTML = depth;
+                    document.querySelector('#resInfo tbody #resCatch').innerHTML = catchment;
+                    document.querySelector('#resInfo tbody #resElv').innerHTML = elv;
+                    document.querySelector('#resInfo tbody #resLength').innerHTML = length;
+                });
+            });
+
+            // AEC chart
+            fetch(url_aec)
+            .then(response => response.json())
+            .then(data => {
+                // console.log(data)
+                // Convert dates to JavaScript dates
+                var data = JSON.parse(data);
+                var series = data.map(function(d) {
+                    return [new Date(d.date).getTime(), d.value];
+                });
+                
+                // Create Highcharts chart
+                Highcharts.chart('chartAEC', {
+                    chart: {
+                        // type: "spline",
+                        zoomType: "x",
+                        panning: true,
+                        panKey: "shift",
+                    },
+                    title: false,
+                    xAxis: {
+                        crosshair: true,
+                        type: "category",
+                        title: {
+                            text: "Elevation (m) <br><br><p></p>",
+                        },
+                        labels: {
+                            allowDecimals: false,
+                            format: "{value}",
+                            style: {
+                                // font: "16px Times New Roman, sans-serif",
+                                color: "#000000",
+                            },
+                        },
+                        minTickInterval: 1,
+                        min: 0.0,
+                    },
+                    yAxis: {
+                        title: {
+                            useHTML: true,
+                            enabled: true,
+                            text: "Area (Km<sup>2</sup>)",
+                        },
+                        labels: {
+                            format: "{value:.f}",
+                        },
+                        minTickInterval: 1,
+                        min: 0.0,
+                    },
+                    tooltip: {
+                        valueDecimals: 2,
+                        formatter: function() {
+                            return 'Elevation: <b>' + this.x + ' m</b><br> Area: <b>'+this.y+' Km<sup>2</sup></b>'
+                        }
+                    },
+                    legend: {enabled:false},
+                    plotOptions: {
+                        area: {
+                            fillColor: {
+                                linearGradient: {
+                                    x1: 0,
+                                    y1: 0,
+                                    x2: 0,
+                                    y2: 1
+                                },
+                                stops: [
+                                    [0, Highcharts.getOptions().colors[0]],
+                                    [1, Highcharts.color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                                ]
+                            },
+                            marker: {
+                                radius: 2
+                            },
+                            lineWidth: 1,
+                            states: {
+                                hover: {
+                                    lineWidth: 1
+                                }
+                            },
+                            threshold: null
+                        }
+                    },
+                    series: [{
+                        name: 'Area',
+                        type: 'area',
+                        data: data.map(d => d.area),
+                    }]
+                });
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
+            // Inflow chart
+            fetch(url_inflow)
+            .then(response => response.json())
+            .then(data => {
+                // console.log(data)
+                // Convert dates to JavaScript dates
+                var data = JSON.parse(data);
+                var series = data.map(function(d) {
+                    return [new Date(d.date).getTime(), d.inflow];
+                });
+
+                fetch(url_precip)
+                .then(response => response.json())
+                .then(pdata => {
+                    var pdata = JSON.parse(pdata);
+                    var pseries = pdata.map(function(d) {
+                        return [new Date(d.date).getTime(), d.precip];
+                    });
+                    
+                    // Create Highcharts chart
+                    Highcharts.chart('chartInflow', {
+                        // chart: chart,
+                        chart: {
+                            zoomType: "xy",
+                            panning: true,
+                            panKey: "shift",
+                            style: {
+                              color: "#000000",
+                            },
+                        },
+                        title: false,
+                        xAxis: xAxis,
+                        yAxis: [
+                            {
+                                title: {
+                                    text: "Inflow (m3/s)",
+                                    style: {
+                                        // font: "16px bold Times New Roman, sans-serif",
+                                        color: "#000000",
+                                    },
+                                },
+                                labels: labels,
+                                // tickPositions: [0, 100, 200, 400, 700, 1000],
+                                // minTickInterval: 1,
+                                // tickPositioner: function(min, max) {
+                                //     var mx;
+                                //     if (max < 100){
+                                //         mx = max + 100;
+                                //     } else if (max > 100 && max < 200){
+                                //         mx = max + 200;
+                                //     } else if (max > 200 && max < 350){
+                                //         mx = max + 250;
+                                //     } else if (max > 350 && max < 500){
+                                //         mx = max + 300;
+                                //     } else {
+                                //         mx = max + 500;
+                                //     }
+                                //     var ticks = [], 
+                                //         interval = Math.ceil((mx - min) / 5); // divide the range into 5 intervals
+                                
+                                //     // generate ticks at each interval
+                                //     for (var i = min; i <= mx; i += interval) {
+                                //       ticks.push(i);
+                                //     }
+                                //     return ticks;
+                                // }
+                            },
+                            {
+                                title: {
+                                    text: "Precipitation (mm)",
+                                    style: {
+                                        // font: "16px bold Times New Roman, sans-serif",
+                                        color: "#000000",
+                                    },
+                                },
+                                labels: {
+                                format: "{value:.2f}",
+                                },
+                                // tickPositions: [0, 50, 100, 200, 700, 1000],
+                                minTickInterval: 0.01,
+                                opposite: true,
+                                reversed: true,
+                                tickPositioner: function(min, max) {
+                                    var mx;
+                                    if (max < 100){
+                                        mx = max + 100;
+                                    } else if (max > 100 && max < 200){
+                                        mx = max + 200;
+                                    } else if (max > 200 && max < 350){
+                                        mx = max + 250;
+                                    } else if (max > 350 && max < 500){
+                                        mx = max + 300;
+                                    } else {
+                                        mx = max + 500;
+                                    }
+                                    var ticks = [], 
+                                        interval = Math.ceil((mx - min) / 5); // divide the range into 5 intervals
+                                
+                                    // generate ticks at each interval
+                                    for (var i = min; i <= mx; i += interval) {
+                                      ticks.push(i);
+                                    }
+                                    return ticks;
+                                }
+                            }
+                        ],
+                        tooltip:{
+                            xDateFormat: "%d-%m-%Y",
+                            crosshairs: true,
+                            shared: true,
+                            // valueDecimals: 0,
+                            // valueSuffix: " (m3/s)",
+                        },
+                        legend: {enabled:true},
+                        series: [
+                            {
+                                name: 'Inflow(m3/s)',
+                                type: 'line',
+                                data: series,
+                                color: "darkblue",
+                                states: states
+                            },
+                            {
+                                name: "Precipitation(mm)",
+                                data: pseries,
+                                type: "line",
+                                yAxis: 1,
+                                color: "red",
+                                states: states
+                            }
+                        ]
+                    });
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
+            // Outflow chart
+            fetch(url_outflow)
+            .then(response => response.json())
+            .then(data => {
+                // console.log(data)
+                // Convert dates to JavaScript dates
+                var data = JSON.parse(data);
+                var series = data.map(function(d) {
+                    return [new Date(d.date).getTime(), d.outflow];
+                });
+                
+                // Create Highcharts chart
+                Highcharts.chart('chartOutflow', {
+                    chart: chart,
+                    title: false,
+                    xAxis: xAxis,
+                    yAxis: {
+                        title: {
+                            text: "Outflow (m3/s)",
+                            style: {
+                                // font: "16px bold Times New Roman, sans-serif",
+                                color: "#000000",
+                            },
+                        },
+                        labels: labels,
+                        // minTickInterval: 1,
+                    },
+                    tooltip: tooltip,
+                    legend: {enabled:false},
+                    series: [{
+                        name: 'Outflow',
+                        type: 'line',
+                        data: series,
+                        color: "darkblue",
+                        states: states
+                    }]
+                });
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
+            // Sarea chart
+            fetch(url_sarea)
+            .then(response => response.json())
+            .then(data => {
+                // console.log(data)
+                // Convert dates to JavaScript dates
+                var data = JSON.parse(data);
+                var series = data.map(function(d) {
+                    return [new Date(d.date).getTime(), d.area];
+                });
+                
+                // Create Highcharts chart
+                Highcharts.chart('chartSarea', {
+                    chart: chart,
+                    title: false,
+                    xAxis: xAxis,
+                    yAxis: {
+                        title: {
+                            text: "Area (km2)",
+                            style: {
+                                // font: "16px bold Times New Roman, sans-serif",
+                                color: "#000000",
+                            },
+                        },
+                        labels: labels,
+                        // minTickInterval: 1,
+                    },
+                    tooltip: {
+                        xDateFormat: "%d-%m-%Y",
+                        crosshairs: true,
+                        shared: true,
+                        valueDecimals: 0,
+                        valueSuffix: " Km^2",
+                    },
+                    legend: {enabled:false},
+                    series: [{
+                        name: 'Area',
+                        type: 'line',
+                        data: series,
+                        color: "darkblue",
+                        states: states
+                    }]
+                });
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
+            // Deltas chart
+            fetch(url_deltas)
+            .then(response => response.json())
+            .then(data => {
+                // console.log(data)
+                // Convert dates to JavaScript dates
+                var data = JSON.parse(data);
+                var series = data.map(function(d) {
+                    return [new Date(d.date).getTime(), d.dels];
+                });
+                
+                // Create Highcharts chart
+                Highcharts.chart('chartDeltas', {
+                    chart: chart,
+                    title: false,
+                    xAxis: xAxis,
+                    yAxis: {
+                        title: {
+                            text: "dS (m3)",
+                            style: {
+                                // font: "16px bold Times New Roman, sans-serif",
+                                color: "#000000",
+                            },
+                        },
+                        labels: labels,
+                        // minTickInterval: 1,
+                    },
+                    tooltip: {
+                        xDateFormat: "%d-%m-%Y",
+                        crosshairs: true,
+                        shared: true,
+                        valueDecimals: 2,
+                        valueSuffix: " (m3)",
+                    },
+                    legend: {enabled:false},
+                    series: [{
+                        name: 'dS',
+                        type: 'line',
+                        data: series,
+                        color: "darkblue",
+                        states: states
+                    }]
+                });
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
+            // Rule curve chart
+            fetch(url_rc)
+            .then(response => response.json())
+            .then(data => {
+                // console.log(data)
+                // Convert dates to JavaScript dates
+                var data = JSON.parse(data);
+    
+                // Create Highcharts chart
+                Highcharts.chart('chartRC', {
+                    chart: {
+                        zoomType: 'x',
+                        panning: true,
+                        panKey: 'shift',
+                        style: {
+                            color: "#000000"
+                        }
+                    },
+                    title: false,
+                    xAxis: [{
+                        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                        title: {
+                            text: 'Month',
+                            style: {
+                                color: "#000000"
+                            }
+                        },
+                        labels: {
+                            format: '{value}',
+                            style: {
+                                color: "#000000"
+                            }
+                        },
+                        minTickInterval: 0.01
+                    }],
+                    yAxis: {
+                        title: {
+                            useHTML: true,
+                            enabled: true,
+                            text: 'Specific storage (S/S<sub>max</sub>)',
+                            style: {
+                                color: "#000000"
+                            }
+                        },
+                        labels: {
+                            format: '{value:.2f}',
+                            style: {
+                                color: "#000000"
+                            }	
+                        },
+                        minTickInterval: 0.01,
+                    },
+                    legend: {enabled:false},
+                    series: [{
+                        name: 'Specific Storage (S/Smax)',
+                        data: data.map(d => d.value),
+                        type: 'spline',
+                        // type: 'line',
+                        color: 'darkblue',
+                        marker: {
+                            enabled: true,
+                            radius: 3		
+                        },
+                        states: states
+                    }]
+                })
+            })
+            .catch(error => {
+                console.error(error);
+            });
+        });
+    });
+    
 })
-var china_reservoirs = L.geoJson(reservoirs, {
-    filter: filterChina,
-	onEachFeature: onEachFeature      
-})
-var laos_reservoirs = L.geoJson(reservoirs, {
-    filter: filterLaos,
-	onEachFeature: onEachFeature
-})
-var thailand_reservoirs = L.geoJson(reservoirs, {
-    filter: filterThailand,
-	onEachFeature: onEachFeature
-})
-var vietnam_reservoirs = L.geoJson(reservoirs, {
-    filter: filterVietnam,
-	onEachFeature: onEachFeature
+.catch(error => {
+    console.error(error);
 });
-
-var all_reservoirs = L.geoJson(reservoirs, {
-	onEachFeature: onEachFeature
-}).addTo(map);
-map.fitBounds(all_reservoirs.getBounds());
-
-// var all_reservoirs = L.layerGroup([cambodia_reservoirs, laos_reservoirs, thailand_reservoirs, vietnam_reservoirs]);
-
-document.getElementById("all").checked = true;
-document.getElementById("cambodia").checked = true;
-document.getElementById("china").checked = true;
-document.getElementById("laos").checked = true;
-document.getElementById("thailand").checked = true;
-document.getElementById("vietnam").checked = true;
-
-
-$('input[type=checkbox][name=all]').click(function(){
-    if (this.checked){
-        map.addLayer(all_reservoirs)
-        map.fitBounds(all_reservoirs.getBounds());
-    }else {
-        map.removeLayer(all_reservoirs); 
-    }
-});
-$('input[type=checkbox][name=cambodia]').click(function(){
-    if (this.checked){
-        map.addLayer(cambodia_reservoirs);
-        map.fitBounds(cambodia_reservoirs.getBounds());
-    }else {
-        map.removeLayer(cambodia_reservoirs);
-    }
-});
-$('input[type=checkbox][name=china]').click(function(){
-    if (this.checked){
-        map.addLayer(china_reservoirs);
-        map.fitBounds(china_reservoirs.getBounds());
-    }else {
-        map.removeLayer(china_reservoirs);
-    }
-});
-$('input[type=checkbox][name=laos]').click(function(){
-    if (this.checked){
-        map.addLayer(laos_reservoirs);
-        map.fitBounds(laos_reservoirs.getBounds());
-    }else {
-        map.removeLayer(laos_reservoirs);
-    }
-});
-$('input[type=checkbox][name=thailand]').click(function(){
-    if (this.checked){
-        map.addLayer(thailand_reservoirs);
-        map.fitBounds(thailand_reservoirs.getBounds());
-    }else {
-        map.removeLayer(thailand_reservoirs);
-    }
-});
-$('input[type=checkbox][name=vietnam]').click(function(){
-    if (this.checked){
-        map.addLayer(vietnam_reservoirs);
-        map.fitBounds(vietnam_reservoirs.getBounds());
-    }else {
-        map.removeLayer(vietnam_reservoirs);
-    }
-});
-
-// filter by reservoirs
-function filterByChi(feature) {
-    if(feature.properties.River=="Chi")
-    return true
-}
-function filteryByLamDomNoi(feature) {
-    if(feature.properties.River=="Lam Dom Noi")
-    return true
-}
-function filterByNamGnong(feature) {
-    if(feature.properties.River=="Nam Gnong")
-    return true
-}
-function filterByNamNgum(feature) {
-    if(feature.properties.River=="Nam Ngum")
-    return true
-}
-function filterByNamPong(feature) {
-    if(feature.properties.River=="Nam Pong")
-    return true
-}
-function filterByNamTheun(feature) {
-    if(feature.properties.River=="Nam Theun")
-    return true
-}
-function filterBySesan(feature) {
-    if(feature.properties.River=="Sesan")
-    return true
-}
-function filterBySeSan(feature) {
-    if(feature.properties.River=="Se San")
-    return true
-}
-
-var chiRiverLayer = L.geoJson(reservoirs, {
-    filter: filterByChi,
-	onEachFeature: onEachFeature
-});
-
-var lamDomNoiRiverLayer = L.geoJson(reservoirs, {
-    filter: filteryByLamDomNoi,
-	onEachFeature: onEachFeature
-});
-
-var namGnongRiverLayer = L.geoJson(reservoirs, {
-    filter: filterByNamGnong,
-	onEachFeature: onEachFeature
-});
-var namNgumRiverLayer = L.geoJson(reservoirs, {
-    filter: filterByNamNgum,
-	onEachFeature: onEachFeature
-});
-var namPongRiverLayer = L.geoJson(reservoirs, {
-    filter: filterByNamPong,
-	onEachFeature: onEachFeature
-});
-var namTheunRiverLayer = L.geoJson(reservoirs, {
-    filter: filterByNamTheun,
-	onEachFeature: onEachFeature
-});
-var sesanRiverLayer = L.geoJson(reservoirs, {
-    filter: filterBySesan,
-	onEachFeature: onEachFeature
-});
-var seSanRiverLayer = L.geoJson(reservoirs, {
-    filter: filterBySeSan,
-	onEachFeature: onEachFeature
-});
-
-$('input[type=checkbox][name=allRivers]').click(function(){
-    if (this.checked){
-        map.addLayer(all_reservoirs);
-        map.fitBounds(all_reservoirs.getBounds());
-    }else {
-        map.removeLayer(all_reservoirs);
-    }
-});
-$('input[type=checkbox][name=chi]').click(function(){
-    if (this.checked){
-        map.addLayer(chiRiverLayer);
-        map.fitBounds(chiRiverLayer.getBounds());
-    }else {
-        map.removeLayer(chiRiverLayer);
-        map.removeLayer(all_reservoirs);
-    }
-});
-$('input[type=checkbox][name=lamDomNoi]').click(function(){
-    if (this.checked){
-        map.addLayer(lamDomNoiRiverLayer);
-        map.fitBounds(lamDomNoiRiverLayer.getBounds());
-    }else {
-        map.removeLayer(lamDomNoiRiverLayer);
-        map.removeLayer(all_reservoirs);
-    }
-});
-$('input[type=checkbox][name=namGnong]').click(function(){
-    if (this.checked){
-        map.addLayer(namGnongRiverLayer);
-        map.fitBounds(namGnongRiverLayer.getBounds());
-    }else {
-        map.removeLayer(namGnongRiverLayer);
-        map.removeLayer(all_reservoirs);
-    }
-});
-$('input[type=checkbox][name=namNgum]').click(function(){
-    if (this.checked){
-        map.addLayer(namNgumRiverLayer);
-        map.fitBounds(namNgumRiverLayer.getBounds());
-    }else {
-        map.removeLayer(namNgumRiverLayer);
-        map.removeLayer(all_reservoirs); 
-    }
-});
-$('input[type=checkbox][name=namPong]').click(function(){
-    if (this.checked){
-        map.addLayer(namPongRiverLayer);
-        map.fitBounds(namPongRiverLayer.getBounds());
-    }else {
-        map.removeLayer(namPongRiverLayer);
-        map.removeLayer(all_reservoirs);
-    }
-});
-$('input[type=checkbox][name=namTheun]').click(function(){
-    if (this.checked){
-        map.addLayer(namTheunRiverLayer);
-        map.fitBounds(namTheunRiverLayer.getBounds());
-    }else {
-        map.removeLayer(namTheunRiverLayer);
-        map.removeLayer(all_reservoirs);
-    }
-});
-$('input[type=checkbox][name=sesan]').click(function(){
-    if (this.checked){
-        map.addLayer(sesanRiverLayer);
-        map.fitBounds(sesanRiverLayer.getBounds());
-    }else {
-        map.removeLayer(sesanRiverLayer);
-        map.removeLayer(all_reservoirs);
-    }
-});
-$('input[type=checkbox][name=seSan]').click(function(){
-    if (this.checked){
-        map.addLayer(seSanRiverLayer);
-        map.fitBounds(seSanRiverLayer.getBounds());
-    }else {
-        map.removeLayer(seSanRiverLayer);
-        map.removeLayer(all_reservoirs);
-    }
-});
-
-/** End Filter Panel */
 
 /** 
     Layer Panel
@@ -590,15 +1935,6 @@ var reservoirsBoundaryStyle = {
 var mekongBoundaryStyle = {
     color: "red",
     weight: 1.75,
-    //opacity: 0.6,
-    //fillOpacity: 0.3,
-    fillColor: "none",
-};
-
-//Define country boundary style
-var adm0Style = {
-    color: "#6A5ACD",
-    weight: 1.0,
     //opacity: 0.6,
     //fillOpacity: 0.3,
     fillColor: "none",
@@ -630,20 +1966,20 @@ var highlightStyle = {
 
 var reservoirs_poly_layer = L.geoJson(reservoirs_poly, {
     style: reservoirsBoundaryStyle,
-    onEachFeature: function(feature, reservoirsPolyLayer) {
-        var reservoirs_name = feature.properties.Name;
-        var country = feature.properties.Country;
-        reservoirsPolyLayer.on('mouseover', function (e) {
-            this.setStyle(highlightStyle);
-            this.bindTooltip(reservoirs_name + ", " + country);
-        }); 
-        reservoirsPolyLayer.on('mouseout', function (e) {
-            this.setStyle(reservoirsBoundaryStyle);
-        });                       
-    } 
+    // onEachFeature: function(feature, reservoirsPolyLayer) {
+    //     var reservoirs_name = feature.properties.Name;
+    //     var country = feature.properties.Country;
+    //     reservoirsPolyLayer.on('mouseover', function (e) {
+    //         this.setStyle(highlightStyle);
+    //         this.bindTooltip(reservoirs_name + ", " + country);
+    //     }); 
+    //     reservoirsPolyLayer.on('mouseout', function (e) {
+    //         this.setStyle(reservoirsBoundaryStyle);
+    //     });                       
+    // } 
 }); 
 
-//Create mekong layer
+// Create mekong layer
 var mekong_layer = L.geoJson(lowerMekongBoundary, {
     style: mekongBoundaryStyle,
     onEachFeature: function(feature, mekongLayer) {
@@ -655,188 +1991,59 @@ var mekong_layer = L.geoJson(lowerMekongBoundary, {
             this.setStyle(mekongBoundaryStyle);
         });                       
     } 
-}).addTo(map); 
-
-var adm0_layer = L.geoJson(adm0, {
-    style: adm0Style,
-    onEachFeature: function(feature, admin0Layer) {
-
-        admin0Layer.bindPopup(feature.properties.NAME_0);
-        // admin0Layer.on('mouseover', function (e) {
-        //     this.setStyle(highlightStyle);
-        //     this.bindTooltip(feature.properties.NAME_0);
-        // }); 
-        // admin0Layer.on('mouseout', function (e) {
-        //     this.setStyle(adm0Style);
-        // });                   
-    } 
-});
+}); 
 
 var gms_rivers_layer = L.geoJson(gms_rivers_lm, {
     style: gmsriversStyle
-});
+}).addTo(map);
+
 var main_rivers_layer = L.geoJson(main_rivers_lm, {
     style: mainriversStyle
-}).addTo(map);
+});
+
 var sub_basin_layer = L.geoJson(basinData, {
     style: basinStyle,
 });
 
-$('input[type=checkbox][name=reservoirs_poly_toggle]').click(function(){
+document.querySelector('#reservoirs_poly_toggle').onclick = (function(){
     if(this.checked) {
         map.addLayer(reservoirs_poly_layer);
     } else {
         map.removeLayer(reservoirs_poly_layer);
     }
 });
-$('input[type=checkbox][name=mekong_toggle]').click(function(){
+document.querySelector('#mekong_toggle').onclick = (function(){
     if(this.checked) {
         map.addLayer(mekong_layer);
     } else {
         map.removeLayer(mekong_layer);
     }
 });
-$('input[type=checkbox][name=adm0_toggle]').click(function(){
+document.querySelector('#adm0_toggle').onclick = (function(){
     if(this.checked) {
         map.addLayer(adm0_layer);
     } else {
         map.removeLayer(adm0_layer);
     }
 });
-$('input[type=checkbox][name=gms_rivers_toggle]').click(function(){
+document.querySelector('#gms_rivers_toggle').onclick = (function(){
     if(this.checked) {
         map.addLayer(gms_rivers_layer);
     } else {
         map.removeLayer(gms_rivers_layer);
     }
 });
-$('input[type=checkbox][name=main_rivers_toggle]').click(function(){
+document.querySelector('#main_rivers_toggle').onclick = (function(){
     if(this.checked) {
         map.addLayer(main_rivers_layer);
     } else {
         map.removeLayer(main_rivers_layer);
     }
 });
-$('input[type=checkbox][name=sub_basin_toggle]').click(function(){
+document.querySelector('#sub_basin_toggle').onclick = (function(){
     if(this.checked) {
         map.addLayer(sub_basin_layer);
     } else {
         map.removeLayer(sub_basin_layer);
     }
 });
-$('input[type=checkbox][name=precip_toggle]').click(function(){
-    if(this.checked) {
-        map.addLayer(precip_layer);
-    } else {
-        map.removeLayer(precip_layer);
-    }
-});
-/** End Layer Panel */
-
-/* 
-    Basemap Panel
-*/
-
-//Onclick change basemap active class
-$(document).ready(function() {
-    $(".basemap-card").click(function () {
-        $(".basemap-card").removeClass("active");
-        // $(".tab").addClass("active"); // instead of this do the below 
-        $(this).addClass("active");   
-    });
-});
-
-//Legend
-// var legend = L.control({position: 'bottomright'});
-
-// legend.onAdd = function (map) {
-//     var div = L.DomUtil.create('div', 'legend');
-//     div.innerHTML += '<h5 class="fw-bold pb-1">Storage Level</h5>'
-//     div.innerHTML +=  '<img class="pt-1" src="/static/images/blue.png" width="20px">' + ' 75-100% High ' + '<br>'
-//     div.innerHTML +=  '<img class="pt-1" src="/static/images/green.png" width="20px">'  + ' 50-75% Medium ' + '<br>'
-//     div.innerHTML +=  '<img class="pt-1" src="/static/images/brown.png" width="20px">'  + ' 25-50% Low ' + '<br>'
-//     div.innerHTML +=  '<img class="pt-1" src="/static/images/red.png" width="20px">'   +  ' 0-25% Critical '
-//     div.innerHTML += '<h5 class="fw-bold pt-2 pb-0">Precipitation</h5>'
-//     div.innerHTML += '<img class="pt-0" src="/static/images/precip_colorbar.png" width="160px">'
-//     return div;
-// };
-
-// legend.addTo(map);
-
-//Onclick switch basemap 
-$('#nav-basemap div').on('click', function(e) {
-    var selected_basemap = this.getAttribute('data-layer');
-    //MapBox Basemap
-    // if((selected_basemap === "street")){
-    //     basemap_layer.setUrl('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}');
-    // }else if(selected_basemap === "osm"){
-    //     basemap_layer.setUrl('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
-    // }else if(selected_basemap === "osm"){
-    //     basemap_layer.setUrl('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
-    // }else if(selected_basemap === "osm"){
-    //     basemap_layer.setUrl('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
-    // }else if(selected_basemap === "osm"){
-    //     basemap_layer.setUrl('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
-    // }else 
-    if(selected_basemap === "osm"){
-        basemap_layer.setUrl('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');    
-    }else if((selected_basemap === "street")){
-        basemap_layer.setUrl('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}');
-    }else if(selected_basemap === "satellite"){
-        basemap_layer.setUrl('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
-    }else if(selected_basemap === "terrain"){
-        basemap_layer.setUrl('https://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer/tile/{z}/{y}/{x}');
-    }
-    else if(selected_basemap === "topo"){
-        basemap_layer.setUrl('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png');
-    }
-    else if(selected_basemap === "dark"){
-        basemap_layer.setUrl('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png');
-    }
-    else if(selected_basemap === "gray"){
-        basemap_layer.setUrl('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}');
-    } 
-});
-/** End Basemap Panel */
-
-/** 
-    ** Add GeoJSON Layer Search Bar ** 
-*/
-var searchControl = new L.Control.Search({
-    //container: 'findbox',
-    layer: all_reservoirs,
-    propertyName: 'Name',
-    position: 'topright',
-    zoom: 13,
-    marker: {						//custom L.Marker or false for hide
-        icon: false,				//custom L.Icon for maker location or false for hide
-        animate: true,				//animate a circle over location found
-        circle: {					//draw a circle in location found
-            radius: 0,
-            weight: 0,
-            color: 'blue',
-            stroke: true,
-            fill: true
-        }
-    }
-});
-
-var resetStyle = {
-    color: 'none', 
-    radius: 0,
-    weight: 0,
-    opacity: 0,
-    stroke: false,
-    fill: false
-}
-searchControl.on('search:locationfound', function(e) {
-    if(e.layer._popup)
-        e.layer.openPopup();
-}).on('search:collapsed', function(e) {
-    all_reservoirs.eachLayer(function(layer) {	//restore feature color
-        layer.setStyle(resetStyle);
-    });	
-});
-
-map.addControl( searchControl );  //inizialize search control
-/** End Search Panel */

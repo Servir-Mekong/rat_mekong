@@ -42,6 +42,48 @@
     <li class="pb-1"><span class="fa-li"><i class="fas fa-check-circle"></i></span> This tool can be used to minimize the conflict between riparian countries, including China, as it can be considered an unbiased tool for all the parties and provide data needed to drive a fair and transparent water-sharing agreement.</li>
     <li class="pb-1"><span class="fa-li"><i class="fas fa-check-circle"></i></span> The information obtained from the RAT could also support the implementation of MRC's Procedures (PDIES, PMFM, PWUM, PNPCA) and monitoring/forecasting activities of the MRC's Regional Flood and Drought Management Centre (RFDMC).</li>
   </ul>
+  <h3 class="h-5 fw-bold mt-5">Summary of improvements introduced in RAT 2.0 as compared to RAT 1.0</h3>
+  <table class="table table-hover table-responsive align-middle fs-6">
+    <thead>
+        <tr class="bg-light">
+            <th scope="col fw-bold"></th>
+            <th scope="col fw-bold">RAT 1.0</th>
+            <th scope="col fw-bold">RAT 2.0</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Hydrological model</td>
+        <td>VIC 4.2. d (sequential computing)</td>
+        <td>MetSim + VIC 5 (parallel computing)</td>
+      </tr>
+      <tr>
+        <td>Evaporation</td>
+        <td>Obtained from VIC 4.2.d</td>
+        <td>Explicitly modeled using Penman Combination method</td>
+      </tr>
+      <tr>
+        <td>Satellite Sensors used to estimate Surface Area</td>
+        <td>Landsat 7, Landsat 8</td>
+        <td>Sentinel 1, Sentinel 2, Landsat 8 (TMS-OS algorithm), Jason-3 (Altimeter)</td>
+      </tr>
+      <tr>
+        <td>Surface Area, ΔS and Outflow temporal frequency</td>
+        <td>30 days</td>
+        <td>1–5 days</td>
+      </tr>
+      <tr>
+        <td>Area-Elevation Curve</td>
+        <td>SRTM derived</td>
+        <td>In-situ if available, otherwise SRTM derived</td>
+      </tr>
+      <tr>
+        <td>Outflow Forecasting</td>
+        <td>Not performed</td>
+        <td>Performed using GFS and historical/expected ΔS</td>
+      </tr>
+    </tbody>
+</table>
   <h3 class="h-5 fw-bold mt-5">About Mekong River Commission (MRC)</h3>
   <p class="fs-5">The MRC is an intergovernmental organization for regional dialogue and cooperation in the Lower Mekong River Basin, established in 1995 based on the Mekong Agreement between Cambodia, Lao PDR, Thailand, and Viet Nam. The organization serves as a regional platform for water diplomacy and a knowledge hub of water resources management for the region's sustainable development. The MRC is the primary user of RAT-Mekong and has been supporting and taking part in the development of RAT-Mekong from the beginning.</p>
 </div>

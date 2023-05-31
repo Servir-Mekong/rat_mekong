@@ -13,354 +13,190 @@
 
 {% include 'navigation.html' %}
 
-<div class="topbar" id="topbar">
-    <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
-        <li class="nav-item" role="presentation">
-            <a class="nav-link active" href="/map" role="button"><i class="fas fa-map"></i> Map</a>
-        </li>
-        <li class="nav-item" role="presentation">
-            <a class="nav-link" href="/table" role="button"><i class="fas fa-table"></i> Table</a>
-        </li>
-    </ul>
-</div>
-
-<!-- Sidebar -->
-<div class="sidebar" id="sidebar">
-    <nav>
-        <div class="nav nav-tabs flex-column" id="nav-tab" role="tablist">
-            <!-- <button class="nav-link active pt-3 pb-3" id="home" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="false" data-bs-toggle="tooltip" data-bs-placement="right" title="Menu"><i class="fas fa-bars fa-lg"></i></button> -->
-            <button class="nav-link pt-3 pb-3" id="filter" data-bs-toggle="tab"
-                data-bs-target="#nav-filter" type="button" role="tab" aria-controls="nav-filter"
-                aria-selected="false" data-bs-toggle="tooltip" data-bs-placement="right" title="Filter Panel"><i
-                    class="fas fa-filter fa-lg"></i></button>
-            <button class="nav-link pt-3 pb-3" id="layer" data-bs-toggle="tab" data-bs-target="#nav-layer"
-                type="button" role="tab" aria-controls="nav-layer" aria-selected="false"
-                data-bs-toggle="tooltip" data-bs-placement="right" title="Layer Panel"><i
-                    class="fas fa-layer-group fa-lg"></i></button>
-            <button class="nav-link pt-3 pb-3" id="basemap" data-bs-toggle="tab" data-bs-target="#nav-basemap"
-                type="button" role="tab" aria-controls="nav-basemap" aria-selected="false"
-                data-bs-toggle="tooltip" data-bs-placement="right" title="Basemap Style"><i
-                    class="fa fa-globe fa-lg"></i></button>
-        </div>
-    </nav>
-</div>
-
-<!-- Sidebar Content -->
-<div class="sidebar-content" id="sidebar-content">
-    <div class="tab-content mt-0 pt-0" id="nav-tabContent">
-        <!-- Default tab content area -->
-        <!-- <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="home">  
-            <button type="button" class="btn btn-home-close shadow-none" id="close-home-content" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="right" title="Close Menu"><i class="fas fa-arrow-left fa-lg"></i></button>        
-        </div> -->
-        <!-- Filter tab content area -->
-        <div class="tab-pane fade show active" id="nav-filter" role="tabpanel" aria-labelledby="nav-filter-tab">
-            <div class="filter-header"><button type="button" class="btn btn-filter-close shadow-none"
-                    id="close-filter-content" aria-label="Close" data-bs-toggle="tooltip"
-                    data-bs-placement="right" title="Close Filter Menu"><i
-                        class="fas fa-arrow-left fa-lg"></i></button><span class="fw-bold fs-5">Filter
-                    Panel</span></div>
-            <div class="card filter-card m-2 border-0">
-                <div class="card-body border-0">
-                    <h6 class="fw-bold">Filter by Country <span class="ps-2"><button type="button"
-                                class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
-                                data-bs-placement="right" title="Filter reservoir by countries"><i
-                                    class="fas fa-question-circle" aria-hidden="true"></i></button></span></h6>
-                    <form>
-                        <div class="multiselect">
-                            <div class="selectBox" id="filter-country">
-                                <select>
-                                    <option>-- Show All --</option>
-                                </select>
-                                <div class="overSelect"></div>
-                            </div>
-                            <div class="checkboxes" id="countryCheckboxes">
-                                <label for="all">
-                                    <input type="checkbox" class="country" id="all" name="all"
-                                        onclick="toggle(this);" checked /> Select All</label>
-                                <label for="cambodia">
-                                    <input type="checkbox" class="country" id="cambodia" name="cambodia"
-                                        checked /> Cambodia</label>
-                                <label for="cambodia">
-                                    <input type="checkbox" class="country" id="china" name="china"
-                                        checked /> china</label>
-                                <label for="laos">
-                                    <input type="checkbox" class="country" id="laos" name="laos" checked /> Lao
-                                    PDR</label>
-                                <label for="thailand">
-                                    <input type="checkbox" class="country" id="thailand" name="thailand"
-                                        checked /> Thailand</label>
-                                <label for="vietnam">
-                                    <input type="checkbox" class="country" id="vietnam" name="vietnam"
-                                        checked /> Vietnam</label>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <!-- Filter by River Basin -->
-            <div class="card filter-card m-2 border-0">
-                <div class="card-body border-0">
-                    <h6 class="fw-bold">Filter by River Basin<span class="ps-2"><button type="button"
-                                class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
-                                data-bs-placement="right" title="Filter reservoir by river basin"><i
-                                    class="fas fa-question-circle" aria-hidden="true"></i></button></span></h6>
-                    <!-- <form>
-                        <div class="multiselect">
-                            <div class="selectBox" id="filter-river-basin">
-                                <select>
-                                    <option>-- Show All --</option>
-                                </select>
-                                <div class="overSelect"></div>
-                            </div>
-                            <div class="checkboxes" id="riverBasinCheckboxes">
-                                <label for="allRivers">
-                                    <input type="checkbox" id="allRivers" name="allRivers"
-                                        onclick="toggle(this);" /> Select All</label>
-                                <label for="chi">
-                                    <input type="checkbox" id="chi" name="chi" /> Chi</label>
-                                <label for="lamDomNoi">
-                                    <input type="checkbox" id="lamDomNoi" name="lamDomNoi" /> Lam Dom
-                                    Noi</label>
-                                <label for="namGnong">
-                                    <input type="checkbox" id="namGnong" name="namGnong" /> Nam Gnong</label>
-                                <label for="namNgum">
-                                    <input type="checkbox" id="namNgum" name="namNgum" /> Nam Ngum</label>
-                                <label for="namPong">
-                                    <input type="checkbox" id="namPong" name="namPong" /> Nam Pong</label>
-                                <label for="namTheun">
-                                    <input type="checkbox" id="namTheun" name="namTheun" /> Nam Theun</label>
-                                <label for="sesan">
-                                    <input type="checkbox" id="sesan" name="sesan" /> Sesan</label>
-                                <label for="seSan">
-                                    <input type="checkbox" id="seSan" name="seSan" /> Se San</label>
-                            </div>
-                        </div>
-                    </form> -->
-                    <form>             
-                        <div class="selectBox">
-                            <select id="river_basin">
-                                
-                            </select>
-                        </div> 
-                    </form>
-                </div>
-            </div>
-            <!-- Filter by Reservoir Name -->
-            <div class="card filter-card m-2 border-0">
-                <div class="card-body border-0">
-                    <h6 class="fw-bold">Filter by Reservoir/Dam Name<span class="ps-2"><button type="button"
-                                class="btn btn-secondary btn-sm" data-bs-toggle="tooltip"
-                                data-bs-placement="right" title="Filter reservoir by reservoir name"><i
-                                    class="fas fa-question-circle" aria-hidden="true"></i></button></span></h6>
-
-                    <form>             
-                        <div class="selectBox">
-                            <select id="reservoir_name">
-                                <!-- <option value="All">-- Show All --</option>
-                                <option value="Battambang 1">Battambang 1</option>
-                                <option value="Lam Pao">Lam Pao</option>
-                                <option value="Lower Sesan 2">Lower Sesan 2</option>
-                                <option value="Nam Mang 3">Nam Mang 3</option>
-                                <option value="Nam Ngum 1">Nam Ngum 1</option>
-                                <option value="Nam Theun 2">Nam Theun 2</option>
-                                <option value="Nam Ton">Nam Ton</option>
-                                <option value="Phumi Svay Chrum">Phumi Svay Chrum</option>
-                                <option value="Sesan 4">Se San 4</option>
-                                <option value="Sirindhorn">Sirindhorn</option>
-                                <option value="Sre Pok 4">Sre Pok 4</option>
-                                <option value="Ubol Ratana">Ubol Ratana</option>
-                                <option value="Yali">Yali</option>                    -->
-                            </select>
-                        </div> 
-                    </form>
-                </div>
-            </div>
-            <!-- Precipitation Map -->
-            <!-- <div class="card filter-card m-2 border-0">
-                <div class="card-body border-0">
-                    <h6 class="fw-bold">Precipitation Map</h6>
-                    <div class="form-check form-switch pt-2 pb-3">
-                        <input class="form-check-input" type="checkbox" name="precip_toggle"
-                            id="precip_toggle" checked>
-                        <label class="form-check-label" for="precip_toggle">Precipitation (GPM - IMERG)</label>
-                    </div>
-                    <div class="pb-3">
-                        <label for="opacity">Opacity:</label><br>
-                        <input type="range" id="precipOpacity" min="0" max="1" value="1" step="0.1">
-                    </div>
-                    <input style="width: 100%; padding: 2px;" type="date" id="precip_date_selection" name="precip_date_selection" value="2023-01-01">
-                    <div class="d-grid gap-2 mt-4">
-                        <button class="btn btn-primary" type="button" id="updatePrecipMap">Update Precipitation Map</button>
-                    </div>
-                </div>
-            </div> -->
-        </div>
-
-        <!--Layer tab content area -->
-        <div class="tab-pane fade" id="nav-layer" role="tabpanel" aria-labelledby="nav-layer-tab">
-            <div class="layer-header"><button type="button" class="btn btn-layer-close shadow-none"
-                    id="close-layer-content" aria-label="Close" data-bs-toggle="tooltip"
-                    data-bs-placement="right" title="Close Layer Panel"><i
-                        class="fas fa-arrow-left fa-lg"></i></button><span class="fw-bold fs-5">Layer
-                    Panel</span></div>
-            <div class="card card-body layer-card m-2 border-0">
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" name="reservoirs_poly_toggle" id="reservoirs_poly_toggle">
-                    <label class="form-check-label" for="reservoirs_poly_toggle">Reservoirs Boundary</label>
-                </div>
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" name="mekong_toggle" id="mekong_toggle" checked>
-                    <label class="form-check-label" for="mekong_toggle">Mekong Region</label>
-                </div>
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" name="adm0_toggle" id="adm0_toggle">
-                    <label class="form-check-label" for="adm0_toggle">Country Boundary</label>
-                </div>
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" name="gms_rivers_toggle"
-                        id="gms_rivers_toggle">
-                    <label class="form-check-label" for="gms_rivers_toggle">GMS Rivers</label>
-                </div>
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" name="main_rivers_toggle"
-                        id="main_rivers_toggle" checked>
-                    <label class="form-check-label" for="main_rivers_toggle">Main Rivers</label>
-                </div>
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" name="sub_basin_toggle"
-                        id="sub_basin_toggle">
-                    <label class="form-check-label" for="sub_basin_toggle">River Sub-basin</label>
-                </div>
-            </div>
-        </div>
-
-        <!-- Basemap tab content area -->
-        <div class="tab-pane fade nav-basemap" id="nav-basemap" role="tabpanel"
-            aria-labelledby="nav-basemap-tab">
-            <div class="layer-header"><button type="button" class="btn btn-layer-close shadow-none"
-                    id="close-basemap-content" aria-label="Close" data-bs-toggle="tooltip"
-                    data-bs-placement="right" title="Close Basemap"><i
-                        class="fas fa-arrow-left fa-lg"></i></button><span class="fw-bold fs-5">Basemap
-                    Style</span></div>
-            <!-- Basemap from MapBox -->
-            <!-- <div class="card basemap-card active m-4" data-layer="streets-v11">
-                <div class="d-flex flex-row bd-highlight">
-                    <div class="bd-highlight"><img src="{% static 'images/mapbox-streets.png' %}" class="basemap-img" height="60px" width="60px" alt="MapBox World Streets Map"></div>
-                    <div class="bd-highlight pt-3 ps-4">
-                        <h6>Streets Map<br><small>MapBox World Streets Map</small></h6>    
-                    </div>
-                </div>
-            </div>
-            <div class="card basemap-card m-4" data-layer="satellite-v9">
-                <div class="d-flex flex-row bd-highlight">
-                    <div class="bd-highlight"><img src="{% static 'images/mapbox-satellite.png' %}" class="basemap-img" height="60px" width="60px" alt="MapBox World Satellite Map"></div>
-                    <div class="bd-highlight pt-3 ps-4">
-                        <h6>Satellite Map<br><small>MapBox World Satellite Map</small></h6>    
-                    </div>
-                </div>
-            </div>
-            <div class="card basemap-card m-4" data-layer="light-v10">
-                <div class="d-flex flex-row bd-highlight">
-                    <div class="bd-highlight"><img src="{% static 'images/mapbox-light.png' %}" class="basemap-img" height="60px" width="60px" alt="MapBox World Light Map"></div>
-                    <div class="bd-highlight pt-3 ps-4">
-                        <h6>Light Map<br><small>MapBox World Light Map</small></h6>    
-                    </div>
-                </div>
-            </div>
-            <div class="card basemap-card m-4" data-layer="dark-v10">
-                <div class="d-flex flex-row bd-highlight">
-                    <div class="bd-highlight"><img src="{% static 'images/mapbox-dark.png' %}" class="basemap-img" height="60px" width="60px" alt="MapBox World Dark Streets Map"></div>
-                    <div class="bd-highlight pt-3 ps-4">
-                        <h6>MapBox Dark Map<br><small>MapBox World Dark Streets Map</small></h6>    
-                    </div>
-                </div>
-            </div>
-            <div class="card basemap-card m-4" data-layer="outdoors-v11">
-                <div class="d-flex flex-row bd-highlight">
-                    <div class="bd-highlight"><img src="{% static 'images/mapbox-outdoor.png' %}" class="basemap-img" height="60px" width="60px" alt="MapBox World Outdoors Map"></div>
-                    <div class="bd-highlight pt-3 ps-4">
-                        <h6>Outdoors Map<br><small>MapBox World Outdoors Map</small></h6>    
-                    </div>
-                </div>
-            </div>  -->
-
-            <!-- Basemap from Esri -->
-            <div class="card basemap-card active m-4" data-layer="street">
-                <div class="d-flex flex-row bd-highlight">
-                    <div class="bd-highlight"><img src="{% static 'images/esri-street.png' %}"
-                            class="basemap-img" height="60px" width="60px" alt="Esri World Streets Basemap">
-                    </div>
-                    <div class="bd-highlight pt-3 ps-4">
-                        <h6>Esri Streets<br><small>Esri World Streets Basemap</small></h6>
-                    </div>
-                </div>
-            </div>
-            <!-- OSM Basemap -->
-            <div class="card basemap-card m-4" data-layer="osm">
-                <div class="d-flex flex-row bd-highlight">
-                    <div class="bd-highlight"><img src="{% static 'images/osm.png' %}" class="basemap-img"
-                            height="60px" width="60px" alt="OSM World Streets Map"></div>
-                    <div class="bd-highlight pt-3 ps-4">
-                        <h6>OpenStreetMap<br><small>OSM World Streets Map</small></h6>
-                    </div>
-                </div>
-            </div>
-            <div class="card basemap-card m-4" data-layer="satellite">
-                <div class="d-flex flex-row bd-highlight">
-                    <div class="bd-highlight"><img src="{% static 'images/esri-satellite.png' %}"
-                            class="basemap-img" height="60px" width="60px" alt="Esri World Satellite Imagery">
-                    </div>
-                    <div class="bd-highlight pt-3 ps-4">
-                        <h6>Satellite Map<br><small>Esri World Satellite Imagery</small></h6>
-                    </div>
-                </div>
-            </div>
-            <div class="card basemap-card m-4" data-layer="topo">
-                <div class="d-flex flex-row bd-highlight">
-                    <div class="bd-highlight"><img src="{% static 'images/esri-topo.png' %}" class="basemap-img"
-                            height="60px" width="60px" alt="Esri World Topographic Map"></div>
-                    <div class="bd-highlight pt-3 ps-4">
-                        <h6>Topographic Map<br><small>Esri World Topographic Map</small></h6>
-                    </div>
-                </div>
-            </div>
-            <div class="card basemap-card m-4" data-layer="terrain">
-                <div class="d-flex flex-row bd-highlight">
-                    <div class="bd-highlight"><img src="{% static 'images/esri-terrain.png' %}"
-                            class="basemap-img" height="60px" width="60px" alt="Esri World Terrain Basemap">
-                    </div>
-                    <div class="bd-highlight pt-3 ps-4">
-                        <h6>Terrain Map<br><small>Esri World Terrain Basemap</small></h6>
-                    </div>
-                </div>
-            </div>
-            <div class="card basemap-card m-4" data-layer="gray">
-                <div class="d-flex flex-row bd-highlight">
-                    <div class="bd-highlight"><img src="{% static 'images/esri-gray.png' %}" class="basemap-img"
-                            height="60px" width="60px" alt="Esri World Gray Map"></div>
-                    <div class="bd-highlight pt-3 ps-4">
-                        <h6>Gray Map<br><small>Esri World Gray Map</small></h6>
-                    </div>
-                </div>
-            </div>
-            <!-- Basemap from Carto Map -->
-            <div class="card basemap-card m-4" data-layer="dark">
-                <div class="d-flex flex-row bd-highlight">
-                    <div class="bd-highlight"><img src="{% static 'images/carto-dark.png' %}"
-                            class="basemap-img" height="60px" width="60px" alt="Carto World Dark Map"></div>
-                    <div class="bd-highlight pt-3 ps-4">
-                        <h6>Dark Map<br><small>Carto World Dark Map</small></h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <div id="map">
     <div class="d-flex justify-content-center spinner">
         <div id="loader" class="spinner-grow text-primary" role="status">
             <span class="visually-hidden">Loading...</span>
         </div>
+    </div>
+</div>
+<button class="btn btn-light pt-5 pb-5" id="leftBtn"><i class="fas fa-arrow-right fa-lg"></i></button>
+<button class="btn btn-light pt-5 pb-5" id="rightBtn"><i class="fas fa-arrow-left fa-lg"></i></button>
+<div class="sidebar" id="sidebar">
+    <div class="card card-body border-0 ps-5 pt-3 pe-5">
+        <ul class="nav nav-pills" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link ps-5 pe-5 fs-5 active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Menu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ps-5 pe-5 fs-5 disabled" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ps-5 pe-5 fs-5" id="pills-layer-tab" data-bs-toggle="pill" data-bs-target="#pills-layer" type="button" role="tab" aria-controls="pills-layer" aria-selected="false">Layer</a>
+            </li>
+        </ul>
+        <div class="tab-content mt-4" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                <div class="card card-body border-0 table-card">
+                    <table class="table table-hover table-responsive align-middle fs-6" id="resTable">
+                        <thead>
+                            <tr class="bg-light">
+                                <th scope="col">Dams & Reservoirs</th>
+                                <th scope="col">Location</th>
+                                <th scope="col">Increase/Decrease</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                <div class="card card-body border-0">
+                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="pills-about-tab" data-bs-toggle="pill" data-bs-target="#pills-about" type="button" role="tab" aria-controls="pills-about" aria-selected="true">About Dam/Reservoir</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="pills-aec-tab" data-bs-toggle="pill" data-bs-target="#pills-aec" type="button" role="tab" aria-controls="pills-aec" aria-selected="true">AEC</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-inflow-tab" data-bs-toggle="pill" data-bs-target="#pills-inflow" type="button" role="tab" aria-controls="pills-inflow" aria-selected="false">Inflow</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-outflow-tab" data-bs-toggle="pill" data-bs-target="#pills-outflow" type="button" role="tab" aria-controls="pills-outflow" aria-selected="false">Outflow</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-sarea-tab" data-bs-toggle="pill" data-bs-target="#pills-sarea" type="button" role="tab" aria-controls="pills-sarea" aria-selected="false">Surface Area</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-deltas-tab" data-bs-toggle="pill" data-bs-target="#pills-deltas" type="button" role="tab" aria-controls="pills-deltas" aria-selected="false">Storage Change</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-rc-tab" data-bs-toggle="pill" data-bs-target="#pills-rc" type="button" role="tab" aria-controls="pills-rc" aria-selected="false">Rule Curve</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content mt-5" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-about" role="tabpanel" aria-labelledby="pills-about-tab" tabindex="0">
+                            <div class="card card-bo0dy border-0">
+                                <div class="rwo">
+                                    <div class="col-sm-12 col-md-6">
+                                        <table class="table table-hover table-responsive align-middle fs-6" id="resInfo">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>:</td>
+                                                    <td id="resName"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Location</td>
+                                                    <td>:</td>
+                                                    <td class="fs-3" id="resLocation"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Latitude</td>
+                                                    <td>:</td>
+                                                    <td id="resLat"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Longitude</td>
+                                                    <td>:</td>
+                                                    <td id="resLng"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Year</td>
+                                                    <td>:</td>
+                                                    <td id="resYear"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Area (Km<sup>2</sup>)</td>
+                                                    <td>:</td>
+                                                    <td id="resArea"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Capacity (MCM)</td>
+                                                    <td>:</td>
+                                                    <td id="resCap"></td>
+                                                </tr><tr>
+                                                    <td>Depth (m)</td>
+                                                    <td>:</td>
+                                                    <td id="resDepth"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Catchment (Km<sup>2</sup>)</td>
+                                                    <td>:</td>
+                                                    <td id="resCatch"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Elevation (MASL)</td>
+                                                    <td>:</td>
+                                                    <td id="resElv"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Length (m)</td>
+                                                    <td>:</td>
+                                                    <td id="resLength"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <small class="fst-italic text-muted">Data source: Global Reservoir and Dam (GRanD)</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-aec" role="tabpanel" aria-labelledby="pills-aec-tab" tabindex="1">
+                            <div class="chartAEC" id="chartAEC"></div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-inflow" role="tabpanel" aria-labelledby="pills-inflow-tab" tabindex="2">
+                            <div class="chartInflow" id="chartInflow"></div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-outflow" role="tabpanel" aria-labelledby="pills-outflow-tab" tabindex="3">
+                            <div class="chartOutflow" id="chartOutflow"></div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-sarea" role="tabpanel" aria-labelledby="pills-sarea-tab" tabindex="4">
+                            <div class="chartSarea" id="chartSarea"></div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-deltas" role="tabpanel" aria-labelledby="pills-deltas-tab" tabindex="5">
+                            <div class="chartDeltas" id="chartDeltas"></div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-rc" role="tabpanel" aria-labelledby="pills-rc-tab" tabindex="6">
+                            <div class="chartRC" id="chartRC"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-layer" role="tabpanel" aria-labelledby="pills-layer-tab" tabindex="0">
+                <div class="card card-body border-0 table-card">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" name="reservoirs_poly_toggle" id="reservoirs_poly_toggle">
+                        <label class="form-check-label" for="reservoirs_poly_toggle">Reservoirs Boundary</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" name="mekong_toggle" id="mekong_toggle">
+                        <label class="form-check-label" for="mekong_toggle">Mekong Region</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" name="adm0_toggle" id="adm0_toggle" checked>
+                        <label class="form-check-label" for="adm0_toggle">Country Boundary</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" name="gms_rivers_toggle"
+                            id="gms_rivers_toggle" checked>
+                        <label class="form-check-label" for="gms_rivers_toggle">GMS Rivers</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" name="main_rivers_toggle"
+                            id="main_rivers_toggle">
+                        <label class="form-check-label" for="main_rivers_toggle">Main Rivers</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" name="sub_basin_toggle"
+                            id="sub_basin_toggle">
+                        <label class="form-check-label" for="sub_basin_toggle">River Sub-basin</label>
+                    </div>
+                </div>
+            </div>
+        </div>    
+
     </div>
 </div>
 
@@ -372,6 +208,7 @@
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 <script src="{% static 'vendor/leaflet-search/leaflet-search.min.js' %}"></script>
+<!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
 <!-- Custom JS -->
 <script src="{% static 'js/map.js' %}"></script>
 <!-- {% compress js %}
