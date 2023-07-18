@@ -11,9 +11,13 @@ class Team(models.Model):
     img = models.ImageField(upload_to='teams/')
     website = models.URLField(blank=True)
     linkedin = models.URLField(blank=True)
+    updated_on = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        ordering = ['-updated_on']
 
     def _get_unique_slug(self):
         slug = slugify(self.name)

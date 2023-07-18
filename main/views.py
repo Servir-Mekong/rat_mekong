@@ -24,7 +24,7 @@ class TeamDetailView(DetailView):
 
 class TeamList(ListView):
     context_object_name = 'team_list'
-    queryset = Team.objects.all()
+    queryset = Team.objects.all().order_by('-updated_on')
     template_name = 'home.html'
 
 class TechNotePage(TemplateView):
