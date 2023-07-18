@@ -952,6 +952,7 @@ fetch(resData)
                     document.querySelector('#resInfo tbody #resLocation').innerHTML = flag;
                     document.querySelector('#resInfo tbody #resLat').innerHTML = lat;
                     document.querySelector('#resInfo tbody #resLng').innerHTML = lng;
+                    document.querySelector('#resInfo tbody #resStatus').innerHTML = status;
                     document.querySelector('#resInfo tbody #resYear').innerHTML = year;
                     document.querySelector('#resInfo tbody #resArea').innerHTML = area;
                     document.querySelector('#resInfo tbody #resCap').innerHTML = cap;
