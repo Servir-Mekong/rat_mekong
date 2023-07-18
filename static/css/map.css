@@ -1,6 +1,25 @@
-#map {
+#map{
     position: fixed;
-    /* position: relative; */
+    height: calc(100% - 110px); 
+    width: 50%;
+}
+#leftBtn{
+    display: block;
+    position: fixed;
+    top: 50%;
+    margin-left: 47.5%;
+    z-index: 1;
+}
+#rightBtn{
+    display: none;
+    position: fixed;
+    top: 50%;
+    margin-left: 97.5%;
+    z-index: 1;
+}
+
+/* #map {
+    position: fixed;
     height: calc(100% - 110px); 
     width: 100%;
     margin-left: -60%;
@@ -18,14 +37,14 @@
     top: 50%;
     margin-left: 97.5%;
     z-index: 1;
-}
-.sidebar {
+} */
+/* .sidebar { */
     /* position: fixed; */
-    margin-left: 40%;
-    transition: opacity 0.5s;
-    z-index: 1000;
+    /* margin-left: 40%; */
+    /* transition: opacity 0.5s;
+    z-index: 1000; */
     /* height: 100%; */
-}
+/* } */
 .sidebar .nav-pills {
     border-bottom: 1px solid #c5c0c0;
 }
@@ -38,16 +57,16 @@
     color: blue;
     border-bottom: 3px solid blue;
 }
-.leaflet-control-container { 
+/* .leaflet-control-container { 
     position: absolute; 
     right: 40% 
-} 
+}  */
 #pills-tabContent {
-    max-height: 550px;
+    max-height: 500px;
     overflow-y: scroll;
 }
 #pills-profile {
-    max-height: 550px;
+    max-height: 500px;
     overflow-y: scroll; 
 }
 #resTable{

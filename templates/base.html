@@ -1,5 +1,5 @@
 {% load static %}
-{% load compress %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="{% static 'vendor/components-font-awesome/css/all.min.css' %}">
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="{% static 'vendor/bootstrap/dist/css/bootstrap.min.css' %}">  
-    {% compress css %}
+   
     <!-- Custom CSS files -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/navigation.css' %}">
@@ -24,19 +24,17 @@
     <link rel="stylesheet" href="{% static 'css/about.css' %}">
     <link rel="stylesheet" href="{% static 'css/partners.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
-    {% endcompress %}
+
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/jszip-2.5.0/dt-1.11.3/b-2.0.1/b-html5-2.0.1/b-print-2.0.1/kt-2.6.4/r-2.2.9/rg-1.1.3/rr-1.2.8/sc-2.0.5/sb-1.2.2/sp-1.4.0/sl-1.3.3/datatables.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/datetime/1.1.1/css/dataTables.dateTime.min.css">
     <!-- Extra CSS files -->
     {% block extra_css %}{% endblock %}
 </head>
-<body onload="loadfun()">
-
+<!-- <body onload="loadfun()"> -->
+<body>
     {% block container %} {% endblock container%}
 
     <!-- loads data -->
-    <!-- <script src="{% static 'data/geojson/reservoirs_v2.geojson' %}"></script> -->
-    <!-- <script src="{% static 'data/geojson/reservoirs.geojson' %}"></script> -->
     <script src="{% static 'data/geojson/reservoirs_poly.geojson' %}"></script>
     <script src="{% static 'data/geojson/adm0.geojson' %}"></script>
     <script src="{% static 'data/geojson/lower_mekong_boundary.geojson' %}"></script>
@@ -46,21 +44,15 @@
     <!-- JS Files -->
     <!-- jQuery -->
 	<script src="{% static 'vendor/jquery/dist/jquery.min.js' %}"></script>
-    <!-- Popper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>   
+   
 	<!-- Bootstrap JS -->
 	<script src="{% static 'vendor/bootstrap/dist/js/bootstrap.bundle.min.js'  %}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
+     <!-- Popper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>   
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-
-    <!-- Bootstrap5 Datatables -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jszip-2.5.0/dt-1.11.3/b-2.0.1/b-html5-2.0.1/b-print-2.0.1/kt-2.6.4/r-2.2.9/rg-1.1.3/rr-1.2.8/sc-2.0.5/sb-1.2.2/sp-1.4.0/sl-1.3.3/datatables.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/datetime/1.1.1/js/dataTables.dateTime.min.js"></script>
     {% block extra_script %}{% endblock %}
 </body>
 </html>

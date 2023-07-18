@@ -122,6 +122,7 @@ def getValue(rid):
     data_url = 'static/data/sarea_tmsos/'+reservoir+'.csv'
     df = pd.read_csv(data_url)
     df = df.rename(columns={"date": "date", "area (km2)": "area"}) 
+    df['area'] = df['area'].fillna(0)
     sdf = df.tail(2)
     d1 = sdf.head(1)
     d2 = sdf.tail(1)
@@ -153,9 +154,17 @@ def get_increase_decrease(request):
 def get_reservoir(request):
     data = 'static/data/geojson/reservoirs_38.geojson'
     gdf = gpd.read_file(data)
-    gdf = gdf.sort_values('COUNTRY')
-    # print(gdf)
-    data = gdf.to_json()
+    # Define the user-defined order
+    user_defined_order = ['China', 'Laos', 'Thailand', 'Cambodia', 'Vietnam']
+
+    # Convert the attribute column to a Categorical data type with the specified order
+    gdf['COUNTRY'] = pd.Categorical(gdf['COUNTRY'], categories=user_defined_order, ordered=True)
+
+    # Sort the GeoDataFrame based on the attribute column
+    sorted_gdf = gdf.sort_values(by='COUNTRY')
+    # gdf = gdf.sort_values('COUNTRY')
+    # print(sorted_gdf)
+    data = sorted_gdf.to_json()
     return JsonResponse(data, safe=False)
 
 @csrf_exempt
@@ -166,6 +175,7 @@ def get_reservoir_info(request):
     df = pd.read_csv(file)
     df = df.loc[df['ID'] == reservoir]
     data = df.to_json(orient='records')
+    # print(data)
     return JsonResponse(data, safe=False)
 
 @csrf_exempt

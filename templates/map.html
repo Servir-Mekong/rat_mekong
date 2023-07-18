@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% load compress %}
+
 <!-- CSS files -->
 {% block extra_css %}
 <!-- Leaflet CSS-->
@@ -13,190 +13,174 @@
 
 {% include 'navigation.html' %}
 
-<div id="map">
-    <div class="d-flex justify-content-center spinner">
-        <div id="loader" class="spinner-grow text-primary" role="status">
-            <span class="visually-hidden">Loading...</span>
-        </div>
+
+<div class="row" style="border:0px;margin-right:0;margin-left:0;max-width:100%; left:0px;right:0px;">
+    <div class="col-md-6 m-0 p-0" id="mapDiv">
+        <div id="map"></div>
+        <button class="btn btn-light pt-5 pb-5" id="leftBtn"><i class="fas fa-arrow-right fa-lg"></i></button>
+        <button class="btn btn-light pt-5 pb-5" id="rightBtn"><i class="fas fa-arrow-left fa-lg"></i></button> 
     </div>
-</div>
-<button class="btn btn-light pt-5 pb-5" id="leftBtn"><i class="fas fa-arrow-right fa-lg"></i></button>
-<button class="btn btn-light pt-5 pb-5" id="rightBtn"><i class="fas fa-arrow-left fa-lg"></i></button>
-<div class="sidebar" id="sidebar">
-    <div class="card card-body border-0 ps-5 pt-3 pe-5">
-        <ul class="nav nav-pills" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <a class="nav-link ps-5 pe-5 fs-5 active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Menu</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link ps-5 pe-5 fs-5 disabled" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link ps-5 pe-5 fs-5" id="pills-layer-tab" data-bs-toggle="pill" data-bs-target="#pills-layer" type="button" role="tab" aria-controls="pills-layer" aria-selected="false">Layer</a>
-            </li>
-        </ul>
-        <div class="tab-content mt-4" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
-                <div class="card card-body border-0 table-card">
-                    <table class="table table-hover table-responsive align-middle fs-6" id="resTable">
-                        <thead>
-                            <tr class="bg-light">
-                                <th scope="col">Dams & Reservoirs</th>
-                                <th scope="col">Location</th>
-                                <th scope="col">Increase/Decrease</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
-                <div class="card card-body border-0">
-                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link active" id="pills-about-tab" data-bs-toggle="pill" data-bs-target="#pills-about" type="button" role="tab" aria-controls="pills-about" aria-selected="true">About Dam/Reservoir</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="pills-aec-tab" data-bs-toggle="pill" data-bs-target="#pills-aec" type="button" role="tab" aria-controls="pills-aec" aria-selected="true">AEC</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="pills-inflow-tab" data-bs-toggle="pill" data-bs-target="#pills-inflow" type="button" role="tab" aria-controls="pills-inflow" aria-selected="false">Inflow</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="pills-outflow-tab" data-bs-toggle="pill" data-bs-target="#pills-outflow" type="button" role="tab" aria-controls="pills-outflow" aria-selected="false">Outflow</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="pills-sarea-tab" data-bs-toggle="pill" data-bs-target="#pills-sarea" type="button" role="tab" aria-controls="pills-sarea" aria-selected="false">Surface Area</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="pills-deltas-tab" data-bs-toggle="pill" data-bs-target="#pills-deltas" type="button" role="tab" aria-controls="pills-deltas" aria-selected="false">Storage Change</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="pills-rc-tab" data-bs-toggle="pill" data-bs-target="#pills-rc" type="button" role="tab" aria-controls="pills-rc" aria-selected="false">Rule Curve</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content mt-5" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-about" role="tabpanel" aria-labelledby="pills-about-tab" tabindex="0">
-                            <div class="card card-bo0dy border-0">
-                                <div class="rwo">
-                                    <div class="col-sm-12 col-md-6">
-                                        <table class="table table-hover table-responsive align-middle fs-6" id="resInfo">
-                                            <tbody>
-                                                <tr>
-                                                    <td>Name</td>
-                                                    <td>:</td>
-                                                    <td id="resName"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Location</td>
-                                                    <td>:</td>
-                                                    <td class="fs-3" id="resLocation"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Latitude</td>
-                                                    <td>:</td>
-                                                    <td id="resLat"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Longitude</td>
-                                                    <td>:</td>
-                                                    <td id="resLng"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Year</td>
-                                                    <td>:</td>
-                                                    <td id="resYear"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Area (Km<sup>2</sup>)</td>
-                                                    <td>:</td>
-                                                    <td id="resArea"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Capacity (MCM)</td>
-                                                    <td>:</td>
-                                                    <td id="resCap"></td>
-                                                </tr><tr>
-                                                    <td>Depth (m)</td>
-                                                    <td>:</td>
-                                                    <td id="resDepth"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Catchment (Km<sup>2</sup>)</td>
-                                                    <td>:</td>
-                                                    <td id="resCatch"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Elevation (MASL)</td>
-                                                    <td>:</td>
-                                                    <td id="resElv"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Length (m)</td>
-                                                    <td>:</td>
-                                                    <td id="resLength"></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <small class="fst-italic text-muted">Data source: Global Reservoir and Dam (GRanD)</small>
+    <div class="col-md-6" id="sideDiv">
+        <div class="sidebar" id="sidebar">
+            <div class="card card-body border-0 ps-5 pt-3 pe-5">
+                <p class="text-end pb-0 mb-0">
+                    <button type="button" class="btn btn-secondary" id="fullscreenButton" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Full Screen">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </button>
+                    <button type="button" class="btn btn-secondary" style="display:none;" id="closeButton" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Full Screen">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </p>
+                <ul class="nav nav-pills pt-0 mt-0" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link ps-5 pe-5 fs-5 active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ps-5 pe-5 fs-5 disabled" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link ps-5 pe-5 fs-5" id="pills-layer-tab" data-bs-toggle="pill" data-bs-target="#pills-layer" type="button" role="tab" aria-controls="pills-layer" aria-selected="false">Layer</a>
+                    </li> -->
+                </ul>
+                <div class="tab-content mt-4" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                        <div class="card card-body border-0 table-card">
+                            <table class="table table-hover table-responsive align-middle fs-6" id="resTable">
+                                <thead>
+                                    <tr class="bg-light">
+                                        <th scope="col">Dams & Reservoirs</th>
+                                        <th scope="col">Location</th>
+                                        <!-- <th scope="col">Status</th> -->
+                                        <th scope="col">Increase/Decrease</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                        <div class="card card-body border-0">
+                            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link active" id="pills-about-tab" data-bs-toggle="pill" data-bs-target="#pills-about" type="button" role="tab" aria-controls="pills-about" aria-selected="true">About Dam/Reservoir</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="pills-aec-tab" data-bs-toggle="pill" data-bs-target="#pills-aec" type="button" role="tab" aria-controls="pills-aec" aria-selected="true">AEC</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pills-inflow-tab" data-bs-toggle="pill" data-bs-target="#pills-inflow" type="button" role="tab" aria-controls="pills-inflow" aria-selected="false">Inflow</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pills-outflow-tab" data-bs-toggle="pill" data-bs-target="#pills-outflow" type="button" role="tab" aria-controls="pills-outflow" aria-selected="false">Outflow</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pills-sarea-tab" data-bs-toggle="pill" data-bs-target="#pills-sarea" type="button" role="tab" aria-controls="pills-sarea" aria-selected="false">Surface Area</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pills-deltas-tab" data-bs-toggle="pill" data-bs-target="#pills-deltas" type="button" role="tab" aria-controls="pills-deltas" aria-selected="false">Storage Change</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pills-rc-tab" data-bs-toggle="pill" data-bs-target="#pills-rc" type="button" role="tab" aria-controls="pills-rc" aria-selected="false">Rule Curve</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content mt-5" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-about" role="tabpanel" aria-labelledby="pills-about-tab" tabindex="0">
+                                    <div class="card card-bo0dy border-0">
+                                        <div class="rwo">
+                                            <div class="col-sm-12 col-md-6">
+                                                <table class="table table-hover table-responsive align-middle fs-6" id="resInfo">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td>:</td>
+                                                            <td id="resName"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Location</td>
+                                                            <td>:</td>
+                                                            <td class="fs-3" id="resLocation"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Latitude</td>
+                                                            <td>:</td>
+                                                            <td id="resLat"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Longitude</td>
+                                                            <td>:</td>
+                                                            <td id="resLng"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Status</td>
+                                                            <td>:</td>
+                                                            <td id="resStatus"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Year</td>
+                                                            <td>:</td>
+                                                            <td id="resYear"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Area (Km<sup>2</sup>)</td>
+                                                            <td>:</td>
+                                                            <td id="resArea"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Capacity (MCM)</td>
+                                                            <td>:</td>
+                                                            <td id="resCap"></td>
+                                                        </tr><tr>
+                                                            <td>Depth (m)</td>
+                                                            <td>:</td>
+                                                            <td id="resDepth"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Catchment (Km<sup>2</sup>)</td>
+                                                            <td>:</td>
+                                                            <td id="resCatch"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Elevation (MASL)</td>
+                                                            <td>:</td>
+                                                            <td id="resElv"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Length (m)</td>
+                                                            <td>:</td>
+                                                            <td id="resLength"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <small class="fst-italic text-muted">Data source: Global Reservoir and Dam (GRanD)</small>
+                                            </div>
+                                        </div>
                                     </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-aec" role="tabpanel" aria-labelledby="pills-aec-tab" tabindex="1">
+                                    <div class="chartAEC" id="chartAEC"></div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-inflow" role="tabpanel" aria-labelledby="pills-inflow-tab" tabindex="2">
+                                    <div class="chartInflow" id="chartInflow"></div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-outflow" role="tabpanel" aria-labelledby="pills-outflow-tab" tabindex="3">
+                                    <div class="chartOutflow" id="chartOutflow"></div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-sarea" role="tabpanel" aria-labelledby="pills-sarea-tab" tabindex="4">
+                                    <div class="chartSarea" id="chartSarea"></div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-deltas" role="tabpanel" aria-labelledby="pills-deltas-tab" tabindex="5">
+                                    <div class="chartDeltas" id="chartDeltas"></div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-rc" role="tabpanel" aria-labelledby="pills-rc-tab" tabindex="6">
+                                    <div class="chartRC" id="chartRC"></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="pills-aec" role="tabpanel" aria-labelledby="pills-aec-tab" tabindex="1">
-                            <div class="chartAEC" id="chartAEC"></div>
-                        </div>
-                        <div class="tab-pane fade" id="pills-inflow" role="tabpanel" aria-labelledby="pills-inflow-tab" tabindex="2">
-                            <div class="chartInflow" id="chartInflow"></div>
-                        </div>
-                        <div class="tab-pane fade" id="pills-outflow" role="tabpanel" aria-labelledby="pills-outflow-tab" tabindex="3">
-                            <div class="chartOutflow" id="chartOutflow"></div>
-                        </div>
-                        <div class="tab-pane fade" id="pills-sarea" role="tabpanel" aria-labelledby="pills-sarea-tab" tabindex="4">
-                            <div class="chartSarea" id="chartSarea"></div>
-                        </div>
-                        <div class="tab-pane fade" id="pills-deltas" role="tabpanel" aria-labelledby="pills-deltas-tab" tabindex="5">
-                            <div class="chartDeltas" id="chartDeltas"></div>
-                        </div>
-                        <div class="tab-pane fade" id="pills-rc" role="tabpanel" aria-labelledby="pills-rc-tab" tabindex="6">
-                            <div class="chartRC" id="chartRC"></div>
-                        </div>
                     </div>
-                </div>
+                </div>    
+        
             </div>
-            <div class="tab-pane fade" id="pills-layer" role="tabpanel" aria-labelledby="pills-layer-tab" tabindex="0">
-                <div class="card card-body border-0 table-card">
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" name="reservoirs_poly_toggle" id="reservoirs_poly_toggle">
-                        <label class="form-check-label" for="reservoirs_poly_toggle">Reservoirs Boundary</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" name="mekong_toggle" id="mekong_toggle">
-                        <label class="form-check-label" for="mekong_toggle">Mekong Region</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" name="adm0_toggle" id="adm0_toggle" checked>
-                        <label class="form-check-label" for="adm0_toggle">Country Boundary</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" name="gms_rivers_toggle"
-                            id="gms_rivers_toggle" checked>
-                        <label class="form-check-label" for="gms_rivers_toggle">GMS Rivers</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" name="main_rivers_toggle"
-                            id="main_rivers_toggle">
-                        <label class="form-check-label" for="main_rivers_toggle">Main Rivers</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" name="sub_basin_toggle"
-                            id="sub_basin_toggle">
-                        <label class="form-check-label" for="sub_basin_toggle">River Sub-basin</label>
-                    </div>
-                </div>
-            </div>
-        </div>    
-
+        </div>
     </div>
 </div>
 
@@ -208,11 +192,7 @@
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 <script src="{% static 'vendor/leaflet-search/leaflet-search.min.js' %}"></script>
-<!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
 <!-- Custom JS -->
 <script src="{% static 'js/map.js' %}"></script>
-<!-- {% compress js %}
-<script src="{% static 'js/map.js' %}"></script>
-{% endcompress %} -->
 
 {% endblock %}
