@@ -34,7 +34,7 @@ class AboutPage(TemplateView):
     template_name = "about.html"
 
 class MapPage(TemplateView):
-    template_name = "map.html"
+    template_name = "mapviewer.html"
 
 class TablePage(TemplateView):
     template_name = "table.html"
@@ -173,9 +173,10 @@ def get_reservoir_info(request):
     reservoir = request.GET.get('r_id') 
     file = 'static/data/reservoirs_info.csv'
     df = pd.read_csv(file)
+    df = df[["ID","NAME", "COUNTRY", "LATITUDE", "LONGITITUDE", "STATUS", "YEAR", "AREA_SKM","CAP_MCM","DEPTH_M","CATCH_SKM","ELEV_MASL","DAM_LEN_M"]]
     df = df.loc[df['ID'] == reservoir]
     data = df.to_json(orient='records')
-    # print(data)
+    print(data)
     return JsonResponse(data, safe=False)
 
 @csrf_exempt

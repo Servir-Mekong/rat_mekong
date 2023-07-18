@@ -62,15 +62,15 @@
                         <div class="card card-body border-0">
                             <ul class="nav nav-pills" id="pills-tab" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <a class="nav-link active" id="pills-about-tab" data-bs-toggle="pill" data-bs-target="#pills-about" type="button" role="tab" aria-controls="pills-about" aria-selected="true">About Dam/Reservoir</a>
+                                    <a class="nav-link active" id="pills-about-tab" data-bs-toggle="pill" data-bs-target="#pills-about" type="button" role="tab" aria-controls="pills-about" aria-selected="true">About</a>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <a class="nav-link" id="pills-aec-tab" data-bs-toggle="pill" data-bs-target="#pills-aec" type="button" role="tab" aria-controls="pills-aec" aria-selected="true">AEC</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="pills-inflow-tab" data-bs-toggle="pill" data-bs-target="#pills-inflow" type="button" role="tab" aria-controls="pills-inflow" aria-selected="false">Inflow</a>
+                                    <a class="nav-link" id="pills-inflow-tab" data-bs-toggle="pill" data-bs-target="#pills-inflow" type="button" role="tab" aria-controls="pills-inflow" aria-selected="false">Inflow/Outflow</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item" style="display:none">
                                     <a class="nav-link" id="pills-outflow-tab" data-bs-toggle="pill" data-bs-target="#pills-outflow" type="button" role="tab" aria-controls="pills-outflow" aria-selected="false">Outflow</a>
                                 </li>
                                 <li class="nav-item">
@@ -118,7 +118,7 @@
                                                         <tr>
                                                             <td>Year</td>
                                                             <td>:</td>
-                                                            <td id="Year"></td>
+                                                            <td id="resYear"></td>
                                                         </tr>
                                                         <tr>
                                                             <td>Area (Km<sup>2</sup>)</td>
@@ -193,6 +193,6 @@
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 <script src="{% static 'vendor/leaflet-search/leaflet-search.min.js' %}"></script>
 <!-- Custom JS -->
-<script src="{% static 'js/map.js' %}"></script>
+<script src="{% static 'js/map_v2.js' %}"></script>
 
 {% endblock %}
