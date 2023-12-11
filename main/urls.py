@@ -1,5 +1,5 @@
 from django.urls import path
-from . import views
+from . import views, api
 from django.conf.urls import include, url
 
 urlpatterns = [
@@ -22,5 +22,6 @@ urlpatterns = [
     path('get_rc_chart/', views.get_rc_chart),
     path('get_increase_decrease/', views.get_increase_decrease),
     path('get_reservoir/', views.get_reservoir),
-    path('get_reservoir_info/', views.get_reservoir_info)
+    path('get_reservoir_info/', views.get_reservoir_info),
+    path('api/ratmekong/', api.ReservoirViewSet.as_view({'get': 'data'}), name='reservoir-data-api'),
 ]
